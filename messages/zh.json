@@ -10,7 +10,8 @@
     "productGrid": {
       "title": "产品中心",
       "subtitle": "从紧凑型POE注入器到工业级UPS系统 — 每一款产品都经过严格可靠性验证。",
-      "viewAll": "查看全部"
+      "viewAll": "查看全部",
+      "items": "items"
     },
     "stats": {
       "title": "信赖的数字"

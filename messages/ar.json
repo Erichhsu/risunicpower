@@ -10,7 +10,8 @@
     "productGrid": {
       "title": "Our Products",
       "subtitle": "From compact POE injectors to industrial-grade UPS systems — every product is engineered for reliability and performance.",
-      "viewAll": "View All"
+      "viewAll": "View All",
+      "items": "items"
     },
     "stats": {
       "title": "Trust in Numbers"

@@ -10,7 +10,8 @@
     "productGrid": {
       "title": "製品一覧",
       "subtitle": "コンパクトなPOEインジェクターから産業用UPSまで — すべての製品は信頼性と性能を追求して設計されています。",
-      "viewAll": "すべて表示"
+      "viewAll": "すべて表示",
+      "items": "items"
     },
     "stats": {
       "title": "信頼の数字"

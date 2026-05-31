@@ -1,9 +1,7 @@
 import { prisma } from '@/lib/db/prisma'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { getTranslations } from 'next-intl/server'
 import { ArrowRight } from 'lucide-react'
-import type { Metadata } from 'next'
 
 export async function generateStaticParams() {
   const categories = await prisma.productCategory.findMany({ where: { published: true } })
@@ -11,20 +9,20 @@ export async function generateStaticParams() {
   return categories.flatMap(cat => locales.map(locale => ({ locale, category: cat.slug })))
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string; category: string }> }) {
-  const { locale, category: catSlug } = await params
-  const cat = await prisma.productCategory.findUnique({
-    where: { slug: catSlug },
-    include: { translations: { where: { locale } } },
-  })
-  if (!cat) return { title: 'Category Not Found' }
-  const name = cat.translations[0]?.name || catSlug
-  return { title: `${name} | RisunicPower`, description: cat.translations[0]?.subtitle || '' }
+const localeLabels: Record<string, Record<string, string>> = {
+  en: { bp: 'Products', c: '{n} products', v: 'View Products', m: '+{n} more', e: 'No products in this category yet.' },
+  zh: { bp: '产品中心', c: '{n} 个产品', v: '查看全部', m: '还有 {n} 项', e: '该品类暂无产品' },
+  ja: { bp: '製品一覧', c: '{n} 製品', v: 'すべて表示', m: 'あと {n} 件', e: 'このカテゴリーに製品はまだありません' },
+}
+function lbl(locale: string, key: string, n?: number): string {
+  const l = localeLabels[locale] || localeLabels.en
+  let v = l[key]
+  if (n !== undefined) v = v.replace('{n}', String(n))
+  return v
 }
 
 export default async function CategoryPage({ params }: { params: Promise<{ locale: string; category: string }> }) {
   const { locale, category: catSlug } = await params
-  const t = await getTranslations({ locale, namespace: 'Product' })
 
   const cat = await prisma.productCategory.findUnique({
     where: { slug: catSlug },
@@ -34,7 +32,6 @@ export default async function CategoryPage({ params }: { params: Promise<{ local
         where: { published: true },
         include: {
           translations: { where: { locale } },
-          images: { where: { isPrimary: true }, take: 1 },
           certifications: true,
         },
         orderBy: { sortOrder: 'asc' },
@@ -49,25 +46,18 @@ export default async function CategoryPage({ params }: { params: Promise<{ local
   return (
     <main className="pt-32 pb-20 min-h-screen">
       <div className="max-w-[1440px] mx-auto px-[clamp(2rem,5vw,8rem)]">
-        {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-[1.3rem] text-[#6b7a8f] mb-8">
-          <Link href={`/${locale}/products`} className="hover:text-[#c44a2b] transition-colors">{t('breadcrumbProducts')}</Link>
+          <Link href={`/${locale}/products`} className="hover:text-[#c44a2b] transition-colors">{lbl(locale, 'bp')}</Link>
           <span>/</span>
           <span className="text-[#1a2332] font-medium">{catT?.name || catSlug}</span>
         </nav>
-
         <div className="mb-16">
           <span className="text-[3.6rem] mb-2 block">{cat.icon || '📦'}</span>
-          <h1 className="text-[clamp(2.8rem,4vw,4.8rem)] font-bold text-[#0f2a44] mb-4 tracking-[-0.02em]">
-            {catT?.name || catSlug}
-          </h1>
-          {catT?.subtitle && (
-            <p className="text-[1.6rem] text-[#6b7a8f] max-w-2xl uppercase tracking-wide">{catT.subtitle}</p>
-          )}
+          <h1 className="text-[clamp(2.8rem,4vw,4.8rem)] font-bold text-[#0f2a44] mb-4">{catT?.name || catSlug}</h1>
+          {catT?.subtitle && <p className="text-[1.6rem] text-[#6b7a8f] max-w-2xl uppercase tracking-wide">{catT.subtitle}</p>}
         </div>
-
         {cat.products.length === 0 ? (
-          <p className="text-[1.6rem] text-[#6b7a8f]">{t('noProducts')}</p>
+          <p className="text-[1.6rem] text-[#6b7a8f]">{lbl(locale, 'e')}</p>
         ) : (
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
             {cat.products.map((prod) => {
@@ -84,9 +74,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ local
                     <h2 className="font-brand text-[1.8rem] font-bold text-[#0f2a44] mb-2 group-hover:text-[#c44a2b] transition-colors">
                       {pt?.name || prod.slug}
                     </h2>
-                    {pt?.subtitle && (
-                      <p className="text-[1.3rem] text-[#6b7a8f] mb-3">{pt.subtitle}</p>
-                    )}
+                    {pt?.subtitle && <p className="text-[1.3rem] text-[#6b7a8f] mb-3">{pt.subtitle}</p>}
                     {features.length > 0 && (
                       <ul className="mb-4 space-y-1">
                         {features.slice(0, 3).map((f, i) => (
@@ -95,17 +83,13 @@ export default async function CategoryPage({ params }: { params: Promise<{ local
                             <span>{f}</span>
                           </li>
                         ))}
-                        {features.length > 3 && (
-                          <li className="text-[1.2rem] text-[#c44a2b]">{t('more', { n: features.length - 3 })}</li>
-                        )}
+                        {features.length > 3 && <li className="text-[1.2rem] text-[#c44a2b]">{lbl(locale, 'm', features.length - 3)}</li>}
                       </ul>
                     )}
                     <div className="flex items-center justify-between">
                       <div className="flex gap-1.5">
                         {prod.certifications.map(c => (
-                          <span key={c.name} className="px-2 py-0.5 bg-[#fdf8f5] text-[#c44a2b] text-[1rem] font-medium border border-[#c44a2b]/10 rounded">
-                            {c.name}
-                          </span>
+                          <span key={c.name} className="px-2 py-0.5 bg-[#fdf8f5] text-[#c44a2b] text-[1rem] font-medium border border-[#c44a2b]/10 rounded">{c.name}</span>
                         ))}
                       </div>
                       <ArrowRight size={16} className="text-[#c44a2b] group-hover:translate-x-1 transition-transform" />

@@ -1,11 +1,22 @@
 import { prisma } from '@/lib/db/prisma'
 import Link from 'next/link'
-import { getTranslations } from 'next-intl/server'
 import { ArrowRight } from 'lucide-react'
+
+const localeLabels: Record<string, Record<string, string>> = {
+  en: { title: 'Product Categories', desc: 'Explore our full range of power solutions — from POE injectors and adapters to solar inverters and portable power stations.', view: 'View Products', count: '{n} products' },
+  zh: { title: '产品中心', desc: '浏览我们的全系列电源解决方案——从POE供电器、适配器到太阳能逆变器和便携储能电源。', view: '查看全部产品', count: '{n} 个产品' },
+  ja: { title: '製品一覧', desc: 'POEインジェクターからアダプター、UPS、インバーター、ポータブル電源までの全製品ラインをご覧ください。', view: 'すべて表示', count: '{n} 製品' },
+}
+
+function label(locale: string, key: string, n?: number): string {
+  const l = localeLabels[locale] || localeLabels.en
+  let v = l[key]
+  if (n !== undefined) v = v.replace('{n}', String(n))
+  return v
+}
 
 export default async function ProductsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'Product' })
 
   const categories = await prisma.productCategory.findMany({
     where: { published: true },
@@ -20,11 +31,11 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
     <main className="pt-32 pb-20 min-h-screen">
       <div className="max-w-[1440px] mx-auto px-[clamp(2rem,5vw,8rem)]">
         <h1 className="text-[clamp(2.8rem,4vw,4.8rem)] font-bold text-[#0f2a44] mb-4 tracking-[-0.02em]">
-          {t('breadcrumbProducts')}
+          {label(locale, 'title')}
         </h1>
         <div className="divider-washi" />
         <p className="text-[1.6rem] text-[#6b7a8f] max-w-2xl mb-16">
-          Explore our full range of power solutions — from POE injectors and adapters to solar inverters and portable power stations.
+          {label(locale, 'desc')}
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -41,9 +52,9 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
                 {ct?.subtitle && (
                   <p className="text-[1.3rem] text-[#6b7a8f] mb-2 uppercase tracking-wide">{ct.subtitle}</p>
                 )}
-                <p className="text-[1.3rem] text-[#6b7a8f] mb-6">{t('productCount', { n: cat._count.products })}</p>
+                <p className="text-[1.3rem] text-[#6b7a8f] mb-6">{label(locale, 'count', cat._count.products)}</p>
                 <span className="inline-flex items-center gap-1.5 text-[1.3rem] font-medium text-[#c44a2b] group-hover:gap-3 transition-all">
-                  {t('viewProducts')} <ArrowRight size={14} />
+                  {label(locale, 'view')} <ArrowRight size={14} />
                 </span>
               </Link>
             )
