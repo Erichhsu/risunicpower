@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
@@ -25,20 +25,22 @@ model Product {
   images         ProductImage[]
   certifications Certification[]
   category       ProductCategory @relation(fields: [categorySlug], references: [slug])
+  inquiries      Inquiry[]
 }
 
 model ProductTranslation {
-  id          String  @id @default(cuid())
+  id          String @id @default(cuid())
   productId   String
   locale      String
   name        String
   subtitle    String?
-  description String  @db.Text
+  description String
   features    String?
 
   product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
 
   @@unique([productId, locale])
+  @@index([productId])
 }
 
 model ProductSpec {
@@ -98,6 +100,7 @@ model ProductCategoryTranslation {
   category ProductCategory @relation(fields: [slug], references: [slug], onDelete: Cascade)
 
   @@unique([slug, locale])
+  @@index([slug])
 }
 
 model Inquiry {
@@ -110,9 +113,12 @@ model Inquiry {
   email       String
   phone       String?
   quantity    Int?
-  message     String   @db.Text
-  createdAt   DateTime @default(now())
+  message     String
   read        Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  product Product? @relation(fields: [productId], references: [id])
 
   @@index([createdAt])
 }
@@ -126,7 +132,8 @@ model Order {
   total                 Int
   currency              String   @default("usd")
   status                String   @default("pending")
-  items                 String   @db.Text
+  // JSON serialized array of cart items: [{ productId, name, price, quantity, image }]
+  items                 String
   createdAt             DateTime @default(now())
   updatedAt             DateTime @updatedAt
 
@@ -141,7 +148,7 @@ model BlogPost {
   locale      String   @default("en")
   title       String
   excerpt     String?
-  content     String   @db.Text
+  content     String
   coverImage  String?
   category    String   @default("general")
   author      String   @default("RisunicPower")
@@ -161,13 +168,14 @@ model CaseStudy {
   title       String
   client      String
   industry    String
-  challenge   String   @db.Text
-  solution    String   @db.Text
-  result      String   @db.Text
+  challenge   String
+  solution    String
+  result      String
   coverImage  String?
   published   Boolean  @default(false)
   publishDate DateTime @default(now())
   createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 
   @@index([locale, published])
 }
@@ -178,13 +186,14 @@ model Solution {
   locale      String   @default("en")
   title       String
   subtitle    String?
-  description String   @db.Text
+  description String
   icon        String?
   products    String?
-  content     String   @db.Text
+  content     String
   published   Boolean  @default(false)
   sortOrder   Int      @default(0)
   createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 
   @@index([locale, published])
 }
