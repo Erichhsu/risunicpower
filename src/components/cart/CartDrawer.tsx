@@ -93,8 +93,8 @@ export default function CartDrawer() {
                   <span>{lbl(locale, 'total')}</span>
                   <span className="text-[#c44a2b]">{formatPrice(totalPrice(), locale)}</span>
                 </div>
-                <Link href={`/${locale}/cart`}
-                  className="block w-full py-3 rounded-full bg-[#0f2a44] text-white text-center font-semibold text-[1.4rem] hover:bg-[#1e4a7a] transition-colors"
+                <Link href={`/${locale}/cart/checkout`}
+                  className="block w-full py-3 rounded-full bg-[#c44a2b] text-white text-center font-semibold text-[1.4rem] hover:bg-[#9a3a1e] transition-all shadow-lg shadow-[#c44a2b]/20"
                   onClick={closeCart}
                 >{lbl(locale, 'checkout')}</Link>
                 <Link href={`/${locale}/contact?type=wholesale`}
