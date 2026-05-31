@@ -1,13 +1,20 @@
 'use client'
 
 import Script from 'next/script'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX'
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || ''
+const COOKIE_KEY = 'risunic_cookie_consent'
 
 export default function GoogleAnalytics() {
-  // Only load GA if consented
-  if (!GA_ID || GA_ID === 'G-XXXXXXXXXX') return null
+  const [enabled, setEnabled] = useState(false)
+
+  useEffect(() => {
+    const saved = localStorage.getItem(COOKIE_KEY)
+    setEnabled(saved === 'all')
+  }, [])
+
+  if (!GA_ID || GA_ID === 'G-XXXXXXXXXX' || !enabled) return null
 
   return (
     <>
@@ -20,9 +27,7 @@ export default function GoogleAnalytics() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${GA_ID}', {
-            page_path: window.location.pathname,
-          });
+          gtag('config', '${GA_ID}');
         `}
       </Script>
     </>

@@ -3,14 +3,45 @@
 import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { MessageCircle, X, Send, Bot, User, Loader2 } from 'lucide-react'
+import { useLocale } from 'next-intl'
 
 type Msg = { role: 'user' | 'bot'; text: string }
 
-const WELCOME = 'Hi! I\'m Risunic AI assistant. Ask me about our power products, specifications, or customization options.'
+const localeLabels: Record<string, Record<string, string>> = {
+  en: {
+    welcome: 'Hi! I\'m Risunic AI assistant. Ask me about our power products, specifications, or customization options.',
+    placeholder: 'Ask about products...',
+    thinking: 'Thinking...',
+    error: 'Service temporarily unavailable. Please email info@risunicpower.com.',
+    title: 'Risunic AI',
+    notConfigured: 'AI chat is not configured yet. Please email info@risunicpower.com for product inquiries.',
+  },
+  zh: {
+    welcome: '你好！我是瑞森 AI 助手。欢迎咨询我们的电源产品、技术规格或定制方案。',
+    placeholder: '咨询产品…',
+    thinking: '思考中…',
+    error: '服务暂时不可用，请发送邮件至 info@risunicpower.com',
+    title: '瑞森 AI',
+    notConfigured: 'AI 客服尚未配置，请发送邮件至 info@risunicpower.com 咨询产品信息。',
+  },
+  ja: {
+    welcome: 'こんにちは！Risunic AIアシスタントです。電源製品、仕様、カスタマイズについてお気軽にお問い合わせください。',
+    placeholder: '製品について質問…',
+    thinking: '考え中…',
+    error: 'サービスが一時的に利用できません。info@risunicpower.com までメールをお送りください。',
+    title: 'Risunic AI',
+    notConfigured: 'AIチャットはまだ設定されていません。製品のお問い合わせは info@risunicpower.com までメールをお送りください。',
+  },
+}
+
+function lbl(locale: string, key: string): string {
+  return localeLabels[locale]?.[key] || localeLabels.en[key] || key
+}
 
 export default function AIChat() {
+  const locale = useLocale()
   const [open, setOpen] = useState(false)
-  const [msgs, setMsgs] = useState<Msg[]>([{ role: 'bot', text: WELCOME }])
+  const [msgs, setMsgs] = useState<Msg[]>([{ role: 'bot', text: lbl(locale, 'welcome') }])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
   const bottomRef = useRef<HTMLDivElement>(null)
@@ -26,12 +57,12 @@ export default function AIChat() {
     try {
       const res = await fetch('/api/ai-chat', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: q, history: msgs.slice(-10) }),
+        body: JSON.stringify({ message: q, history: msgs.slice(-10), locale }),
       })
       const data = await res.json()
       setMsgs(p => [...p, { role: 'bot', text: data.reply || 'Sorry, I couldn\'t process that.' }])
     } catch {
-      setMsgs(p => [...p, { role: 'bot', text: 'Service temporarily unavailable. Please email info@risunicpower.com.' }])
+      setMsgs(p => [...p, { role: 'bot', text: lbl(locale, 'error') }])
     } finally { setLoading(false) }
   }
 
@@ -40,7 +71,7 @@ export default function AIChat() {
       <button
         onClick={() => setOpen(true)}
         className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#c44a2b] text-white shadow-lg hover:bg-[#9a3a1e] transition-all"
-        aria-label="Open AI Chat"
+        aria-label={lbl(locale, 'title')}
       ><MessageCircle size={24} /></button>
 
       <AnimatePresence>
@@ -53,16 +84,14 @@ export default function AIChat() {
             className="fixed bottom-6 right-6 z-50 flex w-[380px] flex-col rounded-2xl bg-white shadow-2xl border border-gray-200 overflow-hidden"
             style={{ maxHeight: 'calc(100vh - 120px)' }}
           >
-            {/* Header */}
             <div className="flex items-center justify-between bg-[#0f2a44] px-5 py-4 text-white">
               <div className="flex items-center gap-3">
                 <Bot size={22} />
-                <span className="font-semibold text-[1.4rem]">Risunic AI</span>
+                <span className="font-semibold text-[1.4rem]">{lbl(locale, 'title')}</span>
               </div>
               <button onClick={() => setOpen(false)} className="hover:opacity-70"><X size={20} /></button>
             </div>
 
-            {/* Messages */}
             <div className="flex-1 overflow-y-auto px-4 py-4 space-y-3" style={{ minHeight: 200, maxHeight: 400 }}>
               {msgs.map((m, i) => (
                 <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
@@ -80,21 +109,20 @@ export default function AIChat() {
                 <div className="flex justify-start">
                   <div className="flex items-center gap-2 rounded-2xl bg-[#f0f2f5] px-4 py-2">
                     <Loader2 size={14} className="animate-spin text-[#c44a2b]" />
-                    <span className="text-[1.3rem] text-[#6b7a8f]">Thinking...</span>
+                    <span className="text-[1.3rem] text-[#6b7a8f]">{lbl(locale, 'thinking')}</span>
                   </div>
                 </div>
               )}
               <div ref={bottomRef} />
             </div>
 
-            {/* Input */}
             <div className="border-t border-gray-200 p-4">
               <div className="flex gap-2">
                 <input
                   value={input}
                   onChange={e => setInput(e.target.value)}
                   onKeyDown={e => e.key === 'Enter' && send()}
-                  placeholder="Ask about products..."
+                  placeholder={lbl(locale, 'placeholder')}
                   className="flex-1 rounded-full border border-gray-300 px-4 py-2 text-[1.3rem] outline-none focus:border-[#0f2a44] bg-[#f8f9fb]"
                 />
                 <button

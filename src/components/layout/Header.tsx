@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
 import { Menu, X, ShoppingCart, Search } from 'lucide-react'
 import { useCartStore } from '@/lib/store/cart'
+import { useSearchStore } from '@/lib/store/search'
 import CartDrawer from '@/components/cart/CartDrawer'
 
 const navItems = [
@@ -20,9 +21,9 @@ export default function Header() {
   const t = useTranslations('Header')
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-  const [searchOpen, setSearchOpen] = useState(false)
   const cartCount = useCartStore(state => state.items.reduce((sum, i) => sum + i.quantity, 0))
   const openCart = useCartStore(state => state.openCart)
+  const openSearch = useSearchStore(state => state.open)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)
@@ -69,7 +70,7 @@ export default function Header() {
           {/* Actions */}
           <div className="flex items-center gap-3">
             <button
-              onClick={() => setSearchOpen(!searchOpen)}
+              onClick={openSearch}
               className={`p-2 rounded-lg transition-colors ${scrolled ? 'hover:bg-[#f7f8fa]' : 'hover:bg-white/10'}`}
               aria-label={t('search')}
             >
@@ -109,21 +110,6 @@ export default function Header() {
                 {t(item.key)}
               </Link>
             ))}
-          </div>
-        )}
-
-        {/* Search overlay */}
-        {searchOpen && (
-          <div className="lg:hidden border-t border-[#e2e8ef] py-4 px-4 bg-white">
-            <input
-              type="text"
-              placeholder="Search products..."
-              className="w-full px-4 py-3 rounded-xl border border-[#e2e8ef] text-[1.4rem] focus:outline-none focus:border-[#c44a2b] focus:ring-2 focus:ring-[#c44a2b]/10"
-              autoFocus
-              onKeyDown={(e) => {
-                if (e.key === 'Escape') setSearchOpen(false)
-              }}
-            />
           </div>
         )}
       </div>

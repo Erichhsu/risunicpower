@@ -31,7 +31,7 @@ export default async function LocaleLayout({
           <Header />
           <main>{children}</main>
           <Footer />
-          <CookieConsent />
+          <CookieConsent locale={locale} />
           <GoogleAnalytics />
           <AIChat />
           <SearchDialog locale={locale} />
