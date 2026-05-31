@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
 import { Menu, X, ShoppingCart, Search } from 'lucide-react'
 import { useCartStore } from '@/lib/store/cart'
+import CartDrawer from '@/components/cart/CartDrawer'
 
 const navItems = [
   { key: 'products', href: '/products' },
@@ -21,6 +22,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
   const cartCount = useCartStore(state => state.items.reduce((sum, i) => sum + i.quantity, 0))
+  const openCart = useCartStore(state => state.openCart)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)
@@ -73,7 +75,7 @@ export default function Header() {
             >
               <Search size={20} className={scrolled ? 'text-[#6b7a8f]' : 'text-white/70'} />
             </button>
-            <Link href={`/${locale}/cart`}
+            <button onClick={openCart}
               className={`p-2 rounded-lg transition-colors relative ${scrolled ? 'hover:bg-[#f7f8fa]' : 'hover:bg-white/10'}`}
               aria-label="Cart"
             >
@@ -83,7 +85,7 @@ export default function Header() {
                   {cartCount}
                 </span>
               )}
-            </Link>
+            </button>
             {/* Mobile menu */}
             <button className="lg:hidden p-2" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
               {menuOpen
@@ -125,6 +127,7 @@ export default function Header() {
           </div>
         )}
       </div>
+      <CartDrawer />
     </header>
   )
 }

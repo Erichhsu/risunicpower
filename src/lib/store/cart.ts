@@ -11,10 +11,14 @@ export interface CartItem {
 
 interface CartStore {
   items: CartItem[]
+  isOpen: boolean
   addItem: (item: Omit<CartItem, 'quantity'>) => void
   removeItem: (slug: string) => void
   updateQuantity: (slug: string, quantity: number) => void
   clearCart: () => void
+  toggleCart: () => void
+  openCart: () => void
+  closeCart: () => void
   totalItems: () => number
   totalPrice: () => number
 }
@@ -23,6 +27,7 @@ export const useCartStore = create<CartStore>()(
   persist(
     (set, get) => ({
       items: [],
+      isOpen: false,
 
       addItem: (item) => {
         set((state) => {
@@ -58,8 +63,11 @@ export const useCartStore = create<CartStore>()(
 
       clearCart: () => set({ items: [] }),
 
-      totalItems: () => get().items.reduce((sum, i) => sum + i.quantity, 0),
+      toggleCart: () => set((state) => ({ isOpen: !state.isOpen })),
+      openCart: () => set({ isOpen: true }),
+      closeCart: () => set({ isOpen: false }),
 
+      totalItems: () => get().items.reduce((sum, i) => sum + i.quantity, 0),
       totalPrice: () => get().items.reduce((sum, i) => sum + i.price * i.quantity, 0),
     }),
     { name: 'risunic-cart' }
