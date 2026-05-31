@@ -82,6 +82,7 @@ CREATE TABLE "Inquiry" (
     "name" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "phone" TEXT,
+    "productName" TEXT,
     "productId" TEXT,
     "quantity" TEXT,
     "message" TEXT NOT NULL,

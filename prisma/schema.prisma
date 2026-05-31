@@ -109,6 +109,7 @@ model Inquiry {
   name      String
   email     String
   phone     String?
+  productName String?
   productId String?
   quantity  String?
   message   String

@@ -2,10 +2,11 @@ const CACHE_NAME = 'risunic-v1'
 const OFFLINE_PAGE = '/en/offline'
 
 const PRECACHE_URLS = [
-  '/',
-  '/products',
-  '/contact',
-  '/about',
+  '/en/',
+  '/en/products',
+  '/en/contact',
+  '/en/about',
+  '/en/offline',
 ]
 
 self.addEventListener('install', (event) => {
