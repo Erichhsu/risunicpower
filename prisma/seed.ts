@@ -227,18 +227,20 @@ async function main() {
       category: 'technology',
       en: { title: 'Why POE Power Supplies Are the Backbone of Industrial Automation', excerpt: 'Discover how Power over Ethernet is revolutionizing industrial automation with simplified cabling, centralized power management, and enhanced reliability.', content: '<p>Power over Ethernet (PoE) technology has transformed industrial automation by delivering both data and power through a single cable. This eliminates the need for separate electrical wiring, reduces installation costs, and enables centralized power management across factory floors.</p><h2>Key Advantages</h2><p><strong>Simplified Cabling:</strong> One cable for power and data reduces installation complexity by up to 60% compared to traditional setups.</p><p><strong>Centralized Management:</strong> Network administrators can remotely monitor and control powered devices from a central location.</p><p><strong>Enhanced Safety:</strong> Low-voltage power delivery (48V DC) eliminates electrocution risks in wet or harsh environments.</p><p><strong>Cost Savings:</strong> Reduced cabling, faster installation, and lower maintenance costs deliver up to 40% TCO savings over 5 years.</p>' },
       zh: { title: '为什么POE电源是工业自动化的核心支柱', excerpt: '探索Power over Ethernet如何通过简化布线、集中电源管理和增强可靠性来革新工业自动化。', content: '<p>Power over Ethernet（PoE）技术通过单根电缆同时传输数据和电力，彻底改变了工业自动化。这消除了单独电气布线的需求，降低了安装成本，并在工厂车间实现了集中电源管理。</p><h2>主要优势</h2><p><strong>简化布线：</strong>一根电缆同时提供电力和数据传输，相比传统方案减少60%的安装复杂度。</p><p><strong>集中管理：</strong>网络管理员可以从中央位置远程监控和控制供电设备。</p><p><strong>增强安全性：</strong>低压供电（48V DC）消除了潮湿或恶劣环境中的电击风险。</p><p><strong>成本节约：</strong>减少布线、更快安装和更低维护成本，5年内可节省高达40%的TCO。</p>' },
+      ja: { title: 'PoE電源が産業オートメーションの基盤である理由', excerpt: 'Power over Ethernetがどのようにシンプルな配線、集中電源管理、信頼性向上で産業オートメーションを変革しているかを探ります。', content: '<p>Power over Ethernet（PoE）技術は、単一ケーブルでデータと電力を同時に供給し、産業オートメーションを変革しています。別個の電気配線の必要性を排除し、設置コストを削減し、工場全体での集中電源管理を可能にします。</p><h2>主な利点</h2><p><strong>配線の簡素化：</strong>1本のケーブルで電力とデータを供給し、従来のセットアップと比較して設置の複雑さを60%削減します。</p><p><strong>集中管理：</strong>ネットワーク管理者は中央の場所から給電デバイスをリモート監視および制御できます。</p><p><strong>安全性の向上：</strong>低電圧給電（48V DC）により、湿気や過酷な環境での感電リスクを排除します。</p>' },
     },
     {
       slug: 'lifepo4-vs-lithium-ion-portable-power',
       category: 'technology',
       en: { title: 'LiFePO₄ vs Lithium-Ion: Which Battery Chemistry Is Right for Your Portable Power Station?', excerpt: 'A detailed comparison of LiFePO₄ and lithium-ion batteries for portable power stations — safety, cycle life, energy density, and cost analysis.', content: '<p>When choosing a portable power station, battery chemistry is the most critical decision. Here\'s a comprehensive comparison to help you decide.</p><h2>LiFePO₄ (LFP) Advantages</h2><p><strong>Safety:</strong> LFP is the safest lithium chemistry — virtually no thermal runaway risk.</p><p><strong>Cycle Life:</strong> 2,000-5,000 cycles to 80% capacity vs 500-1,000 for standard Li-ion.</p><p><strong>Thermal Stability:</strong> Operates reliably from -20°C to 60°C.</p><h2>Li-ion Advantages</h2><p><strong>Energy Density:</strong> 20-30% higher energy density means lighter and more compact designs.</p><p><strong>Cost per kWh:</strong> Lower upfront cost for the same capacity.</p><h2>Our Recommendation</h2><p>For applications requiring frequent cycling, harsh environments, or long-term investment — choose LiFePO₄.</p>' },
       zh: { title: 'LiFePO₄ vs 锂离子：便携储能电源该如何选择电池？', excerpt: '详细对比LiFePO₄和锂离子电池在安全性、循环寿命、能量密度和成本方面的差异。', content: '<p>选择便携储能电源时，电池化学体系是最关键的决策因素。以下全面对比助您做出选择。</p><h2>LiFePO₄（LFP）优势</h2><p><strong>安全性：</strong>LFP是最安全的锂化学体系，几乎无热失控风险。</p><p><strong>循环寿命：</strong>2000-5000次循环至80%容量，远超标准锂离子的500-1000次。</p><p><strong>热稳定性：</strong>在-20°C至60°C范围内可靠运行。</p><h2>锂离子优势</h2><p><strong>能量密度：</strong>高出20-30%，设计更轻便紧凑。</p><p><strong>每千瓦时成本：</strong>同等容量下初始成本更低。</p>' },
+      ja: { title: 'LiFePO₄ vs リチウムイオン：ポータブル電源に最適なバッテリー化学は？', excerpt: 'ポータブル電源ステーション向けLiFePO₄とリチウムイオンバッテリーの安全性、サイクル寿命、エネルギー密度、コストの詳細比較。', content: '<p>ポータブル電源ステーションを選ぶ際、バッテリー化学は最も重要な決定要因です。以下に包括的な比較を示します。</p><h2>LiFePO₄（LFP）の利点</h2><p><strong>安全性：</strong>LFPは最も安全なリチウム化学で、熱暴走のリスクが実質的にありません。</p><p><strong>サイクル寿命：</strong>80%容量まで2,000〜5,000サイクル（標準Li-ionは500〜1,000サイクル）。</p><p><strong>熱安定性：</strong>-20°C〜60°Cで確実に動作。</p><h2>リチウムイオンの利点</h2><p><strong>エネルギー密度：</strong>20〜30%高いエネルギー密度により、より軽量でコンパクトな設計が可能。</p>' },
     },
   ]
 
   for (const bp of blogData) {
-    for (const loc of ['en', 'zh']) {
-      const d = bp[loc as 'en' | 'zh']
+    for (const loc of ['en', 'zh', 'ja']) {
+      const d = bp[loc as 'en' | 'zh' | 'ja']
       await prisma.blogPost.create({
         data: { slug: bp.slug, locale: loc, title: d.title, excerpt: d.excerpt, content: d.content, category: bp.category, published: true, publishDate: new Date() },
       })
@@ -254,6 +256,7 @@ async function main() {
       industry: 'Smart Building',
       en: { title: 'Smart Building POE Upgrade — 40% Energy Savings', challenge: 'A 25-story commercial building in Singapore needed to replace aging power infrastructure for 500+ IP cameras, access control panels, and IoT sensors across all floors.', solution: 'We deployed 120 units of our 60W POE injectors (POE-60W) with centralized power management. Each floor uses a 48-port POE switch with remote monitoring.', result: '40% reduction in cabling costs. 35% energy savings. 99.99% uptime over 18 months. 60% fewer maintenance visits.' },
       zh: { title: '智能建筑POE升级——节能40%', challenge: '新加坡一栋25层商业建筑需要更换500多个IP摄像头、门禁控制器和物联网传感器的老旧电源基础设施。', solution: '我们部署了120台60W POE注入器（POE-60W），配备集中电源管理。每层使用48口POE交换机，支持远程监控。', result: '布线成本降低40%。智能电源调度节能35%。18个月内99.99%正常运行。维护次数减少60%。' },
+      ja: { title: 'スマートビルPoEアップグレード——40%の省エネ', challenge: 'シンガポールの25階建て商業ビルで、500台以上のIPカメラ、入退室管理、IoTセンサーの老朽化した電源インフラの交換が必要でした。', solution: '60W PoEインジェクター（POE-60W）120台を集中電源管理とともに導入。各フロアに48ポートPoEスイッチを設置し、リモート監視を実現。', result: '配線コスト40%削減。インテリジェント電源スケジューリングで35%の省エネ。18ヶ月間99.99%の稼働率。保守訪問60%削減。' },
     },
     {
       slug: 'solar-microgrid-telecom',
@@ -261,12 +264,13 @@ async function main() {
       industry: 'Telecom Infrastructure',
       en: { title: 'Solar-Powered Microgrid for Remote Telecom Towers', challenge: '15 off-grid telecom towers in rural Kenya required reliable 24/7 power. Diesel generator costs were unsustainable at $12,000/month per tower.', solution: 'Hybrid system combining AIO-5KW all-in-one solar inverters with 2000Wh power stations for backup. Each tower uses 4x 450W solar panels and 5kW inverter.', result: 'Diesel consumption reduced by 85%. Payback period of 18 months. 99.5% uptime. 120 tons CO₂ reduction annually.' },
       zh: { title: '太阳能微电网解决偏远通信基站供电难题', challenge: '肯尼亚农村地区15个离网通信基站需要24/7稳定供电。柴油发电机成本高昂，每基站每月12,000美元。', solution: '混合系统：AIO-5KW一体机太阳能逆变器 + 2000Wh储能电源备用。每基站配置4×450W太阳能板和5kW逆变器。', result: '柴油消耗减少85%。投资回收期18个月。99.5%正常运行。年减排120吨CO₂。' },
+      ja: { title: '遠隔通信基地局向け太陽光マイクログリッド', challenge: 'ケニア農村部の15のオフグリッド通信基地局で、24時間365日の安定電源が必要でした。ディーゼル発電機のコストは1基地局あたり月額12,000ドルと持続不可能でした。', solution: 'AIO-5KWオールインワン太陽光インバーターと2000Whポータブル電源を組み合わせたハイブリッドシステム。各基地局に450Wソーラーパネル4枚、5kWインバーターを設置。', result: 'ディーゼル消費85%削減。投資回収期間18ヶ月。稼働率99.5%。全基地局で年間120トンのCO₂削減。' },
     },
   ]
 
   for (const cs of caseData) {
-    for (const loc of ['en', 'zh']) {
-      const d = cs[loc as 'en' | 'zh']
+    for (const loc of ['en', 'zh', 'ja']) {
+      const d = cs[loc as 'en' | 'zh' | 'ja']
       await prisma.caseStudy.create({
         data: { slug: cs.slug, locale: loc, title: d.title, client: cs.client, industry: cs.industry, challenge: d.challenge, solution: d.solution, result: d.result, published: true },
       })
