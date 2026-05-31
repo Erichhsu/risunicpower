@@ -6,10 +6,11 @@ CREATE TABLE "Product" (
     "sortOrder" INTEGER NOT NULL DEFAULT 0,
     "published" BOOLEAN NOT NULL DEFAULT true,
     "featured" BOOLEAN NOT NULL DEFAULT false,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" DATETIME NOT NULL,
+    "priceCents" INTEGER NOT NULL DEFAULT 0,
     "metaTitle" TEXT,
     "metaDescription" TEXT,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL,
     CONSTRAINT "Product_categorySlug_fkey" FOREIGN KEY ("categorySlug") REFERENCES "ProductCategory" ("slug") ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
@@ -52,8 +53,6 @@ CREATE TABLE "Certification" (
     "id" TEXT NOT NULL PRIMARY KEY,
     "productId" TEXT NOT NULL,
     "name" TEXT NOT NULL,
-    "icon" TEXT,
-    "url" TEXT,
     CONSTRAINT "Certification_productId_fkey" FOREIGN KEY ("productId") REFERENCES "Product" ("id") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
@@ -79,17 +78,14 @@ CREATE TABLE "ProductCategoryTranslation" (
 CREATE TABLE "Inquiry" (
     "id" TEXT NOT NULL PRIMARY KEY,
     "locale" TEXT NOT NULL DEFAULT 'en',
-    "productId" TEXT,
-    "productName" TEXT,
     "company" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "phone" TEXT,
-    "quantity" INTEGER,
+    "productId" TEXT,
+    "quantity" TEXT,
     "message" TEXT NOT NULL,
-    "read" BOOLEAN NOT NULL DEFAULT false,
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" DATETIME NOT NULL,
     CONSTRAINT "Inquiry_productId_fkey" FOREIGN KEY ("productId") REFERENCES "Product" ("id") ON DELETE SET NULL ON UPDATE CASCADE
 );
 
@@ -97,13 +93,13 @@ CREATE TABLE "Inquiry" (
 CREATE TABLE "Order" (
     "id" TEXT NOT NULL PRIMARY KEY,
     "stripeSessionId" TEXT NOT NULL,
-    "stripePaymentIntentId" TEXT,
+    "stripePaymentIntentId" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "name" TEXT,
-    "total" INTEGER NOT NULL,
+    "total" INTEGER NOT NULL DEFAULT 0,
     "currency" TEXT NOT NULL DEFAULT 'usd',
     "status" TEXT NOT NULL DEFAULT 'pending',
-    "items" TEXT NOT NULL,
+    "items" TEXT NOT NULL DEFAULT '[]',
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" DATETIME NOT NULL
 );
@@ -153,7 +149,6 @@ CREATE TABLE "Solution" (
     "description" TEXT NOT NULL,
     "icon" TEXT,
     "products" TEXT,
-    "content" TEXT NOT NULL,
     "published" BOOLEAN NOT NULL DEFAULT false,
     "sortOrder" INTEGER NOT NULL DEFAULT 0,
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -197,25 +192,22 @@ CREATE INDEX "Order_email_idx" ON "Order"("email");
 CREATE INDEX "Order_status_idx" ON "Order"("status");
 
 -- CreateIndex
-CREATE INDEX "Order_createdAt_idx" ON "Order"("createdAt");
-
--- CreateIndex
-CREATE UNIQUE INDEX "BlogPost_slug_key" ON "BlogPost"("slug");
-
--- CreateIndex
 CREATE INDEX "BlogPost_locale_published_idx" ON "BlogPost"("locale", "published");
 
 -- CreateIndex
 CREATE INDEX "BlogPost_slug_idx" ON "BlogPost"("slug");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "CaseStudy_slug_key" ON "CaseStudy"("slug");
+CREATE UNIQUE INDEX "BlogPost_slug_locale_key" ON "BlogPost"("slug", "locale");
 
 -- CreateIndex
 CREATE INDEX "CaseStudy_locale_published_idx" ON "CaseStudy"("locale", "published");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "Solution_slug_key" ON "Solution"("slug");
+CREATE UNIQUE INDEX "CaseStudy_slug_locale_key" ON "CaseStudy"("slug", "locale");
 
 -- CreateIndex
 CREATE INDEX "Solution_locale_published_idx" ON "Solution"("locale", "published");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Solution_slug_locale_key" ON "Solution"("slug", "locale");

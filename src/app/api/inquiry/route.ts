@@ -38,12 +38,11 @@ export async function POST(req: NextRequest) {
     const inquiry = await prisma.inquiry.create({
       data: {
         locale: locale || 'en',
-        productName: productName || null,
         company,
         name: senderName,
         email,
         phone: phone || null,
-        quantity: quantity ? Number(quantity) : null,
+        quantity: quantity || null,
         message,
       },
     })
