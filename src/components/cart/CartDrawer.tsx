@@ -61,7 +61,11 @@ export default function CartDrawer() {
                       <span className="text-[2rem] opacity-30">📷</span>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="font-medium text-[1.4rem] text-[#1a2332] truncate">{item.name}</p>
+                      <Link href={`/${locale}/products/${item.categorySlug}/${item.slug}`}
+                        className="font-medium text-[1.4rem] text-[#1a2332] hover:text-[#c44a2b] transition-colors line-clamp-1"
+                      >
+                        {item.name}
+                      </Link>
                       <p className="text-[1.4rem] font-bold text-[#c44a2b] mt-1">{formatPrice(item.price)}</p>
                       <div className="flex items-center gap-2 mt-2">
                         <button onClick={() => updateQuantity(item.slug, item.quantity - 1)}

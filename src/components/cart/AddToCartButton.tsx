@@ -6,6 +6,7 @@ import { useCartStore } from '@/lib/store/cart'
 interface AddToCartButtonProps {
   product: {
     slug: string
+    categorySlug: string
     name: string
     image: string
   }
@@ -19,6 +20,7 @@ export default function AddToCartButton({ product, label = 'Add to Cart' }: AddT
     <button
       onClick={() => addItem({
         slug: product.slug,
+        categorySlug: product.categorySlug,
         name: product.name,
         price: 0,
         image: product.image,

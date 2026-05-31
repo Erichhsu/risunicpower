@@ -15,10 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale, slug } = await params
   const product = await prisma.product.findUnique({
     where: { slug },
-    include: {
-      translations: { where: { locale } },
-      category: { include: { translations: { where: { locale } } } },
-    },
+    include: { translations: { where: { locale } }, category: { include: { translations: { where: { locale } } } } },
   })
   if (!product) return { title: 'RisunicPower' }
   const pt = product.translations[0]
@@ -33,8 +30,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 const localeLabels: Record<string, Record<string, string>> = {
   en: { bp: 'Products', kf: 'Key Features', ts: 'Technical Specifications', cert: 'Certifications', rel: 'Related Products', rq: 'Request Quote', back: 'Back to {name}', atc: 'Add to Cart' },
-  zh: { bp: '产品中心', kf: '关键特性', ts: '技术规格', cert: '认证资质', rel: '相关产品', rq: '获取报价', back: '返回 {name}', atc: '加入购物车' },
-  ja: { bp: '製品一覧', kf: '主な特長', ts: '技術仕様', cert: '認証', rel: '関連製品', rq: '見積もり依頼', back: '{name} に戻る', atc: 'カートに入れる' },
+  zh: { bp: '\u4EA7\u54C1\u4E2D\u5FC3', kf: '\u5173\u952E\u7279\u6027', ts: '\u6280\u672F\u89C4\u683C', cert: '\u8BA4\u8BC1\u8D44\u8D28', rel: '\u76F8\u5173\u4EA7\u54C1', rq: '\u83B7\u53D6\u62A5\u4EF7', back: '\u8FD4\u56DE {name}', atc: '\u52A0\u5165\u8D2D\u7269\u8F66' },
+  ja: { bp: '\u88FD\u54C1\u4E00\u89A7', kf: '\u4E3B\u306A\u7279\u9577', ts: '\u6280\u8853\u4ED5\u69D8', cert: '\u8A8D\u8A3C', rel: '\u95A2\u9023\u88FD\u54C1', rq: '\u898B\u7A4D\u3082\u308A\u4F9D\u983C', back: '{name} \u306B\u623B\u308B', atc: '\u30AB\u30FC\u30C8\u306B\u5165\u308C\u308B' },
 }
 function lbl(locale: string, key: string, vars?: Record<string, string>): string {
   const l = localeLabels[locale] || localeLabels.en
@@ -82,12 +79,12 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
           <div className="aspect-square bg-gradient-to-br from-[#f7f8fa] to-[#e2e8ef] rounded-2xl flex items-center justify-center border border-[#e2e8ef]">
-            <span className="text-[8rem] opacity-20">📷</span>
+            <span className="text-[8rem] opacity-20">&#x1F4F7;</span>
           </div>
 
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-[2.4rem]">{product.category.icon || '📦'}</span>
+              <span className="text-[2.4rem]">{product.category.icon || '&#x1F4E6;'}</span>
               <span className="text-[1.2rem] uppercase tracking-wider text-[#c44a2b] font-medium">{catT?.name || catSlug}</span>
             </div>
             <h1 className="font-brand text-[clamp(2.4rem,3.5vw,4rem)] font-bold leading-[1.1] text-[#0f2a44] mb-3">{pt?.name || slug}</h1>
@@ -110,7 +107,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
             <div className="flex flex-wrap gap-4 mb-8">
               <AddToCartButton
-                product={{ slug, name: pt?.name || slug, image: '/images/products/' + slug + '.jpg' }}
+                product={{ slug, categorySlug: catSlug, name: pt?.name || slug, image: '/images/products/' + slug + '.jpg' }}
                 label={lbl(locale, 'atc')}
               />
               <Link href={`/${locale}/contact?product=${slug}`}

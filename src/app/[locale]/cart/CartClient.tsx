@@ -53,7 +53,7 @@ export default function CartClient({ locale }: { locale: string }) {
                     <span className="text-[3rem] opacity-30">📷</span>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <Link href={`/${locale}/products/${item.slug}`}
+                    <Link href={`/${locale}/products/${item.categorySlug}/${item.slug}`}
                       className="font-medium text-[1.6rem] text-[#1a2332] hover:text-[#c44a2b] transition-colors line-clamp-1"
                     >
                       {item.name}
