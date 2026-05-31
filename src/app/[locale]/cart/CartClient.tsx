@@ -5,16 +5,18 @@ import { ShoppingCart, Trash2, Minus, Plus, ArrowLeft, ArrowRight } from 'lucide
 import { useCartStore } from '@/lib/store/cart'
 
 const localeLabels: Record<string, Record<string, string>> = {
-  en: { title: 'Shopping Cart', empty: 'Your cart is empty', browse: 'Browse Products', product: 'Product', quantity: 'Qty', total: 'Total', subtotal: 'Subtotal', checkout: 'Proceed to Checkout', inquiry: 'Need wholesale pricing?', continue: 'Continue Shopping', remove: 'Remove', clear: 'Clear Cart' },
-  zh: { title: '购物车', empty: '购物车是空的', browse: '去逛逛', product: '商品', quantity: '数量', total: '合计', subtotal: '小计', checkout: '去结算', inquiry: '需要批量报价？', continue: '继续购物', remove: '删除', clear: '清空购物车' },
-  ja: { title: 'ショッピングカート', empty: 'カートは空です', browse: '製品を見る', product: '商品', quantity: '数量', total: '合計', subtotal: '小計', checkout: 'レジに進む', inquiry: '卸売り価格が必要ですか？', continue: '買い物を続ける', remove: '削除', clear: 'カートを空にする' },
+  en: { title: 'Shopping Cart', empty: 'Your cart is empty', browse: 'Browse Products', product: 'Product', quantity: 'Qty', total: 'Total', subtotal: 'Subtotal', checkout: 'Proceed to Checkout', inquiry: 'Need wholesale pricing?', continue: 'Continue Shopping', remove: 'Remove', clear: 'Clear Cart', shipping: 'Shipping & taxes calculated at checkout' },
+  zh: { title: '\u8D2D\u7269\u8F66', empty: '\u8D2D\u7269\u8F66\u662F\u7A7A\u7684', browse: '\u53BB\u901B\u901B', product: '\u5546\u54C1', quantity: '\u6570\u91CF', total: '\u5408\u8BA1', subtotal: '\u5C0F\u8BA1', checkout: '\u53BB\u7ED3\u7B97', inquiry: '\u9700\u8981\u6279\u91CF\u62A5\u4EF7\uFF1F', continue: '\u7EE7\u7EED\u8D2D\u7269', remove: '\u5220\u9664', clear: '\u6E05\u7A7A\u8D2D\u7269\u8F66', shipping: '\u8FD0\u8D39\u53CA\u7A0E\u8D39\u5728\u7ED3\u7B97\u65F6\u8BA1\u7B97' },
+  ja: { title: '\u30AB\u30FC\u30C8', empty: '\u30AB\u30FC\u30C8\u306F\u7A7A\u3067\u3059', browse: '\u88FD\u54C1\u3092\u898B\u308B', product: '\u5546\u54C1', quantity: '\u6570\u91CF', total: '\u5408\u8A08', subtotal: '\u5C0F\u8A08', checkout: '\u30EC\u30B8\u306B\u9032\u3080', inquiry: '\u5378\u58F2\u308A\u4FA1\u683C\u304C\u5FC5\u8981\u3067\u3059\u304B\uFF1F', continue: '\u8CB7\u3044\u7269\u3092\u7D9A\u3051\u308B', remove: '\u524A\u9664', clear: '\u30AB\u30FC\u30C8\u3092\u7A7A\u306B\u3059\u308B', shipping: '\u9001\u6599\u30FB\u7A0E\u91D1\u306F\u30EC\u30B8\u3067\u8A08\u7B97' },
 }
 function lbl(locale: string, key: string): string {
   return (localeLabels[locale] || localeLabels.en)[key] || key
 }
 
-function formatPrice(cents: number): string {
-  return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2 }).format(cents / 100)
+function formatPrice(cents: number, loc: string = 'en'): string {
+  const cur = loc === 'zh' ? 'CNY' : loc === 'ja' ? 'JPY' : 'USD'
+  const code = loc === 'zh' ? 'zh-CN' : loc === 'ja' ? 'ja-JP' : 'en-US'
+  return new Intl.NumberFormat(code, { style: 'currency', currency: cur, minimumFractionDigits: 2 }).format(cents / 100)
 }
 
 export default function CartClient({ locale }: { locale: string }) {
@@ -26,7 +28,7 @@ export default function CartClient({ locale }: { locale: string }) {
         <div className="flex items-center justify-between mb-10">
           <h1 className="text-[clamp(2.4rem,3vw,3.6rem)] font-bold text-[#0f2a44]">{lbl(locale, 'title')}</h1>
           {items.length > 0 && (
-            <button onClick={clearCart}
+            <button onClick={() => { if (window.confirm(lbl(locale, 'clear') + '?')) clearCart() }}
               className="text-[1.3rem] text-[#6b7a8f] hover:text-[#e74c3c] transition-colors flex items-center gap-1"
             >
               <Trash2 size={14} /> {lbl(locale, 'clear')}
@@ -50,7 +52,7 @@ export default function CartClient({ locale }: { locale: string }) {
               {items.map(item => (
                 <div key={item.slug} className="flex gap-6 p-5 bg-white rounded-2xl border border-[#e2e8ef]">
                   <div className="w-24 h-24 rounded-xl bg-[#f7f8fa] flex items-center justify-center shrink-0">
-                    <span className="text-[3rem] opacity-30">📷</span>
+                    <span className="text-[3rem] opacity-30">{'\uD83D\uDCF7'}</span>
                   </div>
                   <div className="flex-1 min-w-0">
                     <Link href={`/${locale}/products/${item.categorySlug}/${item.slug}`}
@@ -58,7 +60,7 @@ export default function CartClient({ locale }: { locale: string }) {
                     >
                       {item.name}
                     </Link>
-                    <p className="text-[1.6rem] font-bold text-[#c44a2b] mt-2">{formatPrice(item.price)}</p>
+                    <p className="text-[1.6rem] font-bold text-[#c44a2b] mt-2">{formatPrice(item.price, locale)}</p>
                     <div className="flex items-center gap-3 mt-3">
                       <div className="flex items-center gap-2 bg-[#f7f8fa] rounded-xl p-1">
                         <button onClick={() => updateQuantity(item.slug, item.quantity - 1)}
@@ -77,7 +79,7 @@ export default function CartClient({ locale }: { locale: string }) {
                     </div>
                   </div>
                   <div className="text-right shrink-0">
-                    <p className="text-[1.6rem] font-bold text-[#0f2a44]">{formatPrice(item.price * item.quantity)}</p>
+                    <p className="text-[1.6rem] font-bold text-[#0f2a44]">{formatPrice(item.price * item.quantity, locale)}</p>
                   </div>
                 </div>
               ))}
@@ -88,10 +90,10 @@ export default function CartClient({ locale }: { locale: string }) {
                 <h3 className="font-bold text-[1.8rem] text-[#0f2a44]">{lbl(locale, 'total')} ({totalItems()} {lbl(locale, 'quantity').toLowerCase()})</h3>
                 <div className="flex justify-between items-baseline">
                   <span className="text-[1.4rem] text-[#6b7a8f]">{lbl(locale, 'subtotal')}</span>
-                  <span className="text-[2.4rem] font-bold text-[#c44a2b]">{formatPrice(totalPrice())}</span>
+                  <span className="text-[2.4rem] font-bold text-[#c44a2b]">{formatPrice(totalPrice(), locale)}</span>
                 </div>
                 <div className="divider-washi my-2" />
-                <p className="text-[1.2rem] text-[#6b7a8f]">Shipping & taxes calculated at checkout</p>
+                <p className="text-[1.2rem] text-[#6b7a8f]">{lbl(locale, 'shipping')}</p>
                 <Link href={`/${locale}/contact?type=wholesale`}
                   className="flex items-center justify-center gap-2 w-full py-4 rounded-full border-2 border-[#c44a2b] text-[#c44a2b] font-semibold text-[1.4rem] hover:bg-[#c44a2b] hover:text-white transition-colors"
                 >

@@ -15,8 +15,10 @@ function lbl(locale: string, key: string): string {
   return (localeLabels[locale] || localeLabels.en)[key] || key
 }
 
-function formatPrice(cents: number): string {
-  return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2 }).format(cents / 100)
+function formatPrice(cents: number, loc: string = 'en'): string {
+  const cur = loc === 'zh' ? 'CNY' : loc === 'ja' ? 'JPY' : 'USD';
+  const code = loc === 'zh' ? 'zh-CN' : loc === 'ja' ? 'ja-JP' : 'en-US';
+  return new Intl.NumberFormat(code, { style: 'currency', currency: cur, minimumFractionDigits: 2 }).format(cents / 100)
 }
 
 export default function CartDrawer() {
@@ -66,7 +68,7 @@ export default function CartDrawer() {
                       >
                         {item.name}
                       </Link>
-                      <p className="text-[1.4rem] font-bold text-[#c44a2b] mt-1">{formatPrice(item.price)}</p>
+                      <p className="text-[1.4rem] font-bold text-[#c44a2b] mt-1">{formatPrice(item.price, locale)}</p>
                       <div className="flex items-center gap-2 mt-2">
                         <button onClick={() => updateQuantity(item.slug, item.quantity - 1)}
                           className="p-1 rounded-md bg-white border border-[#e2e8ef] hover:bg-[#f7f8fa]"
@@ -89,7 +91,7 @@ export default function CartDrawer() {
               <div className="border-t border-[#e2e8ef] px-6 py-4 space-y-3">
                 <div className="flex justify-between text-[1.6rem] font-bold">
                   <span>{lbl(locale, 'total')}</span>
-                  <span className="text-[#c44a2b]">{formatPrice(totalPrice())}</span>
+                  <span className="text-[#c44a2b]">{formatPrice(totalPrice(), locale)}</span>
                 </div>
                 <Link href={`/${locale}/cart`}
                   className="block w-full py-3 rounded-full bg-[#0f2a44] text-white text-center font-semibold text-[1.4rem] hover:bg-[#1e4a7a] transition-colors"
