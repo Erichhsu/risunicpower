@@ -21,7 +21,6 @@ function formatPrice(cents: number): string {
 }
 
 export default function CheckoutClient({ locale }: { locale: string }) {
-  const router = useRouter()
   const { items, totalItems, totalPrice, clearCart } = useCartStore()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
@@ -62,7 +61,7 @@ export default function CheckoutClient({ locale }: { locale: string }) {
           <h1 className="text-[2.4rem] font-bold text-[#0f2a44] mb-4">{lbl(locale, 'empty')}</h1>
           <Link href={`/${locale}/products`}
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#c44a2b] text-white font-semibold text-[1.4rem] hover:bg-[#9a3a1e] transition-all"
-          ><ArrowLeft size={16} /> {lbl(locale, 'browse')}</Link>
+          ><ArrowLeft size={16} /> Cart</Link>
         </div>
       </main>
     )
@@ -121,7 +120,7 @@ export default function CheckoutClient({ locale }: { locale: string }) {
               <Link href={`/${locale}/cart`}
                 className="block w-full text-center text-[1.3rem] text-[#6b7a8f] hover:text-[#c44a2b] transition-colors"
               >
-                <ArrowLeft size={14} className="inline mr-1" /> {lbl(locale, 'browse')}
+                <ArrowLeft size={14} className="inline mr-1" /> Back to Cart
               </Link>
             </motion.div>
           </div>

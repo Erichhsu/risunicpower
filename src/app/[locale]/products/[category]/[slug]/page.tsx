@@ -6,7 +6,7 @@ import { ArrowLeft, Check } from 'lucide-react'
 import AddToCartButton from '@/components/cart/AddToCartButton'
 
 export async function generateStaticParams() {
-  const products = await prisma.product.findMany({ where: { published: true }, select: { slug: true, categorySlug: true } })
+  const products = await prisma.product.findMany({ where: { published: true }, select: { slug: true, categorySlug: true, priceCents: true } })
   const locales = ['en', 'zh', 'ja', 'es', 'de', 'fr', 'pt', 'ar', 'ru']
   return products.flatMap(p => locales.map(locale => ({ locale, category: p.categorySlug, slug: p.slug })))
 }
@@ -107,7 +107,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
             <div className="flex flex-wrap gap-4 mb-8">
               <AddToCartButton
-                product={{ slug, categorySlug: catSlug, name: pt?.name || slug, image: '/images/products/' + slug + '.jpg' }}
+                product={{ slug, categorySlug: catSlug, name: pt?.name || slug, price: product.priceCents, image: '/images/products/' + slug + '.jpg' }}
                 label={lbl(locale, 'atc')}
               />
               <Link href={`/${locale}/contact?product=${slug}`}

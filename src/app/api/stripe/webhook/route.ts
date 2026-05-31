@@ -2,22 +2,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { stripe } from '@/lib/stripe/config'
 import { prisma } from '@/lib/db/prisma'
-import nodemailer from 'nodemailer'
+import { createTransport, esc } from '@/lib/email/transport'
 
-function createTransport() {
-  if (!process.env.SMTP_HOST || !process.env.SMTP_USER) return null
-  return nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT || '465'),
-    secure: true,
-    auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS || '' },
-  })
-}
 
-function esc(s: string | null | undefined): string {
-  if (!s) return ''
-  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
-}
 
 function orderConfirmationEmail(data: {
   email: string; name: string; total: number; currency: string

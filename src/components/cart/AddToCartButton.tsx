@@ -8,6 +8,7 @@ interface AddToCartButtonProps {
     slug: string
     categorySlug: string
     name: string
+    price: number
     image: string
   }
   label?: string
@@ -22,7 +23,7 @@ export default function AddToCartButton({ product, label = 'Add to Cart' }: AddT
         slug: product.slug,
         categorySlug: product.categorySlug,
         name: product.name,
-        price: 0,
+        price: product.price,
         image: product.image,
       })}
       className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#c44a2b] text-white font-semibold text-[1.4rem] hover:bg-[#9a3a1e] transition-all shadow-lg shadow-[#c44a2b]/20"

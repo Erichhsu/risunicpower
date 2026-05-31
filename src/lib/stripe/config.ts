@@ -20,18 +20,21 @@ export const REGION_PAYMENT_METHODS: Record<string, string[]> = {
   default: ['card', 'paypal'],
 }
 
-export function getPaymentMethods(locale: string): string[] {
+export function getPaymentMethods(locale: string): Stripe.Checkout.SessionCreateParams.PaymentMethodType[] {
   const regionMap: Record<string, string> = {
     en: 'us', zh: 'cn', ja: 'jp', es: 'eu', de: 'eu', fr: 'eu', pt: 'eu', ar: 'default', ru: 'default',
   }
-  return REGION_PAYMENT_METHODS[regionMap[locale] || 'default']
+  return (REGION_PAYMENT_METHODS[regionMap[locale] || 'default'] || ['card']) as Stripe.Checkout.SessionCreateParams.PaymentMethodType[]
+}
+
+const stripeLocaleMap: Record<string, Stripe.Checkout.SessionCreateParams.Locale> = {
+  zh: 'zh' as Stripe.Checkout.SessionCreateParams.Locale,
+  ja: 'ja' as Stripe.Checkout.SessionCreateParams.Locale,
+  es: 'es' as Stripe.Checkout.SessionCreateParams.Locale,
+  de: 'de' as Stripe.Checkout.SessionCreateParams.Locale,
+  fr: 'fr' as Stripe.Checkout.SessionCreateParams.Locale,
 }
 
 export function mapStripeLocale(locale: string): Stripe.Checkout.SessionCreateParams.Locale {
-  if (locale === 'zh') return 'zh' as Stripe.Checkout.SessionCreateParams.Locale
-  if (locale === 'ja') return 'ja' as Stripe.Checkout.SessionCreateParams.Locale
-  if (locale === 'es') return 'es' as Stripe.Checkout.SessionCreateParams.Locale
-  if (locale === 'de') return 'de' as Stripe.Checkout.SessionCreateParams.Locale
-  if (locale === 'fr') return 'fr' as Stripe.Checkout.SessionCreateParams.Locale
-  return 'en' as Stripe.Checkout.SessionCreateParams.Locale
+  return (stripeLocaleMap[locale] || 'en') as Stripe.Checkout.SessionCreateParams.Locale
 }

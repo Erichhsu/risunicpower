@@ -29,13 +29,12 @@ export default function SuccessClient({ locale }: { locale: string }) {
       return
     }
 
-    clearCart()
-
     const verify = async () => {
       try {
         const res = await fetch(`/api/stripe/verify?session_id=${sessionId}`)
         if (res.ok) {
           const data = await res.json()
+          clearCart()
           setOrderId(data.id || sessionId.slice(0, 8))
           setStatus('success')
         } else {
@@ -43,6 +42,7 @@ export default function SuccessClient({ locale }: { locale: string }) {
           setOrderId(sessionId.slice(0, 8))
         }
       } catch {
+        clearCart()
         setStatus('success')
         setOrderId(sessionId.slice(0, 8))
       }

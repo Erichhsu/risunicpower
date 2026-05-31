@@ -19,6 +19,7 @@ model Product {
 
   metaTitle       String?
   metaDescription String?
+  priceCents      Int      @default(0)
 
   translations   ProductTranslation[]
   specs          ProductSpec[]

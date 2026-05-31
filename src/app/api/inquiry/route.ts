@@ -1,26 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/db/prisma'
-import nodemailer from 'nodemailer'
+import { createTransport, esc } from '@/lib/email/transport'
 
-function createTransport() {
-  if (!process.env.SMTP_HOST || !process.env.SMTP_USER) return null
-  return nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT || '465'),
-    secure: true,
-    auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS || '' },
-  })
-}
 
-function escapeHtml(s: string): string {
-  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;')
-}
 
 function createInquiryEmail(d: {
   company: string; name: string; email: string; phone?: string
   productName?: string; quantity?: string; message: string; locale?: string
 }) {
-  const h = (s: string) => escapeHtml(s || '')
+  const h = (s: string) => esc(s || '')
   return `
 <div style="font-family: Arial, sans-serif; max-width:600px; margin:0 auto;">
   <h2 style="color:#c44a2b;">🔔 New Inquiry Received</h2>

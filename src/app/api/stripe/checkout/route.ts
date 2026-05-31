@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { stripe, mapStripeLocale } from '@/lib/stripe/config'
+import { stripe, mapStripeLocale, getPaymentMethods } from '@/lib/stripe/config'
 
 export async function POST(req: NextRequest) {
   try {
@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
       success_url: successUrl || `${origin}/${locale}/cart/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: cancelUrl || `${origin}/${locale}/cart`,
       locale: stripeLocale,
-      payment_method_types: ['card', 'paypal', 'alipay', 'wechat_pay'],
+      payment_method_types: getPaymentMethods(locale || 'en'),
       shipping_address_collection: {
         allowed_countries: ['US', 'CN', 'JP', 'GB', 'DE', 'FR', 'AU', 'CA', 'KR', 'SG'],
       },
