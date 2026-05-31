@@ -1,0 +1,96 @@
+{
+  "Home": {
+    "hero": {
+      "tag": "産業用電源ソリューション",
+      "title": "革新に \nエネルギーを",
+      "subtitle": "POE電源から太陽光インバーターまで — 18年以上の研究開発実績、600社以上のお客様、50カ国以上に輸出。",
+      "ctaPrimary": "製品を見る",
+      "ctaSecondary": "見積もりを依頼"
+    },
+    "productGrid": {
+      "title": "製品一覧",
+      "subtitle": "コンパクトなPOEインジェクターから産業用UPSまで — すべての製品は信頼性と性能を追求して設計されています。",
+      "viewAll": "すべて表示"
+    },
+    "stats": {
+      "title": "信頼の数字"
+    }
+  },
+  "Product": {
+    "specs": "仕様",
+    "features": "特長",
+    "certifications": "認証",
+    "related": "関連製品",
+    "getQuote": "見積もり",
+    "downloadSpec": "データシートをダウンロード",
+    "addToCart": "カートに入れる",
+    "buyNow": "今すぐ購入",
+    "moq": "最小注文数",
+    "price": "価格",
+    "inquiry": "お問い合わせ"
+  },
+  "Cart": {
+    "title": "ショッピングカート",
+    "empty": "カートは空です",
+    "emptyDesc": "製品を閲覧してお気に入りを追加してください",
+    "browseProducts": "製品を見る",
+    "total": "合計",
+    "subtotal": "小計",
+    "shipping": "送料",
+    "calculatedAtCheckout": "チェックアウト時に計算",
+    "checkout": "チェックアウト",
+    "proceedCheckout": "レジに進む",
+    "wholesaleInquiry": "卸売りお問い合わせ",
+    "clearCart": "カートを空にする",
+    "remove": "削除",
+    "orderSummary": "注文概要",
+    "items": "点"
+  },
+  "Checkout": {
+    "title": "チェックアウト",
+    "backToCart": "カートに戻る",
+    "orderSummary": "注文概要",
+    "total": "合計",
+    "payWithStripe": "Stripeで支払う",
+    "processing": "処理中...",
+    "securePayment": "🔒 Stripeが保護 · 140以上の通貨に対応"
+  },
+  "Contact": {
+    "title": "お問い合わせ",
+    "subtitle": "見積もり、OEM/ODMに関するお問い合わせ、テクニカルサポート",
+    "form": {
+      "company": "会社名",
+      "name": "お名前",
+      "email": "メールアドレス",
+      "phone": "電話番号",
+      "product": "ご興味のある製品",
+      "quantity": "数量（最小: 100）",
+      "message": "メッセージ",
+      "submit": "送信",
+      "success": "お問い合わせありがとうございます。24時間以内にご連絡いたします。"
+    }
+  },
+  "Header": {
+    "products": "製品",
+    "solutions": "ソリューション",
+    "about": "会社概要",
+    "blog": "ブログ",
+    "contact": "お問い合わせ",
+    "search": "検索"
+  },
+  "Footer": {
+    "products": "製品",
+    "company": "会社情報",
+    "support": "サポート",
+    "legal": "法的情報",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "rights": "All rights reserved.",
+    "newsletter": "メルマガ購読",
+    "subscribe": "登録"
+  },
+  "NotFound": {
+    "title": "ページが見つかりません",
+    "desc": "お探しのページは移動または削除された可能性があります。"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "Home": {
+    "hero": {
+      "tag": "Industrial Power Solutions",
+      "title": "Powering Your \nInnovation",
+      "subtitle": "From POE supplies to solar inverters — 18+ years of R&D excellence serving 600+ clients across 50+ countries.",
+      "ctaPrimary": "View Products",
+      "ctaSecondary": "Get a Quote"
+    },
+    "productGrid": {
+      "title": "Our Products",
+      "subtitle": "From compact POE injectors to industrial-grade UPS systems — every product is engineered for reliability and performance.",
+      "viewAll": "View All"
+    },
+    "stats": {
+      "title": "Trust in Numbers"
+    }
+  },
+  "Product": {
+    "specs": "Specifications",
+    "features": "Features",
+    "certifications": "Certifications",
+    "related": "Related Products",
+    "getQuote": "Get a Quote",
+    "downloadSpec": "Download Datasheet",
+    "addToCart": "Add to Cart",
+    "buyNow": "Buy Now",
+    "moq": "MOQ",
+    "price": "Price",
+    "inquiry": "Inquiry"
+  },
+  "Cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "emptyDesc": "Browse our products and add items you like",
+    "browseProducts": "Browse Products",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "calculatedAtCheckout": "Calculated at checkout",
+    "checkout": "Checkout",
+    "proceedCheckout": "Proceed to Checkout",
+    "wholesaleInquiry": "Wholesale Inquiry",
+    "clearCart": "Clear Cart",
+    "remove": "Remove",
+    "orderSummary": "Order Summary",
+    "items": "items"
+  },
+  "Checkout": {
+    "title": "Checkout",
+    "backToCart": "Back to Cart",
+    "orderSummary": "Order Summary",
+    "total": "Total",
+    "payWithStripe": "Pay with Stripe",
+    "processing": "Processing...",
+    "securePayment": "🔒 Secured by Stripe · 140+ currencies supported"
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch for quotes, OEM/ODM inquiries, or technical support",
+    "form": {
+      "company": "Company",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "product": "Product of Interest",
+      "quantity": "Quantity (MOQ: 100)",
+      "message": "Message",
+      "submit": "Submit Inquiry",
+      "success": "Thank you! We will respond within 24 hours."
+    }
+  },
+  "Header": {
+    "products": "Products",
+    "solutions": "Solutions",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "search": "Search"
+  },
+  "Footer": {
+    "products": "Products",
+    "company": "Company",
+    "support": "Support",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "rights": "All rights reserved.",
+    "newsletter": "Subscribe to our newsletter",
+    "subscribe": "Subscribe"
+  },
+  "NotFound": {
+    "title": "Page Not Found",
+    "desc": "The page you are looking for might have been moved or no longer exists."
+  }
+}
