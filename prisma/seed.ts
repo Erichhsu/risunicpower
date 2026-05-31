@@ -18,7 +18,7 @@ const products: Array<{
   slug: string; categorySlug: string; sortOrder: number; featured: boolean
   en: { name: string; subtitle: string; description: string; features: string[] }
   zh: { name: string; subtitle: string; description: string; features: string[] }
-  specs: { en: { label: string; value: string }[] }
+  specs: { en: { label: string; value: string }[]; zh?: { label: string; value: string }[] }
   certifications: { name: string }[]
 }> = [
   {
@@ -48,6 +48,16 @@ const products: Array<{
     zh: { name: 'ADP-120W 桌面式电源适配器', subtitle: '120W高密度电源', description: 'ADP-120W是一款高密度桌面式电源适配器，在紧凑尺寸中提供120W功率。适用于工业设备、医疗设备和高功率电子产品。', features: ['120W输出', '紧凑设计（152x68x35mm）', '主动PFC >0.9', '低待机功耗<0.15W', '宽工作温度-10°C~+70°C'] },
     specs: { en: [{ label: 'Output Power', value: '120W' }, { label: 'Input', value: '90-264VAC, 47-63Hz' }, { label: 'Output', value: '12V/24V/48V options' }, { label: 'PFC', value: 'Active PFC >0.9' }, { label: 'Efficiency', value: 'Level VI / CoC Tier 2' }, { label: 'Dimension', value: '152 x 68 x 35 mm' }] },
     certifications: [{ name: 'CE' }, { name: 'UL' }, { name: 'FCC' }],
+  },
+  {
+    slug: 'open-frame-150w', categorySlug: 'open-frame', sortOrder: 0, featured: true,
+    en: { name: 'OF-150W Open Frame Power Supply', subtitle: '150W Industrial Open Frame PSU', description: 'The OF-150W is a compact open-frame power supply delivering 150W with active PFC. Ideal for embedded systems, industrial equipment, and LED lighting applications. Features include universal AC input, low standby power, and comprehensive protection.', features: ['150W continuous output', 'Active PFC >0.9', 'Universal input 90-264VAC', 'Low standby <0.3W', 'Full protection: OVP/OCP/SCP', 'Compact 3x2 inch footprint', 'Conformal coating option'] },
+    zh: { name: 'OF-150W 裸板电源', subtitle: '150W工业级裸板电源', description: 'OF-150W是一款紧凑型150W裸板电源，带主动PFC功能。适用于嵌入式系统、工业设备和LED照明应用。具备通用交流输入、低待机功耗和全方位保护。', features: ['150W持续输出', '主动PFC >0.9', '通用输入90-264VAC', '低待机<0.3W', '全面保护：OVP/OCP/SCP', '3x2英寸紧凑尺寸', '可选项：三防漆涂覆'] },
+    specs: {
+      en: [{ label: 'Output Power', value: '150W' }, { label: 'Input', value: '90-264VAC, 47-63Hz' }, { label: 'Output', value: '12V/24V/48V options' }, { label: 'Efficiency', value: '>88%' }, { label: 'PFC', value: 'Active >0.9' }, { label: 'Leakage Current', value: '<0.5mA' }, { label: 'Dimension', value: '76.2 x 50.8 x 28 mm' }],
+      zh: [{ label: '输出功率', value: '150W' }, { label: '输入', value: '90-264VAC, 47-63Hz' }, { label: '输出', value: '12V/24V/48V 可选' }, { label: '效率', value: '>88%' }, { label: 'PFC', value: '主动式 >0.9' }, { label: '漏电流', value: '<0.5mA' }, { label: '尺寸', value: '76.2 x 50.8 x 28 mm' }],
+    },
+    certifications: [{ name: 'CE' }, { name: 'FCC' }, { name: 'UL' }],
   },
   {
     slug: 'ups-1000va', categorySlug: 'ups', sortOrder: 0, featured: true,
@@ -166,12 +176,20 @@ async function main() {
           ],
         },
         specs: {
-          create: prod.specs.en.map((spec, i) => ({
-            locale: 'en',
-            label: spec.label,
-            value: spec.value,
-            sortOrder: i,
-          })),
+          create: [
+            ...prod.specs.en.map((spec, i) => ({
+              locale: 'en',
+              label: spec.label,
+              value: spec.value,
+              sortOrder: i,
+            })),
+            ...(prod.specs.zh ? prod.specs.zh.map((spec, i) => ({
+              locale: 'zh',
+              label: spec.label,
+              value: spec.value,
+              sortOrder: i,
+            })) : []),
+          ],
         },
         certifications: {
           create: prod.certifications.map(c => ({

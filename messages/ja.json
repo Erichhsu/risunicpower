@@ -27,7 +27,16 @@
     "buyNow": "今すぐ購入",
     "moq": "最小注文数",
     "price": "価格",
-    "inquiry": "お問い合わせ"
+    "inquiry": "お問い合わせ",
+    "breadcrumbProducts": "製品一覧",
+    "viewProducts": "すべて表示",
+    "productCount": "{n} 製品",
+    "keyFeatures": "主な特長",
+    "techSpecs": "技術仕様",
+    "noProducts": "このカテゴリーに製品はまだありません",
+    "backTo": "{name} に戻る",
+    "requestQuote": "見積もり依頼",
+    "more": "あと {n} 件"
   },
   "Cart": {
     "title": "ショッピングカート",

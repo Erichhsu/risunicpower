@@ -27,7 +27,16 @@
     "buyNow": "立即购买",
     "moq": "最小起订量",
     "price": "价格",
-    "inquiry": "询价"
+    "inquiry": "询价",
+    "breadcrumbProducts": "产品中心",
+    "viewProducts": "查看全部产品",
+    "productCount": "{n} 个产品",
+    "keyFeatures": "关键特性",
+    "techSpecs": "技术规格",
+    "noProducts": "该品类暂无产品",
+    "backTo": "返回 {name}",
+    "requestQuote": "获取报价",
+    "more": "还有 {n} 项"
   },
   "Cart": {
     "title": "购物车",

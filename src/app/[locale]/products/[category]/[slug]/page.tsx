@@ -1,6 +1,7 @@
 import { prisma } from '@/lib/db/prisma'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { getTranslations } from 'next-intl/server'
 import { ArrowLeft, Check } from 'lucide-react'
 import type { Metadata } from 'next'
 import AddToCartButton from '@/components/cart/AddToCartButton'
@@ -24,6 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function ProductDetailPage({ params }: { params: Promise<{ locale: string; category: string; slug: string }> }) {
   const { locale, category: catSlug, slug } = await params
+  const t = await getTranslations({ locale, namespace: 'Product' })
 
   const product = await prisma.product.findUnique({
     where: { slug },
@@ -38,9 +40,9 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
   if (!product || !product.published) notFound()
 
-  const t = product.translations[0]
+  const pt = product.translations[0]
   const catT = product.category.translations[0]
-  const features: string[] = t?.features ? JSON.parse(t.features) : []
+  const features: string[] = pt?.features ? JSON.parse(pt.features) : []
 
   const relatedProducts = await prisma.product.findMany({
     where: { categorySlug: catSlug, slug: { not: slug }, published: true },
@@ -53,14 +55,14 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     <main className="pt-32 pb-20 min-h-screen">
       <div className="max-w-[1440px] mx-auto px-[clamp(2rem,5vw,8rem)]">
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-[1.3rem] text-[#6b7a8f] mb-8">
-          <Link href={`/${locale}/products`} className="hover:text-[#c44a2b] transition-colors">Products</Link>
+        <nav className="flex flex-wrap items-center gap-2 text-[1.3rem] text-[#6b7a8f] mb-8">
+          <Link href={`/${locale}/products`} className="hover:text-[#c44a2b] transition-colors">{t('breadcrumbProducts')}</Link>
           <span>/</span>
           <Link href={`/${locale}/products/${catSlug}`} className="hover:text-[#c44a2b] transition-colors">
             {catT?.name || catSlug}
           </Link>
           <span>/</span>
-          <span className="text-[#1a2332] font-medium truncate max-w-[200px]">{t?.name || slug}</span>
+          <span className="text-[#1a2332] font-medium truncate max-w-[200px]">{pt?.name || slug}</span>
         </nav>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
@@ -79,20 +81,20 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             </div>
 
             <h1 className="font-brand text-[clamp(2.4rem,3.5vw,4rem)] font-bold leading-[1.1] text-[#0f2a44] mb-3">
-              {t?.name || slug}
+              {pt?.name || slug}
             </h1>
-            {t?.subtitle && (
-              <p className="text-[1.6rem] text-[#6b7a8f] mb-6">{t.subtitle}</p>
+            {pt?.subtitle && (
+              <p className="text-[1.6rem] text-[#6b7a8f] mb-6">{pt.subtitle}</p>
             )}
 
-            {t?.description && (
-              <p className="text-[1.5rem] text-[#1a2332] leading-[1.8] mb-8">{t.description}</p>
+            {pt?.description && (
+              <p className="text-[1.5rem] text-[#1a2332] leading-[1.8] mb-8">{pt.description}</p>
             )}
 
             {/* Features */}
             {features.length > 0 && (
               <div className="mb-8">
-                <h3 className="font-semibold text-[1.4rem] text-[#0f2a44] mb-3 uppercase tracking-wider">Key Features</h3>
+                <h3 className="font-semibold text-[1.4rem] text-[#0f2a44] mb-3 uppercase tracking-wider">{t('keyFeatures')}</h3>
                 <div className="grid sm:grid-cols-2 gap-2">
                   {features.map((f, i) => (
                     <div key={i} className="flex items-start gap-2 text-[1.4rem] text-[#1a2332]">
@@ -106,18 +108,18 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
             {/* CTA */}
             <div className="flex flex-wrap gap-4 mb-8">
-              <AddToCartButton product={{ slug, name: t?.name || slug, image: '/images/products/' + slug + '.jpg' }} />
+              <AddToCartButton product={{ slug, name: pt?.name || slug, image: '/images/products/' + slug + '.jpg' }} />
               <Link href={`/${locale}/contact?product=${slug}`}
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 border-[#0f2a44] text-[#0f2a44] font-semibold text-[1.4rem] hover:bg-[#0f2a44] hover:text-white transition-all"
               >
-                Request Quote
+                {t('requestQuote')}
               </Link>
             </div>
 
             {/* Certifications */}
             {product.certifications.length > 0 && (
-              <div className="flex flex-wrap gap-2 mb-8">
-                <span className="text-[1.2rem] text-[#6b7a8f] mr-2">Certifications:</span>
+              <div className="flex flex-wrap items-center gap-2 mb-8">
+                <span className="text-[1.2rem] text-[#6b7a8f] mr-2">{t('certifications')}:</span>
                 {product.certifications.map(c => (
                   <span key={c.name} className="px-3 py-1 rounded-full bg-[#fdf8f5] text-[#c44a2b] text-[1.1rem] font-medium border border-[#c44a2b]/10">
                     {c.name}
@@ -131,13 +133,13 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
         {/* Specs Table */}
         {product.specs.length > 0 && (
           <section className="mb-20 max-w-3xl">
-            <h2 className="text-[2.4rem] font-bold text-[#0f2a44] mb-6">Technical Specifications</h2>
+            <h2 className="text-[2.4rem] font-bold text-[#0f2a44] mb-6">{t('techSpecs')}</h2>
             <div className="bg-white rounded-2xl border border-[#e2e8ef] overflow-hidden">
               <table className="w-full text-left">
                 <tbody>
                   {product.specs.map((spec, i) => (
                     <tr key={spec.id} className={i % 2 === 0 ? 'bg-[#f7f8fa]' : 'bg-white'}>
-                      <td className="px-6 py-4 text-[1.4rem] font-medium text-[#0f2a44] w-[200px] border-b border-[#e2e8ef]">{spec.label}</td>
+                      <td className="px-6 py-4 text-[1.4rem] font-medium text-[#0f2a44] w-[180px] min-w-[120px] sm:w-[220px] border-b border-[#e2e8ef]">{spec.label}</td>
                       <td className="px-6 py-4 text-[1.4rem] text-[#1a2332] border-b border-[#e2e8ef]">{spec.value}</td>
                     </tr>
                   ))}
@@ -150,7 +152,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
         {/* Related Products */}
         {relatedProducts.length > 0 && (
           <section>
-            <h2 className="text-[2.4rem] font-bold text-[#0f2a44] mb-6">Related Products</h2>
+            <h2 className="text-[2.4rem] font-bold text-[#0f2a44] mb-6">{t('related')}</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {relatedProducts.map(rp => {
                 const rt = rp.translations[0]
@@ -176,7 +178,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           <Link href={`/${locale}/products/${catSlug}`}
             className="inline-flex items-center gap-2 text-[1.4rem] font-medium text-[#6b7a8f] hover:text-[#c44a2b] transition-colors"
           >
-            <ArrowLeft size={16} /> Back to {catT?.name || catSlug}
+            <ArrowLeft size={16} /> {t('backTo', { name: catT?.name || catSlug })}
           </Link>
         </div>
       </div>

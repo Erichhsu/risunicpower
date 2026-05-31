@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
 import { Menu, X, ShoppingCart, Search } from 'lucide-react'
+import { useCartStore } from '@/lib/store/cart'
 
 const navItems = [
   { key: 'products', href: '/products' },
@@ -19,7 +20,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
-  const [cartCount, setCartCount] = useState(0)
+  const cartCount = useCartStore(state => state.items.reduce((sum, i) => sum + i.quantity, 0))
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)

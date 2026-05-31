@@ -1,6 +1,7 @@
 import { prisma } from '@/lib/db/prisma'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { getTranslations } from 'next-intl/server'
 import { ArrowRight } from 'lucide-react'
 import type { Metadata } from 'next'
 
@@ -23,6 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function CategoryPage({ params }: { params: Promise<{ locale: string; category: string }> }) {
   const { locale, category: catSlug } = await params
+  const t = await getTranslations({ locale, namespace: 'Product' })
 
   const cat = await prisma.productCategory.findUnique({
     where: { slug: catSlug },
@@ -34,7 +36,6 @@ export default async function CategoryPage({ params }: { params: Promise<{ local
           translations: { where: { locale } },
           images: { where: { isPrimary: true }, take: 1 },
           certifications: true,
-          _count: { select: { certifications: true } },
         },
         orderBy: { sortOrder: 'asc' },
       },
@@ -50,7 +51,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ local
       <div className="max-w-[1440px] mx-auto px-[clamp(2rem,5vw,8rem)]">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-[1.3rem] text-[#6b7a8f] mb-8">
-          <Link href={`/${locale}/products`} className="hover:text-[#c44a2b] transition-colors">Products</Link>
+          <Link href={`/${locale}/products`} className="hover:text-[#c44a2b] transition-colors">{t('breadcrumbProducts')}</Link>
           <span>/</span>
           <span className="text-[#1a2332] font-medium">{catT?.name || catSlug}</span>
         </nav>
@@ -66,26 +67,25 @@ export default async function CategoryPage({ params }: { params: Promise<{ local
         </div>
 
         {cat.products.length === 0 ? (
-          <p className="text-[1.6rem] text-[#6b7a8f]">No products in this category yet.</p>
+          <p className="text-[1.6rem] text-[#6b7a8f]">{t('noProducts')}</p>
         ) : (
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
             {cat.products.map((prod) => {
-              const t = prod.translations[0]
-              const features: string[] = t?.features ? JSON.parse(t.features) : []
+              const pt = prod.translations[0]
+              const features: string[] = pt?.features ? JSON.parse(pt.features) : []
               return (
                 <Link key={prod.slug} href={`/${locale}/products/${catSlug}/${prod.slug}`}
                   className="group bg-white rounded-2xl border border-[#e2e8ef] overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                 >
-                  {/* Image placeholder */}
                   <div className="aspect-[4/3] bg-gradient-to-br from-[#f7f8fa] to-[#e2e8ef] flex items-center justify-center">
                     <span className="text-[4rem] opacity-30">📷</span>
                   </div>
                   <div className="p-6">
                     <h2 className="font-brand text-[1.8rem] font-bold text-[#0f2a44] mb-2 group-hover:text-[#c44a2b] transition-colors">
-                      {t?.name || prod.slug}
+                      {pt?.name || prod.slug}
                     </h2>
-                    {t?.subtitle && (
-                      <p className="text-[1.3rem] text-[#6b7a8f] mb-3">{t.subtitle}</p>
+                    {pt?.subtitle && (
+                      <p className="text-[1.3rem] text-[#6b7a8f] mb-3">{pt.subtitle}</p>
                     )}
                     {features.length > 0 && (
                       <ul className="mb-4 space-y-1">
@@ -96,7 +96,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ local
                           </li>
                         ))}
                         {features.length > 3 && (
-                          <li className="text-[1.2rem] text-[#c44a2b]">+{features.length - 3} more</li>
+                          <li className="text-[1.2rem] text-[#c44a2b]">{t('more', { n: features.length - 3 })}</li>
                         )}
                       </ul>
                     )}
