@@ -2,7 +2,7 @@ import { prisma } from '@/lib/db/prisma'
 import { MetadataRoute } from 'next'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://risunicpower.com'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://risunicpower.com'
   const locales = ['en', 'zh', 'ja', 'es', 'de', 'fr', 'pt', 'ar', 'ru']
   const today = new Date().toISOString().split('T')[0]
 

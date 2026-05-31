@@ -1,5 +1,5 @@
 const CACHE_NAME = 'risunic-v1'
-const OFFLINE_PAGE = '/offline'
+const OFFLINE_PAGE = '/en/offline'
 
 const PRECACHE_URLS = [
   '/',

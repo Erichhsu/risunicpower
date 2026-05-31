@@ -27,7 +27,7 @@ export default async function CaseStudyDetailPage({ params }: { params: Promise<
     <main className="min-h-screen bg-white pt-28 pb-20">
       <div className="mx-auto max-w-[800px] px-6">
         <Link href={`/${l}/case-studies`} className="inline-flex items-center gap-1 text-[1.3rem] text-[#c44a2b] hover:underline mb-8">
-          <ArrowLeft size={16} /> {l === 'zh' ? '返回案例' : 'Back to Case Studies'}
+          <ArrowLeft size={16} /> {l === 'zh' ? '返回案例' : l === 'ja' ? '導入事例に戻る' : 'Back to Case Studies'}
         </Link>
 
         <div className="flex items-center gap-3 text-[1.2rem] text-[#6b7a8f] mb-4">
@@ -69,7 +69,7 @@ export default async function CaseStudyDetailPage({ params }: { params: Promise<
           <Link href={`/${l}/contact?subject=${encodeURIComponent(c.title)}`}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0f2a44] text-white text-[1.3rem] font-semibold hover:bg-[#1e4a7a] transition-colors"
           >
-            {l === 'zh' ? '获取类似方案' : 'Get a Similar Solution'}
+            {l === 'zh' ? '获取类似方案' : l === 'ja' ? '類似のソリューションを入手' : 'Get a Similar Solution'}
           </Link>
         </div>
       </div>
