@@ -18,6 +18,8 @@ export default function Header() {
   const t = useTranslations('Header')
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [searchOpen, setSearchOpen] = useState(false)
+  const [cartCount, setCartCount] = useState(0)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)
@@ -38,7 +40,7 @@ export default function Header() {
             <div className="w-8 h-8">
               <svg viewBox="0 0 32 28" className="w-full h-full">
                 <polygon points="16,1 30,8 30,20 16,27 2,20 2,8"
-                  fill={scrolled ? '#c44a2b' : '#c44a2b'} opacity="0.8" />
+                  fill="#c44a2b" opacity="0.8" />
               </svg>
             </div>
             <span className={`font-bold text-[1.8rem] tracking-tight ${scrolled ? 'text-[#0f2a44]' : 'text-white'}`}>
@@ -63,17 +65,26 @@ export default function Header() {
 
           {/* Actions */}
           <div className="flex items-center gap-3">
-            <button className={`p-2 rounded-lg transition-colors ${scrolled ? 'hover:bg-[#f7f8fa]' : 'hover:bg-white/10'}`}
-              aria-label={t('search')}>
+            <button
+              onClick={() => setSearchOpen(!searchOpen)}
+              className={`p-2 rounded-lg transition-colors ${scrolled ? 'hover:bg-[#f7f8fa]' : 'hover:bg-white/10'}`}
+              aria-label={t('search')}
+            >
               <Search size={20} className={scrolled ? 'text-[#6b7a8f]' : 'text-white/70'} />
             </button>
-            <button className={`p-2 rounded-lg transition-colors relative ${scrolled ? 'hover:bg-[#f7f8fa]' : 'hover:bg-white/10'}`}
-              aria-label="Cart">
+            <Link href={`/${locale}/cart`}
+              className={`p-2 rounded-lg transition-colors relative ${scrolled ? 'hover:bg-[#f7f8fa]' : 'hover:bg-white/10'}`}
+              aria-label="Cart"
+            >
               <ShoppingCart size={20} className={scrolled ? 'text-[#6b7a8f]' : 'text-white/70'} />
-              <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#c44a2b] text-white text-[1rem] flex items-center justify-center font-bold">0</span>
-            </button>
+              {cartCount > 0 && (
+                <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#c44a2b] text-white text-[1rem] flex items-center justify-center font-bold">
+                  {cartCount}
+                </span>
+              )}
+            </Link>
             {/* Mobile menu */}
-            <button className="lg:hidden p-2" onClick={() => setMenuOpen(!menuOpen)}>
+            <button className="lg:hidden p-2" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
               {menuOpen
                 ? <X size={22} className={scrolled ? 'text-[#1a2332]' : 'text-white'} />
                 : <Menu size={22} className={scrolled ? 'text-[#1a2332]' : 'text-white'} />
@@ -95,6 +106,21 @@ export default function Header() {
                 {t(item.key)}
               </Link>
             ))}
+          </div>
+        )}
+
+        {/* Search overlay */}
+        {searchOpen && (
+          <div className="lg:hidden border-t border-[#e2e8ef] py-4 px-4 bg-white">
+            <input
+              type="text"
+              placeholder="Search products..."
+              className="w-full px-4 py-3 rounded-xl border border-[#e2e8ef] text-[1.4rem] focus:outline-none focus:border-[#c44a2b] focus:ring-2 focus:ring-[#c44a2b]/10"
+              autoFocus
+              onKeyDown={(e) => {
+                if (e.key === 'Escape') setSearchOpen(false)
+              }}
+            />
           </div>
         )}
       </div>
