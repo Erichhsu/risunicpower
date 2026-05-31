@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { prisma } from '@/lib/db/prisma'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -10,10 +11,30 @@ export async function generateStaticParams() {
   return products.flatMap(p => locales.map(locale => ({ locale, category: p.categorySlug, slug: p.slug })))
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; category: string; slug: string }> }): Promise<Metadata> {
+  const { locale, slug } = await params
+  const product = await prisma.product.findUnique({
+    where: { slug },
+    include: {
+      translations: { where: { locale } },
+      category: { include: { translations: { where: { locale } } } },
+    },
+  })
+  if (!product) return { title: 'RisunicPower' }
+  const pt = product.translations[0]
+  const catT = product.category.translations[0]
+  const name = pt?.name || slug
+  const catName = catT?.name || product.categorySlug
+  return {
+    title: `${name} | ${catName} | RisunicPower`,
+    description: pt?.description?.slice(0, 160) || `${name} — ${catName} product from RisunicPower.`,
+  }
+}
+
 const localeLabels: Record<string, Record<string, string>> = {
-  en: { bp: 'Products', kf: 'Key Features', ts: 'Technical Specifications', cert: 'Certifications', rel: 'Related Products', rq: 'Request Quote', back: 'Back to {name}' },
-  zh: { bp: '产品中心', kf: '关键特性', ts: '技术规格', cert: '认证资质', rel: '相关产品', rq: '获取报价', back: '返回 {name}' },
-  ja: { bp: '製品一覧', kf: '主な特長', ts: '技術仕様', cert: '認証', rel: '関連製品', rq: '見積もり依頼', back: '{name} に戻る' },
+  en: { bp: 'Products', kf: 'Key Features', ts: 'Technical Specifications', cert: 'Certifications', rel: 'Related Products', rq: 'Request Quote', back: 'Back to {name}', atc: 'Add to Cart' },
+  zh: { bp: '产品中心', kf: '关键特性', ts: '技术规格', cert: '认证资质', rel: '相关产品', rq: '获取报价', back: '返回 {name}', atc: '加入购物车' },
+  ja: { bp: '製品一覧', kf: '主な特長', ts: '技術仕様', cert: '認証', rel: '関連製品', rq: '見積もり依頼', back: '{name} に戻る', atc: 'カートに入れる' },
 }
 function lbl(locale: string, key: string, vars?: Record<string, string>): string {
   const l = localeLabels[locale] || localeLabels.en
@@ -88,7 +109,10 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             )}
 
             <div className="flex flex-wrap gap-4 mb-8">
-              <AddToCartButton product={{ slug, name: pt?.name || slug, image: '/images/products/' + slug + '.jpg' }} />
+              <AddToCartButton
+                product={{ slug, name: pt?.name || slug, image: '/images/products/' + slug + '.jpg' }}
+                label={lbl(locale, 'atc')}
+              />
               <Link href={`/${locale}/contact?product=${slug}`}
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 border-[#0f2a44] text-[#0f2a44] font-semibold text-[1.4rem] hover:bg-[#0f2a44] hover:text-white transition-all"
               >
@@ -115,7 +139,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                 <tbody>
                   {product.specs.map((spec, i) => (
                     <tr key={spec.id} className={i % 2 === 0 ? 'bg-[#f7f8fa]' : 'bg-white'}>
-                      <td className="px-6 py-4 text-[1.4rem] font-medium text-[#0f2a44] w-[180px] min-w-[120px] sm:w-[220px] border-b border-[#e2e8ef]">{spec.label}</td>
+                      <td className="px-6 py-4 text-[1.4rem] font-medium text-[#0f2a44] min-w-[120px] sm:w-[220px] border-b border-[#e2e8ef]">{spec.label}</td>
                       <td className="px-6 py-4 text-[1.4rem] text-[#1a2332] border-b border-[#e2e8ef]">{spec.value}</td>
                     </tr>
                   ))}

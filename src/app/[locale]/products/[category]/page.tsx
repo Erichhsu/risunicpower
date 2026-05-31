@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { prisma } from '@/lib/db/prisma'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -7,6 +8,21 @@ export async function generateStaticParams() {
   const categories = await prisma.productCategory.findMany({ where: { published: true } })
   const locales = ['en', 'zh', 'ja', 'es', 'de', 'fr', 'pt', 'ar', 'ru']
   return categories.flatMap(cat => locales.map(locale => ({ locale, category: cat.slug })))
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; category: string }> }): Promise<Metadata> {
+  const { locale, category: catSlug } = await params
+  const cat = await prisma.productCategory.findUnique({
+    where: { slug: catSlug },
+    include: { translations: { where: { locale } } },
+  })
+  const name = cat?.translations[0]?.name || catSlug
+  return {
+    title: `${name} | RisunicPower`,
+    description: cat?.translations[0]?.subtitle
+      ? `${cat.translations[0].subtitle} — RisunicPower industrial power supply manufacturer.`
+      : `${name} products from RisunicPower — POE, adapters, UPS, inverters, and more.`,
+  }
 }
 
 const localeLabels: Record<string, Record<string, string>> = {
