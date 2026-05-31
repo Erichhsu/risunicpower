@@ -1,6 +1,9 @@
 import { prisma } from '@/lib/db/prisma'
 import Hero from '@/components/sections/Hero'
 import ProductGrid from '@/components/sections/ProductGrid'
+import EnergyStats from '@/components/sections/EnergyStats'
+import Certifications from '@/components/sections/Certifications'
+import Solutions from '@/components/sections/Solutions'
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
@@ -26,6 +29,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     <>
       <Hero />
       <ProductGrid categories={gridData} />
+      <EnergyStats locale={locale} />
+      <Certifications locale={locale} />
+      <Solutions locale={locale} />
     </>
   )
 }

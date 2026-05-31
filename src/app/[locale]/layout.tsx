@@ -3,6 +3,10 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import CookieConsent from '@/components/ui/CookieConsent'
+import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
+import AIChat from '@/components/ai/AIChat'
+import SearchDialog from '@/components/ui/SearchDialog'
 import '../globals.css'
 
 export const metadata: Metadata = {
@@ -27,6 +31,10 @@ export default async function LocaleLayout({
           <Header />
           <main>{children}</main>
           <Footer />
+          <CookieConsent />
+          <GoogleAnalytics />
+          <AIChat />
+          <SearchDialog locale={locale} />
         </NextIntlClientProvider>
       </body>
     </html>
