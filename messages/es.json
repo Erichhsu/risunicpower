@@ -3,7 +3,7 @@
     "hero": {
       "tag": "Industrial Power Solutions",
       "title": "Powering Your \nInnovation",
-      "subtitle": "From POE supplies to solar inverters — 18+ years of R&D excellence serving 600+ clients across 50+ countries.",
+      "subtitle": "From POE supplies to solar inverters — 12+ years of R&D serving\n600+ clients across 30+ countries.",
       "ctaPrimary": "View Products",
       "ctaSecondary": "Get a Quote"
     },
@@ -11,11 +11,14 @@
       "title": "Our Products",
       "subtitle": "From compact POE injectors to industrial-grade UPS systems — every product is engineered for reliability and performance.",
       "viewAll": "View All",
-      "items": "items"
+      "items": "items",
+      "label": "Nuestros Productos"
     },
     "stats": {
       "title": "Trust in Numbers"
-    }
+    },
+    "viewAll": "Ver todo",
+    "readMore": "Leer más"
   },
   "Product": {
     "specs": "Specifications",
@@ -86,7 +89,8 @@
     "about": "About",
     "blog": "Blog",
     "contact": "Contact",
-    "search": "Search"
+    "search": "Search",
+    "caseStudies": "Casos de éxito"
   },
   "Footer": {
     "products": "Products",
@@ -98,10 +102,29 @@
     "rights": "All rights reserved.",
     "newsletter": "Subscribe to our newsletter",
     "subscribe": "Subscribe",
-    "brandDescription": "Industrial power supply manufacturer since 2008. CE, FCC, UL certified."
+    "brandDescription": "Industrial power supply manufacturer since 2014. CE, FCC, UL certified.",
+    "connectWithUs": "Conéctese con nosotros"
   },
   "NotFound": {
     "title": "Page Not Found",
     "desc": "The page you are looking for might have been moved or no longer exists."
+  },
+  "Reviews": {
+    "title": "Opiniones de Clientes",
+    "loading": "Cargando opiniones...",
+    "noReviews": "Aún no hay opiniones",
+    "beFirst": "¡Sea el primero en compartir su experiencia!",
+    "writeReview": "Escribir Opinión",
+    "rating": "Valoración",
+    "yourReview": "Su Opinión",
+    "reviewPlaceholder": "Comparta su experiencia con este producto...",
+    "company": "Empresa",
+    "yourName": "Su Nombre",
+    "country": "País",
+    "submit": "Enviar",
+    "submitting": "Enviando...",
+    "success": "¡Gracias! Su opinión ha sido enviada.",
+    "error": "Error al enviar. Intente de nuevo.",
+    "count": "{n} opiniones"
   }
 }

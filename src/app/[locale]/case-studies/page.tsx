@@ -35,17 +35,17 @@ export default async function CaseStudiesPage({ params }: { params: Promise<{ lo
           <div className="space-y-6">
             {cases.map(c => (
               <Link key={c.slug} href={`/${l}/case-studies/${c.slug}`}
-                className="group flex flex-col md:flex-row md:items-center gap-6 rounded-2xl border border-gray-200 p-8 hover:border-[#c44a2b]/30 hover:shadow-lg transition-all"
+                className="group flex flex-col md:flex-row md:items-center gap-6 rounded-2xl border border-gray-200 p-8 hover:border-[#F7D142]/30 hover:shadow-lg transition-all"
               >
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#c44a2b]/10">
-                  <Building2 size={24} className="text-[#c44a2b]" />
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#F7D142]/10">
+                  <Building2 size={24} className="text-[#F7D142]" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h2 className="text-[1.8rem] font-bold text-[#0f2a44] mb-1 group-hover:text-[#c44a2b] transition-colors">{c.title}</h2>
+                  <h2 className="text-[1.8rem] font-bold text-[#0f2a44] mb-1 group-hover:text-[#F7D142] transition-colors">{c.title}</h2>
                   <p className="text-[1.3rem] text-[#6b7a8f]">{c.client} · {c.industry} · {new Date(c.publishDate).toLocaleDateString()}</p>
                   <p className="mt-2 text-[1.3rem] leading-relaxed text-[#2c3e50] line-clamp-2">{c.result}</p>
                 </div>
-                <ArrowRight size={20} className="text-gray-300 group-hover:text-[#c44a2b] transition-colors shrink-0" />
+                <ArrowRight size={20} className="text-gray-300 group-hover:text-[#F7D142] transition-colors shrink-0" />
               </Link>
             ))}
           </div>

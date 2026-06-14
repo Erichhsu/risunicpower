@@ -12,6 +12,7 @@ datasource db {
 model Product {
   id            String   @id @default(cuid())
   slug          String   @unique
+  sku           String?
   categorySlug  String
   sortOrder     Int      @default(0)
   published     Boolean  @default(true)
@@ -26,6 +27,7 @@ model Product {
   specs          ProductSpec[]
   images         ProductImage[]
   certifications Certification[]
+  reviews        ProductReview[]
   category       ProductCategory @relation(fields: [categorySlug], references: [slug])
   inquiries      Inquiry[]
 }
@@ -72,6 +74,20 @@ model Certification {
   id        String @id @default(cuid())
   productId String
   name      String
+
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  @@index([productId])
+}
+
+model ProductReview {
+  id        String   @id @default(cuid())
+  productId String
+  rating    Int
+  author    String   @default("Verified Buyer")
+  company   String?
+  country   String?
+  content   String?
+  createdAt DateTime @default(now())
 
   product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
   @@index([productId])

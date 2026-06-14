@@ -41,3 +41,6 @@ yarn-error.log*
 next-env.d.ts
 
 .env.production
+dev.db
+*_query.js
+public/_debug_*

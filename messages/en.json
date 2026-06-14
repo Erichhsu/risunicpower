@@ -3,7 +3,7 @@
     "hero": {
       "tag": "Industrial Power Solutions",
       "title": "Powering Your \nInnovation",
-      "subtitle": "From POE supplies to solar inverters — 18+ years of R&D excellence serving 600+ clients across 50+ countries.",
+      "subtitle": "From POE supplies to solar inverters — 12+ years of R&D excellence serving\n600+ clients across 30+ countries.",
       "ctaPrimary": "View Products",
       "ctaSecondary": "Get a Quote"
     },
@@ -11,11 +11,14 @@
       "title": "Our Products",
       "subtitle": "From compact POE injectors to industrial-grade UPS systems — every product is engineered for reliability and performance.",
       "viewAll": "View All",
-      "items": "items"
+      "items": "items",
+      "label": "Our Products"
     },
     "stats": {
       "title": "Trust in Numbers"
-    }
+    },
+    "viewAll": "View All",
+    "readMore": "Read More"
   },
   "Product": {
     "specs": "Specifications",
@@ -86,7 +89,8 @@
     "about": "About",
     "blog": "Blog",
     "contact": "Contact",
-    "search": "Search"
+    "search": "Search",
+    "caseStudies": "Case Studies"
   },
   "Footer": {
     "products": "Products",
@@ -98,10 +102,29 @@
     "rights": "All rights reserved.",
     "newsletter": "Subscribe to our newsletter",
     "subscribe": "Subscribe",
-    "brandDescription": "Industrial power supply manufacturer since 2008. CE, FCC, UL certified."
+    "brandDescription": "Industrial power supply manufacturer since 2014. CE, FCC, UL certified.",
+    "connectWithUs": "Connect With Us"
   },
   "NotFound": {
     "title": "Page Not Found",
     "desc": "The page you are looking for might have been moved or no longer exists."
+  },
+  "Reviews": {
+    "title": "Customer Reviews",
+    "loading": "Loading reviews...",
+    "noReviews": "No reviews yet.",
+    "beFirst": "Be the first to share your experience with this product!",
+    "writeReview": "Write a Review",
+    "rating": "Rating",
+    "yourReview": "Your Review",
+    "reviewPlaceholder": "Share your experience with this product...",
+    "company": "Company",
+    "yourName": "Your Name",
+    "country": "Country",
+    "submit": "Submit Review",
+    "submitting": "Submitting...",
+    "success": "Thank you! Your review has been submitted.",
+    "error": "Failed to submit review. Please try again.",
+    "count": "{n} reviews"
   }
 }

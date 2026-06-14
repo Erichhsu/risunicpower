@@ -4,11 +4,6 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft, Building2, Calendar } from 'lucide-react'
 
-export async function generateStaticParams() {
-  const cases = await prisma.caseStudy.findMany({ where: { published: true }, select: { slug: true, locale: true } })
-  return cases.map(c => ({ locale: c.locale, slug: c.slug }))
-}
-
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params
   const c = await prisma.caseStudy.findFirst({ where: { slug, locale }, select: { title: true } })
@@ -26,7 +21,7 @@ export default async function CaseStudyDetailPage({ params }: { params: Promise<
   return (
     <main className="min-h-screen bg-white pt-28 pb-20">
       <div className="mx-auto max-w-[800px] px-6">
-        <Link href={`/${l}/case-studies`} className="inline-flex items-center gap-1 text-[1.3rem] text-[#c44a2b] hover:underline mb-8">
+        <Link href={`/${l}/case-studies`} className="inline-flex items-center gap-1 text-[1.3rem] text-[#F7D142] hover:underline mb-8">
           <ArrowLeft size={16} /> {l === 'zh' ? '返回案例' : l === 'ja' ? '導入事例に戻る' : 'Back to Case Studies'}
         </Link>
 

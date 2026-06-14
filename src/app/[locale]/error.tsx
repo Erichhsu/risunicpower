@@ -12,7 +12,7 @@ export default function LocaleError({
   return (
     <main className="min-h-screen bg-white flex items-center justify-center pt-20">
       <div className="text-center px-6">
-        <div className="text-[6rem] font-bold text-[#c44a2b] mb-4 leading-none">500</div>
+        <div className="text-[6rem] font-bold text-[#F7D142] mb-4 leading-none">500</div>
         <h1 className="text-[2.4rem] font-bold text-[#0f2a44] mb-4">Something went wrong</h1>
         <p className="text-[1.4rem] text-[#6b7a8f] mb-8 max-w-md mx-auto">
           An unexpected error occurred. Please try again or contact us.

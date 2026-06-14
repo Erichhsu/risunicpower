@@ -55,7 +55,7 @@ export default function SuccessClient({ locale }: { locale: string }) {
       <div className="max-w-[600px] mx-auto px-[clamp(2rem,5vw,8rem)] text-center py-20">
         {status === 'loading' && (
           <div>
-            <Loader2 size={48} className="mx-auto text-[#c44a2b] animate-spin mb-6" />
+            <Loader2 size={48} className="mx-auto text-[#F7D142] animate-spin mb-6" />
             <p className="text-[1.8rem] text-[#6b7a8f]">{lbl(locale, 'loading')}</p>
           </div>
         )}
@@ -75,7 +75,7 @@ export default function SuccessClient({ locale }: { locale: string }) {
             )}
             <div className="divider-washi" />
             <Link href={`/${locale}/products`}
-              className="inline-flex items-center gap-2 mt-8 px-8 py-4 rounded-full bg-[#c44a2b] text-white font-semibold text-[1.4rem] hover:bg-[#9a3a1e] transition-all shadow-lg shadow-[#c44a2b]/20"
+              className="inline-flex items-center gap-2 mt-8 px-8 py-4 rounded-full bg-[#F7D142] text-white font-semibold text-[1.4rem] hover:bg-[#9a3a1e] transition-all shadow-lg shadow-[#F7D142]/20"
             >
               {lbl(locale, 'back')} <ArrowRight size={16} />
             </Link>
@@ -87,7 +87,7 @@ export default function SuccessClient({ locale }: { locale: string }) {
             <h1 className="text-[2.4rem] font-bold text-[#e74c3c] mb-4">404</h1>
             <p className="text-[1.6rem] text-[#6b7a8f]">{lbl(locale, 'error')}</p>
             <Link href={`/${locale}/contact`}
-              className="inline-block mt-6 text-[1.4rem] font-medium text-[#c44a2b] hover:underline"
+              className="inline-block mt-6 text-[1.4rem] font-medium text-[#F7D142] hover:underline"
             >Contact Support</Link>
           </div>
         )}

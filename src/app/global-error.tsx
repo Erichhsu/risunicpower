@@ -15,7 +15,7 @@ export default function GlobalError({
           justifyContent: 'center', minHeight: '100vh', fontFamily: 'system-ui, sans-serif',
           padding: '2rem', textAlign: 'center', background: '#f8f9fb',
         }}>
-          <div style={{ fontSize: '4rem', fontWeight: 700, color: '#c44a2b', marginBottom: '0.5rem' }}>500</div>
+          <div style={{ fontSize: '4rem', fontWeight: 700, color: '#F7D142', marginBottom: '0.5rem' }}>500</div>
           <h1 style={{ fontSize: '1.8rem', fontWeight: 700, color: '#0f2a44', marginBottom: '0.5rem' }}>
             Something went wrong
           </h1>

@@ -1,14 +1,40 @@
-import Link from 'next/link'
+import type { Metadata } from 'next'
+import termsContent from '@/lib/legal/terms'
 
-export default async function TermsPage({ params }: { params: Promise<{ locale: string }> }) {
+type Props = { params: Promise<{ locale: string }> }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
-  const l = ['en', 'zh', 'ja'].includes(locale) ? locale : 'en'
+  const isZh = locale === 'zh'
+  return {
+    title: isZh ? '服务条款 - RisunicPower' : 'Terms of Service - RisunicPower',
+    description: isZh
+      ? 'RisunicPower服务条款。使用本网站即表示您同意以下条款和条件。'
+      : 'RisunicPower Terms of Service. By using this website, you agree to the following terms and conditions.',
+    robots: 'noindex, follow',
+  }
+}
+
+export default async function TermsPage({ params }: Props) {
+  const { locale } = await params
+  const content = termsContent[locale === 'zh' ? 'zh' : 'en']
+
   return (
-    <main className="min-h-screen bg-white pt-28 pb-20">
-      <div className="mx-auto max-w-[800px] px-6">
-        <h1 className="text-[3.2rem] font-bold text-[#0f2a44] mb-6">Terms of Service</h1>
-        <p className="text-[1.4rem] leading-relaxed text-[#6b7a8f] mb-8">This page is under construction. Please check back soon.</p>
-        <Link href={`/${l}`} className="inline-flex px-6 py-3 rounded-full bg-[#0f2a44] text-white text-[1.3rem] font-semibold hover:bg-[#1e4a7a] transition-colors">Back to Home</Link>
+    <main className="pt-32 pb-20 min-h-screen bg-[#f7f8fa]">
+      <div className="max-w-[900px] mx-auto px-6">
+        <h1 className="text-[3.2rem] font-bold text-[#0f2a44] mb-2">{content.title}</h1>
+        <p className="text-[1.3rem] text-[#6b7a8f] mb-12">{content.lastUpdated}</p>
+
+        <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm space-y-10">
+          {content.sections.map((section, i) => (
+            <div key={i}>
+              <h2 className="text-[2rem] font-bold text-[#0f2a44] mb-3">{section.heading}</h2>
+              <p className="text-[1.4rem] text-[#4a5568] leading-relaxed whitespace-pre-line">
+                {section.body}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </main>
   )

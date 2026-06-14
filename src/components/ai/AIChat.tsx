@@ -12,25 +12,25 @@ const localeLabels: Record<string, Record<string, string>> = {
     welcome: 'Hi! I\'m Risunic AI assistant. Ask me about our power products, specifications, or customization options.',
     placeholder: 'Ask about products...',
     thinking: 'Thinking...',
-    error: 'Service temporarily unavailable. Please email info@risunicpower.com.',
+    error: 'Service temporarily unavailable. Please email erich.hsu@risunicpower.com.',
     title: 'Risunic AI',
-    notConfigured: 'AI chat is not configured yet. Please email info@risunicpower.com for product inquiries.',
+    notConfigured: 'AI chat is not configured yet. Please email erich.hsu@risunicpower.com for product inquiries.',
   },
   zh: {
-    welcome: '你好！我是瑞森 AI 助手。欢迎咨询我们的电源产品、技术规格或定制方案。',
+    welcome: '你好！我是 Risunic AI 助手。欢迎咨询我们的电源产品、技术规格或定制方案。',
     placeholder: '咨询产品…',
     thinking: '思考中…',
-    error: '服务暂时不可用，请发送邮件至 info@risunicpower.com',
-    title: '瑞森 AI',
-    notConfigured: 'AI 客服尚未配置，请发送邮件至 info@risunicpower.com 咨询产品信息。',
+    error: '服务暂时不可用，请发送邮件至 erich.hsu@risunicpower.com',
+    title: 'Risunic AI',
+    notConfigured: 'AI 客服尚未配置，请发送邮件至 erich.hsu@risunicpower.com 咨询产品信息。',
   },
   ja: {
     welcome: 'こんにちは！Risunic AIアシスタントです。電源製品、仕様、カスタマイズについてお気軽にお問い合わせください。',
     placeholder: '製品について質問…',
     thinking: '考え中…',
-    error: 'サービスが一時的に利用できません。info@risunicpower.com までメールをお送りください。',
+    error: 'サービスが一時的に利用できません。erich.hsu@risunicpower.com までメールをお送りください。',
     title: 'Risunic AI',
-    notConfigured: 'AIチャットはまだ設定されていません。製品のお問い合わせは info@risunicpower.com までメールをお送りください。',
+    notConfigured: 'AIチャットはまだ設定されていません。製品のお問い合わせは erich.hsu@risunicpower.com までメールをお送りください。',
   },
 }
 
@@ -70,7 +70,7 @@ export default function AIChat() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#c44a2b] text-white shadow-lg hover:bg-[#9a3a1e] transition-all"
+        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#F7D142] text-white shadow-lg hover:bg-[#9a3a1e] transition-all"
         aria-label={lbl(locale, 'title')}
       ><MessageCircle size={24} /></button>
 
@@ -108,7 +108,7 @@ export default function AIChat() {
               {loading && (
                 <div className="flex justify-start">
                   <div className="flex items-center gap-2 rounded-2xl bg-[#f0f2f5] px-4 py-2">
-                    <Loader2 size={14} className="animate-spin text-[#c44a2b]" />
+                    <Loader2 size={14} className="animate-spin text-[#F7D142]" />
                     <span className="text-[1.3rem] text-[#6b7a8f]">{lbl(locale, 'thinking')}</span>
                   </div>
                 </div>
@@ -128,7 +128,7 @@ export default function AIChat() {
                 <button
                   onClick={send}
                   disabled={loading || !input.trim()}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[#c44a2b] text-white disabled:opacity-40 hover:bg-[#9a3a1e] transition-colors"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F7D142] text-white disabled:opacity-40 hover:bg-[#9a3a1e] transition-colors"
                 ><Send size={16} /></button>
               </div>
             </div>

@@ -8,7 +8,7 @@ export default async function OfflinePage({ params }: { params: Promise<{ locale
   return (
     <main className="min-h-screen bg-white flex items-center justify-center pt-20">
       <div className="text-center px-6">
-        <WifiOff size={48} className="mx-auto mb-6 text-[#c44a2b]" />
+        <WifiOff size={48} className="mx-auto mb-6 text-[#F7D142]" />
         <h1 className="text-[3.2rem] font-bold text-[#0f2a44] mb-4">
           {l === 'zh' ? '当前无网络连接' : l === 'ja' ? 'オフラインです' : 'You\'re Offline'}
         </h1>

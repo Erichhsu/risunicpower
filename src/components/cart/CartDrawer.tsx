@@ -64,11 +64,11 @@ export default function CartDrawer() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <Link href={`/${locale}/products/${item.categorySlug}/${item.slug}`}
-                        className="font-medium text-[1.4rem] text-[#1a2332] hover:text-[#c44a2b] transition-colors line-clamp-1"
+                        className="font-medium text-[1.4rem] text-[#1a2332] hover:text-[#F7D142] transition-colors line-clamp-1"
                       >
                         {item.name}
                       </Link>
-                      <p className="text-[1.4rem] font-bold text-[#c44a2b] mt-1">{formatPrice(item.price, locale)}</p>
+                      <p className="text-[1.4rem] font-bold text-[#F7D142] mt-1">{formatPrice(item.price, locale)}</p>
                       <div className="flex items-center gap-2 mt-2">
                         <button onClick={() => updateQuantity(item.slug, item.quantity - 1)}
                           className="p-1 rounded-md bg-white border border-[#e2e8ef] hover:bg-[#f7f8fa]"
@@ -91,14 +91,14 @@ export default function CartDrawer() {
               <div className="border-t border-[#e2e8ef] px-6 py-4 space-y-3">
                 <div className="flex justify-between text-[1.6rem] font-bold">
                   <span>{lbl(locale, 'total')}</span>
-                  <span className="text-[#c44a2b]">{formatPrice(totalPrice(), locale)}</span>
+                  <span className="text-[#F7D142]">{formatPrice(totalPrice(), locale)}</span>
                 </div>
                 <Link href={`/${locale}/cart/checkout`}
-                  className="block w-full py-3 rounded-full bg-[#c44a2b] text-white text-center font-semibold text-[1.4rem] hover:bg-[#9a3a1e] transition-all shadow-lg shadow-[#c44a2b]/20"
+                  className="block w-full py-3 rounded-full bg-[#F7D142] text-white text-center font-semibold text-[1.4rem] hover:bg-[#9a3a1e] transition-all shadow-lg shadow-[#F7D142]/20"
                   onClick={closeCart}
                 >{lbl(locale, 'checkout')}</Link>
                 <Link href={`/${locale}/contact?type=wholesale`}
-                  className="flex items-center justify-center gap-2 w-full py-3 rounded-full border-2 border-[#c44a2b] text-[#c44a2b] font-semibold text-[1.4rem] hover:bg-[#c44a2b] hover:text-white transition-colors"
+                  className="flex items-center justify-center gap-2 w-full py-3 rounded-full border-2 border-[#F7D142] text-[#F7D142] font-semibold text-[1.4rem] hover:bg-[#F7D142] hover:text-white transition-colors"
                   onClick={closeCart}
                 >
                   <Send size={16} /> {lbl(locale, 'inquiry')}

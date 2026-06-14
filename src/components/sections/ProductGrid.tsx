@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
 import { ArrowRight } from 'lucide-react'
@@ -8,6 +7,7 @@ import { ArrowRight } from 'lucide-react'
 interface CategoryData {
   slug: string
   icon: string | null
+  image: string | null
   name: string
   subtitle: string | null
   count: number
@@ -18,42 +18,49 @@ export default function ProductGrid({ categories }: { categories: CategoryData[]
   const t = useTranslations('Home')
 
   return (
-    <section className="py-[clamp(6rem,10vw,14rem)] bg-[#f7f8fa]">
+    <section className="py-[clamp(6rem,10vw,14rem)] bg-[#2D3947]">
       <div className="max-w-[1440px] mx-auto px-[clamp(2rem,5vw,8rem)]">
         <div className="text-center mb-16">
-          <h2 className="text-[clamp(2.8rem,4vw,4.8rem)] font-bold text-[#0f2a44] mb-4">
+          <p className="section-subtitle !text-[#F7D142]">
+            {t('productGrid.label')}
+          </p>
+          <h2 className="section-title !text-white !text-[clamp(2.4rem,4vw,3.6rem)] mb-4">
             {t('productGrid.title')}
           </h2>
-          <div className="divider-washi" />
-          <p className="text-[1.6rem] text-[#6b7a8f] max-w-2xl mx-auto">
+          <p className="section-desc !text-white/60 !text-[clamp(1.2rem,2vw,1.5rem)] max-w-2xl mx-auto">
             {t('productGrid.subtitle')}
           </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((cat, i) => (
-            <motion.div key={cat.slug}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05, duration: 0.5 }}
-            >
+            <div key={cat.slug}>
               <Link href={`/${locale}/products/${cat.slug}`}
-                className="hex-card block p-8 bg-white rounded-2xl border border-[#e2e8ef] hover:border-[#c44a2b]/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+                className="hex-card block bg-white rounded-2xl border border-[#e2e8ef] hover:border-[#F7D142]/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
               >
-                <span className="text-[3.6rem] mb-4 block">{cat.icon || '📦'}</span>
-                <h3 className="font-brand text-[2rem] font-bold text-[#0f2a44] mb-1.5 group-hover:text-[#c44a2b] transition-colors">
-                  {cat.name}
-                </h3>
-                {cat.subtitle && (
-                  <p className="text-[1.3rem] text-[#6b7a8f] mb-4 tracking-wide uppercase">{cat.subtitle}</p>
-                )}
-                <p className="text-[1.2rem] text-[#6b7a8f] mb-6">{cat.count} {t('productGrid.items')}</p>
-                <span className="inline-flex items-center gap-1.5 text-[1.3rem] font-medium text-[#c44a2b] group-hover:gap-3 transition-all">
-                  {t('productGrid.viewAll')} <ArrowRight size={14} />
-                </span>
+                {/* Product image — 80% of card width */}
+                <div className="w-[80%] mx-auto mt-8 aspect-[4/3] bg-gradient-to-br from-[#f7f8fa] to-[#e2e8ef] rounded-xl flex items-center justify-center overflow-hidden">
+                  {cat.image ? (
+                    <img src={cat.image} alt={cat.name} className="w-full h-full object-contain p-4" />
+                  ) : (
+                    <span className="text-[3.6rem] opacity-30">{cat.icon || '📦'}</span>
+                  )}
+                </div>
+                {/* Card text */}
+                <div className="p-6 pt-5">
+                  <h3 className="font-brand text-[2rem] font-bold text-[#0f2a44] mb-1.5 group-hover:text-[#F7D142] transition-colors">
+                    {cat.name}
+                  </h3>
+                  {cat.subtitle && (
+                    <p className="text-[1.3rem] text-[#6b7a8f] mb-4 tracking-wide uppercase">{cat.subtitle}</p>
+                  )}
+                  <p className="text-[1.2rem] text-[#6b7a8f] mb-6">{cat.count} {t('productGrid.items')}</p>
+                  <span className="inline-flex items-center gap-1.5 text-[1.3rem] font-medium text-[#F7D142] group-hover:gap-3 transition-all">
+                    {t('productGrid.viewAll')} <ArrowRight size={14} />
+                  </span>
+                </div>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

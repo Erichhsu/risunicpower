@@ -37,16 +37,16 @@ export default async function BlogListPage({ params }: { params: Promise<{ local
           <div className="grid md:grid-cols-2 gap-8">
             {posts.map(p => (
               <Link key={p.slug} href={`/${l}/blog/${p.slug}`}
-                className="group rounded-2xl border border-gray-200 p-8 hover:border-[#c44a2b]/30 hover:shadow-lg transition-all"
+                className="group rounded-2xl border border-gray-200 p-8 hover:border-[#F7D142]/30 hover:shadow-lg transition-all"
               >
-                <div className="flex items-center gap-2 text-[1.2rem] text-[#c44a2b] mb-4">
+                <div className="flex items-center gap-2 text-[1.2rem] text-[#F7D142] mb-4">
                   <Calendar size={14} />
                   <span>{new Date(p.publishDate).toLocaleDateString(l === 'zh' ? 'zh-CN' : 'en-US')}</span>
-                  <span className="rounded-full bg-[#c44a2b]/10 px-2 py-0.5 text-[1.1rem]">{p.category}</span>
+                  <span className="rounded-full bg-[#F7D142]/10 px-2 py-0.5 text-[1.1rem]">{p.category}</span>
                 </div>
-                <h2 className="text-[2rem] font-bold text-[#0f2a44] mb-3 group-hover:text-[#c44a2b] transition-colors">{p.title}</h2>
+                <h2 className="text-[2rem] font-bold text-[#0f2a44] mb-3 group-hover:text-[#F7D142] transition-colors">{p.title}</h2>
                 <p className="text-[1.3rem] leading-relaxed text-[#6b7a8f] mb-4">{p.excerpt}</p>
-                <span className="inline-flex items-center gap-1 text-[1.3rem] font-semibold text-[#c44a2b] group-hover:gap-2 transition-all">
+                <span className="inline-flex items-center gap-1 text-[1.3rem] font-semibold text-[#F7D142] group-hover:gap-2 transition-all">
                   {l === 'zh' ? '阅读更多' : l === 'ja' ? '続きを読む' : 'Read More'} <ArrowRight size={14} />
                 </span>
               </Link>

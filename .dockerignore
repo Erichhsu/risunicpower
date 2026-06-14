@@ -1,0 +1,47 @@
+# 依赖
+node_modules
+
+# 构建产物（Docker 内会重新 build）
+.next
+.next/
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# 环境变量（通过 docker-compose 注入，不打入镜像）
+.env
+.env.*
+!.env.example
+
+# 开发文件
+*.md
+!README.md
+test-results
+playwright-report
+_ai_test.txt
+_check.mjs
+_find_issues.py
+build_result.txt
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# 操作系统
+.DS_Store
+Thumbs.db
+
+# SSL 证书（运行时挂载）
+ssl/
+
+# 备份
+backups/
+
+# 临时文件
+*.log
+tmp/
+temp/

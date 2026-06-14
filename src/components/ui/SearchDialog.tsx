@@ -104,7 +104,7 @@ export default function SearchDialog({ locale }: { locale?: string }) {
                 placeholder={lbl(l, 'placeholder')}
                 className="flex-1 text-[1.6rem] outline-none bg-transparent"
               />
-              {loading && <Loader2 size={18} className="animate-spin text-[#c44a2b]" />}
+              {loading && <Loader2 size={18} className="animate-spin text-[#F7D142]" />}
               <button onClick={close} className="p-1 hover:bg-gray-100 rounded-full"><X size={18} /></button>
             </div>
 
@@ -122,12 +122,12 @@ export default function SearchDialog({ locale }: { locale?: string }) {
                   ref={el => { resultRefs.current[i] = el }}
                   className={`flex items-center gap-4 px-5 py-4 transition-colors group ${selectedIdx === i ? 'bg-[#e8edf5]' : 'hover:bg-[#f8f9fb]'}`}
                 >
-                  <Package size={18} className="text-[#c44a2b] shrink-0" />
+                  <Package size={18} className="text-[#F7D142] shrink-0" />
                   <div className="flex-1 min-w-0">
                     <div className="text-[1.4rem] font-medium text-[#0f2a44] truncate">{r.name}</div>
                     <div className="text-[1.2rem] text-gray-400">{r.categoryName}</div>
                   </div>
-                  <ArrowRight size={16} className="text-gray-300 group-hover:text-[#c44a2b] transition-colors shrink-0" />
+                  <ArrowRight size={16} className="text-gray-300 group-hover:text-[#F7D142] transition-colors shrink-0" />
                 </Link>
               ))}
               {results.length === 0 && !query.trim() && (

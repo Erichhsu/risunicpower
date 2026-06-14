@@ -18,7 +18,7 @@ function orderConfirmationEmail(data: {
 
   const totalFormatted = (data.total / 100).toFixed(2)
   return `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;">
-  <h2 style="color:#c44a2b;">&#x2705; Order Confirmed</h2>
+  <h2 style="color:#F7D142;">&#x2705; Order Confirmed</h2>
   <p>Thank you for your order, ${esc(data.name)}!</p>
   <table style="width:100%;border-collapse:collapse;margin-top:16px;">
     <tr style="background:#f7f8fa;"><th style="padding:8px;border:1px solid #e2e8ef;text-align:left;">Item</th><th style="padding:8px;border:1px solid #e2e8ef;">Qty</th><th style="padding:8px;border:1px solid #e2e8ef;text-align:right;">Total</th></tr>

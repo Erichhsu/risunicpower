@@ -41,7 +41,7 @@ export default function CartClient({ locale }: { locale: string }) {
             <ShoppingCart size={64} className="mx-auto text-[#e2e8ef] mb-6" />
             <p className="text-[1.8rem] text-[#6b7a8f] mb-6">{lbl(locale, 'empty')}</p>
             <Link href={`/${locale}/products`}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#c44a2b] text-white font-semibold text-[1.4rem] hover:bg-[#9a3a1e] transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#F7D142] text-white font-semibold text-[1.4rem] hover:bg-[#9a3a1e] transition-all"
             >
               <ArrowLeft size={16} /> {lbl(locale, 'browse')}
             </Link>
@@ -56,11 +56,11 @@ export default function CartClient({ locale }: { locale: string }) {
                   </div>
                   <div className="flex-1 min-w-0">
                     <Link href={`/${locale}/products/${item.categorySlug}/${item.slug}`}
-                      className="font-medium text-[1.6rem] text-[#1a2332] hover:text-[#c44a2b] transition-colors line-clamp-1"
+                      className="font-medium text-[1.6rem] text-[#1a2332] hover:text-[#F7D142] transition-colors line-clamp-1"
                     >
                       {item.name}
                     </Link>
-                    <p className="text-[1.6rem] font-bold text-[#c44a2b] mt-2">{formatPrice(item.price, locale)}</p>
+                    <p className="text-[1.6rem] font-bold text-[#F7D142] mt-2">{formatPrice(item.price, locale)}</p>
                     <div className="flex items-center gap-3 mt-3">
                       <div className="flex items-center gap-2 bg-[#f7f8fa] rounded-xl p-1">
                         <button onClick={() => updateQuantity(item.slug, item.quantity - 1)}
@@ -90,17 +90,17 @@ export default function CartClient({ locale }: { locale: string }) {
                 <h3 className="font-bold text-[1.8rem] text-[#0f2a44]">{lbl(locale, 'total')} ({totalItems()} {lbl(locale, 'quantity').toLowerCase()})</h3>
                 <div className="flex justify-between items-baseline">
                   <span className="text-[1.4rem] text-[#6b7a8f]">{lbl(locale, 'subtotal')}</span>
-                  <span className="text-[2.4rem] font-bold text-[#c44a2b]">{formatPrice(totalPrice(), locale)}</span>
+                  <span className="text-[2.4rem] font-bold text-[#F7D142]">{formatPrice(totalPrice(), locale)}</span>
                 </div>
                 <div className="divider-washi my-2" />
                 <p className="text-[1.2rem] text-[#6b7a8f]">{lbl(locale, 'shipping')}</p>
                 <Link href={`/${locale}/contact?type=wholesale`}
-                  className="flex items-center justify-center gap-2 w-full py-4 rounded-full border-2 border-[#c44a2b] text-[#c44a2b] font-semibold text-[1.4rem] hover:bg-[#c44a2b] hover:text-white transition-colors"
+                  className="flex items-center justify-center gap-2 w-full py-4 rounded-full border-2 border-[#F7D142] text-[#F7D142] font-semibold text-[1.4rem] hover:bg-[#F7D142] hover:text-white transition-colors"
                 >
                   <span>{lbl(locale, 'inquiry')}</span><ArrowRight size={16} />
                 </Link>
                 <Link href={`/${locale}/products`}
-                  className="block w-full text-center text-[1.3rem] text-[#6b7a8f] hover:text-[#c44a2b] transition-colors pt-2"
+                  className="block w-full text-center text-[1.3rem] text-[#6b7a8f] hover:text-[#F7D142] transition-colors pt-2"
                 >
                   {lbl(locale, 'continue')}
                 </Link>

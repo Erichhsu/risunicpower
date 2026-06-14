@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { Building2, Home, Sailboat, TowerControl, Sun, Factory } from 'lucide-react'
 import Link from 'next/link'
 
@@ -21,39 +20,32 @@ export default function Solutions({ locale }: { locale?: string }) {
     : { title: 'Industry Solutions', desc: 'Tailored power solutions across 6 key industries', cta: 'Learn More' }
 
   return (
-    <section className="bg-[#f8f9fb] py-20">
+    <section className="py-20 bg-[#0073AA]">
       <div className="mx-auto max-w-[1200px] px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
           className="text-center mb-14"
         >
-          <h2 className="text-[2.8rem] font-bold text-[#0f2a44] mb-2">{t.title}</h2>
-          <p className="text-[1.3rem] text-[#6b7a8f]">{t.desc}</p>
-        </motion.div>
+          <h2 className="section-title !text-white">{t.title}</h2>
+          <p className="section-subtitle !text-white/80">{t.desc}</p>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {solutions.map((s, i) => {
             const data = locale === 'zh' ? s.zh : s.en
             return (
-              <motion.div
+              <div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-                className="group rounded-2xl bg-white p-8 border border-gray-200 hover:border-[#c44a2b]/30 hover:shadow-lg transition-all"
+                className="group rounded-2xl bg-white p-8 border border-gray-200 hover:border-[#F7D142]/30 hover:shadow-lg transition-all"
               >
-                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-[#0f2a44]/5 text-[#c44a2b] group-hover:bg-[#c44a2b] group-hover:text-white transition-all">
+                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-[#0f2a44]/5 text-[#F7D142] group-hover:bg-[#F7D142] group-hover:text-white transition-all">
                   {s.icon}
                 </div>
                 <h3 className="text-[1.8rem] font-bold text-[#0f2a44] mb-2">{data.title}</h3>
                 <p className="text-[1.3rem] leading-relaxed text-[#6b7a8f] mb-4">{data.desc}</p>
-                <Link href={`/${locale || 'en'}/products`} className="text-[1.3rem] font-semibold text-[#c44a2b] hover:underline">
+                <Link href={`/${locale || 'en'}/products`} className="text-[1.3rem] font-semibold text-[#F7D142] hover:underline">
                   {t.cta} →
                 </Link>
-              </motion.div>
+              </div>
             )
           })}
         </div>

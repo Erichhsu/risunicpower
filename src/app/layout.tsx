@@ -1,4 +1,8 @@
-// src/app/layout.tsx — Root layout (just html wrapper, i18n lives in [locale])
+// src/app/layout.tsx — Root layout (required by Next.js 16: must export <html> and <body>)
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  )
 }

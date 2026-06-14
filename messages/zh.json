@@ -3,7 +3,7 @@
     "hero": {
       "tag": "工业电源解决方案",
       "title": "为创新 \n注入能量",
-      "subtitle": "从POE电源到光伏逆变器 — 18年以上研发经验，服务全球600+客户，产品远销50余国。",
+      "subtitle": "从POE电源到光伏逆变器 — 12年以上研发经验，服务全球600+客户，产品远销50余国。",
       "ctaPrimary": "查看产品",
       "ctaSecondary": "获取报价"
     },
@@ -11,11 +11,14 @@
       "title": "产品中心",
       "subtitle": "从紧凑型POE注入器到工业级UPS系统 — 每一款产品都经过严格可靠性验证。",
       "viewAll": "查看全部",
-      "items": "items"
+      "items": "items",
+      "label": "产品系列"
     },
     "stats": {
       "title": "信赖的数字"
-    }
+    },
+    "viewAll": "查看全部",
+    "readMore": "了解更多"
   },
   "Product": {
     "specs": "规格参数",
@@ -86,7 +89,8 @@
     "about": "关于我们",
     "blog": "博客",
     "contact": "联系",
-    "search": "搜索"
+    "search": "搜索",
+    "caseStudies": "成功案例"
   },
   "Footer": {
     "products": "产品中心",
@@ -98,10 +102,29 @@
     "rights": "保留所有权利。",
     "newsletter": "订阅我们的电子报",
     "subscribe": "订阅",
-    "brandDescription": "2008年成立的工业电源制造商。CE、FCC、UL认证。"
+    "brandDescription": "2014年成立的工业电源制造商。CE、FCC、UL认证。",
+    "connectWithUs": "关注我们"
   },
   "NotFound": {
     "title": "页面未找到",
     "desc": "您查找的页面可能已被移动或不存在。"
+  },
+  "Reviews": {
+    "title": "客户评价",
+    "loading": "加载评价中...",
+    "noReviews": "暂无评价",
+    "beFirst": "成为第一个分享产品体验的人！",
+    "writeReview": "写评价",
+    "rating": "评分",
+    "yourReview": "您的评价",
+    "reviewPlaceholder": "分享您对这个产品的使用体验...",
+    "company": "公司名称",
+    "yourName": "您的姓名",
+    "country": "国家",
+    "submit": "提交评价",
+    "submitting": "提交中...",
+    "success": "感谢您的评价！已成功提交。",
+    "error": "提交失败，请稍后重试。",
+    "count": "{n} 条评价"
   }
 }

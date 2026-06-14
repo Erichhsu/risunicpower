@@ -1,15 +1,12 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import { prisma } from '@/lib/db/prisma'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { ArrowLeft, Check } from 'lucide-react'
+import { ArrowLeft, Check, Star } from 'lucide-react'
 import AddToCartButton from '@/components/cart/AddToCartButton'
-
-export async function generateStaticParams() {
-  const products = await prisma.product.findMany({ where: { published: true }, select: { slug: true, categorySlug: true, priceCents: true } })
-  const locales = ['en', 'zh', 'ja', 'es', 'de', 'fr', 'pt', 'ar', 'ru']
-  return products.flatMap(p => locales.map(locale => ({ locale, category: p.categorySlug, slug: p.slug })))
-}
+import StarRating from '@/components/ui/StarRating'
+import CurrencyConverter from '@/components/ui/CurrencyConverter'
+import ProductReviews from '@/components/reviews/ProductReviews'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; category: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params
@@ -29,9 +26,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 const localeLabels: Record<string, Record<string, string>> = {
-  en: { bp: 'Products', kf: 'Key Features', ts: 'Technical Specifications', cert: 'Certifications', rel: 'Related Products', rq: 'Request Quote', back: 'Back to {name}', atc: 'Add to Cart' },
-  zh: { bp: '\u4EA7\u54C1\u4E2D\u5FC3', kf: '\u5173\u952E\u7279\u6027', ts: '\u6280\u672F\u89C4\u683C', cert: '\u8BA4\u8BC1\u8D44\u8D28', rel: '\u76F8\u5173\u4EA7\u54C1', rq: '\u83B7\u53D6\u62A5\u4EF7', back: '\u8FD4\u56DE {name}', atc: '\u52A0\u5165\u8D2D\u7269\u8F66' },
-  ja: { bp: '\u88FD\u54C1\u4E00\u89A7', kf: '\u4E3B\u306A\u7279\u9577', ts: '\u6280\u8853\u4ED5\u69D8', cert: '\u8A8D\u8A3C', rel: '\u95A2\u9023\u88FD\u54C1', rq: '\u898B\u7A4D\u3082\u308A\u4F9D\u983C', back: '{name} \u306B\u623B\u308B', atc: '\u30AB\u30FC\u30C8\u306B\u5165\u308C\u308B' },
+  en: { bp: 'Products', kf: 'Key Features', ts: 'Technical Specifications', cert: 'Certifications', rel: 'Related Products', rq: 'Inquire Now', moem: 'MOQ · OEM · ODM', back: 'Back to {name}', atc: 'Add to Cart', sku: 'SKU', rev: 'Customer Reviews', price: 'Price' },
+  zh: { bp: '产品中心', kf: '关键特性', ts: '技术规格', cert: '认证资质', rel: '相关产品', rq: '询价咨询', moem: '起订量 · OEM · 定制', back: '返回 {name}', atc: '加入购物车', sku: 'SKU', rev: '客户评价', price: '价格' },
+  ja: { bp: '製品一覧', kf: '主な特長', ts: '技術仕様', cert: '認証', rel: '関連製品', rq: 'お問い合わせ', moem: 'MOQ · OEM · カスタム', back: '{name} に戻る', atc: 'カートに入れる', sku: 'SKU', rev: 'レビュー', price: '価格' },
 }
 function lbl(locale: string, key: string, vars?: Record<string, string>): string {
   const l = localeLabels[locale] || localeLabels.en
@@ -49,6 +46,8 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
       translations: { where: { locale } },
       specs: { where: { locale }, orderBy: { sortOrder: 'asc' } },
       certifications: true,
+      images: true,
+      reviews: { orderBy: { createdAt: 'desc' } },
       category: { include: { translations: { where: { locale } } } },
     },
   })
@@ -57,11 +56,17 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
   const pt = product.translations[0]
   const catT = product.category.translations[0]
+  const primaryImage = product.images?.[0]
+  const imageUrl = primaryImage?.url || '/images/products/' + slug + '.png'
   const features: string[] = pt?.features ? JSON.parse(pt.features) : []
 
   const relatedProducts = await prisma.product.findMany({
     where: { categorySlug: catSlug, slug: { not: slug }, published: true },
-    include: { translations: { where: { locale } } },
+    include: {
+      translations: { where: { locale } },
+      images: { take: 1 },
+      category: { include: { translations: { where: { locale } } } },
+    },
     take: 3,
     orderBy: { sortOrder: 'asc' },
   })
@@ -70,25 +75,52 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     <main className="pt-32 pb-20 min-h-screen">
       <div className="max-w-[1440px] mx-auto px-[clamp(2rem,5vw,8rem)]">
         <nav className="flex flex-wrap items-center gap-2 text-[1.3rem] text-[#6b7a8f] mb-8">
-          <Link href={`/${locale}/products`} className="hover:text-[#c44a2b] transition-colors">{lbl(locale, 'bp')}</Link>
+          <Link href={`/${locale}/products`} className="hover:text-[#F7D142] transition-colors">{lbl(locale, 'bp')}</Link>
           <span>/</span>
-          <Link href={`/${locale}/products/${catSlug}`} className="hover:text-[#c44a2b] transition-colors">{catT?.name || catSlug}</Link>
+          <Link href={`/${locale}/products/${catSlug}`} className="hover:text-[#F7D142] transition-colors">{catT?.name || catSlug}</Link>
           <span>/</span>
           <span className="text-[#1a2332] font-medium truncate max-w-[200px]">{pt?.name || slug}</span>
         </nav>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
-          <div className="aspect-square bg-gradient-to-br from-[#f7f8fa] to-[#e2e8ef] rounded-2xl flex items-center justify-center border border-[#e2e8ef]">
-            <span className="text-[8rem] opacity-20">&#x1F4F7;</span>
+          <div className="aspect-square bg-gradient-to-br from-[#f7f8fa] to-[#e2e8ef] rounded-2xl flex items-center justify-center border border-[#e2e8ef] overflow-hidden">
+            {primaryImage ? (
+              <img src={imageUrl} alt={pt?.name || slug} className="w-full h-full object-contain p-8" />
+            ) : (
+              <span className="text-[8rem] opacity-20">&#x1F4F7;</span>
+            )}
           </div>
 
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-[2.4rem]">{product.category.icon || '&#x1F4E6;'}</span>
-              <span className="text-[1.2rem] uppercase tracking-wider text-[#c44a2b] font-medium">{catT?.name || catSlug}</span>
+              <span className="text-[2.4rem]">{product.category.icon || '📦'}</span>
+              <span className="text-[1.2rem] uppercase tracking-wider text-[#F7D142] font-medium">{catT?.name || catSlug}</span>
             </div>
             <h1 className="font-brand text-[clamp(2.4rem,3.5vw,4rem)] font-bold leading-[1.1] text-[#0f2a44] mb-3">{pt?.name || slug}</h1>
-            {pt?.subtitle && <p className="text-[1.6rem] text-[#6b7a8f] mb-6">{pt.subtitle}</p>}
+            {pt?.subtitle && <p className="text-[1.6rem] text-[#6b7a8f] mb-4">{pt.subtitle}</p>}
+
+            {/* SKU + Rating row */}
+            <div className="flex flex-wrap items-center gap-4 mb-6">
+              {product.sku && (
+                <span className="text-[1.2rem] text-[#6b7a8f] bg-[#f7f8fa] px-3 py-1 rounded-lg font-mono">
+                  {lbl(locale, 'sku')}: {product.sku}
+                </span>
+              )}
+              {product.reviews.length > 0 && (
+                <StarRating
+                  rating={product.reviews.reduce((s, r) => s + r.rating, 0) / product.reviews.length}
+                  count={product.reviews.length}
+                  showCount
+                />
+              )}
+            </div>
+
+            {/* Price + Currency Converter */}
+            <div className="mb-8 p-5 bg-[#F5F8FC] rounded-2xl border border-[#e2e8ef]">
+              <p className="text-[1.1rem] uppercase tracking-wider text-[#6b7a8f] mb-2">{lbl(locale, 'price')}</p>
+              <CurrencyConverter priceCents={product.priceCents} />
+            </div>
+
             {pt?.description && <p className="text-[1.5rem] text-[#1a2332] leading-[1.8] mb-8">{pt.description}</p>}
 
             {features.length > 0 && (
@@ -107,21 +139,24 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
             <div className="flex flex-wrap gap-4 mb-8">
               <AddToCartButton
-                product={{ slug, categorySlug: catSlug, name: pt?.name || slug, price: product.priceCents, image: '/images/products/' + slug + '.jpg' }}
+                product={{ slug, categorySlug: catSlug, name: pt?.name || slug, price: product.priceCents, image: imageUrl }}
                 label={lbl(locale, 'atc')}
               />
-              <Link href={`/${locale}/contact?product=${slug}`}
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 border-[#0f2a44] text-[#0f2a44] font-semibold text-[1.4rem] hover:bg-[#0f2a44] hover:text-white transition-all"
-              >
-                {lbl(locale, 'rq')}
-              </Link>
+              <div>
+                <Link href={`/${locale}/contact?product=${slug}`}
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 border-[#0E4071] text-[#0E4071] font-semibold text-[1.4rem] hover:bg-[#0E4071] hover:text-white transition-all"
+                >
+                  {lbl(locale, 'rq')}
+                </Link>
+                <p className="text-[1.1rem] text-[#6b7a8f] mt-1.5 ml-1">{lbl(locale, 'moem')}</p>
+              </div>
             </div>
 
             {product.certifications.length > 0 && (
               <div className="flex flex-wrap items-center gap-2 mb-8">
                 <span className="text-[1.2rem] text-[#6b7a8f] mr-2">{lbl(locale, 'cert')}:</span>
                 {product.certifications.map(c => (
-                  <span key={c.name} className="px-3 py-1 rounded-full bg-[#fdf8f5] text-[#c44a2b] text-[1.1rem] font-medium border border-[#c44a2b]/10">{c.name}</span>
+                  <span key={c.name} className="px-3 py-1 rounded-full bg-[#fdf8f5] text-[#F7D142] text-[1.1rem] font-medium border border-[#F7D142]/10">{c.name}</span>
                 ))}
               </div>
             )}
@@ -152,12 +187,22 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             <div className="grid md:grid-cols-3 gap-6">
               {relatedProducts.map(rp => {
                 const rt = rp.translations[0]
+                const rpCatT = rp.category.translations[0]
+                const rpImg = rp.images?.[0]?.url
                 return (
-                  <Link key={rp.slug} href={`/${locale}/products/${catSlug}/${rp.slug}`}
-                    className="block p-6 bg-white rounded-2xl border border-[#e2e8ef] hover:shadow-lg transition-all group"
+                  <Link key={rp.slug} href={`/${locale}/products/${rp.categorySlug}/${rp.slug}`}
+                    className="block bg-white rounded-2xl border border-[#e2e8ef] overflow-hidden hover:shadow-lg transition-all group"
                   >
-                    <h3 className="font-brand text-[1.6rem] font-bold text-[#0f2a44] group-hover:text-[#c44a2b] transition-colors">{rt?.name || rp.slug}</h3>
-                    {rt?.subtitle && <p className="text-[1.2rem] text-[#6b7a8f] mt-1">{rt.subtitle}</p>}
+                    {rpImg && (
+                      <div className="aspect-[4/3] bg-gradient-to-br from-[#f7f8fa] to-[#e2e8ef] flex items-center justify-center overflow-hidden p-3">
+                        <img src={rpImg} alt={rt?.name || rp.slug} className="w-full h-full object-contain" />
+                      </div>
+                    )}
+                    <div className="p-4">
+                      <span className="text-[1rem] uppercase tracking-wider text-[#F7D142] font-medium">{rpCatT?.name || rp.categorySlug}</span>
+                      <h3 className="font-brand text-[1.5rem] font-bold text-[#0f2a44] mt-1 group-hover:text-[#F7D142] transition-colors">{rt?.name || rp.slug}</h3>
+                      {rt?.subtitle && <p className="text-[1.2rem] text-[#6b7a8f] mt-1">{rt.subtitle}</p>}
+                    </div>
                   </Link>
                 )
               })}
@@ -165,9 +210,13 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           </section>
         )}
 
+        <section className="mb-20 max-w-3xl">
+          <ProductReviews productId={product.id} locale={locale} />
+        </section>
+
         <div className="mt-16">
           <Link href={`/${locale}/products/${catSlug}`}
-            className="inline-flex items-center gap-2 text-[1.4rem] font-medium text-[#6b7a8f] hover:text-[#c44a2b] transition-colors"
+            className="inline-flex items-center gap-2 text-[1.4rem] font-medium text-[#6b7a8f] hover:text-[#F7D142] transition-colors"
           >
             <ArrowLeft size={16} /> {lbl(locale, 'back', { name: catT?.name || catSlug })}
           </Link>

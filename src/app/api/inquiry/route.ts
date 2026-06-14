@@ -11,7 +11,7 @@ function createInquiryEmail(d: {
   const h = (s: string) => esc(s || '')
   return `
 <div style="font-family: Arial, sans-serif; max-width:600px; margin:0 auto;">
-  <h2 style="color:#c44a2b;">🔔 New Inquiry Received</h2>
+  <h2 style="color:#F7D142;">🔔 New Inquiry Received</h2>
   <table style="width:100%; border-collapse:collapse;">
     ${d.productName ? `<tr><td style="padding:8px;border:1px solid #e2e8ef;font-weight:bold;">Product</td><td style="padding:8px;border:1px solid #e2e8ef;">${h(d.productName)}</td></tr>` : ''}
     <tr><td style="padding:8px;border:1px solid #e2e8ef;font-weight:bold;">Company</td><td style="padding:8px;border:1px solid #e2e8ef;">${h(d.company)}</td></tr>

@@ -60,7 +60,7 @@ export default function CheckoutClient({ locale }: { locale: string }) {
           <ShoppingCart size={64} className="mx-auto text-[#e2e8ef] mb-6" />
           <h1 className="text-[2.4rem] font-bold text-[#0f2a44] mb-4">{lbl(locale, 'empty')}</h1>
           <Link href={`/${locale}/products`}
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#c44a2b] text-white font-semibold text-[1.4rem] hover:bg-[#9a3a1e] transition-all"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#F7D142] text-white font-semibold text-[1.4rem] hover:bg-[#9a3a1e] transition-all"
           ><ArrowLeft size={16} /> Cart</Link>
         </div>
       </main>
@@ -103,7 +103,7 @@ export default function CheckoutClient({ locale }: { locale: string }) {
               <div className="divider-washi my-2" />
               <div className="flex justify-between items-baseline">
                 <span className="text-[1.4rem] text-[#6b7a8f]">{lbl(locale, 'total')}</span>
-                <span className="text-[2.4rem] font-bold text-[#c44a2b]">{formatPrice(totalPrice())}</span>
+                <span className="text-[2.4rem] font-bold text-[#F7D142]">{formatPrice(totalPrice())}</span>
               </div>
 
               {error && (
@@ -111,14 +111,14 @@ export default function CheckoutClient({ locale }: { locale: string }) {
               )}
 
               <button onClick={handleCheckout} disabled={loading}
-                className="w-full flex items-center justify-center gap-2 py-4 rounded-full bg-[#c44a2b] text-white font-semibold text-[1.5rem] hover:bg-[#9a3a1e] transition-colors disabled:opacity-60 shadow-lg shadow-[#c44a2b]/20"
+                className="w-full flex items-center justify-center gap-2 py-4 rounded-full bg-[#F7D142] text-white font-semibold text-[1.5rem] hover:bg-[#9a3a1e] transition-colors disabled:opacity-60 shadow-lg shadow-[#F7D142]/20"
               >
                 {loading ? <Loader2 size={20} className="animate-spin" /> : <CreditCard size={18} />}
                 {loading ? lbl(locale, 'processing') : lbl(locale, 'pay')}
               </button>
 
               <Link href={`/${locale}/cart`}
-                className="block w-full text-center text-[1.3rem] text-[#6b7a8f] hover:text-[#c44a2b] transition-colors"
+                className="block w-full text-center text-[1.3rem] text-[#6b7a8f] hover:text-[#F7D142] transition-colors"
               >
                 <ArrowLeft size={14} className="inline mr-1" /> Back to Cart
               </Link>

@@ -1,0 +1,101 @@
+/* ═════════════════════════════════════════════
+   ThemeStulip Design System
+   Reference: https://themestulip.com/
+   1:1 color palette, typography, spacing
+   ═════════════════════════════════════════════ */
+
+@layer themestulip {
+  :root {
+    --color-primary: #0E4071;
+    --color-primary-light: #2C5D7E;
+    --color-primary-dark: #0A2D52;
+    --color-accent: #F7D142;
+    --color-accent-light: #F9E68B;
+    --color-accent-hover: #D4B838;
+    --color-blue: #0073AA;
+    --color-blue-light: #ECF1F7;
+    --color-blue-light-2: #E5ECF4;
+    --color-dark: #2D3947;
+    --color-dark-teal: #2C5D7E;
+    --color-mint: #F9FFFF;
+    --color-text: #0E4071;
+    --color-text-secondary: #5A6D80;
+    --color-border: #E2E8EF;
+    --color-bg-light: #F5F8FC;
+    --color-footer: #0072A8;
+  }
+
+  /* ── Buttons ── */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    border-radius: 0.5rem;
+    background: #F7D142;
+    color: #0E4071;
+    font-weight: 700;
+    font-size: 1.3rem;
+    transition: background 0.2s;
+  }
+  .btn-primary:hover {
+    background: #D4B838;
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    border-radius: 0.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-weight: 700;
+    font-size: 1.3rem;
+    transition: background 0.2s;
+  }
+  .btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  /* ── Cards ── */
+  .card-ts {
+    background: white;
+    border: 1px solid #E2E8EF;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    transition: all 0.3s;
+  }
+  .card-ts:hover {
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);
+    border-color: rgba(247, 209, 66, 0.3);
+  }
+
+  /* ── Section titles ── */
+  .section-subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #0073AA;
+    margin-bottom: 1rem;
+  }
+  .section-title {
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    font-weight: 800;
+    color: #0E4071;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  .section-desc {
+    font-size: 1.4rem;
+    color: #5A6D80;
+    max-width: 36rem;
+    margin: 0 auto;
+  }
+
+  /* ── Dark section overrides ── */
+  .dark-section .section-subtitle { color: #F7D142; }
+  .dark-section .section-title { color: #FFFFFF; }
+  .dark-section .section-desc { color: rgba(255,255,255,0.7); }
+}

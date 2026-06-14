@@ -4,11 +4,6 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Calendar, ArrowLeft } from 'lucide-react'
 
-export async function generateStaticParams() {
-  const posts = await prisma.blogPost.findMany({ where: { published: true }, select: { slug: true, locale: true } })
-  return posts.map(p => ({ locale: p.locale, slug: p.slug }))
-}
-
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params
   const post = await prisma.blogPost.findFirst({ where: { slug, locale }, select: { title: true, excerpt: true } })
@@ -26,14 +21,14 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
   return (
     <main className="min-h-screen bg-white pt-28 pb-20">
       <article className="mx-auto max-w-[800px] px-6">
-        <Link href={`/${l}/blog`} className="inline-flex items-center gap-1 text-[1.3rem] text-[#c44a2b] hover:underline mb-8">
+        <Link href={`/${l}/blog`} className="inline-flex items-center gap-1 text-[1.3rem] text-[#F7D142] hover:underline mb-8">
           <ArrowLeft size={16} /> {l === 'zh' ? '返回博客' : l === 'ja' ? 'ブログに戻る' : 'Back to Blog'}
         </Link>
 
         <div className="flex items-center gap-3 text-[1.2rem] text-[#6b7a8f] mb-4">
           <Calendar size={14} />
           <span>{new Date(p.publishDate).toLocaleDateString(l === 'zh' ? 'zh-CN' : 'en-US')}</span>
-          <span className="rounded-full bg-[#c44a2b]/10 px-3 py-1 text-[1.1rem] text-[#c44a2b]">{p.category}</span>
+          <span className="rounded-full bg-[#F7D142]/10 px-3 py-1 text-[1.1rem] text-[#F7D142]">{p.category}</span>
         </div>
 
         <h1 className="text-[3.2rem] font-bold text-[#0f2a44] leading-tight mb-6">{p.title}</h1>
