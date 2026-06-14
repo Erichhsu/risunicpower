@@ -5,7 +5,7 @@ import * as path from 'path'
 const prisma = new PrismaClient()
 
 interface CatDef {
-  slug: string; name_en: string; name_zh: string; sub_en: string; sub_zh: string
+  slug: string; name_en: string; name_zh: string; sub_en: string; sub_zh: string; sort_order?: number
 }
 interface SpecDef { l: string; v: string; o: number }
 interface ImgDef { url: string; alt: string; sortOrder: number; isPrimary: boolean }
@@ -100,8 +100,8 @@ async function main() {
   for (const cat of categories) {
     await prisma.productCategory.upsert({
       where: { slug: cat.slug },
-      update: { sortOrder: 0, icon: '', published: true },
-      create: { slug: cat.slug, sortOrder: 0, icon: '', published: true },
+      update: { sortOrder: cat.sort_order ?? 0, icon: '', published: true },
+      create: { slug: cat.slug, sortOrder: cat.sort_order ?? 0, icon: '', published: true },
     })
     for (const [locale, name, subtitle] of [['en', cat.name_en, cat.sub_en], ['zh', cat.name_zh, cat.sub_zh]] as const) {
       await prisma.productCategoryTranslation.upsert({
