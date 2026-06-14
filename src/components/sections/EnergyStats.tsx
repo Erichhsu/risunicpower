@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState, useCallback } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Zap, Globe, Users, Award } from 'lucide-react'
 
 interface StatItem {
@@ -19,42 +19,30 @@ const stats: StatItem[] = [
 
 function useCountUp(target: number, duration: number = 2000) {
   const [count, setCount] = useState(0)
-  const ref = useRef<HTMLDivElement>(null)
   const started = useRef(false)
 
   useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !started.current) {
-          started.current = true
-          const startTime = performance.now()
-          const step = () => {
-            const elapsed = performance.now() - startTime
-            const progress = Math.min(elapsed / duration, 1)
-            // easeOutExpo for a satisfying deceleration
-            const eased = 1 - Math.pow(1 - progress, 3)
-            setCount(Math.floor(eased * target))
-            if (progress < 1) requestAnimationFrame(step)
-            else setCount(target)
-          }
-          requestAnimationFrame(step)
-        }
-      },
-      { threshold: 0.3 }
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
+    if (started.current) return
+    started.current = true
+    const startTime = performance.now()
+    const step = () => {
+      const elapsed = performance.now() - startTime
+      const progress = Math.min(elapsed / duration, 1)
+      const eased = 1 - Math.pow(1 - progress, 3)
+      setCount(Math.floor(eased * target))
+      if (progress < 1) requestAnimationFrame(step)
+      else setCount(target)
+    }
+    requestAnimationFrame(step)
   }, [target, duration])
 
-  return { count, ref }
+  return count
 }
 
 function StatCounter({ value, suffix }: { value: number; suffix: string }) {
-  const { count, ref } = useCountUp(value)
+  const count = useCountUp(value)
   return (
-    <div ref={ref} className="text-[3.6rem] font-bold text-white leading-none mb-2">
+    <div className="text-[3.6rem] font-bold text-white leading-none mb-2">
       {count.toLocaleString()}{suffix}
     </div>
   )
