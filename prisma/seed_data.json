@@ -9,14 +9,6 @@
       "sortOrder": 0
     },
     {
-      "slug": "inverter",
-      "name_en": "Power Inverters",
-      "name_zh": "逆变器整机",
-      "sub_en": "Pure Sine Wave Off-Grid",
-      "sub_zh": "纯正弦波离网逆变器",
-      "sortOrder": 1
-    },
-    {
       "slug": "solar-controller",
       "name_en": "MPPT Solar Controllers",
       "name_zh": "MPPT太阳能控制器",
@@ -65,12 +57,39 @@
       "sortOrder": 7
     },
     {
-      "slug": "poe",
-      "name_en": "POE Power Supplies",
-      "name_zh": "PoE电源适配器",
-      "sub_en": "IEEE 802.3af/at/bt Compliant",
-      "sub_zh": "符合IEEE 802.3af/at/bt标准",
-      "sortOrder": 8
+      "slug": "inverter-ip21",
+      "name_en": "Power Inverters IP21",
+      "name_zh": "逆变器 IP21",
+      "sub_en": "Indoor-rated inverter power supplies",
+      "sub_zh": "室内防护等级逆变电源"
+    },
+    {
+      "slug": "inverter-ip65",
+      "name_en": "Power Inverters IP65",
+      "name_zh": "逆变器 IP65",
+      "sub_en": "Outdoor-rated inverter power supplies",
+      "sub_zh": "户外防护等级逆变电源"
+    },
+    {
+      "slug": "poe-wall-plug",
+      "name_en": "Wall Plug PoE",
+      "name_zh": "墙插PoE电源",
+      "sub_en": "Wall-plug PoE power supplies",
+      "sub_zh": "墙插式PoE电源适配器"
+    },
+    {
+      "slug": "poe-desktop",
+      "name_en": "Desktop PoE",
+      "name_zh": "桌面PoE电源",
+      "sub_en": "Desktop PoE power supplies",
+      "sub_zh": "桌面式PoE电源适配器"
+    },
+    {
+      "slug": "poe-rackmount",
+      "name_en": "Rackmount PoE",
+      "name_zh": "机架式PoE",
+      "sub_en": "Rackmount industrial PoE solutions",
+      "sub_zh": "机架式工业PoE解决方案"
     }
   ],
   "products": [
@@ -6053,10 +6072,10 @@
     },
     {
       "slug": "r0285",
-      "cat": "inverter",
+      "cat": "inverter-ip21",
       "order": 2,
-      "en_name": "R0285 Power Inverter 2400W",
-      "zh_name": "R0285 逆变器 2400W",
+      "en_name": "R0285 Power Inverter 2.4kW IP21 24V",
+      "zh_name": "R0285 逆变器 2.4KW IP21 24V",
       "en_specs": [
         {
           "l": "Model",
@@ -6510,10 +6529,10 @@
     },
     {
       "slug": "r0286",
-      "cat": "inverter",
+      "cat": "inverter-ip21",
       "order": 3,
-      "en_name": "R0286 Power Inverter 2.4kW",
-      "zh_name": "R0286 逆变器 2.4kW",
+      "en_name": "R0286 Power Inverter 2.4kW IP21 48V",
+      "zh_name": "R0286 逆变器 2.4kW IP21 48V",
       "en_specs": [
         {
           "l": "Model",
@@ -6707,10 +6726,10 @@
     },
     {
       "slug": "r0287",
-      "cat": "inverter",
+      "cat": "inverter-ip21",
       "order": 4,
-      "en_name": "R0287 Power Inverter 6.2kW",
-      "zh_name": "R0287 逆变器 6.2kW",
+      "en_name": "R0287 Power Inverter 6.2kW IP21 48V",
+      "zh_name": "R0287 逆变器 6.2kW IP21 48V",
       "en_specs": [
         {
           "l": "Model",
@@ -6904,10 +6923,10 @@
     },
     {
       "slug": "r0319",
-      "cat": "inverter",
+      "cat": "inverter-ip21",
       "order": 5,
-      "en_name": "R0319 Power Inverter",
-      "zh_name": "R0319 逆变器",
+      "en_name": "R0319 Power Inverter IP21 25.6V",
+      "zh_name": "R0319 逆变器 IP21 25.6V",
       "en_specs": [
         {
           "l": "Model",
@@ -7439,10 +7458,10 @@
     },
     {
       "slug": "r0337",
-      "cat": "inverter",
+      "cat": "inverter-ip21",
       "order": 6,
-      "en_name": "R0337 Power Inverter 500W",
-      "zh_name": "R0337 逆变器 500W",
+      "en_name": "R0337 Power Inverter 500W IP21 LIP 3.2V",
+      "zh_name": "R0337 逆变器 500W IP21 LIP 3.2V",
       "en_specs": [
         {
           "l": "Model",
@@ -7966,10 +7985,10 @@
     },
     {
       "slug": "r0355",
-      "cat": "inverter",
+      "cat": "inverter-ip65",
       "order": 7,
-      "en_name": "R0355 Power Inverter 6200W",
-      "zh_name": "R0355 逆变器 6200W",
+      "en_name": "R0355 Power Inverter 6200W IP65 48V",
+      "zh_name": "R0355 逆变器 6200W IP65 48V",
       "en_specs": [
         {
           "l": "Model",
@@ -8451,10 +8470,10 @@
     },
     {
       "slug": "r0403",
-      "cat": "inverter",
+      "cat": "inverter-ip65",
       "order": 8,
-      "en_name": "R0403 Power Inverter 10kW",
-      "zh_name": "R0403 逆变器 10kW",
+      "en_name": "R0403 Power Inverter 10kW IP65 48V",
+      "zh_name": "R0403 逆变器 10kW IP65 48V",
       "en_specs": [
         {
           "l": "Model",
@@ -8950,10 +8969,10 @@
     },
     {
       "slug": "r0404",
-      "cat": "inverter",
+      "cat": "inverter-ip21",
       "order": 9,
-      "en_name": "R0404 Power Inverter 1200W",
-      "zh_name": "R0404 逆变器 1200W",
+      "en_name": "R0404 Power Inverter 1200W IP21 LIP 6.4V×2",
+      "zh_name": "R0404 逆变器 1200W IP21 LIP 6.4V×2",
       "en_specs": [
         {
           "l": "Model",
@@ -11510,10 +11529,10 @@
     },
     {
       "slug": "r0046",
-      "cat": "poe",
+      "cat": "poe-desktop",
       "order": 0,
-      "en_name": "R0046 PoE Power Supply 80W",
-      "zh_name": "R0046 PoE电源 80W",
+      "en_name": "R0046 PoE Power Supply 80W Desktop 56V",
+      "zh_name": "R0046 PoE电源 80W 桌面 56V",
       "en_specs": [
         {
           "l": "型号 (Model)",
@@ -11873,10 +11892,10 @@
     },
     {
       "slug": "r0240",
-      "cat": "poe",
+      "cat": "poe-wall-plug",
       "order": 1,
-      "en_name": "R0240 PoE Power Supply 15.36W",
-      "zh_name": "R0240 PoE电源 15.36W",
+      "en_name": "R0240 PoE Power Supply 15.36W Wall Plug 48V",
+      "zh_name": "R0240 PoE电源 15.36W 墙插 48V",
       "en_specs": [
         {
           "l": "型号 (Model)",
@@ -12296,10 +12315,10 @@
     },
     {
       "slug": "r0255",
-      "cat": "poe",
+      "cat": "poe-rackmount",
       "order": 2,
-      "en_name": "R0255 PoE Power Supply 32.4W",
-      "zh_name": "R0255 PoE电源 32.4W",
+      "en_name": "R0255 PoE Extender 32.4W Rackmount Industrial",
+      "zh_name": "R0255 PoE延伸器 32.4W 机架式 工业级",
       "en_specs": [
         {
           "l": "型号 (Model)",
@@ -12549,10 +12568,10 @@
     },
     {
       "slug": "r0260",
-      "cat": "poe",
+      "cat": "poe-rackmount",
       "order": 3,
-      "en_name": "R0260 PoE Power Supply 100W",
-      "zh_name": "R0260 PoE电源 100W",
+      "en_name": "R0260 PoE Protector 100W Rackmount 24-Port",
+      "zh_name": "R0260 PoE防雷器 100W 机架式 24路",
       "en_specs": [
         {
           "l": "型号 (Model)",
@@ -12802,10 +12821,10 @@
     },
     {
       "slug": "rp015w01",
-      "cat": "poe",
+      "cat": "poe-wall-plug",
       "order": 4,
-      "en_name": "RP015W01 PoE Injector 15W 802.3af",
-      "zh_name": "RP015W01 PoE供电器 15W 802.3af",
+      "en_name": "RP015W01 PoE Injector 15W Wall Plug 48V",
+      "zh_name": "RP015W01 PoE注入器 15W 墙插 48V",
       "en_specs": [
         {
           "l": "型号 (Model)",
@@ -13131,10 +13150,10 @@
     },
     {
       "slug": "rp018",
-      "cat": "poe",
+      "cat": "poe-wall-plug",
       "order": 5,
-      "en_name": "RP018 PoE Switch 12W",
-      "zh_name": "RP018 PoE交换机 12W",
+      "en_name": "RP018 PoE Switch 12W Wall Plug 24V",
+      "zh_name": "RP018 PoE交换机 12W 墙插 24V",
       "en_specs": [
         {
           "l": "型号 (Model)",
@@ -13496,10 +13515,10 @@
     },
     {
       "slug": "rp020",
-      "cat": "poe",
+      "cat": "poe-wall-plug",
       "order": 6,
-      "en_name": "RP020 PoE Injector 12W",
-      "zh_name": "RP020 PoE供电器 12W",
+      "en_name": "RP020 PoE Injector 12W Wall Plug 24V",
+      "zh_name": "RP020 PoE注入器 12W 墙插 24V",
       "en_specs": [
         {
           "l": "型号 (Model)",
@@ -13871,10 +13890,10 @@
     },
     {
       "slug": "rp023",
-      "cat": "poe",
+      "cat": "poe-desktop",
       "order": 7,
-      "en_name": "RP023 PoE Injector 12W",
-      "zh_name": "RP023 PoE供电器 12W",
+      "en_name": "RP023 PoE Injector 12W Desktop 24V",
+      "zh_name": "RP023 PoE注入器 12W 桌面 24V",
       "en_specs": [
         {
           "l": "型号 (Model)",
@@ -14246,10 +14265,10 @@
     },
     {
       "slug": "rp024",
-      "cat": "poe",
+      "cat": "poe-desktop",
       "order": 8,
-      "en_name": "RP024 PoE+ Injector 24W 802.3at",
-      "zh_name": "RP024 PoE+供电器 24W 802.3at",
+      "en_name": "RP024 PoE+ Injector 24W Desktop 48V",
+      "zh_name": "RP024 PoE+注入器 24W 桌面 48V",
       "en_specs": [
         {
           "l": "型号 (Model)",
@@ -14603,10 +14622,10 @@
     },
     {
       "slug": "rp025-rp015",
-      "cat": "poe",
+      "cat": "poe-desktop",
       "order": 9,
-      "en_name": "RP025 PoE Adapter 30W",
-      "zh_name": "RP025 PoE适配器 30W",
+      "en_name": "RP025 PoE Adapter 30W Desktop 48V",
+      "zh_name": "RP025 PoE适配器 30W 桌面 48V",
       "en_specs": [
         {
           "l": "型号 (Model)",
@@ -14972,10 +14991,10 @@
     },
     {
       "slug": "rp026-rp029-rp030w01",
-      "cat": "poe",
+      "cat": "poe-desktop",
       "order": 10,
-      "en_name": "RP026 PoE+ Switch 60W",
-      "zh_name": "RP026 PoE+交换机 60W",
+      "en_name": "RP026 PoE+ Switch 60W Desktop 48V",
+      "zh_name": "RP026 PoE+交换机 60W 桌面 48V",
       "en_specs": [
         {
           "l": "型号 (Model)",
@@ -15331,10 +15350,10 @@
     },
     {
       "slug": "rp028",
-      "cat": "poe",
+      "cat": "poe-desktop",
       "order": 11,
-      "en_name": "RP028 PoE Injector 12W",
-      "zh_name": "RP028 PoE供电器 12W",
+      "en_name": "RP028 PoE Injector 12W Desktop 24V",
+      "zh_name": "RP028 PoE注入器 12W 桌面 24V",
       "en_specs": [
         {
           "l": "型号 (Model)",
@@ -15694,10 +15713,10 @@
     },
     {
       "slug": "rp030w02",
-      "cat": "poe",
+      "cat": "poe-desktop",
       "order": 12,
-      "en_name": "RP030W02 PoE++ Injector 30W 802.3bt",
-      "zh_name": "RP030W02 PoE++供电器 30W 802.3bt",
+      "en_name": "RP030W02 PoE++ Injector 30W Desktop 53V",
+      "zh_name": "RP030W02 PoE++注入器 30W 桌面 53V",
       "en_specs": [
         {
           "l": "型号 (Model)",
