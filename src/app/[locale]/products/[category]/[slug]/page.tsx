@@ -93,7 +93,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-[2.4rem]">{product.category.icon || '📦'}</span>
+              <img src="/images/category-icon.png" alt="" className="w-10 h-10 object-contain" />
               <span className="text-[1.2rem] uppercase tracking-wider text-[#F7D142] font-medium">{catT?.name || catSlug}</span>
             </div>
             <h1 className="font-brand text-[clamp(2.4rem,3.5vw,4rem)] font-bold leading-[1.1] text-[#0f2a44] mb-3">{pt?.name || slug}</h1>

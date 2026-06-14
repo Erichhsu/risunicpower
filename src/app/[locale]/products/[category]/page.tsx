@@ -63,7 +63,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ local
           <span className="text-[#1a2332] font-medium">{catT?.name || catSlug}</span>
         </nav>
         <div className="mb-16">
-          <span className="text-[3.6rem] mb-2 block">{cat.icon || '📦'}</span>
+          <img src="/images/category-icon.png" alt="" className="w-14 h-14 object-contain mb-2" />
           <h1 className="text-[clamp(2.8rem,4vw,4.8rem)] font-bold text-[#0f2a44] mb-4">{catT?.name || catSlug}</h1>
           {catT?.subtitle && <p className="text-[1.6rem] text-[#6b7a8f] max-w-2xl uppercase tracking-wide">{catT.subtitle}</p>}
         </div>

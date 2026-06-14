@@ -43,7 +43,7 @@ export default function ProductGrid({ categories }: { categories: CategoryData[]
                   {cat.image ? (
                     <img src={cat.image} alt={cat.name} className="w-full h-full object-contain p-4" />
                   ) : (
-                    <span className="text-[3.6rem] opacity-30">{cat.icon || '📦'}</span>
+                    <img src="/images/category-icon.png" alt="" className="w-14 h-14 object-contain opacity-30" />
                   )}
                 </div>
                 {/* Card text */}
