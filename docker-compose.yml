@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3000:3000"
     environment:
       - NODE_ENV=production
       - DATABASE_URL=${DATABASE_URL:-file:/app/data/prod.db}
@@ -32,19 +32,22 @@ services:
     networks:
       - risunic_net
 
-  # Postgres (production use)
-  db:
-    image: postgres:16-alpine
-    restart: always
-    environment:
-      - POSTGRES_USER=${DB_USER:-risunic}
-      - POSTGRES_PASSWORD=${DB_PASS}
-      - POSTGRES_DB=${DB_NAME:-risunicpower}
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-      - ./backups:/backups
-    networks:
-      - risunic_net
+  # PostgreSQL 已移除 — 当前使用 SQLite (schema provider = sqlite)
+  # 如需切换，修改 prisma/schema.prisma 的 datasource 为 postgresql
+  # 然后取消下面的 db 服务注释并更新 DATABASE_URL
+
+  # db:
+  #   image: postgres:16-alpine
+  #   restart: always
+  #   environment:
+  #     - POSTGRES_USER=${DB_USER:-risunic}
+  #     - POSTGRES_PASSWORD=${DB_PASS}
+  #     - POSTGRES_DB=${DB_NAME:-risunicpower}
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #     - ./backups:/backups
+  #   networks:
+  #     - risunic_net
 
   # nginx reverse proxy
   nginx:

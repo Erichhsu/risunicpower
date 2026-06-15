@@ -67,15 +67,15 @@ const SECURITY_HEADERS: Record<string, string> = {
 
 const CSP = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://www.googletagmanager.com",
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob: images.unsplash.com",
+  "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
-  "connect-src 'self' https://api.exchangerate-api.com",
-  "frame-src 'none'",
+  "connect-src 'self' https://api.exchangerate-api.com https://api.deepseek.com https://api.stripe.com",
+  "frame-src https://js.stripe.com https://hooks.stripe.com",
   "object-src 'none'",
   "base-uri 'self'",
-  "form-action 'self'",
+  "form-action 'self' https://hooks.stripe.com",
 ].join('; ')
 
 // ── Rate limit configs ──
