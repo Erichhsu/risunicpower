@@ -21,9 +21,9 @@ const photos: PhotoItem[] = [
   { src: '/images/factory/huizhou-factory.jpg', caption_en: 'Huizhou Manufacturing Base', caption_zh: '惠州生产基地', caption_ja: '恵州製造拠点' },
   { src: '/images/factory/vietnam-factory-2.webp', caption_en: 'Vietnam Production Facility', caption_zh: '越南生产工厂', caption_ja: 'ベトナム生産拠点' },
   { src: '/images/factory/factory-showroom.jpg', caption_en: 'Factory Showroom', caption_zh: '工厂展厅', caption_ja: '工場ショールーム' },
-  { src: '/images/why-us/定制电源设计.webp', caption_en: 'Custom Power Design', caption_zh: '定制电源设计', caption_ja: 'カスタム電源設計' },
-  { src: '/images/why-us/全球认证合规.jpg', caption_en: 'Global Certifications', caption_zh: '全球认证合规', caption_ja: 'グローバル認証' },
-  { src: '/images/why-us/快速交付体系.jpg', caption_en: 'Fast Delivery System', caption_zh: '快速交付体系', caption_ja: '迅速な納品体制' },
+  { src: '/images/why-us/custom-power-design.webp', caption_en: 'Custom Power Design', caption_zh: '定制电源设计', caption_ja: 'カスタム電源設計' },
+  { src: '/images/why-us/global-certifications.jpg', caption_en: 'Global Certifications', caption_zh: '全球认证合规', caption_ja: 'グローバル認証' },
+  { src: '/images/why-us/fast-delivery-system.jpg', caption_en: 'Fast Delivery System', caption_zh: '快速交付体系', caption_ja: '迅速な納品体制' },
 ]
 
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -67,7 +67,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
     subtitle: '12+ Years of Power Electronics Excellence · Serving 600+ Clients Worldwide',
     story: { h: 'Our Story', p: 'Shenzhen Risunic Technology Co., Ltd. (RisunicPower) was founded in 2014, specializing in R&D, manufacturing, and sales of power solutions. Headquartered in Shenzhen with a 12,000m² production base and a Vietnam facility, we produce over 5 million units annually. Certified to CE, FCC, UL, RoHS, and ISO 9001, we export to 30+ countries worldwide.' },
     capability: { h: 'Core Capabilities', p: '80+ R&D Engineers | EMC Lab + Environmental Test Chambers | Automated SMT Lines | Full-Process QC | 24-Hour Tech Response' },
-    portfolio: { h: 'Nine Product Lines', p: 'PoE电源 · UPS · 逆变器整机 · 裂相机 · 后备机 · 便携储能 · 一体机 · 微型逆变器 · MPPT控制器' },
+    portfolio: { h: 'Nine Product Lines', p: 'PoE Power Supplies · Adapters · Bare Board Power · UPS · Inverters · Portable Power · All-in-One ESS · Micro Inverters · MPPT Controllers' },
     quality: { h: 'Quality Promise', p: 'Full-process quality control from component selection to shipment. Every product undergoes burn-in testing and reliability validation. Lifecycle technical support included.' },
     cta: 'Contact us for a product catalog and quotation',
     timeline: [
