@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Calendar, ArrowLeft } from 'lucide-react'
 
+export const dynamic = 'force-dynamic'
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params
   const post = await prisma.blogPost.findFirst({ where: { slug, locale }, select: { title: true, excerpt: true } })
