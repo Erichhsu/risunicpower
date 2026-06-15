@@ -20,7 +20,7 @@ const sidebarInfo: Record<string, { company: string; rdLabel: string; rdAddr: st
     whyItems: ['✓ 12+ years of power supply R&D', '✓ 600+ satisfied clients worldwide', '✓ CE, FCC, UL, RoHS certified', '✓ OEM/ODM welcome', '✓ Global shipping available'],
   },
   zh: {
-    company: '深圳晨旭通科技有限公司',
+    company: '深圳市晨旭通科技股份有限公司',
     rdLabel: '研发中心', rdAddr: '深圳市光明区玉塘街道田寮社区同仁路盛荟红星创智广场A座12F',
     factoryLabel: '工厂', factoryAddr: '广东省惠州市惠城区宏川路1号',
     twLabel: '台北办事处', twAddr: '台北市内湖区阳光街345巷5号2F',
@@ -29,7 +29,7 @@ const sidebarInfo: Record<string, { company: string; rdLabel: string; rdAddr: st
     whyItems: ['✓ 12年以上电源研发经验', '✓ 全球600+满意客户', '✓ CE、FCC、UL、RoHS 认证', '✓ 欢迎OEM/ODM合作', '✓ 支持全球发货'],
   },
   ja: {
-    company: '深セン晨旭通科技有限公司',
+    company: '深セン市晨旭通科技股份有限公司',
     rdLabel: '研究開発センター', rdAddr: '深圳市光明区玉塘街道田寮社区同仁路盛荟紅星創智広場A棟12F',
     factoryLabel: '工場', factoryAddr: '広東省惠州市惠城区宏川路1号',
     twLabel: '台湾オフィス', twAddr: '台北市内湖区陽光街345巷5号2F',
