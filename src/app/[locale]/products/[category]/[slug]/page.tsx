@@ -8,6 +8,8 @@ import StarRating from '@/components/ui/StarRating'
 import CurrencyConverter from '@/components/ui/CurrencyConverter'
 import ProductReviews from '@/components/reviews/ProductReviews'
 
+export const dynamic = 'force-dynamic'
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; category: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params
   const product = await prisma.product.findUnique({
