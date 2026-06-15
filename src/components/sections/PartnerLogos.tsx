@@ -21,18 +21,36 @@ const partners = [
   { file: '21_画板 1.jpg', name: 'Partner', width: 70 },
 ]
 
+const tData: Record<string, { title: string; subtitle: string; footer: string }> = {
+  zh: {
+    title: '合作伙伴',
+    subtitle: '全球知名企业信赖之选',
+    footer: '与更多世界500强及行业领军企业建立长期合作关系',
+  },
+  ja: {
+    title: 'パートナー',
+    subtitle: '世界中のトップ企業から信頼されています',
+    footer: 'さらなるグローバルリーダーとのパートナーシップを築いています',
+  },
+  en: {
+    title: 'Trusted Partners',
+    subtitle: 'Trusted by leading enterprises worldwide',
+    footer: 'Building long-term partnerships with Fortune 500 & industry leaders',
+  },
+}
+
 interface Props { locale?: string }
 
 export default function PartnerLogos({ locale }: Props) {
-  const title = locale === 'zh' ? '合作伙伴' : locale === 'ja' ? 'パートナー' : 'Trusted Partners'
-  const subtitle = locale === 'zh' ? '全球知名企业信赖之选' : locale === 'ja' ? '世界中のトップ企業から信頼されています' : 'Trusted by leading enterprises worldwide'
+  const l = ['en', 'zh', 'ja'].includes(locale || 'en') ? (locale || 'en') : 'en'
+  const t = tData[l] || tData.en
 
   return (
     <section className="py-20 md:py-28 bg-white">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="text-center mb-14">
-          <p className="section-subtitle">{subtitle}</p>
-          <h2 className="section-title">{title}</h2>
+          <p className="section-subtitle">{t.subtitle}</p>
+          <h2 className="section-title">{t.title}</h2>
         </div>
 
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 items-center justify-items-center">
@@ -56,11 +74,7 @@ export default function PartnerLogos({ locale }: Props) {
 
         <div className="text-center mt-10">
           <p className="text-[1.3rem] text-[#4A5D70]">
-            {locale === 'zh'
-              ? '与更多世界500强及行业领军企业建立长期合作关系'
-              : locale === 'ja'
-                ? 'さらなるグローバルリーダーとのパートナーシップを築いています'
-                : 'Building long-term partnerships with Fortune 500 & industry leaders'}
+            {t.footer}
           </p>
         </div>
       </div>

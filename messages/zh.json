@@ -11,7 +11,7 @@
       "title": "产品中心",
       "subtitle": "从紧凑型POE注入器到工业级UPS系统 — 每一款产品都经过严格可靠性验证。",
       "viewAll": "查看全部",
-      "items": "items",
+      "items": "件",
       "label": "产品系列"
     },
     "stats": {
@@ -40,7 +40,15 @@
     "noProducts": "该品类暂无产品",
     "backTo": "返回 {name}",
     "requestQuote": "获取报价",
-    "more": "还有 {n} 项"
+    "more": "还有 {n} 项",
+    "sku": "SKU",
+    "moqOemOdm": "起订量 · OEM · 定制",
+    "productsTitle": "产品中心",
+    "productsDesc": "浏览我们的全系列电源解决方案——从POE供电器、适配器到太阳能逆变器和便携储能电源。",
+    "allProducts": "查看全部产品",
+    "inquiryNow": "询价咨询",
+    "customerReviews": "客户评价",
+    "backToProducts": "返回产品中心"
   },
   "Cart": {
     "title": "购物车",
@@ -57,7 +65,13 @@
     "clearCart": "清空购物车",
     "remove": "移除",
     "orderSummary": "订单摘要",
-    "items": "件"
+    "items": "件",
+    "product": "商品",
+    "quantity": "数量",
+    "continueShopping": "继续购物",
+    "shippingCalc": "运费及税费在结算时计算",
+    "wholesalePricing": "需要批量报价？",
+    "totalItems": "合计 ({n} 件)"
   },
   "Checkout": {
     "title": "结算",
@@ -66,7 +80,14 @@
     "total": "合计",
     "payWithStripe": "使用 Stripe 支付",
     "processing": "处理中...",
-    "securePayment": "🔒 由 Stripe 安全护航 · 支持140+种货币"
+    "securePayment": "🔒 由 Stripe 安全护航 · 支持140+种货币",
+    "empty": "购物车是空的",
+    "browse": "继续购物",
+    "items": "商品",
+    "nogkey": "支付尚未配置",
+    "cart": "购物车",
+    "desc": "确认订单并进行支付",
+    "error": "支付初始化失败，请重试。"
   },
   "Contact": {
     "title": "联系我们",
@@ -81,7 +102,11 @@
       "message": "留言",
       "submit": "提交询价",
       "success": "感谢您的询价！我们将在24小时内回复。"
-    }
+    },
+    "sending": "发送中...",
+    "formError": "出错了，请重试。",
+    "required": "必填",
+    "invalidEmail": "邮箱格式不正确"
   },
   "Header": {
     "products": "产品",
@@ -107,7 +132,8 @@
   },
   "NotFound": {
     "title": "页面未找到",
-    "desc": "您查找的页面可能已被移动或不存在。"
+    "desc": "您查找的页面可能已被移动或不存在。",
+    "backHome": "返回首页"
   },
   "Reviews": {
     "title": "客户评价",
@@ -126,5 +152,35 @@
     "success": "感谢您的评价！已成功提交。",
     "error": "提交失败，请稍后重试。",
     "count": "{n} 条评价"
+  },
+  "Blog": {
+    "backToBlog": "返回博客",
+    "inquireProduct": "咨询相关产品"
+  },
+  "CaseStudies": {
+    "backToCaseStudies": "返回案例",
+    "challenge": "挑战",
+    "solution": "解决方案",
+    "results": "成果",
+    "getSimilar": "获取类似方案"
+  },
+  "Offline": {
+    "title": "当前无网络连接",
+    "desc": "请检查您的网络连接后重试",
+    "backHome": "返回首页"
+  },
+  "Cookies": {
+    "title": "Cookie 政策",
+    "desc": "本页面正在建设中，请稍后再来。",
+    "backHome": "返回首页"
+  },
+  "Payment": {
+    "title": "支付成功！",
+    "desc": "谢谢您的订购，您将短信收到确认邮件。",
+    "orderId": "订单编号",
+    "backToShop": "继续购物",
+    "error": "无法验证支付，请联系客服。",
+    "loading": "正在验证支付...",
+    "contactSupport": "联系客服"
   }
 }

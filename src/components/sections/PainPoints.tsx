@@ -8,11 +8,15 @@ const items = [
   { icon: <ShieldX size={32} />, zh: '找不到合适的认证？', ja: '適切な認証が見つからない？', en: "Can't find the right certification?" },
 ]
 
+const tData: Record<string, { title: string; sub: string }> = {
+  zh: { title: '你的挑战，我们的方案', sub: 'Pain Points' },
+  ja: { title: 'あなたの課題、私たちの解決策', sub: 'Pain Points' },
+  en: { title: 'Your Challenges, Our Solutions', sub: 'Pain Points' },
+}
+
 export default function PainPoints({ locale }: { locale?: string }) {
-  const l = ['en', 'zh', 'ja'].includes(locale || 'en') ? locale : 'en'
-  const t = l === 'zh' ? { title: '你的挑战，我们的方案', sub: 'Pain Points' }
-    : l === 'ja' ? { title: 'あなたの課題、私たちの解決策', sub: 'Pain Points' }
-    : { title: 'Your Challenges, Our Solutions', sub: 'Pain Points' }
+  const l = ['en', 'zh', 'ja'].includes(locale || 'en') ? (locale || 'en') : 'en'
+  const t = tData[l] || tData.en
 
   return (
     <section className="py-20 md:py-28 bg-white">
@@ -22,12 +26,16 @@ export default function PainPoints({ locale }: { locale?: string }) {
           <h2 className="section-title">{t.title}</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
-          {items.map((item, i) => (
-            <div key={i} className="card-ts flex flex-col items-center text-center py-10">
-              <div className="mb-5 text-[#F7D142]">{item.icon}</div>
-              <p className="text-[1.5rem] font-medium text-[#0E4071]">{item[l as 'zh' | 'ja' | 'en']}</p>
-            </div>
-          ))}
+          {items.map((item, i) => {
+            const itemAny = item as Record<string, unknown>
+            const text = (itemAny[l] as string) || item.en
+            return (
+              <div key={i} className="card-ts flex flex-col items-center text-center py-10">
+                <div className="mb-5 text-[#F7D142]">{item.icon}</div>
+                <p className="text-[1.5rem] font-medium text-[#0E4071]">{text}</p>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>

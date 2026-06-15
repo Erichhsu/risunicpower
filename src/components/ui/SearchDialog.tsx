@@ -17,6 +17,13 @@ const localeLabels: Record<string, Record<string, string>> = {
   en: { placeholder: 'Search products...', noResults: 'No products found for', hint: 'Type to search across', hintSuffix: 'product categories', esc: 'to close', nav: 'navigate' },
   zh: { placeholder: '搜索产品…', noResults: '未找到产品：', hint: '可在', hintSuffix: '个产品品类中搜索', esc: '关闭', nav: '导航' },
   ja: { placeholder: '製品を検索…', noResults: '製品が見つかりません：', hint: '', hintSuffix: '製品カテゴリから検索', esc: '閉じる', nav: '移動' },
+
+  ar: { placeholder: 'اسأل عن المنتجات...', noResults: 'لم يتم العثور على منتجات لـ', hint: 'اكتب للبحث في', hintSuffix: 'فئات المنتجات', esc: 'للإغلاق', nav: 'للتنقل' },
+  de: { placeholder: 'Fragen Sie zu Produkten...', noResults: 'Keine Produkte gefunden für', hint: 'Geben Sie ein, um zu suchen in', hintSuffix: 'Produktkategorien', esc: 'zum Schließen', nav: 'navigieren' },
+  es: { placeholder: 'Pregunte sobre productos...', noResults: 'No se encontraron productos para', hint: 'Escriba para buscar en', hintSuffix: 'categorías de productos', esc: 'para cerrar', nav: 'navegar' },
+  fr: { placeholder: 'Interrogez sur les produits...', noResults: 'Aucun produit trouvé pour', hint: 'Tapez pour rechercher dans', hintSuffix: 'les catégories de produits', esc: 'pour fermer', nav: 'naviguer' },
+  pt: { placeholder: 'Pergunte sobre produtos...', noResults: 'Nenhum produto encontrado para', hint: 'Digite para pesquisar em', hintSuffix: 'categorias de produtos', esc: 'para fechar', nav: 'navegar' },
+  ru: { placeholder: 'Спросить о товарах...', noResults: 'Товары не найдены по запросу', hint: 'Введите для поиска по', hintSuffix: 'категориям товаров', esc: 'для закрытия', nav: 'навигация' },
 }
 
 function lbl(locale: string, key: string): string {

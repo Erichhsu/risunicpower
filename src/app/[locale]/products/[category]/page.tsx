@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
 import { prisma } from '@/lib/db/prisma'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -21,20 +22,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   }
 }
 
-const localeLabels: Record<string, Record<string, string>> = {
-  en: { bp: 'Products', sku: 'SKU', c: '{n} products', v: 'View Products', m: '+{n} more', e: 'No products in this category yet.' },
-  zh: { bp: '产品中心', sku: 'SKU', c: '{n} 个产品', v: '查看全部', m: '还有 {n} 项', e: '该品类暂无产品' },
-  ja: { bp: '製品一覧', sku: 'SKU', c: '{n} 製品', v: 'すべて表示', m: 'あと {n} 件', e: 'このカテゴリーに製品はまだありません' },
-}
-function lbl(locale: string, key: string, n?: number): string {
-  const l = localeLabels[locale] || localeLabels.en
-  let v = l[key]
-  if (n !== undefined) v = v.replace('{n}', String(n))
-  return v
-}
-
 export default async function CategoryPage({ params }: { params: Promise<{ locale: string; category: string }> }) {
   const { locale, category: catSlug } = await params
+  const t = await getTranslations({ locale, namespace: 'Product' })
 
   const cat = await prisma.productCategory.findUnique({
     where: { slug: catSlug },
@@ -60,7 +50,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ local
     <main className="pt-32 pb-20 min-h-screen">
       <div className="max-w-[1440px] mx-auto px-[clamp(2rem,5vw,8rem)]">
         <nav className="flex items-center gap-2 text-[1.3rem] text-[#6b7a8f] mb-8">
-          <Link href={`/${locale}/products`} className="hover:text-[#F7D142] transition-colors">{lbl(locale, 'bp')}</Link>
+          <Link href={`/${locale}/products`} className="hover:text-[#F7D142] transition-colors">{t('breadcrumbProducts')}</Link>
           <span>/</span>
           <span className="text-[#1a2332] font-medium">{catT?.name || catSlug}</span>
         </nav>
@@ -70,7 +60,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ local
           {catT?.subtitle && <p className="text-[1.6rem] text-[#6b7a8f] max-w-2xl uppercase tracking-wide">{catT.subtitle}</p>}
         </div>
         {cat.products.length === 0 ? (
-          <p className="text-[1.6rem] text-[#6b7a8f]">{lbl(locale, 'e')}</p>
+          <p className="text-[1.6rem] text-[#6b7a8f]">{t('noProducts')}</p>
         ) : (
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
             {cat.products.map((prod) => {
@@ -85,7 +75,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ local
                     {imgUrl ? (
                       <img src={imgUrl} alt={pt?.name || prod.slug} className="w-full h-full object-contain" />
                     ) : (
-                      <span className="text-[4rem] opacity-30">📷</span>
+                      <span className="text-[4rem] opacity-30">{'\uD83D\uDCF7'}</span>
                     )}
                   </div>
                   <div className="p-6">
@@ -94,17 +84,17 @@ export default async function CategoryPage({ params }: { params: Promise<{ local
                     </h2>
                     {pt?.subtitle && <p className="text-[1.3rem] text-[#6b7a8f] mb-3">{pt.subtitle}</p>}
                     {prod.sku && (
-                      <p className="text-[1.1rem] font-mono text-[#b0bccd] mb-3">{lbl(locale, 'sku')}: {prod.sku}</p>
+                      <p className="text-[1.1rem] font-mono text-[#b0bccd] mb-3">{t('sku')}: {prod.sku}</p>
                     )}
                     {features.length > 0 && (
                       <ul className="mb-4 space-y-1">
                         {features.slice(0, 3).map((f, i) => (
                           <li key={i} className="text-[1.2rem] text-[#6b7a8f] flex items-start gap-2">
-                            <span className="text-[#0eb892] mt-1">▸</span>
+                            <span className="text-[#0eb892] mt-1">{'\u25B8'}</span>
                             <span>{f}</span>
                           </li>
                         ))}
-                        {features.length > 3 && <li className="text-[1.2rem] text-[#F7D142]">{lbl(locale, 'm', features.length - 3)}</li>}
+                        {features.length > 3 && <li className="text-[1.2rem] text-[#F7D142]">{t('more', { n: features.length - 3 })}</li>}
                       </ul>
                     )}
                     <div className="flex items-center justify-between">

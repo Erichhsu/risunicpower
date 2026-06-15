@@ -11,7 +11,7 @@
       "title": "製品一覧",
       "subtitle": "コンパクトなPOEインジェクターから産業用UPSまで — すべての製品は信頼性と性能を追求して設計されています。",
       "viewAll": "すべて表示",
-      "items": "items",
+      "items": "点",
       "label": "製品ライン"
     },
     "stats": {
@@ -40,7 +40,15 @@
     "noProducts": "このカテゴリーに製品はまだありません",
     "backTo": "{name} に戻る",
     "requestQuote": "見積もり依頼",
-    "more": "あと {n} 件"
+    "more": "あと {n} 件",
+    "sku": "SKU",
+    "moqOemOdm": "MOQ · OEM · カスタム",
+    "productsTitle": "製品一覧",
+    "productsDesc": "POEインジェクターからアダプター、UPS、インバーター、ポータブル電源までの全製品ラインをご覧ください。",
+    "allProducts": "すべて表示",
+    "inquiryNow": "お問い合わせ",
+    "customerReviews": "レビュー",
+    "backToProducts": "製品一覧に戻る"
   },
   "Cart": {
     "title": "ショッピングカート",
@@ -57,7 +65,13 @@
     "clearCart": "カートを空にする",
     "remove": "削除",
     "orderSummary": "注文概要",
-    "items": "点"
+    "items": "点",
+    "product": "商品",
+    "quantity": "数量",
+    "continueShopping": "買い物を続ける",
+    "shippingCalc": "送料・税金はレジで計算",
+    "wholesalePricing": "卸売り価格が必要ですか？",
+    "totalItems": "合計 ({n} 点)"
   },
   "Checkout": {
     "title": "チェックアウト",
@@ -66,7 +80,14 @@
     "total": "合計",
     "payWithStripe": "Stripeで支払う",
     "processing": "処理中...",
-    "securePayment": "🔒 Stripeが保護 · 140以上の通貨に対応"
+    "securePayment": "🔒 Stripeが保護 · 140以上の通貨に対応",
+    "empty": "カートは空です",
+    "browse": "買い物を続ける",
+    "items": "商品",
+    "nogkey": "支払いが設定されていません",
+    "cart": "カート",
+    "desc": "注文を確認して支払いへ",
+    "error": "支払いの初期化に失敗しました"
   },
   "Contact": {
     "title": "お問い合わせ",
@@ -81,7 +102,11 @@
       "message": "メッセージ",
       "submit": "送信",
       "success": "お問い合わせありがとうございます。24時間以内にご連絡いたします。"
-    }
+    },
+    "sending": "送信中...",
+    "formError": "エラーが発生しました。もう一度お試しください。",
+    "required": "必須",
+    "invalidEmail": "メールアドレスの形式が正しくありません"
   },
   "Header": {
     "products": "製品",
@@ -99,7 +124,7 @@
     "legal": "法的情報",
     "privacy": "プライバシーポリシー",
     "terms": "利用規約",
-    "rights": "All rights reserved.",
+    "rights": "全著作権所有。",
     "newsletter": "メルマガ購読",
     "subscribe": "登録",
     "brandDescription": "2014年創業の産業用電源メーカー。CE、FCC、UL認証取得。",
@@ -107,7 +132,8 @@
   },
   "NotFound": {
     "title": "ページが見つかりません",
-    "desc": "お探しのページは移動または削除された可能性があります。"
+    "desc": "お探しのページは移動または削除された可能性があります。",
+    "backHome": "ホームに戻る"
   },
   "Reviews": {
     "title": "カスタマーレビュー",
@@ -126,5 +152,35 @@
     "success": "レビューを送信しました。ありがとうございます！",
     "error": "送信に失敗しました。もう一度お試しください。",
     "count": "{n} 件のレビュー"
+  },
+  "Blog": {
+    "backToBlog": "ブログに戻る",
+    "inquireProduct": "関連製品について問い合わせる"
+  },
+  "CaseStudies": {
+    "backToCaseStudies": "導入事例に戻る",
+    "challenge": "課題",
+    "solution": "ソリューション",
+    "results": "成果",
+    "getSimilar": "類似のソリューションを入手"
+  },
+  "Offline": {
+    "title": "オフラインです",
+    "desc": "ネットワーク接続を確認してください",
+    "backHome": "ホームに戻る"
+  },
+  "Cookies": {
+    "title": "クッキーポリシー",
+    "desc": "このページは作成中です。しばらくしてから再度ご確認ください。",
+    "backHome": "ホームに戻る"
+  },
+  "Payment": {
+    "title": "支払い成功！",
+    "desc": "ご注文ありがとうございます。確認メールをお送りします。",
+    "orderId": "注文番号",
+    "backToShop": "買い物を続ける",
+    "error": "支払いを確認できませんでした。サポートにお問い合わせください。",
+    "loading": "支払いを確認中...",
+    "contactSupport": "サポートに連絡"
   }
 }

@@ -4,8 +4,11 @@ import Image from 'next/image'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  const t = locale === 'zh'
+  const l = ['en', 'zh', 'ja'].includes(locale) ? locale : 'en'
+  const t = l === 'zh'
     ? { title: '关于我们 — RisunicPower', desc: '晨旭通科技 — 12年电源制造经验，服务全球60+国家' }
+    : l === 'ja'
+    ? { title: '当社について — RisunicPower', desc: '晨旭通科技 — 12年の電源製造実績、世界60カ国以上にサービス提供' }
     : { title: 'About Us — RisunicPower', desc: 'Shenzhen Risunic Technology — 12+ years of power manufacturing excellence' }
   return { title: t.title, description: t.desc }
 }
@@ -38,6 +41,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
     portfolio: { h: '九大产品线', p: 'PoE电源 · UPS · 逆变器整机 · 裂相机 · 后备机 · 便携储能 · 一体机 · 微型逆变器 · MPPT控制器' },
     quality: { h: '质量承诺', p: '从物料选型到成品出货全流程控制。所有产品经老化测试和可靠性验证。提供全生命周期技术支持。' },
     cta: '联系我们获取产品目录和报价',
+    timelineHeading: '发展里程碑',
     timeline: [
       { year: '2014', text: '深圳公司成立，专注电源研发' },
       { year: '2016', text: '通过ISO 9001质量管理体系认证' },
@@ -54,6 +58,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
     portfolio: { h: '9つの製品ライン', p: 'PoE電源 · UPS · インバーター · 分割相 · バックアップ · ポータブル電源 · 一体型 · マイクロインバーター · MPPT' },
     quality: { h: '品質への取り組み', p: '材料選定から出荷まで全工程の品質管理。全製品エージングテストと信頼性検証実施。製品ライフサイクル全体の技術サポートを提供。' },
     cta: '製品カタログと見積もりについてはお問い合わせください',
+    timelineHeading: '沿革',
     timeline: [
       { year: '2014', text: '深センに創業、電源開発に特化' },
       { year: '2016', text: 'ISO 9001品質マネジメント認証取得' },
@@ -70,6 +75,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
     portfolio: { h: 'Nine Product Lines', p: 'PoE Power Supplies · Adapters · Bare Board Power · UPS · Inverters · Portable Power · All-in-One ESS · Micro Inverters · MPPT Controllers' },
     quality: { h: 'Quality Promise', p: 'Full-process quality control from component selection to shipment. Every product undergoes burn-in testing and reliability validation. Lifecycle technical support included.' },
     cta: 'Contact us for a product catalog and quotation',
+    timelineHeading: 'Milestones',
     timeline: [
       { year: '2014', text: 'Founded in Shenzhen, focused on power supply R&D' },
       { year: '2016', text: 'ISO 9001 quality management certification' },
@@ -126,7 +132,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       {/* ── Timeline Road ── */}
       <section className="py-16 md:py-24 bg-[#F5F8FC]">
         <div className="max-w-[1000px] mx-auto px-6">
-          <h2 className="text-center text-[2.4rem] font-bold text-[#0E4071] mb-12">Milestones</h2>
+          <h2 className="text-center text-[2.4rem] font-bold text-[#0E4071] mb-12">{data.timelineHeading}</h2>
           <div className="relative">
             {/* Vertical line */}
             <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-[#d0d8e0] -translate-x-1/2" />

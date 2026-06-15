@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Check } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 interface Spec {
   id: string
@@ -28,6 +29,7 @@ export default function ProductTabs({
   t_description?: string
   t_keyFeatures?: string
 }) {
+  const t = useTranslations('Product')
   const [activeTab, setActiveTab] = useState(0)
 
   // Filter specs by locale
@@ -38,7 +40,7 @@ export default function ProductTabs({
 
   const tabs = [
     { label: techSpecsLabel, content: 'specs' },
-    { label: t_description || 'Description', content: 'desc' },
+    { label: t_description || t('features'), content: 'desc' },
   ] as const
 
   return (
@@ -87,7 +89,7 @@ export default function ProductTabs({
           )}
           {features.length > 0 && (
             <div>
-              <h3 className="text-[1.8rem] font-bold text-[#0E4071] mb-4">{t_keyFeatures || 'Key Features'}</h3>
+              <h3 className="text-[1.8rem] font-bold text-[#0E4071] mb-4">{t_keyFeatures || t('keyFeatures')}</h3>
               <div className="grid sm:grid-cols-2 gap-3">
                 {features.map((f, i) => (
                   <div key={i} className="flex items-start gap-2 text-[1.4rem] text-[#4A5D70]">

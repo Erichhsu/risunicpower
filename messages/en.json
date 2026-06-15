@@ -40,7 +40,15 @@
     "noProducts": "No products in this category yet.",
     "backTo": "Back to {name}",
     "requestQuote": "Request Quote",
-    "more": "+{n} more"
+    "more": "+{n} more",
+    "sku": "SKU",
+    "moqOemOdm": "MOQ · OEM · ODM",
+    "productsTitle": "Product Categories",
+    "productsDesc": "Explore our full range of power solutions — from POE injectors and adapters to solar inverters and portable power stations.",
+    "allProducts": "View All Products",
+    "inquiryNow": "Inquire Now",
+    "customerReviews": "Customer Reviews",
+    "backToProducts": "Back to Products"
   },
   "Cart": {
     "title": "Shopping Cart",
@@ -57,7 +65,13 @@
     "clearCart": "Clear Cart",
     "remove": "Remove",
     "orderSummary": "Order Summary",
-    "items": "items"
+    "items": "items",
+    "product": "Product",
+    "quantity": "Qty",
+    "continueShopping": "Continue Shopping",
+    "shippingCalc": "Shipping & taxes calculated at checkout",
+    "wholesalePricing": "Need wholesale pricing?",
+    "totalItems": "Total ({n} items)"
   },
   "Checkout": {
     "title": "Checkout",
@@ -66,7 +80,14 @@
     "total": "Total",
     "payWithStripe": "Pay with Stripe",
     "processing": "Processing...",
-    "securePayment": "🔒 Secured by Stripe · 140+ currencies supported"
+    "securePayment": "🔒 Secured by Stripe · 140+ currencies supported",
+    "empty": "Your cart is empty",
+    "browse": "Continue Shopping",
+    "items": "Items",
+    "nogkey": "Payment not configured yet",
+    "cart": "Cart",
+    "desc": "Review your order and proceed to payment",
+    "error": "Payment initiation failed. Please try again."
   },
   "Contact": {
     "title": "Contact Us",
@@ -81,7 +102,11 @@
       "message": "Message",
       "submit": "Submit Inquiry",
       "success": "Thank you! We will respond within 24 hours."
-    }
+    },
+    "sending": "Sending...",
+    "formError": "Something went wrong. Please try again.",
+    "required": "Required",
+    "invalidEmail": "Invalid email address"
   },
   "Header": {
     "products": "Products",
@@ -107,7 +132,8 @@
   },
   "NotFound": {
     "title": "Page Not Found",
-    "desc": "The page you are looking for might have been moved or no longer exists."
+    "desc": "The page you are looking for might have been moved or no longer exists.",
+    "backHome": "Back to Home"
   },
   "Reviews": {
     "title": "Customer Reviews",
@@ -126,5 +152,35 @@
     "success": "Thank you! Your review has been submitted.",
     "error": "Failed to submit review. Please try again.",
     "count": "{n} reviews"
+  },
+  "Blog": {
+    "backToBlog": "Back to Blog",
+    "inquireProduct": "Inquire About Related Products"
+  },
+  "CaseStudies": {
+    "backToCaseStudies": "Back to Case Studies",
+    "challenge": "Challenge",
+    "solution": "Solution",
+    "results": "Results",
+    "getSimilar": "Get a Similar Solution"
+  },
+  "Offline": {
+    "title": "You're Offline",
+    "desc": "Please check your internet connection and try again",
+    "backHome": "Back to Home"
+  },
+  "Cookies": {
+    "title": "Cookie Policy",
+    "desc": "This page is under construction. Please check back soon.",
+    "backHome": "Back to Home"
+  },
+  "Payment": {
+    "title": "Payment Successful!",
+    "desc": "Thank you for your order. You will receive a confirmation email shortly.",
+    "orderId": "Order ID",
+    "backToShop": "Continue Shopping",
+    "error": "Unable to verify payment. Please contact support.",
+    "loading": "Verifying payment...",
+    "contactSupport": "Contact Support"
   }
 }

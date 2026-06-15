@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server'
 import { prisma } from '@/lib/db/prisma'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
@@ -15,6 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function BlogDetailPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params
+  const t = await getTranslations({ locale, namespace: 'Blog' })
   const p = await prisma.blogPost.findFirst({ where: { slug, locale } })
   if (!p) notFound()
 
@@ -24,12 +26,12 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
     <main className="min-h-screen bg-white pt-28 pb-20">
       <article className="mx-auto max-w-[800px] px-6">
         <Link href={`/${l}/blog`} className="inline-flex items-center gap-1 text-[1.3rem] text-[#F7D142] hover:underline mb-8">
-          <ArrowLeft size={16} /> {l === 'zh' ? '返回博客' : l === 'ja' ? 'ブログに戻る' : 'Back to Blog'}
+          <ArrowLeft size={16} /> {t('backToBlog')}
         </Link>
 
         <div className="flex items-center gap-3 text-[1.2rem] text-[#6b7a8f] mb-4">
           <Calendar size={14} />
-          <span>{new Date(p.publishDate).toLocaleDateString(l === 'zh' ? 'zh-CN' : 'en-US')}</span>
+          <span>{new Date(p.publishDate).toLocaleDateString(l === 'zh' ? 'zh-CN' : l === 'ja' ? 'ja-JP' : 'en-US')}</span>
           <span className="rounded-full bg-[#F7D142]/10 px-3 py-1 text-[1.1rem] text-[#F7D142]">{p.category}</span>
         </div>
 
@@ -44,7 +46,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
           <Link href={`/${l}/contact?subject=${encodeURIComponent(p.title)}`}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0f2a44] text-white text-[1.3rem] font-semibold hover:bg-[#1e4a7a] transition-colors"
           >
-            {l === 'zh' ? '咨询相关产品' : l === 'ja' ? '関連製品について問い合わせる' : 'Inquire About Related Products'}
+            {t('inquireProduct')}
           </Link>
         </div>
       </article>

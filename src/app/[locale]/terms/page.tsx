@@ -17,7 +17,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function TermsPage({ params }: Props) {
   const { locale } = await params
-  const content = termsContent[locale === 'zh' ? 'zh' : 'en']
+  const l = ['en', 'zh', 'ja'].includes(locale) ? locale : 'en'
+  const content = termsContent[l === 'zh' ? 'zh' : 'en']
 
   return (
     <main className="pt-32 pb-20 min-h-screen bg-[#f7f8fa]">

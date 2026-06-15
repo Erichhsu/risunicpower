@@ -32,6 +32,13 @@ const localeLabels: Record<string, Record<string, string>> = {
     title: 'Risunic AI',
     notConfigured: 'AIチャットはまだ設定されていません。製品のお問い合わせは erich.hsu@risunicpower.com までメールをお送りください。',
   },
+
+  ar: { welcome: 'مرحباً! أنا مساعدك الذكي للمنتجات. اسألني عن أي شيء يتعلق بمنتجاتنا أو مواصفاتها أو أسعارها.', placeholder: 'اسأل عن المنتجات...', thinking: 'جارٍ التفكير...', error: 'فشل بدء عملية الدفع. يرجى المحاولة مرة أخرى.', title: 'الدفع', notConfigured: 'لم يتم تكوين الدردشة الذكية بعد. يرجى إرسال بريد إلكتروني إلى erich.hsu@risunicpower.com للاستفسار عن المنتجات.' },
+  de: { welcome: 'Hallo! Ich bin Ihr KI-Produktassistent. Fragen Sie mich alles zu unseren Produkten, Spezifikationen oder Preisen.', placeholder: 'Fragen Sie zu Produkten...', thinking: 'Denke nach...', error: 'Zahlungsinitiierung fehlgeschlagen. Bitte versuchen Sie es erneut.', title: 'Kasse', notConfigured: 'KI-Chat ist noch nicht konfiguriert. Bitte senden Sie eine E-Mail an erich.hsu@risunicpower.com für Produktanfragen.' },
+  es: { welcome: '¡Hola! Soy su asistente de productos con IA. Pregúnteme cualquier cosa sobre nuestros productos, especificaciones o precios.', placeholder: 'Pregunte sobre productos...', thinking: 'Pensando...', error: 'Error al iniciar el pago. Intente de nuevo.', title: 'Finalizar compra', notConfigured: 'El chat de IA aún no está configurado. Envíe un correo a erich.hsu@risunicpower.com para consultas sobre productos.' },
+  fr: { welcome: 'Bonjour ! Je suis votre assistant IA produit. Posez-moi toutes vos questions sur nos produits, spécifications ou tarifs.', placeholder: 'Interrogez sur les produits...', thinking: 'Réflexion en cours...', error: 'Échec de l\'initiation du paiement. Veuillez réessayer.', title: 'Commande', notConfigured: 'Le chat IA n\'est pas encore configuré. Veuillez envoyer un e-mail à erich.hsu@risunicpower.com pour toute demande concernant les produits.' },
+  pt: { welcome: 'Olá! Sou seu assistente de produtos IA. Pergunte-me sobre nossos produtos, especificações ou preços.', placeholder: 'Pergunte sobre produtos...', thinking: 'Pensando...', error: 'Falha ao iniciar o pagamento. Tente novamente.', title: 'Finalizar Compra', notConfigured: 'O chat de IA ainda não está configurado. Envie um e-mail para erich.hsu@risunicpower.com para consultas sobre produtos.' },
+  ru: { welcome: 'Здравствуйте! Я ваш ИИ-помощник по продукции. Спрашивайте о товарах, характеристиках или ценах.', placeholder: 'Спросить о товарах...', thinking: 'Думаю...', error: 'Не удалось инициировать оплату. Пожалуйста, попробуйте снова.', title: 'Оформление заказа', notConfigured: 'Чат с ИИ еще не настроен. Пожалуйста, отправляйте запросы по email: erich.hsu@risunicpower.com.' },
 }
 
 function lbl(locale: string, key: string): string {

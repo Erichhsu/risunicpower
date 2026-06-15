@@ -1,113 +1,139 @@
 {
   "Home": {
     "hero": {
-      "tag": "Industrial Power Solutions",
-      "title": "Powering Your \nInnovation",
-      "subtitle": "From POE supplies to solar inverters — 12+ years of R&D serving\n600+ clients across 30+ countries.",
-      "ctaPrimary": "View Products",
-      "ctaSecondary": "Get a Quote"
+      "tag": "Soluções de Potência Industrial",
+      "title": "Potencializando Sua\nInovação",
+      "subtitle": "De fontes POE a inversores solares — mais de 12 anos de excelência em P&D atendendo mais de 600 clientes em mais de 30 países.",
+      "ctaPrimary": "Ver Produtos",
+      "ctaSecondary": "Solicitar Cotação"
     },
     "productGrid": {
-      "title": "Our Products",
-      "subtitle": "From compact POE injectors to industrial-grade UPS systems — every product is engineered for reliability and performance.",
-      "viewAll": "View All",
-      "items": "items",
+      "title": "Nossos Produtos",
+      "subtitle": "De injetores POE compactos a sistemas UPS de nível industrial — cada produto é projetado para confiabilidade e desempenho.",
+      "viewAll": "Ver Tudo",
+      "items": "itens",
       "label": "Nossos Produtos"
     },
     "stats": {
-      "title": "Trust in Numbers"
+      "title": "Confiança em Números"
     },
-    "viewAll": "Ver todos",
-    "readMore": "Leia mais"
+    "viewAll": "Ver Tudo",
+    "readMore": "Ler Mais"
   },
   "Product": {
-    "specs": "Specifications",
-    "features": "Features",
-    "certifications": "Certifications",
-    "related": "Related Products",
-    "getQuote": "Get a Quote",
-    "downloadSpec": "Download Datasheet",
-    "addToCart": "Add to Cart",
-    "buyNow": "Buy Now",
-    "moq": "MOQ",
-    "price": "Price",
-    "inquiry": "Inquiry",
-    "breadcrumbProducts": "Products",
-    "viewProducts": "View Products",
-    "productCount": "{n} products",
-    "keyFeatures": "Key Features",
-    "techSpecs": "Technical Specifications",
-    "noProducts": "No products in this category yet.",
-    "backTo": "Back to {name}",
-    "requestQuote": "Request Quote",
-    "more": "+{n} more"
+    "specs": "Especificações",
+    "features": "Funcionalidades",
+    "certifications": "Certificações",
+    "related": "Produtos Relacionados",
+    "getQuote": "Solicitar Cotação",
+    "downloadSpec": "Baixar Ficha Técnica",
+    "addToCart": "Adicionar ao Carrinho",
+    "buyNow": "Comprar Agora",
+    "moq": "Qtd. Mín.",
+    "price": "Preço",
+    "inquiry": "Consulta",
+    "breadcrumbProducts": "Produtos",
+    "viewProducts": "Ver Produtos",
+    "productCount": "{n} produtos",
+    "keyFeatures": "Funcionalidades Principais",
+    "techSpecs": "Especificações Técnicas",
+    "noProducts": "Nenhum produto nesta categoria ainda.",
+    "backTo": "Voltar para {name}",
+    "requestQuote": "Solicitar Cotação",
+    "more": "+{n} mais",
+    "sku": "SKU",
+    "moqOemOdm": "MOQ · OEM · ODM",
+    "productsTitle": "Categorias de Produtos",
+    "productsDesc": "Explore nossa linha completa de soluções de energia — de injetores POE e adaptadores a inversores solares e centrais elétricas portáteis.",
+    "allProducts": "Ver Todos os Produtos",
+    "inquiryNow": "Consultar Agora",
+    "customerReviews": "Avaliações de Clientes",
+    "backToProducts": "Voltar aos Produtos"
   },
   "Cart": {
-    "title": "Shopping Cart",
-    "empty": "Your cart is empty",
-    "emptyDesc": "Browse our products and add items you like",
-    "browseProducts": "Browse Products",
+    "title": "Carrinho de Compras",
+    "empty": "Seu carrinho está vazio",
+    "emptyDesc": "Navegue por nossos produtos e adicione os que gostar",
+    "browseProducts": "Explorar Produtos",
     "total": "Total",
     "subtotal": "Subtotal",
-    "shipping": "Shipping",
-    "calculatedAtCheckout": "Calculated at checkout",
-    "checkout": "Checkout",
-    "proceedCheckout": "Proceed to Checkout",
-    "wholesaleInquiry": "Wholesale Inquiry",
-    "clearCart": "Clear Cart",
-    "remove": "Remove",
-    "orderSummary": "Order Summary",
-    "items": "items"
+    "shipping": "Envio",
+    "calculatedAtCheckout": "Calculado na finalização",
+    "checkout": "Finalizar Compra",
+    "proceedCheckout": "Prosseguir para Pagamento",
+    "wholesaleInquiry": "Consulta de Atacado",
+    "clearCart": "Esvaziar Carrinho",
+    "remove": "Remover",
+    "orderSummary": "Resumo do Pedido",
+    "items": "itens",
+    "product": "Produto",
+    "quantity": "Qtd.",
+    "continueShopping": "Continuar Comprando",
+    "shippingCalc": "Frete e impostos calculados na finalização",
+    "wholesalePricing": "Precisa de preços de atacado?",
+    "totalItems": "Total ({n} itens)"
   },
   "Checkout": {
-    "title": "Checkout",
-    "backToCart": "Back to Cart",
-    "orderSummary": "Order Summary",
+    "title": "Finalizar Compra",
+    "backToCart": "Voltar ao Carrinho",
+    "orderSummary": "Resumo do Pedido",
     "total": "Total",
-    "payWithStripe": "Pay with Stripe",
-    "processing": "Processing...",
-    "securePayment": "🔒 Secured by Stripe · 140+ currencies supported"
+    "payWithStripe": "Pagar com Stripe",
+    "processing": "Processando...",
+    "securePayment": "🔒 Protegido por Stripe · 140+ moedas",
+    "empty": "Seu carrinho está vazio",
+    "browse": "Continuar Comprando",
+    "items": "Itens",
+    "nogkey": "Pagamento ainda não configurado",
+    "cart": "Carrinho",
+    "desc": "Revise seu pedido e prossiga para o pagamento",
+    "error": "Falha ao iniciar pagamento. Por favor, tente novamente."
   },
   "Contact": {
-    "title": "Contact Us",
-    "subtitle": "Get in touch for quotes, OEM/ODM inquiries, or technical support",
+    "title": "Contate-nos",
+    "subtitle": "Solicite cotações, consultas OEM/ODM ou suporte técnico",
     "form": {
-      "company": "Company",
-      "name": "Name",
-      "email": "Email",
-      "phone": "Phone",
-      "product": "Product of Interest",
-      "quantity": "Quantity (MOQ: 100)",
-      "message": "Message",
-      "submit": "Submit Inquiry",
-      "success": "Thank you! We will respond within 24 hours."
-    }
+      "company": "Empresa",
+      "name": "Nome",
+      "email": "E-mail",
+      "phone": "Telefone",
+      "product": "Produto de Interesse",
+      "quantity": "Quantidade (MOQ: 100)",
+      "message": "Mensagem",
+      "submit": "Enviar Consulta",
+      "success": "Obrigado! Responderemos em até 24 horas."
+    },
+    "sending": "Enviando...",
+    "formError": "Algo deu errado. Por favor, tente novamente.",
+    "required": "Obrigatório",
+    "invalidEmail": "E-mail inválido"
   },
   "Header": {
-    "products": "Products",
-    "solutions": "Solutions",
-    "about": "About",
+    "products": "Produtos",
+    "solutions": "Soluções",
+    "about": "Sobre",
     "blog": "Blog",
-    "contact": "Contact",
-    "search": "Search",
-    "caseStudies": "Estudos de caso"
+    "contact": "Contato",
+    "search": "Buscar",
+    "caseStudies": "Estudos de Caso"
   },
   "Footer": {
-    "products": "Products",
-    "company": "Company",
-    "support": "Support",
-    "legal": "Legal",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "rights": "All rights reserved.",
-    "newsletter": "Subscribe to our newsletter",
-    "subscribe": "Subscribe",
-    "brandDescription": "Industrial power supply manufacturer since 2014. CE, FCC, UL certified.",
-    "connectWithUs": "Conecte-se conosco"
+    "products": "Produtos",
+    "company": "Empresa",
+    "support": "Suporte",
+    "legal": "Jurídico",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço",
+    "rights": "Todos os direitos reservados.",
+    "newsletter": "Assine nossa newsletter",
+    "subscribe": "Assinar",
+    "brandDescription": "Fabricante de fontes de alimentação industrial desde 2014. Certificado CE, FCC, UL.",
+    "connectWithUs": "Conecte-se Conosco"
   },
   "NotFound": {
-    "title": "Page Not Found",
-    "desc": "The page you are looking for might have been moved or no longer exists."
+    "title": "Página Não Encontrada",
+    "desc": "A página que você procura pode ter sido movida ou não existe mais.",
+    "backHome": "Voltar ao Início"
   },
   "Reviews": {
     "title": "Avaliações de Clientes",
@@ -126,5 +152,35 @@
     "success": "Obrigado! Sua avaliação foi enviada.",
     "error": "Falha ao enviar. Tente novamente.",
     "count": "{n} avaliações"
+  },
+  "Blog": {
+    "backToBlog": "Voltar ao Blog",
+    "inquireProduct": "Consultar Produtos Relacionados"
+  },
+  "CaseStudies": {
+    "backToCaseStudies": "Voltar aos Estudos de Caso",
+    "challenge": "Desafio",
+    "solution": "Solução",
+    "results": "Resultados",
+    "getSimilar": "Obter uma Solução Similar"
+  },
+  "Offline": {
+    "title": "You're Offline",
+    "desc": "Por favor, verifique sua conexão de internet e tente novamente",
+    "backHome": "Voltar ao Início"
+  },
+  "Cookies": {
+    "title": "Cookie Policy",
+    "desc": "Esta página está em construção. Por favor, volte em breve.",
+    "backHome": "Voltar ao Início"
+  },
+  "Payment": {
+    "title": "Payment Successful!",
+    "desc": "Obrigado pelo seu pedido. Você receberá um e-mail de confirmação em breve.",
+    "orderId": "ID do Pedido",
+    "backToShop": "Continuar Comprando",
+    "error": "Não foi possível verificar o pagamento. Entre em contato com o suporte.",
+    "loading": "Verificando pagamento...",
+    "contactSupport": "Contatar Suporte"
   }
 }

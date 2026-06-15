@@ -12,44 +12,69 @@ const TABS = [
 ] as const
 
 const MILESTONES = [
-  { year: '2014', zh: '深圳光明总部成立，专注POE电源研发', en: 'Founded in Shenzhen, focused on POE power supply R&D' },
-  { year: '2016', zh: '通过ISO 9001质量管理体系认证', en: 'ISO 9001:2015 certified' },
-  { year: '2018', zh: '惠州生产基地投产，年产能突破100万台', en: 'Huizhou factory opened, capacity exceeded 1M units/year' },
-  { year: '2020', zh: '通过国家高新技术企业认定', en: 'Recognized as National High-Tech Enterprise' },
-  { year: '2021', zh: '产品线扩展至UPS、逆变器、储能', en: 'Expanded into UPS, inverter, energy storage' },
-  { year: '2022', zh: '获专精特新企业认定，研发团队突破50人', en: 'Recognized as SRDI enterprise; R&D team 50+' },
-  { year: '2023', zh: '越南生产基地投产，年产能突破300万台', en: 'Vietnam factory launched; 3M+ annual capacity' },
-  { year: '2024', zh: '研发团队80+人，全球服务300+客户', en: '80+ R&D engineers; 300+ global customers' },
-  { year: '2025', zh: '年销售额5.1亿元，服务10+世界500强企业', en: 'RMB 510M revenue; serving 10+ Fortune 500' },
+  { year: '2014', zh: '深圳光明总部成立，专注POE电源研发', en: 'Founded in Shenzhen, focused on POE power supply R&D', ja: '深セン光明本社設立、POE電源研究開発に注力' },
+  { year: '2016', zh: '通过ISO 9001质量管理体系认证', en: 'ISO 9001:2015 certified', ja: 'ISO 9001:2015認証取得' },
+  { year: '2018', zh: '惠州生产基地投产，年产能突破100万台', en: 'Huizhou factory opened, capacity exceeded 1M units/year', ja: '惠州生産拠点稼働開始、年間生産能力100万台突破' },
+  { year: '2020', zh: '通过国家高新技术企业认定', en: 'Recognized as National High-Tech Enterprise', ja: '国家ハイテク企業認定取得' },
+  { year: '2021', zh: '产品线扩展至UPS、逆变器、储能', en: 'Expanded into UPS, inverter, energy storage', ja: 'UPS、インバーター、蓄電システムへ製品ライン拡大' },
+  { year: '2022', zh: '获专精特新企业认定，研发团队突破50人', en: 'Recognized as SRDI enterprise; R&D team 50+', ja: '専精特新企業認定、研究開発チーム50名突破' },
+  { year: '2023', zh: '越南生产基地投产，年产能突破300万台', en: 'Vietnam factory launched; 3M+ annual capacity', ja: 'ベトナム生産拠点稼働、年間生産能力300万台突破' },
+  { year: '2024', zh: '研发团队80+人，全球服务300+客户', en: '80+ R&D engineers; 300+ global customers', ja: '研究開発チーム80名以上、世界300社以上にサービス提供' },
+  { year: '2025', zh: '年销售额5.1亿元，服务10+世界500强企业', en: 'RMB 510M revenue; serving 10+ Fortune 500', ja: '年間売上高5.1億元、フォーチュン500企業10社以上と取引' },
 ]
 
 const QUALITY_ITEMS = [
-  { zh: 'ISO 9001:2015质量管理体系', en: 'ISO 9001:2015 Quality Management', icon: <CheckCircle size={20} /> },
-  { zh: 'ISO 14001:2015环境管理体系', en: 'ISO 14001:2015 Environmental Management', icon: <CheckCircle size={20} /> },
-  { zh: '国家高新技术企业', en: 'National High-Tech Enterprise', icon: <Award size={20} /> },
-  { zh: '专精特新企业', en: 'Specialized & Innovative Enterprise', icon: <Award size={20} /> },
-  { zh: '每批出货附200万美元产品责任险', en: '$2M product liability insurance per shipment', icon: <ShieldCheck size={20} /> },
-  { zh: '产品认证覆盖全球30+国家', en: 'Certifications in 30+ countries', icon: <Globe size={20} /> },
-  { zh: 'DQA实验室：EMC/安规/环境/HALT全能力', en: 'Full DQA lab: EMC, safety, environmental, HALT', icon: <Zap size={20} /> },
-  { zh: 'RFQ→EVT→DVT→PVT→MP全流程质量门控', en: 'Full NPI process with quality gate reviews', icon: <Clock size={20} /> },
+  { zh: 'ISO 9001:2015质量管理体系', en: 'ISO 9001:2015 Quality Management', ja: 'ISO 9001:2015 品質マネジメントシステム', icon: <CheckCircle size={20} /> },
+  { zh: 'ISO 14001:2015环境管理体系', en: 'ISO 14001:2015 Environmental Management', ja: 'ISO 14001:2015 環境マネジメントシステム', icon: <CheckCircle size={20} /> },
+  { zh: '国家高新技术企业', en: 'National High-Tech Enterprise', ja: '国家ハイテク企業', icon: <Award size={20} /> },
+  { zh: '专精特新企业', en: 'Specialized & Innovative Enterprise', ja: '専精特新企業', icon: <Award size={20} /> },
+  { zh: '每批出货附200万美元产品责任险', en: '$2M product liability insurance per shipment', ja: '出荷ごとに200万ドルの製造物責任保険付き', icon: <ShieldCheck size={20} /> },
+  { zh: '产品认证覆盖全球30+国家', en: 'Certifications in 30+ countries', ja: '世界30カ国以上で認証取得', icon: <Globe size={20} /> },
+  { zh: 'DQA实验室：EMC/安规/环境/HALT全能力', en: 'Full DQA lab: EMC, safety, environmental, HALT', ja: 'DQAラボ：EMC/安全規格/環境/HALT全対応', icon: <Zap size={20} /> },
+  { zh: 'RFQ→EVT→DVT→PVT→MP全流程质量门控', en: 'Full NPI process with quality gate reviews', ja: 'RFQ→EVT→DVT→PVT→MP全工程品質ゲート管理', icon: <Clock size={20} /> },
 ]
 
 const PARTNER_REGIONS = [
-  { region: 'North America', flag: '🇺🇸' },
-  { region: 'Europe', flag: '🇪🇺' },
-  { region: 'Japan & Korea', flag: '🇯🇵' },
-  { region: 'Southeast Asia', flag: '🌏' },
-  { region: 'Middle East', flag: '🌍' },
-  { region: 'Latin America', flag: '🌎' },
+  { region_zh: '北美', region_en: 'North America', region_ja: '北米', flag: '🇺🇸' },
+  { region_zh: '欧洲', region_en: 'Europe', region_ja: 'ヨーロッパ', flag: '🇪🇺' },
+  { region_zh: '日韩', region_en: 'Japan & Korea', region_ja: '日本・韓国', flag: '🇯🇵' },
+  { region_zh: '东南亚', region_en: 'Southeast Asia', region_ja: '東南アジア', flag: '🌏' },
+  { region_zh: '中东', region_en: 'Middle East', region_ja: '中東', flag: '🌍' },
+  { region_zh: '拉美', region_en: 'Latin America', region_ja: 'ラテンアメリカ', flag: '🌎' },
 ]
 
 const JOB_LIST = [
-  { title: '外贸业务经理', dept: '销售部', location: '深圳', type: '全职' },
-  { title: '电源研发工程师', dept: '研发一部', location: '深圳', type: '全职' },
-  { title: '储能系统工程师', dept: '研发四部', location: '深圳', type: '全职' },
-  { title: '品质工程师 (QE)', dept: '品质部', location: '惠州', type: '全职' },
-  { title: '生产主管', dept: '生产部', location: '越南', type: '全职' },
+  {
+    zh: { title: '外贸业务经理', dept: '销售部', location: '深圳', type: '全职' },
+    en: { title: 'Foreign Trade Manager', dept: 'Sales', location: 'Shenzhen', type: 'Full-time' },
+    ja: { title: '海外営業マネージャー', dept: '営業部', location: '深セン', type: '正社員' },
+  },
+  {
+    zh: { title: '电源研发工程师', dept: '研发一部', location: '深圳', type: '全职' },
+    en: { title: 'Power R&D Engineer', dept: 'R&D Dept 1', location: 'Shenzhen', type: 'Full-time' },
+    ja: { title: '電源研究開発エンジニア', dept: '研究開発第一部', location: '深セン', type: '正社員' },
+  },
+  {
+    zh: { title: '储能系统工程师', dept: '研发四部', location: '深圳', type: '全职' },
+    en: { title: 'Energy Storage Engineer', dept: 'R&D Dept 4', location: 'Shenzhen', type: 'Full-time' },
+    ja: { title: '蓄電システムエンジニア', dept: '研究開発第四部', location: '深セン', type: '正社員' },
+  },
+  {
+    zh: { title: '品质工程师 (QE)', dept: '品质部', location: '惠州', type: '全职' },
+    en: { title: 'Quality Engineer (QE)', dept: 'Quality', location: 'Huizhou', type: 'Full-time' },
+    ja: { title: '品質エンジニア (QE)', dept: '品質部', location: '恵州', type: '正社員' },
+  },
+  {
+    zh: { title: '生产主管', dept: '生产部', location: '越南', type: '全职' },
+    en: { title: 'Production Supervisor', dept: 'Production', location: 'Vietnam', type: 'Full-time' },
+    ja: { title: '生産管理者', dept: '生産部', location: 'ベトナム', type: '正社員' },
+  },
 ]
+
+// Helper: pick the right translation from a zh/en/ja record
+function t<K extends string>(record: Record<K, string>, l: 'zh' | 'en' | 'ja', fallbackKey: K): string {
+  return (record as Record<string, string>)[l] || (record as Record<string, string>)[fallbackKey]
+}
 
 function ProfileTab({ l }: { l: 'zh' | 'en' | 'ja' }) {
   const t = l === 'zh' ? {
@@ -98,7 +123,7 @@ function HistoryTab({ l }: { l: 'zh' | 'en' | 'ja' }) {
             <div className="absolute left-1 md:left-auto top-2 w-6 h-6 rounded-full border-2 border-[#F7D142] bg-white md:right-0 md:-mr-3" style={i % 2 === 0 ? { left: '0.25rem' } : { left: '0.25rem' }} />
             <div className="card-ts">
               <span className="text-[1.2rem] font-bold text-[#F7D142] mb-1 block">{m.year}</span>
-              <p className="text-[1.3rem] text-[#4A5D70]">{l === 'en' ? m.en : m.zh}</p>
+              <p className="text-[1.3rem] text-[#4A5D70]">{m[l] || m.en}</p>
             </div>
           </div>
         ))}
@@ -113,7 +138,7 @@ function QualityTab({ l }: { l: 'zh' | 'en' | 'ja' }) {
       {QUALITY_ITEMS.map((item, i) => (
         <div key={i} className="card-ts flex items-center gap-4">
           <div className="text-[#F7D142] shrink-0">{item.icon}</div>
-          <span className="text-[1.3rem] text-[#0E4071] font-medium">{l === 'en' ? item.en : item.zh}</span>
+          <span className="text-[1.3rem] text-[#0E4071] font-medium">{item[l] || item.en}</span>
         </div>
       ))}
     </div>
@@ -128,12 +153,16 @@ function PartnersTab({ l }: { l: 'zh' | 'en' | 'ja' }) {
     <div className="text-center max-w-3xl mx-auto">
       <p className="text-[1.8rem] font-bold text-[#0E4071] mb-8">{labels.title}</p>
       <div className="grid grid-cols-3 gap-4">
-        {PARTNER_REGIONS.map((r, i) => (
-          <div key={r.region} className="card-ts flex flex-col items-center justify-center py-8">
-            <span className="text-[3rem] block mb-2">{r.flag}</span>
-            <span className="text-[1.3rem] font-medium text-[#0E4071]">{r.region}</span>
-          </div>
-        ))}
+        {PARTNER_REGIONS.map((r, i) => {
+          const regionKey = `region_${l}` as keyof typeof r
+          const regionName = (r[regionKey] as string) || r.region_en
+          return (
+            <div key={i} className="card-ts flex flex-col items-center justify-center py-8">
+              <span className="text-[3rem] block mb-2">{r.flag}</span>
+              <span className="text-[1.3rem] font-medium text-[#0E4071]">{regionName}</span>
+            </div>
+          )
+        })}
       </div>
     </div>
   )
@@ -145,12 +174,15 @@ function CareersTab({ l }: { l: 'zh' | 'en' | 'ja' }) {
   const labels = l === 'zh' ? {
     title: '加入晨旭通', why: '为什么选择我们', why1: '行业领先的技术平台与研发投入', why2: '完善的培训体系与职业发展通道', why3: '全球化工作环境与跨国协作机会', why4: '有竞争力的薪酬福利与股权激励',
     formTitle: '投递简历', name: '姓名', email: '邮箱', phone: '电话', position: '应聘岗位', message: '自我介绍/附加信息', submit: '提交申请', resume: '上传简历',
+    deptLabel: '部门：', locationLabel: '地点：', typeLabel: '类型：', applyNote: '请填写右侧表单提交申请，我们将在3个工作日内回复。',
   } : l === 'ja' ? {
     title: '採用情報', why: '選ばれる理由', why1: '業界トップクラスの技術プラットフォーム', why2: '充実した研修制度とキャリア開発', why3: 'グローバルな職場環境と国際協業', why4: '競争力のある報酬と福利厚生',
     formTitle: '履歴書を送る', name: 'お名前', email: 'メールアドレス', phone: '電話番号', position: '希望職種', message: '自己紹介・その他', submit: '送信', resume: '履歴書アップロード',
+    deptLabel: '部署：', locationLabel: '勤務地：', typeLabel: '雇用形態：', applyNote: '右側のフォームからご応募ください。3営業日以内にご連絡いたします。',
   } : {
     title: 'Join Our Team', why: 'Why Risunic?', why1: 'Industry-leading technology platform & R&D investment', why2: 'Comprehensive training & career development', why3: 'Global workplace with cross-border collaboration', why4: 'Competitive compensation & equity incentives',
     formTitle: 'Apply Now', name: 'Name', email: 'Email', phone: 'Phone', position: 'Position', message: 'About You / Additional Info', submit: 'Submit Application', resume: 'Upload Resume',
+    deptLabel: 'Dept: ', locationLabel: 'Location: ', typeLabel: 'Type: ', applyNote: 'Please fill in the form to apply. We will respond within 3 business days.',
   }
 
   return (
@@ -165,26 +197,29 @@ function CareersTab({ l }: { l: 'zh' | 'en' | 'ja' }) {
           ))}
         </div>
         <div className="space-y-2">
-          {JOB_LIST.map((job, i) => (
-            <div key={i}>
-              <button onClick={() => setExpanded(expanded === i ? null : i)}
-                className={`w-full flex items-center justify-between rounded-xl border p-4 text-left transition-all ${expanded === i ? 'border-[#F7D142] bg-[#F7D142]/5' : 'border-[#E2E8EF] bg-white'} hover:border-[#F7D142]/30`}>
-                <div>
-                  <div className="font-semibold text-[1.4rem] text-[#0E4071]">{job.title}</div>
-                  <div className="text-[1.2rem] text-[#4A5D70]">{job.dept} · {job.location} · {job.type}</div>
-                </div>
-                {expanded === i ? <ChevronUp size={18} className="text-[#F7D142]" /> : <ChevronDown size={18} className="text-[#4A5D70]" />}
-              </button>
-              {expanded === i && (
-                <div className="rounded-b-xl border border-t-0 border-[#E2E8EF] p-4 bg-white text-[1.3rem] text-[#4A5D70] leading-relaxed">
-                  <p className="mb-2"><strong>部门：</strong>{job.dept}</p>
-                  <p className="mb-2"><strong>地点：</strong>{job.location}</p>
-                  <p className="mb-2"><strong>类型：</strong>{job.type}</p>
-                  <p>请填写右侧表单提交申请，我们将在3个工作日内回复。</p>
-                </div>
-              )}
-            </div>
-          ))}
+          {JOB_LIST.map((job, i) => {
+            const jobData = job[l] || job.en
+            return (
+              <div key={i}>
+                <button onClick={() => setExpanded(expanded === i ? null : i)}
+                  className={`w-full flex items-center justify-between rounded-xl border p-4 text-left transition-all ${expanded === i ? 'border-[#F7D142] bg-[#F7D142]/5' : 'border-[#E2E8EF] bg-white'} hover:border-[#F7D142]/30`}>
+                  <div>
+                    <div className="font-semibold text-[1.4rem] text-[#0E4071]">{jobData.title}</div>
+                    <div className="text-[1.2rem] text-[#4A5D70]">{jobData.dept} · {jobData.location} · {jobData.type}</div>
+                  </div>
+                  {expanded === i ? <ChevronUp size={18} className="text-[#F7D142]" /> : <ChevronDown size={18} className="text-[#4A5D70]" />}
+                </button>
+                {expanded === i && (
+                  <div className="rounded-b-xl border border-t-0 border-[#E2E8EF] p-4 bg-white text-[1.3rem] text-[#4A5D70] leading-relaxed">
+                    <p className="mb-2"><strong>{labels.deptLabel}</strong>{jobData.dept}</p>
+                    <p className="mb-2"><strong>{labels.locationLabel}</strong>{jobData.location}</p>
+                    <p className="mb-2"><strong>{labels.typeLabel}</strong>{jobData.type}</p>
+                    <p>{labels.applyNote}</p>
+                  </div>
+                )}
+              </div>
+            )
+          })}
         </div>
       </div>
       <div className="lg:col-span-3">
@@ -195,7 +230,10 @@ function CareersTab({ l }: { l: 'zh' | 'en' | 'ja' }) {
           <input type="tel" placeholder={labels.phone} className="input-field" />
           <select className="sm:col-span-2 input-field">
             <option value="">{labels.position}</option>
-            {JOB_LIST.map(j => <option key={j.title} value={j.title}>{j.title}</option>)}
+            {JOB_LIST.map(j => {
+              const jobData = j[l] || j.en
+              return <option key={jobData.title} value={jobData.title}>{jobData.title}</option>
+            })}
           </select>
           <div className="sm:col-span-2 rounded-xl border border-dashed border-[#F7D142]/30 px-4 py-6 text-center text-[1.3rem] text-[#4A5D70] cursor-pointer hover:bg-[#F7D142]/5 transition-colors">
             📎 {labels.resume}

@@ -11,7 +11,7 @@ const testimonials = [
   { name: 'Hiroshi Tanaka', company: 'Nippon Denki KK', country: 'Japan', avatar: '/images/avatars/avatar_hiroshi.png', quote: 'RisunicPowerの品質管理体制は非常に優れています。納期厳守、不良品ゼロ。日本市場向けのカスタマイズにも柔軟に対応してくれます。', rating: 5 },
 ]
 
-const labels = {
+const labels: Record<string, { title: string; sub: string }> = {
   en: { title: 'What Our Clients Say', sub: 'Testimonials' },
   zh: { title: '客户对我们说', sub: 'Testimonials' },
   ja: { title: 'お客様の声', sub: 'Testimonials' },
@@ -20,8 +20,8 @@ const labels = {
 interface Props { locale?: string }
 
 export default function Testimonials({ locale }: Props) {
-  const l = ['en', 'zh', 'ja'].includes(locale || 'en') ? locale : 'en'
-  const t = labels[l as keyof typeof labels]
+  const l = ['en', 'zh', 'ja'].includes(locale || 'en') ? (locale || 'en') : 'en'
+  const t = labels[l] || labels.en
 
   return (
     <section className="py-20 md:py-28 bg-[#E5ECF4]">
