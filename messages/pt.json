@@ -18,7 +18,9 @@
       "title": "Confiança em Números"
     },
     "viewAll": "Ver Tudo",
-    "readMore": "Ler Mais"
+    "readMore": "Ler Mais",
+    "certTitle": "Certificações Globais",
+    "certDesc": "Nossos produtos atendem aos padrões internacionais de segurança e qualidade"
   },
   "Product": {
     "specs": "Especificações",
@@ -182,5 +184,13 @@
     "error": "Não foi possível verificar o pagamento. Entre em contato com o suporte.",
     "loading": "Verificando pagamento...",
     "contactSupport": "Contatar Suporte"
+  },
+  "Stats": {
+    "title": "Confiança em Números",
+    "subtitle": "Mais de 12 anos de liderança industrial em mais de 30 países",
+    "skus": "SKUs de Produtos",
+    "countries": "Países Atendidos",
+    "clients": "Clientes Globais",
+    "years": "Anos de Excelência"
   }
 }

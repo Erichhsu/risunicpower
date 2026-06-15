@@ -18,7 +18,9 @@
       "title": "信赖的数字"
     },
     "viewAll": "查看全部",
-    "readMore": "了解更多"
+    "readMore": "了解更多",
+    "certTitle": "全球认证",
+    "certDesc": "我们的产品符合国际安全和质量标准"
   },
   "Product": {
     "specs": "规格参数",
@@ -182,5 +184,13 @@
     "error": "无法验证支付，请联系客服。",
     "loading": "正在验证支付...",
     "contactSupport": "联系客服"
+  },
+  "Stats": {
+    "title": "信赖源于数字",
+    "subtitle": "12年行业深耕，服务全球30+国家",
+    "skus": "产品型号",
+    "countries": "服务国家",
+    "clients": "全球客户",
+    "years": "行业经验"
   }
 }

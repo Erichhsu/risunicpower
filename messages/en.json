@@ -18,7 +18,9 @@
       "title": "Trust in Numbers"
     },
     "viewAll": "View All",
-    "readMore": "Read More"
+    "readMore": "Read More",
+    "certTitle": "Global Certifications",
+    "certDesc": "Our products meet international safety and quality standards"
   },
   "Product": {
     "specs": "Specifications",
@@ -182,5 +184,13 @@
     "error": "Unable to verify payment. Please contact support.",
     "loading": "Verifying payment...",
     "contactSupport": "Contact Support"
+  },
+  "Stats": {
+    "title": "Trust in Numbers",
+    "subtitle": "12+ years of industry leadership across 30+ countries",
+    "skus": "Product SKUs",
+    "countries": "Countries Served",
+    "clients": "Global Clients",
+    "years": "Years of Excellence"
   }
 }

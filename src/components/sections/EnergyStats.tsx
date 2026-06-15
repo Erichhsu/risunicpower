@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { Zap, Globe, Users, Award } from 'lucide-react'
 
 interface StatItem {
@@ -9,13 +10,6 @@ interface StatItem {
   suffix: string
   label: string
 }
-
-const stats: StatItem[] = [
-  { icon: <Zap size={28} />, value: 500, suffix: '+', label: 'Product SKUs' },
-  { icon: <Globe size={28} />, value: 30, suffix: '+', label: 'Countries Served' },
-  { icon: <Users size={28} />, value: 600, suffix: '+', label: 'Global Clients' },
-  { icon: <Award size={28} />, value: 12, suffix: '+', label: 'Years of Excellence' },
-]
 
 function useCountUp(target: number, duration: number = 2000) {
   const [count, setCount] = useState(0)
@@ -76,12 +70,15 @@ function StatCounter({ value, suffix }: { value: number; suffix: string }) {
   )
 }
 
-export default function EnergyStats({ locale }: { locale?: string }) {
-  const t = locale === 'zh'
-    ? { title: '信赖源于数字', desc: '12年行业深耕，服务全球30+国家' }
-    : locale === 'ja'
-    ? { title: '数字が語る信頼', desc: '12年の業界経験、30カ国以上にサービス提供' }
-    : { title: 'Trust in Numbers', desc: '12+ years of industry leadership across 30+ countries' }
+export default function EnergyStats() {
+  const t = useTranslations('Stats')
+
+  const stats: StatItem[] = [
+    { icon: <Zap size={28} />, value: 500, suffix: '+', label: t('skus') },
+    { icon: <Globe size={28} />, value: 30, suffix: '+', label: t('countries') },
+    { icon: <Users size={28} />, value: 600, suffix: '+', label: t('clients') },
+    { icon: <Award size={28} />, value: 12, suffix: '+', label: t('years') },
+  ]
 
   return (
     <section className="relative py-20 overflow-hidden bg-[#2C5D7E]">
@@ -93,10 +90,10 @@ export default function EnergyStats({ locale }: { locale?: string }) {
       <div className="relative mx-auto max-w-[1200px] px-6">
         <h2
           className="text-center text-[2.8rem] font-bold text-white mb-2"
-        >{t.title}</h2>
+        >{t('title')}</h2>
         <p
           className="text-center text-[1.3rem] text-white/60 mb-12"
-        >{t.desc}</p>
+        >{t('subtitle')}</p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((s, i) => (

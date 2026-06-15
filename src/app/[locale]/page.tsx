@@ -47,10 +47,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <CompanyCards locale={locale} />
 
       {/* 3. Certifications — white */}
-      <Certifications locale={locale} />
+      <Certifications />
 
       {/* 4. EnergyStats — dark teal #2C5D7E */}
-      <EnergyStats locale={locale} />
+      <EnergyStats />
 
       {/* 5. Testimonials — light blue #E5ECF4 */}
       <Testimonials locale={locale} />

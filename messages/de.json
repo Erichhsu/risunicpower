@@ -18,7 +18,9 @@
       "title": "Vertrauen in Zahlen"
     },
     "viewAll": "Alle Anzeigen",
-    "readMore": "Weiterlesen"
+    "readMore": "Weiterlesen",
+    "certTitle": "Globale Zertifizierungen",
+    "certDesc": "Unsere Produkte erfüllen internationale Sicherheits- und Qualitätsstandards"
   },
   "Product": {
     "specs": "Spezifikationen",
@@ -182,5 +184,13 @@
     "error": "Zahlung konnte nicht verifiziert werden. Bitte kontaktieren Sie den Support.",
     "loading": "Zahlung wird überprüft...",
     "contactSupport": "Support Kontaktieren"
+  },
+  "Stats": {
+    "title": "Vertrauen in Zahlen",
+    "subtitle": "Über 12 Jahre Branchenführerschaft in über 30 Ländern",
+    "skus": "Produkt-SKUs",
+    "countries": "Länder Betreut",
+    "clients": "Globale Kunden",
+    "years": "Jahre Exzellenz"
   }
 }

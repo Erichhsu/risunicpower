@@ -18,7 +18,9 @@
       "title": "La Confiance en Chiffres"
     },
     "viewAll": "Voir Tout",
-    "readMore": "Lire Plus"
+    "readMore": "Lire Plus",
+    "certTitle": "Certifications Mondiales",
+    "certDesc": "Nos produits respectent les normes internationales de sécurité et de qualité"
   },
   "Product": {
     "specs": "Spécifications",
@@ -182,5 +184,13 @@
     "error": "Impossible de vérifier le paiement. Veuillez contacter le support.",
     "loading": "Vérification du paiement...",
     "contactSupport": "Contacter le Support"
+  },
+  "Stats": {
+    "title": "La Confiance en Chiffres",
+    "subtitle": "Plus de 12 ans de leadership industriel dans plus de 30 pays",
+    "skus": "SKU Produits",
+    "countries": "Pays Desservis",
+    "clients": "Clients Mondiaux",
+    "years": "Années d'Excellence"
   }
 }
