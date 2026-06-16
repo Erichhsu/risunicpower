@@ -109,22 +109,22 @@
       "slug": "rl550",
       "cat": "all-in-one",
       "order": 0,
-      "en_name": "RL550 All-in-One Hybrid Inverter 5.5kW",
-      "zh_name": "RL550 一体式混合逆变器 5.5kW",
+      "en_name": "RL550 All-in-One Hybrid Inverter 5.5KW",
+      "zh_name": "RL550 一体式混合逆变器 5.5KW",
       "en_specs": [
         {
           "l": "Rated Inverter Power",
-          "v": "5500W",
+          "v": "5.5KW",
           "o": 0
         },
         {
           "l": "Max. PV Input Power",
-          "v": "6500W",
+          "v": "6.5KW",
           "o": 1
         },
         {
           "l": "Max. Charging Power",
-          "v": "2880W",
+          "v": "2.9KW",
           "o": 2
         },
         {
@@ -261,17 +261,17 @@
       "zh_specs": [
         {
           "l": "额定逆变功率",
-          "v": "5500W",
+          "v": "5.5KW",
           "o": 0
         },
         {
           "l": "最大PV输入功率",
-          "v": "6500W",
+          "v": "6.5KW",
           "o": 1
         },
         {
           "l": "最大充电功率",
-          "v": "2880W",
+          "v": "2.9KW",
           "o": 2
         },
         {
@@ -427,9 +427,9 @@
       ],
       "sku": "RL550",
       "features_all": [
-        "5500W Hybrid Inverter",
+        "5.5KW Hybrid Inverter",
         "4800Wh/100Ah Battery",
-        "Dual MPPT 6500W PV Input",
+        "Dual MPPT 6.5KW PV Input",
         "UPS <10ms Switch",
         "Max 500VDC PV Input"
       ],
@@ -522,22 +522,22 @@
       "slug": "rl650",
       "cat": "all-in-one",
       "order": 1,
-      "en_name": "RL650 All-in-One Hybrid Inverter 6.5kW",
-      "zh_name": "RL650 一体式混合逆变器 6.5kW",
+      "en_name": "RL650 All-in-One Hybrid Inverter 6.5KW",
+      "zh_name": "RL650 一体式混合逆变器 6.5KW",
       "en_specs": [
         {
           "l": "Rated Inverter Power",
-          "v": "6500W",
+          "v": "6.5KW",
           "o": 0
         },
         {
           "l": "Max. PV Input Power",
-          "v": "7500W",
+          "v": "7.5KW",
           "o": 1
         },
         {
           "l": "Max. Charging Power",
-          "v": "3000W",
+          "v": "3KW",
           "o": 2
         },
         {
@@ -604,17 +604,17 @@
       "zh_specs": [
         {
           "l": "额定逆变功率",
-          "v": "6500W",
+          "v": "6.5KW",
           "o": 0
         },
         {
           "l": "最大PV输入功率",
-          "v": "7500W",
+          "v": "7.5KW",
           "o": 1
         },
         {
           "l": "最大充电功率",
-          "v": "3000W",
+          "v": "3KW",
           "o": 2
         },
         {
@@ -700,7 +700,7 @@
       ],
       "sku": "RL650",
       "features_all": [
-        "6500W Rated Power",
+        "6.5KW Rated Power",
         "5KWh Li-ion Battery",
         "Dual MPPT Trackers",
         "UPS Function <10ms",
@@ -795,22 +795,22 @@
       "slug": "rl800",
       "cat": "all-in-one",
       "order": 2,
-      "en_name": "RL800 All-in-One Hybrid Inverter 8kW",
-      "zh_name": "RL800 一体式混合逆变器 8kW",
+      "en_name": "RL800 All-in-One Hybrid Inverter 8KW",
+      "zh_name": "RL800 一体式混合逆变器 8KW",
       "en_specs": [
         {
           "l": "Rated Inverter Power",
-          "v": "8000W",
+          "v": "8KW",
           "o": 0
         },
         {
           "l": "Max. PV Input Power",
-          "v": "9000W",
+          "v": "9KW",
           "o": 1
         },
         {
           "l": "Max. Charging Power",
-          "v": "3600W",
+          "v": "3.6KW",
           "o": 2
         },
         {
@@ -877,17 +877,17 @@
       "zh_specs": [
         {
           "l": "额定逆变功率",
-          "v": "8000W",
+          "v": "8KW",
           "o": 0
         },
         {
           "l": "最大PV输入功率",
-          "v": "9000W",
+          "v": "9KW",
           "o": 1
         },
         {
           "l": "最大充电功率",
-          "v": "3600W",
+          "v": "3.6KW",
           "o": 2
         },
         {
@@ -973,7 +973,7 @@
       ],
       "sku": "RL800",
       "features_all": [
-        "8000W Rated Power",
+        "8KW Rated Power",
         "5KWh Li-ion Battery",
         "Dual MPPT, 150A Charging",
         "Parallel + 3-Phase Support",
@@ -1068,12 +1068,12 @@
       "slug": "ess-w-1000w",
       "cat": "all-in-one",
       "order": 3,
-      "en_name": "ESS-W-1000W Wall-Mount Storage 314Ah",
-      "zh_name": "ESS-W-1000W 壁挂式储能系统 314Ah",
+      "en_name": "ESS-W-1KW Wall-Mount Storage 314Ah",
+      "zh_name": "ESS-W-1KW 壁挂式储能系统 314Ah",
       "en_specs": [
         {
           "l": "Model",
-          "v": "ESS-W 1000W+2009WH",
+          "v": "ESS-W 1KW+2009WH",
           "o": 0
         },
         {
@@ -1083,7 +1083,7 @@
         },
         {
           "l": "额定交流输出功率",
-          "v": "1000W",
+          "v": "1KW",
           "o": 2
         },
         {
@@ -1160,7 +1160,7 @@
       "zh_specs": [
         {
           "l": "型号",
-          "v": "ESS-W 1000W+2009WH",
+          "v": "ESS-W 1KW+2009WH",
           "o": 0
         },
         {
@@ -1170,7 +1170,7 @@
         },
         {
           "l": "额定交流输出功率",
-          "v": "1000W",
+          "v": "1KW",
           "o": 2
         },
         {
@@ -1254,7 +1254,7 @@
       ],
       "sku": "ESS-W-1000W",
       "features_all": [
-        "1000W Pure Sine Wave",
+        "1KW Pure Sine Wave",
         "LiFePO4 2000Wh Battery",
         "MPPT Solar Charge",
         "UPS <20ms Switch",
@@ -1349,12 +1349,12 @@
       "slug": "ess-1000w",
       "cat": "all-in-one",
       "order": 4,
-      "en_name": "ESS-1000W All-in-One Energy Storage 314Ah",
-      "zh_name": "ESS-1000W 一体式储能系统 314Ah",
+      "en_name": "ESS-1KW All-in-One Energy Storage 314Ah",
+      "zh_name": "ESS-1KW 一体式储能系统 314Ah",
       "en_specs": [
         {
           "l": "Model",
-          "v": "ESS 1000W+2009WH",
+          "v": "ESS 1KW+2009WH",
           "o": 0
         },
         {
@@ -1364,7 +1364,7 @@
         },
         {
           "l": "额定交流输出功率",
-          "v": "1000W",
+          "v": "1KW",
           "o": 2
         },
         {
@@ -1456,7 +1456,7 @@
       "zh_specs": [
         {
           "l": "型号",
-          "v": "ESS 1000W+2009WH",
+          "v": "ESS 1KW+2009WH",
           "o": 0
         },
         {
@@ -1466,7 +1466,7 @@
         },
         {
           "l": "额定交流输出功率",
-          "v": "1000W",
+          "v": "1KW",
           "o": 2
         },
         {
@@ -1565,7 +1565,7 @@
       ],
       "sku": "ESS-1000W",
       "features_all": [
-        "1000W Pure Sine Wave",
+        "1KW Pure Sine Wave",
         "2000Wh LiFePO4 Battery",
         "MPPT Solar 550W Max",
         "8000 Cycle Long Life",
@@ -1660,12 +1660,12 @@
       "slug": "ess-12kw-16kwh",
       "cat": "all-in-one",
       "order": 5,
-      "en_name": "ESS-12KW-16KWH All-in-One Energy Storage 12kW",
-      "zh_name": "ESS-12KW-16KWH 一体式储能系统 12kW",
+      "en_name": "ESS-12KW-16KWh All-in-One Energy Storage 12KW",
+      "zh_name": "ESS-12KW-16KWh 一体式储能系统 12KW",
       "en_specs": [
         {
           "l": "Model",
-          "v": "ESS 12KW+16KWH",
+          "v": "ESS 12KW+16KWh",
           "o": 1
         },
         {
@@ -1675,12 +1675,12 @@
         },
         {
           "l": "Rated Inverter Power",
-          "v": "12kW",
+          "v": "12KW",
           "o": 3
         },
         {
           "l": "Battery Capacity",
-          "v": "16kWh (14.4kWh usable)",
+          "v": "16KWh (14.4KWh usable)",
           "o": 4
         },
         {
@@ -1700,7 +1700,7 @@
         },
         {
           "l": "Max PV Input Power",
-          "v": "9000W (27A Max)",
+          "v": "9KW (27A Max)",
           "o": 8
         },
         {
@@ -1742,7 +1742,7 @@
       "zh_specs": [
         {
           "l": "Model",
-          "v": "ESS 12KW+16KWH",
+          "v": "ESS 12KW+16KWh",
           "o": 1
         },
         {
@@ -1752,12 +1752,12 @@
         },
         {
           "l": "Rated Inverter Power",
-          "v": "12kW",
+          "v": "12KW",
           "o": 3
         },
         {
           "l": "Battery Capacity",
-          "v": "16kWh (14.4kWh usable)",
+          "v": "16KWh (14.4KWh usable)",
           "o": 4
         },
         {
@@ -1777,7 +1777,7 @@
         },
         {
           "l": "Max PV Input Power",
-          "v": "9000W (27A Max)",
+          "v": "9KW (27A Max)",
           "o": 8
         },
         {
@@ -1827,7 +1827,7 @@
       "sku": "ESS-12KW-16KWH",
       "features_all": [
         "12KW/16KWh Off-Grid System",
-        "9000W PV Input 500VDC",
+        "9KW PV Input 500VDC",
         "160A Charge/Discharge",
         "51.2V Battery Module",
         "WiFi + Generator Ready"
@@ -1921,12 +1921,12 @@
       "slug": "ess-12kw-30kwh",
       "cat": "all-in-one",
       "order": 6,
-      "en_name": "ESS-12KW-30KWH All-in-One Energy Storage 12kW",
-      "zh_name": "ESS-12KW-30KWH 一体式储能系统 12kW",
+      "en_name": "ESS-12KW-30KWh All-in-One Energy Storage 12KW",
+      "zh_name": "ESS-12KW-30KWh 一体式储能系统 12KW",
       "en_specs": [
         {
           "l": "Model",
-          "v": "ESS 12KW+30KWH",
+          "v": "ESS 12KW+30KWh",
           "o": 1
         },
         {
@@ -1936,12 +1936,12 @@
         },
         {
           "l": "Rated Inverter Power",
-          "v": "12kW",
+          "v": "12KW",
           "o": 3
         },
         {
           "l": "Battery Capacity",
-          "v": "30kWh",
+          "v": "30KWh",
           "o": 4
         },
         {
@@ -1961,7 +1961,7 @@
         },
         {
           "l": "Max PV Input Power",
-          "v": "9000W (27A Max)",
+          "v": "9KW (27A Max)",
           "o": 8
         },
         {
@@ -1998,7 +1998,7 @@
       "zh_specs": [
         {
           "l": "Model",
-          "v": "ESS 12KW+30KWH",
+          "v": "ESS 12KW+30KWh",
           "o": 1
         },
         {
@@ -2008,12 +2008,12 @@
         },
         {
           "l": "Rated Inverter Power",
-          "v": "12kW",
+          "v": "12KW",
           "o": 3
         },
         {
           "l": "Battery Capacity",
-          "v": "30kWh",
+          "v": "30KWh",
           "o": 4
         },
         {
@@ -2033,7 +2033,7 @@
         },
         {
           "l": "Max PV Input Power",
-          "v": "9000W (27A Max)",
+          "v": "9KW (27A Max)",
           "o": 8
         },
         {
@@ -2078,7 +2078,7 @@
       "sku": "ESS-12KW-30KWH",
       "features_all": [
         "12KW/30KWh Off-Grid System",
-        "9000W PV Input 450VDC",
+        "9KW PV Input 450VDC",
         "200A Charge/Discharge",
         "Feed-in to Grid Support",
         "WiFi + Generator Ready"
@@ -2172,12 +2172,12 @@
       "slug": "ess-12kw-60kwh",
       "cat": "all-in-one",
       "order": 7,
-      "en_name": "ESS-12KW-60KWH Commercial Storage 12kW",
-      "zh_name": "ESS-12KW-60KWH 商用储能系统 12kW",
+      "en_name": "ESS-12KW-60KWh Commercial Storage 12KW",
+      "zh_name": "ESS-12KW-60KWh 商用储能系统 12KW",
       "en_specs": [
         {
           "l": "Model",
-          "v": "ESS 12KW+60KWH",
+          "v": "ESS 12KW+60KWh",
           "o": 1
         },
         {
@@ -2187,12 +2187,12 @@
         },
         {
           "l": "Rated Inverter Power",
-          "v": "12kW",
+          "v": "12KW",
           "o": 3
         },
         {
           "l": "Battery Capacity",
-          "v": "60kWh",
+          "v": "60KWh",
           "o": 4
         },
         {
@@ -2212,7 +2212,7 @@
         },
         {
           "l": "Max PV Input Power",
-          "v": "15000W",
+          "v": "15KW",
           "o": 8
         },
         {
@@ -2249,7 +2249,7 @@
       "zh_specs": [
         {
           "l": "Model",
-          "v": "ESS 12KW+60KWH",
+          "v": "ESS 12KW+60KWh",
           "o": 1
         },
         {
@@ -2259,12 +2259,12 @@
         },
         {
           "l": "Rated Inverter Power",
-          "v": "12kW",
+          "v": "12KW",
           "o": 3
         },
         {
           "l": "Battery Capacity",
-          "v": "60kWh",
+          "v": "60KWh",
           "o": 4
         },
         {
@@ -2284,7 +2284,7 @@
         },
         {
           "l": "Max PV Input Power",
-          "v": "15000W",
+          "v": "15KW",
           "o": 8
         },
         {
@@ -2329,7 +2329,7 @@
       "sku": "ESS-12KW-60KWH",
       "features_all": [
         "12KW/60KWh Stackable System",
-        "15000W PV Input 450VDC",
+        "15KW PV Input 450VDC",
         "200A Charge/Discharge",
         "Feed-in to Grid Support",
         "WiFi + Generator Ready"
@@ -2423,12 +2423,12 @@
       "slug": "ess-12kw-64kwh",
       "cat": "all-in-one",
       "order": 8,
-      "en_name": "ESS-12KW-64KWH Commercial Storage 12kW",
-      "zh_name": "ESS-12KW-64KWH 商用储能系统 12kW",
+      "en_name": "ESS-12KW-64KWh Commercial Storage 12KW",
+      "zh_name": "ESS-12KW-64KWh 商用储能系统 12KW",
       "en_specs": [
         {
           "l": "Model",
-          "v": "ESS 12KW+64KWH",
+          "v": "ESS 12KW+64KWh",
           "o": 1
         },
         {
@@ -2438,12 +2438,12 @@
         },
         {
           "l": "Rated Inverter Power",
-          "v": "12kW",
+          "v": "12KW",
           "o": 3
         },
         {
           "l": "Battery Capacity",
-          "v": "64kWh",
+          "v": "64KWh",
           "o": 4
         },
         {
@@ -2463,7 +2463,7 @@
         },
         {
           "l": "Max PV Input Power",
-          "v": "15000W (Dual MPPT)",
+          "v": "15KW (Dual MPPT)",
           "o": 8
         },
         {
@@ -2510,7 +2510,7 @@
       "zh_specs": [
         {
           "l": "Model",
-          "v": "ESS 12KW+64KWH",
+          "v": "ESS 12KW+64KWh",
           "o": 1
         },
         {
@@ -2520,12 +2520,12 @@
         },
         {
           "l": "Rated Inverter Power",
-          "v": "12kW",
+          "v": "12KW",
           "o": 3
         },
         {
           "l": "Battery Capacity",
-          "v": "64kWh",
+          "v": "64KWh",
           "o": 4
         },
         {
@@ -2545,7 +2545,7 @@
         },
         {
           "l": "Max PV Input Power",
-          "v": "15000W (Dual MPPT)",
+          "v": "15KW (Dual MPPT)",
           "o": 8
         },
         {
@@ -2600,7 +2600,7 @@
       "sku": "ESS-12KW-64KWH",
       "features_all": [
         "12KW/64KWh Rack-Mounted",
-        "15000W Dual MPPT PV Input",
+        "15KW Dual MPPT PV Input",
         "200A Charge/Discharge",
         "Feed-in to Grid Support",
         "WiFi + Generator Ready"
@@ -2694,12 +2694,12 @@
       "slug": "ess-3-6kw-5kwh",
       "cat": "all-in-one",
       "order": 9,
-      "en_name": "ESS-3.6KW-5KWH Wall-Mount Storage System",
-      "zh_name": "ESS-3.6KW-5KWH 壁挂式储能系统",
+      "en_name": "ESS-3.6KW-5KWh Wall-Mount Storage System",
+      "zh_name": "ESS-3.6KW-5KWh 壁挂式储能系统",
       "en_specs": [
         {
           "l": "Model",
-          "v": "ESS 3.6KW+5KWH",
+          "v": "ESS 3.6KW+5KWh",
           "o": 0
         },
         {
@@ -2719,7 +2719,7 @@
         },
         {
           "l": "交流输出额定功率",
-          "v": "3.6kW",
+          "v": "3.6KW",
           "o": 4
         },
         {
@@ -2744,7 +2744,7 @@
         },
         {
           "l": "光伏输入功率",
-          "v": "5000W / 18A",
+          "v": "5KW / 18A",
           "o": 9
         },
         {
@@ -2826,7 +2826,7 @@
       "zh_specs": [
         {
           "l": "型号",
-          "v": "ESS 3.6KW+5KWH",
+          "v": "ESS 3.6KW+5KWh",
           "o": 0
         },
         {
@@ -2846,7 +2846,7 @@
         },
         {
           "l": "交流输出额定功率",
-          "v": "3.6kW",
+          "v": "3.6KW",
           "o": 4
         },
         {
@@ -2871,7 +2871,7 @@
         },
         {
           "l": "光伏输入功率",
-          "v": "5000W / 18A",
+          "v": "5KW / 18A",
           "o": 9
         },
         {
@@ -3055,12 +3055,12 @@
       "slug": "ess-3-6kw-8kwh",
       "cat": "all-in-one",
       "order": 10,
-      "en_name": "ESS-3.6KW-8KWH Wall-Mount Storage System",
-      "zh_name": "ESS-3.6KW-8KWH 壁挂式储能系统",
+      "en_name": "ESS-3.6KW-8KWh Wall-Mount Storage System",
+      "zh_name": "ESS-3.6KW-8KWh 壁挂式储能系统",
       "en_specs": [
         {
           "l": "Model",
-          "v": "ESS 3.6KW+8KWH",
+          "v": "ESS 3.6KW+8KWh",
           "o": 1
         },
         {
@@ -3070,12 +3070,12 @@
         },
         {
           "l": "Rated Inverter Power",
-          "v": "3.6kW",
+          "v": "3.6KW",
           "o": 3
         },
         {
           "l": "Battery Capacity",
-          "v": "8kWh",
+          "v": "8KWh",
           "o": 4
         },
         {
@@ -3095,7 +3095,7 @@
         },
         {
           "l": "Max PV Input Power",
-          "v": "5000W",
+          "v": "5KW",
           "o": 8
         },
         {
@@ -3137,7 +3137,7 @@
       "zh_specs": [
         {
           "l": "Model",
-          "v": "ESS 3.6KW+8KWH",
+          "v": "ESS 3.6KW+8KWh",
           "o": 1
         },
         {
@@ -3147,12 +3147,12 @@
         },
         {
           "l": "Rated Inverter Power",
-          "v": "3.6kW",
+          "v": "3.6KW",
           "o": 3
         },
         {
           "l": "Battery Capacity",
-          "v": "8kWh",
+          "v": "8KWh",
           "o": 4
         },
         {
@@ -3172,7 +3172,7 @@
         },
         {
           "l": "Max PV Input Power",
-          "v": "5000W",
+          "v": "5KW",
           "o": 8
         },
         {
@@ -3222,7 +3222,7 @@
       "sku": "ESS-3-6KW-8KWH",
       "features_all": [
         "3.6KW/8KWh Off-Grid System",
-        "5000W PV MPPT 40-450V",
+        "5KW PV MPPT 40-450V",
         "25.6V Lead-Acid/Lithium Battery",
         "100A Charge / 150A Discharge",
         "Slim Wall-Mount Design"
@@ -3958,12 +3958,12 @@
       "slug": "ess-6kw-16kwh",
       "cat": "all-in-one",
       "order": 13,
-      "en_name": "ESS-6KW-16KWH Hybrid Storage System",
-      "zh_name": "ESS-6KW-16KWH 混合储能系统",
+      "en_name": "ESS-6KW-16KWh Hybrid Storage System",
+      "zh_name": "ESS-6KW-16KWh 混合储能系统",
       "en_specs": [
         {
           "l": "Model",
-          "v": "ESS 6KW+16KWH",
+          "v": "ESS 6KW+16KWh",
           "o": 0
         },
         {
@@ -3983,7 +3983,7 @@
         },
         {
           "l": "交流输出额定功率",
-          "v": "6kW",
+          "v": "6KW",
           "o": 4
         },
         {
@@ -4008,7 +4008,7 @@
         },
         {
           "l": "光伏输入功率",
-          "v": "9000W / 27A",
+          "v": "9KW / 27A",
           "o": 9
         },
         {
@@ -4095,7 +4095,7 @@
       "zh_specs": [
         {
           "l": "型号",
-          "v": "ESS 6KW+16KWH",
+          "v": "ESS 6KW+16KWh",
           "o": 0
         },
         {
@@ -4115,7 +4115,7 @@
         },
         {
           "l": "交流输出额定功率",
-          "v": "6kW",
+          "v": "6KW",
           "o": 4
         },
         {
@@ -4140,7 +4140,7 @@
         },
         {
           "l": "光伏输入功率",
-          "v": "9000W / 27A",
+          "v": "9KW / 27A",
           "o": 9
         },
         {
@@ -4335,12 +4335,12 @@
       "slug": "ess-hx-6kw",
       "cat": "all-in-one",
       "order": 14,
-      "en_name": "ESS-HX-6KW Hybrid Inverter 6kW",
-      "zh_name": "ESS-HX-6KW 混合逆变器 6kW",
+      "en_name": "ESS-HX-6KW Hybrid Inverter 6KW",
+      "zh_name": "ESS-HX-6KW 混合逆变器 6KW",
       "en_specs": [
         {
           "l": "Model",
-          "v": "ESS HX 6KW+16KWH",
+          "v": "ESS HX 6KW+16KWh",
           "o": 0
         },
         {
@@ -4350,7 +4350,7 @@
         },
         {
           "l": "光伏最大输入功率",
-          "v": "9kW",
+          "v": "9KW",
           "o": 2
         },
         {
@@ -4370,7 +4370,7 @@
         },
         {
           "l": "并网额定功率",
-          "v": "6kW / 6kVA",
+          "v": "6KW / 6KVA",
           "o": 6
         },
         {
@@ -4482,7 +4482,7 @@
       "zh_specs": [
         {
           "l": "型号",
-          "v": "ESS HX 6KW+16KWH",
+          "v": "ESS HX 6KW+16KWh",
           "o": 0
         },
         {
@@ -4492,7 +4492,7 @@
         },
         {
           "l": "光伏最大输入功率",
-          "v": "9kW",
+          "v": "9KW",
           "o": 2
         },
         {
@@ -4512,7 +4512,7 @@
         },
         {
           "l": "并网额定功率",
-          "v": "6kW / 6kVA",
+          "v": "6KW / 6KVA",
           "o": 6
         },
         {
@@ -4632,7 +4632,7 @@
       "sku": "ESS-HX-6KW",
       "features_all": [
         "6KW Hybrid Inverter",
-        "High PV 9000W Input",
+        "High PV 9KW Input",
         "UPS <20ms Switch",
         "Parallel Support",
         "WiFi/GPRS Optional"
@@ -4726,12 +4726,12 @@
       "slug": "ess-hy-10kw",
       "cat": "all-in-one",
       "order": 15,
-      "en_name": "ESS-HY-10KW Hybrid Inverter 10kW",
-      "zh_name": "ESS-HY-10KW 混合逆变器 10kW",
+      "en_name": "ESS-HY-10KW Hybrid Inverter 10KW",
+      "zh_name": "ESS-HY-10KW 混合逆变器 10KW",
       "en_specs": [
         {
           "l": "Model",
-          "v": "ESS HY 10KW+30KWH",
+          "v": "ESS HY 10KW+30KWh",
           "o": 1
         },
         {
@@ -4741,12 +4741,12 @@
         },
         {
           "l": "Rated Inverter Power",
-          "v": "10kW",
+          "v": "10KW",
           "o": 3
         },
         {
           "l": "Battery Capacity",
-          "v": "30kWh",
+          "v": "30KWh",
           "o": 4
         },
         {
@@ -4808,7 +4808,7 @@
       "zh_specs": [
         {
           "l": "Model",
-          "v": "ESS HY 10KW+30KWH",
+          "v": "ESS HY 10KW+30KWh",
           "o": 1
         },
         {
@@ -4818,12 +4818,12 @@
         },
         {
           "l": "Rated Inverter Power",
-          "v": "10kW",
+          "v": "10KW",
           "o": 3
         },
         {
           "l": "Battery Capacity",
-          "v": "30kWh",
+          "v": "30KWh",
           "o": 4
         },
         {
@@ -4987,12 +4987,12 @@
       "slug": "ess-hy-12kw",
       "cat": "all-in-one",
       "order": 16,
-      "en_name": "ESS-HY-12KW Hybrid Inverter 12kW",
-      "zh_name": "ESS-HY-12KW 混合逆变器 12kW",
+      "en_name": "ESS-HY-12KW Hybrid Inverter 12KW",
+      "zh_name": "ESS-HY-12KW 混合逆变器 12KW",
       "en_specs": [
         {
           "l": "Model",
-          "v": "ESS HY 12KW+30KWH",
+          "v": "ESS HY 12KW+30KWh",
           "o": 1
         },
         {
@@ -5002,12 +5002,12 @@
         },
         {
           "l": "Rated Inverter Power",
-          "v": "12kW",
+          "v": "12KW",
           "o": 3
         },
         {
           "l": "Battery Capacity",
-          "v": "30kWh",
+          "v": "30KWh",
           "o": 4
         },
         {
@@ -5069,7 +5069,7 @@
       "zh_specs": [
         {
           "l": "Model",
-          "v": "ESS HY 12KW+30KWH",
+          "v": "ESS HY 12KW+30KWh",
           "o": 1
         },
         {
@@ -5079,12 +5079,12 @@
         },
         {
           "l": "Rated Inverter Power",
-          "v": "12kW",
+          "v": "12KW",
           "o": 3
         },
         {
           "l": "Battery Capacity",
-          "v": "30kWh",
+          "v": "30KWh",
           "o": 4
         },
         {
@@ -5418,7 +5418,7 @@
         },
         {
           "l": "AC输出-过载保护",
-          "v": "≥700W/60s → ≥850W/15s → ≥1020W/2s → ≥1200W/200ms",
+          "v": "≥700W/60s → ≥850W/15s → ≥1KW/2s → ≥1.2KW/200ms",
           "o": 33
         },
         {
@@ -5685,7 +5685,7 @@
         },
         {
           "l": "AC输出-过载保护",
-          "v": "≥700W/60s → ≥850W/15s → ≥1020W/2s → ≥1200W/200ms",
+          "v": "≥700W/60s → ≥850W/15s → ≥1KW/2s → ≥1.2KW/200ms",
           "o": 33
         },
         {
@@ -5907,8 +5907,8 @@
       "slug": "r0263",
       "cat": "backup-power",
       "order": 1,
-      "en_name": "R0263 Backup UPS 1400W/600W",
-      "zh_name": "R0263 备电UPS 1400W/600W",
+      "en_name": "R0263 Backup UPS 1.4KW/600W",
+      "zh_name": "R0263 备电UPS 1.4KW/600W",
       "en_specs": [
         {
           "l": "Model",
@@ -5922,7 +5922,7 @@
         },
         {
           "l": "Description",
-          "v": "逆变器 1400W",
+          "v": "逆变器 1.4KW",
           "o": 2
         },
         {
@@ -5947,7 +5947,7 @@
         },
         {
           "l": "AC Output Rated Power",
-          "v": "1400W",
+          "v": "1.4KW",
           "o": 7
         },
         {
@@ -6077,7 +6077,7 @@
         },
         {
           "l": "AC输出-过载保护",
-          "v": "≥1400W/60s → ≥1500W/15s → ≥2040W/2s → ≥2400W/200ms",
+          "v": "≥1.4KW/60s → ≥1.5KW/15s → ≥2KW/2s → ≥2.4KW/200ms",
           "o": 33
         },
         {
@@ -6184,7 +6184,7 @@
         },
         {
           "l": "描述",
-          "v": "逆变器 1400W",
+          "v": "逆变器 1.4KW",
           "o": 2
         },
         {
@@ -6209,7 +6209,7 @@
         },
         {
           "l": "AC输出-额定功率",
-          "v": "1400W",
+          "v": "1.4KW",
           "o": 7
         },
         {
@@ -6339,7 +6339,7 @@
         },
         {
           "l": "AC输出-过载保护",
-          "v": "≥1400W/60s → ≥1500W/15s → ≥2040W/2s → ≥2400W/200ms",
+          "v": "≥1.4KW/60s → ≥1.5KW/15s → ≥2KW/2s → ≥2.4KW/200ms",
           "o": 33
         },
         {
@@ -6461,7 +6461,7 @@
       ],
       "sku": "R0263",
       "features_all": [
-        "1400W Inverter",
+        "1.4KW Inverter",
         "24V DC Input",
         "230V AC Pure Sine Wave",
         "Offline UPS Design",
@@ -6556,7 +6556,7 @@
       "slug": "r0285",
       "cat": "inverter-ip21",
       "order": 2,
-      "en_name": "R0285 Power Inverter 2.4kW IP21 24V",
+      "en_name": "R0285 Power Inverter 2.4KW IP21 24V",
       "zh_name": "R0285 逆变器 2.4KW IP21 24V",
       "en_specs": [
         {
@@ -6566,7 +6566,7 @@
         },
         {
           "l": "Description",
-          "v": "24V 2400W 双向逆变器 / 60~100V 1400W MPPT",
+          "v": "24V 2.4KW 双向逆变器 / 60~100V 1.4KW MPPT",
           "o": 1
         },
         {
@@ -6576,7 +6576,7 @@
         },
         {
           "l": "AC模式-额定功率",
-          "v": "2400W",
+          "v": "2.4KW",
           "o": 3
         },
         {
@@ -6636,7 +6636,7 @@
         },
         {
           "l": "MPPT-最大PV功率",
-          "v": "1400W",
+          "v": "1.4KW",
           "o": 15
         },
         {
@@ -6738,7 +6738,7 @@
         },
         {
           "l": "描述",
-          "v": "24V 2400W 双向逆变器 / 60~100V 1400W MPPT",
+          "v": "24V 2.4KW 双向逆变器 / 60~100V 1.4KW MPPT",
           "o": 1
         },
         {
@@ -6748,7 +6748,7 @@
         },
         {
           "l": "AC模式-额定功率",
-          "v": "2400W",
+          "v": "2.4KW",
           "o": 3
         },
         {
@@ -6808,7 +6808,7 @@
         },
         {
           "l": "MPPT-最大PV功率",
-          "v": "1400W",
+          "v": "1.4KW",
           "o": 15
         },
         {
@@ -6918,10 +6918,10 @@
       ],
       "sku": "R0285",
       "features_all": [
-        "2400W Bidirectional Inverter",
+        "2.4KW Bidirectional Inverter",
         "24V DC Input",
         "230V AC Pure Sine Wave",
-        "MPPT 1400W Built-in",
+        "MPPT 1.4KW Built-in",
         "IP21 Indoor Rated"
       ],
       "en_description": "The R0285 from RisunicPower delivers high-performance power solutions with standout features: 51.2V 100Ah Battery, LiFePO4 Long Life, 5.12KWh Storage. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
@@ -7013,8 +7013,8 @@
       "slug": "r0286",
       "cat": "inverter-ip21",
       "order": 3,
-      "en_name": "R0286 Power Inverter 2.4kW IP21 48V",
-      "zh_name": "R0286 逆变器 2.4kW IP21 48V",
+      "en_name": "R0286 Power Inverter 2.4KW IP21 48V",
+      "zh_name": "R0286 逆变器 2.4KW IP21 48V",
       "en_specs": [
         {
           "l": "Model",
@@ -7115,7 +7115,7 @@
       ],
       "sku": "R0286",
       "features_all": [
-        "2400W Inverter/Charger",
+        "2.4KW Inverter/Charger",
         "48V DC Input",
         "230V AC Output",
         "True Sine Wave",
@@ -7210,8 +7210,8 @@
       "slug": "r0287",
       "cat": "inverter-ip21",
       "order": 4,
-      "en_name": "R0287 Power Inverter 6.2kW IP21 48V",
-      "zh_name": "R0287 逆变器 6.2kW IP21 48V",
+      "en_name": "R0287 Power Inverter 6.2KW IP21 48V",
+      "zh_name": "R0287 逆变器 6.2KW IP21 48V",
       "en_specs": [
         {
           "l": "Model",
@@ -7417,7 +7417,7 @@
         },
         {
           "l": "Description",
-          "v": "3000W 双向逆变器",
+          "v": "3KW 双向逆变器",
           "o": 1
         },
         {
@@ -7542,7 +7542,7 @@
         },
         {
           "l": "AC输出保护-过载",
-          "v": "≥3000W/60s → ≥3400W/30s → ≥3900W/2s → ≥4900W/200ms",
+          "v": "≥3KW/60s → ≥3.4KW/30s → ≥3.9KW/2s → ≥4.9KW/200ms",
           "o": 26
         },
         {
@@ -7619,7 +7619,7 @@
         },
         {
           "l": "描述",
-          "v": "3000W 双向逆变器",
+          "v": "3KW 双向逆变器",
           "o": 1
         },
         {
@@ -7744,7 +7744,7 @@
         },
         {
           "l": "AC输出保护-过载",
-          "v": "≥3000W/60s → ≥3400W/30s → ≥3900W/2s → ≥4900W/200ms",
+          "v": "≥3KW/60s → ≥3.4KW/30s → ≥3.9KW/2s → ≥4.9KW/200ms",
           "o": 26
         },
         {
@@ -7847,7 +7847,7 @@
       ],
       "sku": "R0319",
       "features_all": [
-        "3000W Bidirectional Inverter",
+        "3KW Bidirectional Inverter",
         "25.6V DC Input",
         "230V AC Pure Sine Wave",
         "IP21 Indoor Rated",
@@ -8469,8 +8469,8 @@
       "slug": "r0355",
       "cat": "inverter-ip65",
       "order": 7,
-      "en_name": "R0355 Power Inverter 6200W IP65 48V",
-      "zh_name": "R0355 逆变器 6200W IP65 48V",
+      "en_name": "R0355 Power Inverter 6.2KW IP65 48V",
+      "zh_name": "R0355 逆变器 6.2KW IP65 48V",
       "en_specs": [
         {
           "l": "Model",
@@ -8524,7 +8524,7 @@
         },
         {
           "l": "逆变模式-额定输出功率",
-          "v": "6200W",
+          "v": "6.2KW",
           "o": 10
         },
         {
@@ -8609,7 +8609,7 @@
         },
         {
           "l": "PV输入-最大PV功率",
-          "v": "7000W",
+          "v": "7KW",
           "o": 27
         },
         {
@@ -8701,7 +8701,7 @@
         },
         {
           "l": "逆变模式-额定输出功率",
-          "v": "6200W",
+          "v": "6.2KW",
           "o": 10
         },
         {
@@ -8786,7 +8786,7 @@
         },
         {
           "l": "PV输入-最大PV功率",
-          "v": "7000W",
+          "v": "7KW",
           "o": 27
         },
         {
@@ -8859,7 +8859,7 @@
       ],
       "sku": "R0355",
       "features_all": [
-        "6200W Off-Grid Inverter",
+        "6.2KW Off-Grid Inverter",
         "48V DC Input",
         "IP65 Outdoor Rated",
         "Pure Sine Wave Output",
@@ -8954,8 +8954,8 @@
       "slug": "r0403",
       "cat": "inverter-ip65",
       "order": 8,
-      "en_name": "R0403 Power Inverter 10kW IP65 48V",
-      "zh_name": "R0403 逆变器 10kW IP65 48V",
+      "en_name": "R0403 Power Inverter 10KW IP65 48V",
+      "zh_name": "R0403 逆变器 10KW IP65 48V",
       "en_specs": [
         {
           "l": "Model",
@@ -9094,7 +9094,7 @@
         },
         {
           "l": "PV输入-额定功率",
-          "v": "10000W",
+          "v": "10KW",
           "o": 27
         },
         {
@@ -9281,7 +9281,7 @@
         },
         {
           "l": "PV输入-额定功率",
-          "v": "10000W",
+          "v": "10KW",
           "o": 27
         },
         {
@@ -9358,7 +9358,7 @@
       ],
       "sku": "R0403",
       "features_all": [
-        "10kW Off-Grid Inverter",
+        "10KW Off-Grid Inverter",
         "48V DC Input",
         "IP65 Outdoor Rated",
         "Pure Sine Wave Output",
@@ -9453,8 +9453,8 @@
       "slug": "r0404",
       "cat": "inverter-ip21",
       "order": 9,
-      "en_name": "R0404 Power Inverter 1200W IP21 LIP 6.4V×2 314Ah",
-      "zh_name": "R0404 电力逆变器 1200W IP21 LIP 6.4V×2 314Ah",
+      "en_name": "R0404 Power Inverter 1.2KW IP21 LIP 6.4V×2 314Ah",
+      "zh_name": "R0404 电力逆变器 1.2KW IP21 LIP 6.4V×2 314Ah",
       "en_specs": [
         {
           "l": "Model",
@@ -9463,7 +9463,7 @@
         },
         {
           "l": "Description",
-          "v": "6.4V 1200W 双向逆变器 (双LiFePO4电芯串联)",
+          "v": "6.4V 1.2KW 双向逆变器 (双LiFePO4电芯串联)",
           "o": 1
         },
         {
@@ -9513,7 +9513,7 @@
         },
         {
           "l": "AC输出-最大功率",
-          "v": "1200W",
+          "v": "1.2KW",
           "o": 11
         },
         {
@@ -9563,7 +9563,7 @@
         },
         {
           "l": "AC充电-最大AC充电功率",
-          "v": "1200W",
+          "v": "1.2KW",
           "o": 21
         },
         {
@@ -9645,7 +9645,7 @@
         },
         {
           "l": "描述",
-          "v": "6.4V 1200W 双向逆变器 (双LiFePO4电芯串联)",
+          "v": "6.4V 1.2KW 双向逆变器 (双LiFePO4电芯串联)",
           "o": 1
         },
         {
@@ -9695,7 +9695,7 @@
         },
         {
           "l": "AC输出-最大功率",
-          "v": "1200W",
+          "v": "1.2KW",
           "o": 11
         },
         {
@@ -9745,7 +9745,7 @@
         },
         {
           "l": "AC充电-最大AC充电功率",
-          "v": "1200W",
+          "v": "1.2KW",
           "o": 21
         },
         {
@@ -9841,7 +9841,7 @@
       ],
       "sku": "R0404",
       "features_all": [
-        "1200W Dual Cell Inverter",
+        "1.2KW Dual Cell Inverter",
         "6.4V 2×LiFePO4 Input",
         "230V AC Output",
         "IP21 Indoor Design",
@@ -9936,8 +9936,8 @@
       "slug": "r0378",
       "cat": "split-phase-inverter",
       "order": 10,
-      "en_name": "R0378 Split Phase Inverter 8000W",
-      "zh_name": "R0378 裂相逆变器 8000W",
+      "en_name": "R0378 Split Phase Inverter 8KW",
+      "zh_name": "R0378 裂相逆变器 8KW",
       "en_specs": [
         {
           "l": "Model",
@@ -10011,12 +10011,12 @@
         },
         {
           "l": "逆变模式-额定功率(W)-裂相",
-          "v": "8000W",
+          "v": "8KW",
           "o": 14
         },
         {
           "l": "逆变模式-额定功率(W)-单相",
-          "v": "6000W",
+          "v": "6KW",
           "o": 15
         },
         {
@@ -10101,7 +10101,7 @@
         },
         {
           "l": "PV充电-最大PV输入功率",
-          "v": "4500W + 4500W",
+          "v": "4.5KW + 4.5KW",
           "o": 32
         },
         {
@@ -10228,12 +10228,12 @@
         },
         {
           "l": "逆变模式-额定功率(W)-裂相",
-          "v": "8000W",
+          "v": "8KW",
           "o": 14
         },
         {
           "l": "逆变模式-额定功率(W)-单相",
-          "v": "6000W",
+          "v": "6KW",
           "o": 15
         },
         {
@@ -10318,7 +10318,7 @@
         },
         {
           "l": "PV充电-最大PV输入功率",
-          "v": "4500W + 4500W",
+          "v": "4.5KW + 4.5KW",
           "o": 32
         },
         {
@@ -10483,8 +10483,8 @@
       "slug": "r0388",
       "cat": "split-phase-inverter",
       "order": 11,
-      "en_name": "R0388 Split Phase Inverter 12000W",
-      "zh_name": "R0388 裂相逆变器 12000W",
+      "en_name": "R0388 Split Phase Inverter 12KW",
+      "zh_name": "R0388 裂相逆变器 12KW",
       "en_specs": [
         {
           "l": "Model",
@@ -10558,12 +10558,12 @@
         },
         {
           "l": "逆变模式-额定功率(W)-裂相",
-          "v": "12000W",
+          "v": "12KW",
           "o": 14
         },
         {
           "l": "逆变模式-额定功率(W)-单相",
-          "v": "7200W",
+          "v": "7.2KW",
           "o": 15
         },
         {
@@ -10663,7 +10663,7 @@
         },
         {
           "l": "PV充电-最大PV输入功率",
-          "v": "5500W + 5500W",
+          "v": "5.5KW + 5.5KW",
           "o": 35
         },
         {
@@ -10790,12 +10790,12 @@
         },
         {
           "l": "逆变模式-额定功率(W)-裂相",
-          "v": "12000W",
+          "v": "12KW",
           "o": 14
         },
         {
           "l": "逆变模式-额定功率(W)-单相",
-          "v": "7200W",
+          "v": "7.2KW",
           "o": 15
         },
         {
@@ -10895,7 +10895,7 @@
         },
         {
           "l": "PV充电-最大PV输入功率",
-          "v": "5500W + 5500W",
+          "v": "5.5KW + 5.5KW",
           "o": 35
         },
         {
@@ -11404,7 +11404,7 @@
         },
         {
           "l": "功率范围",
-          "v": "800W ~ 1200W",
+          "v": "800W ~ 1.2KW",
           "o": 2
         },
         {
@@ -11501,7 +11501,7 @@
         },
         {
           "l": "功率范围",
-          "v": "800W ~ 1200W",
+          "v": "800W ~ 1.2KW",
           "o": 2
         },
         {
@@ -11711,7 +11711,7 @@
         },
         {
           "l": "功率范围",
-          "v": "1600W ~ 2250W",
+          "v": "1.6KW ~ 2.3KW",
           "o": 2
         },
         {
@@ -11813,7 +11813,7 @@
         },
         {
           "l": "功率范围",
-          "v": "1600W ~ 2250W",
+          "v": "1.6KW ~ 2.3KW",
           "o": 2
         },
         {
@@ -11918,7 +11918,7 @@
       ],
       "sku": "R0412",
       "features_all": [
-        "1600W Microinverter",
+        "1.6KW Microinverter",
         "4-Panel Input Support",
         "Grid-Tie 230V/50Hz",
         "Individual MPPT per Panel",
@@ -16560,8 +16560,8 @@
       "slug": "rps-1200",
       "cat": "power-station",
       "order": 0,
-      "en_name": "RPS-1200 Portable Power Station 1200W",
-      "zh_name": "RPS-1200 便携储能电源 1200W",
+      "en_name": "RPS-1200 Portable Power Station 1.2KW",
+      "zh_name": "RPS-1200 便携储能电源 1.2KW",
       "en_specs": [
         {
           "l": "电池类型 (Battery Type)",
@@ -16585,7 +16585,7 @@
         },
         {
           "l": "AC输出功率",
-          "v": "1200W Max (纯正弦波)",
+          "v": "1.2KW Max (纯正弦波)",
           "o": 4
         },
         {
@@ -16652,7 +16652,7 @@
         },
         {
           "l": "AC输出功率",
-          "v": "1200W Max (纯正弦波)",
+          "v": "1.2KW Max (纯正弦波)",
           "o": 4
         },
         {
@@ -16718,7 +16718,7 @@
       ],
       "sku": "RPS-1200",
       "features_all": [
-        "1200W Pure Sine Wave",
+        "1.2KW Pure Sine Wave",
         "806Wh LiFePO4 Battery",
         "110V/220V Dual Voltage",
         "100W USB-C PD + QC3.0",
@@ -17530,8 +17530,8 @@
       "slug": "r0212",
       "cat": "ups",
       "order": 0,
-      "en_name": "R0212 UPS 3000VA/2400W",
-      "zh_name": "R0212 UPS不间断电源 3000VA/2400W",
+      "en_name": "R0212 UPS 3000VA/2.4KW",
+      "zh_name": "R0212 UPS不间断电源 3000VA/2.4KW",
       "en_specs": [
         {
           "l": "额定容量 (Rated VA)",
@@ -17540,7 +17540,7 @@
         },
         {
           "l": "额定功率 (Rated W)",
-          "v": "2400W",
+          "v": "2.4KW",
           "o": 1
         },
         {
@@ -17752,7 +17752,7 @@
         },
         {
           "l": "额定功率 (Rated W)",
-          "v": "2400W",
+          "v": "2.4KW",
           "o": 1
         },
         {
@@ -17990,7 +17990,7 @@
       ],
       "sku": "R0212",
       "features_all": [
-        "3000VA/2400W Online UPS",
+        "3000VA/2.4KW Online UPS",
         "208-240V HV Range",
         "VRLA 12V Battery Support",
         "Pure Sine Wave Output",
@@ -18085,8 +18085,8 @@
       "slug": "r0212c",
       "cat": "ups",
       "order": 1,
-      "en_name": "R0212C UPS 3000VA/2400W Class 2",
-      "zh_name": "R0212C UPS不间断电源 3000VA/2400W Class 2",
+      "en_name": "R0212C UPS 3000VA/2.4KW Class 2",
+      "zh_name": "R0212C UPS不间断电源 3000VA/2.4KW Class 2",
       "en_specs": [
         {
           "l": "额定容量 (Rated VA)",
@@ -18095,7 +18095,7 @@
         },
         {
           "l": "额定功率 (Rated W)",
-          "v": "2400W",
+          "v": "2.4KW",
           "o": 1
         },
         {
@@ -18307,7 +18307,7 @@
         },
         {
           "l": "额定功率 (Rated W)",
-          "v": "2400W",
+          "v": "2.4KW",
           "o": 1
         },
         {
@@ -18545,7 +18545,7 @@
       ],
       "sku": "R0212C",
       "features_all": [
-        "3000VA/2400W Class 2 UPS",
+        "3000VA/2.4KW Class 2 UPS",
         "208-240V HV Range",
         "Class 2 Safety Certified",
         "VRLA 12V Battery Ready",
@@ -19710,8 +19710,8 @@
       "slug": "r0358",
       "cat": "ups",
       "order": 4,
-      "en_name": "R0358 UPS 3000VA/2400W",
-      "zh_name": "R0358 UPS不间断电源 3000VA/2400W",
+      "en_name": "R0358 UPS 3000VA/2.4KW",
+      "zh_name": "R0358 UPS不间断电源 3000VA/2.4KW",
       "en_specs": [
         {
           "l": "额定容量 (Rated VA)",
@@ -19720,7 +19720,7 @@
         },
         {
           "l": "额定功率 (Rated W)",
-          "v": "2400W",
+          "v": "2.4KW",
           "o": 1
         },
         {
@@ -19932,7 +19932,7 @@
         },
         {
           "l": "额定功率 (Rated W)",
-          "v": "2400W",
+          "v": "2.4KW",
           "o": 1
         },
         {
@@ -20170,7 +20170,7 @@
       ],
       "sku": "R0358",
       "features_all": [
-        "3000VA/2400W Online UPS",
+        "3000VA/2.4KW Online UPS",
         "208-240V HV Range",
         "VRLA 12V Battery Support",
         "High Efficiency Design",
@@ -20265,8 +20265,8 @@
       "slug": "r0358a",
       "cat": "ups",
       "order": 5,
-      "en_name": "R0358A UPS 3000VA/2400W Medical Grade",
-      "zh_name": "R0358A UPS不间断电源 3000VA/2400W 医疗级",
+      "en_name": "R0358A UPS 3000VA/2.4KW Medical Grade",
+      "zh_name": "R0358A UPS不间断电源 3000VA/2.4KW 医疗级",
       "en_specs": [
         {
           "l": "额定容量 (Rated VA)",
@@ -20275,7 +20275,7 @@
         },
         {
           "l": "额定功率 (Rated W)",
-          "v": "2400W",
+          "v": "2.4KW",
           "o": 1
         },
         {
@@ -20487,7 +20487,7 @@
         },
         {
           "l": "额定功率 (Rated W)",
-          "v": "2400W",
+          "v": "2.4KW",
           "o": 1
         },
         {
@@ -20725,7 +20725,7 @@
       ],
       "sku": "R0358A",
       "features_all": [
-        "3000VA/2400W Medical UPS",
+        "3000VA/2.4KW Medical UPS",
         "208-240V HV Range",
         "Medical Grade Approval",
         "VRLA 12V Battery",
