@@ -427,10 +427,10 @@
       ],
       "sku": "RL550",
       "features_all": [
-        "5500W/6500W Rated Power",
-        "MPPT Solar Charger Built-in",
-        "UPS Function <10ms Switch",
-        "Parallel Operation Support",
+        "5500W Hybrid Inverter",
+        "4800Wh/100Ah Battery",
+        "Dual MPPT 6500W PV Input",
+        "UPS <10ms Switch",
         "Max 500VDC PV Input"
       ],
       "en_description": "The RL550 from RisunicPower delivers high-performance power solutions with standout features: 5500W/6500W Rated Power, MPPT Solar Charger Built-in, UPS Function <10ms Switch. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
@@ -701,10 +701,10 @@
       "sku": "RL650",
       "features_all": [
         "6500W Rated Power",
+        "5KWh Li-ion Battery",
         "Dual MPPT Trackers",
         "UPS Function <10ms",
-        "Parallel Up to 6 Units",
-        "Generator Compatible"
+        "Parallel Up to 6 Units"
       ],
       "en_description": "The RL650 from RisunicPower delivers high-performance power solutions with standout features: 6500W Rated Power, Dual MPPT Trackers, UPS Function <10ms. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "RL650是RisunicPower推出的高性能电源解决方案，具备6500W Rated Power、Dual MPPT Trackers、UPS Function <10ms等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -974,9 +974,9 @@
       "sku": "RL800",
       "features_all": [
         "8000W Rated Power",
-        "Dual MPPT, 120A Charging",
-        "Parallel and 3-Phase Support",
-        "Bidirectional Inverter",
+        "5KWh Li-ion Battery",
+        "Dual MPPT, 150A Charging",
+        "Parallel + 3-Phase Support",
         "LCD Touch Control"
       ],
       "en_description": "The RL800 from RisunicPower delivers high-performance power solutions with standout features: 8000W Rated Power, Dual MPPT, 120A Charging, Parallel and 3-Phase Support. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
@@ -1565,11 +1565,11 @@
       ],
       "sku": "ESS-1000W",
       "features_all": [
-        "1000W/1020Wh Capacity",
-        "Pure Sine Wave Output",
-        "LiFePO4 Safe Battery",
-        "MPPT 120W Solar Input",
-        "AC+Solar+Car Charging"
+        "1000W Pure Sine Wave",
+        "2000Wh LiFePO4 Battery",
+        "MPPT Solar 550W Max",
+        "8000 Cycle Long Life",
+        "AC+Solar Dual Charging"
       ],
       "en_description": "The ESS-1000W from RisunicPower delivers high-performance power solutions with standout features: 1000W/1020Wh Capacity, Pure Sine Wave Output, LiFePO4 Safe Battery. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "ESS_1000W+2009WH是RisunicPower推出的高性能电源解决方案，具备1000W/1020Wh Capacity、Pure Sine Wave Output、LiFePO4 Safe Battery等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -3262,11 +3262,11 @@
       ],
       "sku": "ESS-300W",
       "features_all": [
-        "300W Portable Power",
-        "Small and Lightweight",
-        "AC/USB/DC Outputs",
-        "Solar Charging Ready",
-        "Emergency Backup"
+        "300W Pure Sine Wave",
+        "896Wh LiFePO4 Battery",
+        "MPPT Solar 300W Input",
+        "8000 Cycle Long Life",
+        "Emergency Backup Ready"
       ],
       "en_description": "The ESS-300W from RisunicPower delivers high-performance power solutions with standout features: 300W Portable Power, Small and Lightweight, AC/USB/DC Outputs. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "ESS_300W+896WH是RisunicPower推出的高性能电源解决方案，具备300W Portable Power、Small and Lightweight、AC/USB/DC Outputs等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -3951,9 +3951,9 @@
       "sku": "ESS-6KW-16KWH",
       "features_all": [
         "6KW/16KWh Hybrid System",
-        "48V Low Voltage",
-        "Parallel 6 Units Max",
+        "51.2V Low Voltage",
         "On/Off Grid Hybrid",
+        "Parallel 6 Units Max",
         "Smart Monitoring"
       ],
       "en_description": "The ESS-6KW-16KWH from RisunicPower delivers high-performance power solutions with standout features: 6KW/16KWh Hybrid System, 48V Low Voltage, Parallel 6 Units Max. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
