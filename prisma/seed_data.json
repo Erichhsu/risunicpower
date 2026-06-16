@@ -6448,11 +6448,11 @@
       ],
       "sku": "R0285",
       "features_all": [
-        "51.2V 100Ah Battery",
-        "LiFePO4 Long Life",
-        "5.12KWh Storage",
-        "19\" Rack Mount",
-        "Parallel Support"
+        "2400W Bidirectional Inverter",
+        "24V DC Input",
+        "230V AC Pure Sine Wave",
+        "MPPT 1400W Built-in",
+        "IP21 Indoor Rated"
       ],
       "en_description": "The R0285 from RisunicPower delivers high-performance power solutions with standout features: 51.2V 100Ah Battery, LiFePO4 Long Life, 5.12KWh Storage. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0285是RisunicPower推出的高性能电源解决方案，具备51.2V 100Ah Battery、LiFePO4 Long Life、5.12KWh Storage等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -6645,11 +6645,11 @@
       ],
       "sku": "R0286",
       "features_all": [
-        "51.2V 150Ah Battery",
-        "7.68KWh Capacity",
-        "Rack Mount 3U",
-        "Smart BMS Protection",
-        "Up to 15 in Parallel"
+        "2400W Inverter/Charger",
+        "48V DC Input",
+        "230V AC Output",
+        "True Sine Wave",
+        "IP21 Indoor Design"
       ],
       "en_description": "The R0286 from RisunicPower delivers high-performance power solutions with standout features: 51.2V 150Ah Battery, 7.68KWh Capacity, Rack Mount 3U. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0286是RisunicPower推出的高性能电源解决方案，具备51.2V 150Ah Battery、7.68KWh Capacity、Rack Mount 3U等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -6842,11 +6842,11 @@
       ],
       "sku": "R0287",
       "features_all": [
-        "51.2V 200Ah Battery",
-        "10.24KWh LFP Pack",
-        "Rack Mount 4U",
-        "Parallel 15 Units",
-        "RS485/RS232, LCD Screen"
+        "6.2KW Inverter/Charger",
+        "48V DC Input",
+        "230V AC Output",
+        "True Sine Wave",
+        "IP21 Indoor Design"
       ],
       "en_description": "The R0287 from RisunicPower delivers high-performance power solutions with standout features: 51.2V 200Ah Battery, 10.24KWh LFP Pack, Rack Mount 4U. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0287是RisunicPower推出的高性能电源解决方案，具备51.2V 200Ah Battery、10.24KWh LFP Pack、Rack Mount 4U等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -11131,11 +11131,11 @@
       ],
       "sku": "R0411",
       "features_all": [
-        "12.8V 30Ah Battery",
-        "Versatile Use",
-        "Slim Design",
-        "OEM Customizable",
-        "Reliable Protection"
+        "800W Microinverter",
+        "2-Panel Input Support",
+        "Grid-Tie 230V/50Hz",
+        "Peak Efficiency 96.5%",
+        "Wireless Monitoring"
       ],
       "en_description": "The R0411 from RisunicPower delivers high-performance power solutions with standout features: 12.8V 30Ah Battery, Versatile Use, Slim Design. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0411是RisunicPower推出的高性能电源解决方案，具备12.8V 30Ah Battery、Versatile Use、Slim Design等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -11448,11 +11448,11 @@
       ],
       "sku": "R0412",
       "features_all": [
-        "12.8V 40Ah Battery",
-        "Compact 2U Design",
-        "Rack/Bracket Mount",
-        "Lead-Acid Replacement",
-        "BMS Built-in"
+        "1600W Microinverter",
+        "4-Panel Input Support",
+        "Grid-Tie 230V/50Hz",
+        "Individual MPPT per Panel",
+        "Wireless + Wired Comms"
       ],
       "en_description": "The R0412 from RisunicPower delivers high-performance power solutions with standout features: 12.8V 40Ah Battery, Compact 2U Design, Rack/Bracket Mount. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0412是RisunicPower推出的高性能电源解决方案，具备12.8V 40Ah Battery、Compact 2U Design、Rack/Bracket Mount等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -17520,11 +17520,11 @@
       ],
       "sku": "R0212",
       "features_all": [
-        "12V 1A Power Adapter",
-        "UL Listed",
-        "Compact Wall Plug",
-        "CE/FCC Certified",
-        "Universal AC Input"
+        "3000VA/2400W Online UPS",
+        "208-240V HV Range",
+        "VRLA 12V Battery Support",
+        "Pure Sine Wave Output",
+        "EMI/RFI Filter Built-in"
       ],
       "en_description": "The R0212 from RisunicPower delivers high-performance power solutions with standout features: 12V 1A Power Adapter, UL Listed, Compact Wall Plug. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0212是RisunicPower推出的高性能电源解决方案，具备12V 1A Power Adapter、UL Listed、Compact Wall Plug等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -18075,11 +18075,11 @@
       ],
       "sku": "R0212C",
       "features_all": [
-        "12V 1A Class 2 Adapter",
-        "UL 1310 Certified",
-        "Compact Design",
-        "Energy Efficient",
-        "Multiple Plug Types"
+        "3000VA/2400W Class 2 UPS",
+        "208-240V HV Range",
+        "Class 2 Safety Certified",
+        "VRLA 12V Battery Ready",
+        "Full Protection Suite"
       ],
       "en_description": "The R0212C from RisunicPower delivers high-performance power solutions with standout features: 12V 1A Class 2 Adapter, UL 1310 Certified, Compact Design. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0212C是RisunicPower推出的高性能电源解决方案，具备12V 1A Class 2 Adapter、UL 1310 Certified、Compact Design等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -18610,11 +18610,11 @@
       ],
       "sku": "R0296",
       "features_all": [
-        "12V 2A Switching Adapter",
-        "Stable Output",
-        "Overload Protection",
-        "Wide Input Voltage",
-        "CE/RoHS"
+        "1000VA/800W Online UPS",
+        "208-240V HV Range",
+        "VRLA 12V Battery Support",
+        "Stable Pure Sine Wave",
+        "Overload & Short Circuit Protection"
       ],
       "en_description": "The R0296 from RisunicPower delivers high-performance power solutions with standout features: 12V 2A Switching Adapter, Stable Output, Overload Protection. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0296是RisunicPower推出的高性能电源解决方案，具备12V 2A Switching Adapter、Stable Output、Overload Protection等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -19145,11 +19145,11 @@
       ],
       "sku": "R0296A",
       "features_all": [
-        "12V 2A Medical Adapter",
-        "Medical Grade",
-        "Low Ripple Noise",
-        "Safety Certified",
-        "Compact Design"
+        "1000VA/800W Medical UPS",
+        "208-240V HV Range",
+        "Medical Grade Safety",
+        "VRLA 12V Battery",
+        "Low Leakage Current Design"
       ],
       "en_description": "The R0296A from RisunicPower delivers high-performance power solutions with standout features: 12V 2A Medical Adapter, Medical Grade, Low Ripple Noise. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0296A是RisunicPower推出的高性能电源解决方案，具备12V 2A Medical Adapter、Medical Grade、Low Ripple Noise等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -19700,11 +19700,11 @@
       ],
       "sku": "R0358",
       "features_all": [
-        "12V 3A Power Adapter",
-        "High Efficiency",
-        "Short Circuit Protection",
-        "Quality Build",
-        "CE/FCC"
+        "3000VA/2400W Online UPS",
+        "208-240V HV Range",
+        "VRLA 12V Battery Support",
+        "High Efficiency Design",
+        "Comprehensive Protection"
       ],
       "en_description": "The R0358 from RisunicPower delivers high-performance power solutions with standout features: 12V 3A Power Adapter, High Efficiency, Short Circuit Protection. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0358是RisunicPower推出的高性能电源解决方案，具备12V 3A Power Adapter、High Efficiency、Short Circuit Protection等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -20255,11 +20255,11 @@
       ],
       "sku": "R0358A",
       "features_all": [
-        "12V 3A Medical Grade",
-        "Medical Safety Approval",
-        "Low Leakage Current",
-        "Over-Voltage Protection",
-        "RoHS Compliant"
+        "3000VA/2400W Medical UPS",
+        "208-240V HV Range",
+        "Medical Grade Approval",
+        "VRLA 12V Battery",
+        "Ultra-Low Leakage Current"
       ],
       "en_description": "The R0358A from RisunicPower delivers high-performance power solutions with standout features: 12V 3A Medical Grade, Medical Safety Approval, Low Leakage Current. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0358A是RisunicPower推出的高性能电源解决方案，具备12V 3A Medical Grade、Medical Safety Approval、Low Leakage Current等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
