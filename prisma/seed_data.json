@@ -1068,8 +1068,8 @@
       "slug": "ess-w-1000w",
       "cat": "all-in-one",
       "order": 3,
-      "en_name": "ESS-W-1000W Wall-Mount All-in-One Storage 1kW",
-      "zh_name": "ESS-W-1000W 壁挂一体式储能系统 1kW",
+      "en_name": "ESS-W-1000W Wall-Mount Storage 314Ah",
+      "zh_name": "ESS-W-1000W 壁挂式储能系统 314Ah",
       "en_specs": [
         {
           "l": "Model",
@@ -1349,8 +1349,8 @@
       "slug": "ess-1000w",
       "cat": "all-in-one",
       "order": 4,
-      "en_name": "ESS-1000W All-in-One Energy Storage 1kW",
-      "zh_name": "ESS-1000W 一体式储能系统 1kW",
+      "en_name": "ESS-1000W All-in-One Energy Storage 314Ah",
+      "zh_name": "ESS-1000W 一体式储能系统 314Ah",
       "en_specs": [
         {
           "l": "Model",
@@ -3647,8 +3647,8 @@
       "slug": "ess-500w",
       "cat": "power-station",
       "order": 12,
-      "en_name": "ESS-500W Portable Power Station 500Wh",
-      "zh_name": "ESS-500W 便携储能电源 500Wh",
+      "en_name": "ESS-500W Portable Power Station 314Ah",
+      "zh_name": "ESS-500W 便携储能电源 314Ah",
       "en_specs": [
         {
           "l": "Model",
