@@ -65,7 +65,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   const displaySpecs = localeSpecs.length > 0 ? localeSpecs : enSpecs
 
   const primaryImage = product.images.find(im => im.isPrimary) || product.images[0]
-  const imageUrl = primaryImage?.url || '/images/products/' + slug + '.png'
+  const imageUrl = primaryImage?.url || `/images/products/${slug}/${slug}_main.png`
   const features: string[] = pt?.features ? JSON.parse(pt.features) : []
 
   const relatedProducts = await prisma.product.findMany({
