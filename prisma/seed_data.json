@@ -1666,54 +1666,154 @@
         {
           "l": "Model",
           "v": "ESS 12KW+16KWH",
-          "o": 0
+          "o": 1
         },
         {
           "l": "Type",
-          "v": "一体式储能",
-          "o": 1
+          "v": "Off-Grid All-in-One ESS",
+          "o": 2
         },
         {
           "l": "Rated Inverter Power",
           "v": "12kW",
-          "o": 2
-        },
-        {
-          "l": "Battery Capacity",
-          "v": "16KWh",
           "o": 3
         },
         {
-          "l": "应用场景",
-          "v": "户用/小型商用储能",
+          "l": "Battery Capacity",
+          "v": "16kWh (14.4kWh usable)",
           "o": 4
+        },
+        {
+          "l": "Rated Battery Voltage",
+          "v": "51.2VDC",
+          "o": 5
+        },
+        {
+          "l": "AC Input",
+          "v": "220-240V 50/60Hz",
+          "o": 6
+        },
+        {
+          "l": "AC Output",
+          "v": "Pure Sine Wave 220-240V",
+          "o": 7
+        },
+        {
+          "l": "Max PV Input Power",
+          "v": "9000W (27A Max)",
+          "o": 8
+        },
+        {
+          "l": "MPPT Voltage Range",
+          "v": "60-450VDC / 500VDC Max",
+          "o": 9
+        },
+        {
+          "l": "Max Charge Current",
+          "v": "160A PV + 160A AC",
+          "o": 10
+        },
+        {
+          "l": "Max Discharge Current",
+          "v": "200A",
+          "o": 11
+        },
+        {
+          "l": "Features",
+          "v": "Dual Output, WiFi, Generator Compatible, Lithium Battery Activation",
+          "o": 12
+        },
+        {
+          "l": "Dimensions (W×D×H)",
+          "v": "550×245×1180 mm",
+          "o": 13
+        },
+        {
+          "l": "Net/Gross Weight",
+          "v": "152 / 173 kg",
+          "o": 14
+        },
+        {
+          "l": "Application",
+          "v": "Residential / Small Commercial Off-Grid ESS",
+          "o": 15
         }
       ],
       "zh_specs": [
         {
-          "l": "型号",
+          "l": "Model",
           "v": "ESS 12KW+16KWH",
-          "o": 0
-        },
-        {
-          "l": "类型",
-          "v": "一体式储能",
           "o": 1
         },
         {
-          "l": "额定逆变功率",
-          "v": "12kW",
+          "l": "Type",
+          "v": "Off-Grid All-in-One ESS",
           "o": 2
         },
         {
-          "l": "电池容量",
-          "v": "16KWh",
+          "l": "Rated Inverter Power",
+          "v": "12kW",
           "o": 3
         },
         {
-          "l": "应用场景",
-          "v": "户用/小型商用储能",
+          "l": "Battery Capacity",
+          "v": "16kWh (14.4kWh usable)",
           "o": 4
+        },
+        {
+          "l": "Rated Battery Voltage",
+          "v": "51.2VDC",
+          "o": 5
+        },
+        {
+          "l": "AC Input",
+          "v": "220-240V 50/60Hz",
+          "o": 6
+        },
+        {
+          "l": "AC Output",
+          "v": "Pure Sine Wave 220-240V",
+          "o": 7
+        },
+        {
+          "l": "Max PV Input Power",
+          "v": "9000W (27A Max)",
+          "o": 8
+        },
+        {
+          "l": "MPPT Voltage Range",
+          "v": "60-450VDC / 500VDC Max",
+          "o": 9
+        },
+        {
+          "l": "Max Charge Current",
+          "v": "160A PV + 160A AC",
+          "o": 10
+        },
+        {
+          "l": "Max Discharge Current",
+          "v": "200A",
+          "o": 11
+        },
+        {
+          "l": "Features",
+          "v": "Dual Output, WiFi, Generator Compatible, Lithium Battery Activation",
+          "o": 12
+        },
+        {
+          "l": "Dimensions (W×D×H)",
+          "v": "550×245×1180 mm",
+          "o": 13
+        },
+        {
+          "l": "Net/Gross Weight",
+          "v": "152 / 173 kg",
+          "o": 14
+        },
+        {
+          "l": "Application",
+          "v": "Residential / Small Commercial Off-Grid ESS",
+          "o": 15
         }
       ],
       "images": [
@@ -1726,11 +1826,11 @@
       ],
       "sku": "ESS-12KW-16KWH",
       "features_all": [
-        "12KW/16KWh Large Capacity",
-        "3-Phase Support",
-        "Parallel Expandable",
-        "High Voltage Battery",
-        "Remote Monitoring App"
+        "12KW/16KWh Off-Grid System",
+        "9000W PV Input 500VDC",
+        "160A Charge/Discharge",
+        "51.2V Battery Module",
+        "WiFi + Generator Ready"
       ],
       "en_description": "The ESS-12KW-16KWH from RisunicPower delivers high-performance power solutions with standout features: 12KW/16KWh Large Capacity, 3-Phase Support, Parallel Expandable. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "ESS_12KW+16KWH是RisunicPower推出的高性能电源解决方案，具备12KW/16KWh Large Capacity、3-Phase Support、Parallel Expandable等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -1827,54 +1927,144 @@
         {
           "l": "Model",
           "v": "ESS 12KW+30KWH",
-          "o": 0
+          "o": 1
         },
         {
           "l": "Type",
-          "v": "一体式储能",
-          "o": 1
+          "v": "Off-Grid All-in-One ESS",
+          "o": 2
         },
         {
           "l": "Rated Inverter Power",
           "v": "12kW",
-          "o": 2
-        },
-        {
-          "l": "Battery Capacity",
-          "v": "30KWh",
           "o": 3
         },
         {
-          "l": "应用场景",
-          "v": "商用储能系统",
+          "l": "Battery Capacity",
+          "v": "30kWh",
           "o": 4
+        },
+        {
+          "l": "Rated Battery Voltage",
+          "v": "51.2VDC",
+          "o": 5
+        },
+        {
+          "l": "AC Input",
+          "v": "220-240V 50/60Hz",
+          "o": 6
+        },
+        {
+          "l": "AC Output",
+          "v": "Pure Sine Wave 220-240V (Dual Output)",
+          "o": 7
+        },
+        {
+          "l": "Max PV Input Power",
+          "v": "9000W (27A Max)",
+          "o": 8
+        },
+        {
+          "l": "MPPT Voltage Range",
+          "v": "60-450VDC",
+          "o": 9
+        },
+        {
+          "l": "Max Charge Current",
+          "v": "200A / 200A",
+          "o": 10
+        },
+        {
+          "l": "Features",
+          "v": "Dual AC Output, Feed-in to Grid, WiFi, Generator, Lithium Activation",
+          "o": 11
+        },
+        {
+          "l": "Dimensions (W×D×H)",
+          "v": "695×298×1550 mm",
+          "o": 12
+        },
+        {
+          "l": "Net/Gross Weight",
+          "v": "280 / 303 kg",
+          "o": 13
+        },
+        {
+          "l": "Application",
+          "v": "Commercial Off-Grid ESS",
+          "o": 14
         }
       ],
       "zh_specs": [
         {
-          "l": "型号",
+          "l": "Model",
           "v": "ESS 12KW+30KWH",
-          "o": 0
-        },
-        {
-          "l": "类型",
-          "v": "一体式储能",
           "o": 1
         },
         {
-          "l": "额定逆变功率",
-          "v": "12kW",
+          "l": "Type",
+          "v": "Off-Grid All-in-One ESS",
           "o": 2
         },
         {
-          "l": "电池容量",
-          "v": "30KWh",
+          "l": "Rated Inverter Power",
+          "v": "12kW",
           "o": 3
         },
         {
-          "l": "应用场景",
-          "v": "商用储能系统",
+          "l": "Battery Capacity",
+          "v": "30kWh",
           "o": 4
+        },
+        {
+          "l": "Rated Battery Voltage",
+          "v": "51.2VDC",
+          "o": 5
+        },
+        {
+          "l": "AC Input",
+          "v": "220-240V 50/60Hz",
+          "o": 6
+        },
+        {
+          "l": "AC Output",
+          "v": "Pure Sine Wave 220-240V (Dual Output)",
+          "o": 7
+        },
+        {
+          "l": "Max PV Input Power",
+          "v": "9000W (27A Max)",
+          "o": 8
+        },
+        {
+          "l": "MPPT Voltage Range",
+          "v": "60-450VDC",
+          "o": 9
+        },
+        {
+          "l": "Max Charge Current",
+          "v": "200A / 200A",
+          "o": 10
+        },
+        {
+          "l": "Features",
+          "v": "Dual AC Output, Feed-in to Grid, WiFi, Generator, Lithium Activation",
+          "o": 11
+        },
+        {
+          "l": "Dimensions (W×D×H)",
+          "v": "695×298×1550 mm",
+          "o": 12
+        },
+        {
+          "l": "Net/Gross Weight",
+          "v": "280 / 303 kg",
+          "o": 13
+        },
+        {
+          "l": "Application",
+          "v": "Commercial Off-Grid ESS",
+          "o": 14
         }
       ],
       "images": [
@@ -1887,11 +2077,11 @@
       ],
       "sku": "ESS-12KW-30KWH",
       "features_all": [
-        "12KW/30KWh Capacity",
-        "Industrial Grade",
-        "3-Phase Inverter",
-        "Generator Ready",
-        "Cloud Monitoring"
+        "12KW/30KWh Off-Grid System",
+        "9000W PV Input 450VDC",
+        "200A Charge/Discharge",
+        "Feed-in to Grid Support",
+        "WiFi + Generator Ready"
       ],
       "en_description": "The ESS-12KW-30KWH from RisunicPower delivers high-performance power solutions with standout features: 12KW/30KWh Capacity, Industrial Grade, 3-Phase Inverter. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "ESS_12KW+30KWH是RisunicPower推出的高性能电源解决方案，具备12KW/30KWh Capacity、Industrial Grade、3-Phase Inverter等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -1988,54 +2178,144 @@
         {
           "l": "Model",
           "v": "ESS 12KW+60KWH",
-          "o": 0
+          "o": 1
         },
         {
           "l": "Type",
-          "v": "工商业储能",
-          "o": 1
+          "v": "Stackable Off-Grid All-in-One ESS",
+          "o": 2
         },
         {
           "l": "Rated Inverter Power",
           "v": "12kW",
-          "o": 2
-        },
-        {
-          "l": "Battery Capacity",
-          "v": "60KWh",
           "o": 3
         },
         {
-          "l": "应用场景",
-          "v": "工商业储能",
+          "l": "Battery Capacity",
+          "v": "60kWh",
           "o": 4
+        },
+        {
+          "l": "Rated Battery Voltage",
+          "v": "51.2VDC",
+          "o": 5
+        },
+        {
+          "l": "AC Input",
+          "v": "220-240V 50/60Hz",
+          "o": 6
+        },
+        {
+          "l": "AC Output",
+          "v": "Pure Sine Wave 220-240V (Dual Output)",
+          "o": 7
+        },
+        {
+          "l": "Max PV Input Power",
+          "v": "15000W",
+          "o": 8
+        },
+        {
+          "l": "MPPT Voltage Range",
+          "v": "60-450VDC",
+          "o": 9
+        },
+        {
+          "l": "Max Charge Current",
+          "v": "200A / 200A",
+          "o": 10
+        },
+        {
+          "l": "Features",
+          "v": "Stackable Battery, Feed-in to Grid, WiFi, Dual Output, Generator",
+          "o": 11
+        },
+        {
+          "l": "Inverter Weight",
+          "v": "33 kg",
+          "o": 12
+        },
+        {
+          "l": "Battery Unit Weight",
+          "v": "139 kg/PC",
+          "o": 13
+        },
+        {
+          "l": "Application",
+          "v": "C&I ESS (Commercial & Industrial)",
+          "o": 14
         }
       ],
       "zh_specs": [
         {
-          "l": "型号",
+          "l": "Model",
           "v": "ESS 12KW+60KWH",
-          "o": 0
-        },
-        {
-          "l": "类型",
-          "v": "工商业储能",
           "o": 1
         },
         {
-          "l": "额定逆变功率",
-          "v": "12kW",
+          "l": "Type",
+          "v": "Stackable Off-Grid All-in-One ESS",
           "o": 2
         },
         {
-          "l": "电池容量",
-          "v": "60KWh",
+          "l": "Rated Inverter Power",
+          "v": "12kW",
           "o": 3
         },
         {
-          "l": "应用场景",
-          "v": "工商业储能",
+          "l": "Battery Capacity",
+          "v": "60kWh",
           "o": 4
+        },
+        {
+          "l": "Rated Battery Voltage",
+          "v": "51.2VDC",
+          "o": 5
+        },
+        {
+          "l": "AC Input",
+          "v": "220-240V 50/60Hz",
+          "o": 6
+        },
+        {
+          "l": "AC Output",
+          "v": "Pure Sine Wave 220-240V (Dual Output)",
+          "o": 7
+        },
+        {
+          "l": "Max PV Input Power",
+          "v": "15000W",
+          "o": 8
+        },
+        {
+          "l": "MPPT Voltage Range",
+          "v": "60-450VDC",
+          "o": 9
+        },
+        {
+          "l": "Max Charge Current",
+          "v": "200A / 200A",
+          "o": 10
+        },
+        {
+          "l": "Features",
+          "v": "Stackable Battery, Feed-in to Grid, WiFi, Dual Output, Generator",
+          "o": 11
+        },
+        {
+          "l": "Inverter Weight",
+          "v": "33 kg",
+          "o": 12
+        },
+        {
+          "l": "Battery Unit Weight",
+          "v": "139 kg/PC",
+          "o": 13
+        },
+        {
+          "l": "Application",
+          "v": "C&I ESS (Commercial & Industrial)",
+          "o": 14
         }
       ],
       "images": [
@@ -2048,11 +2328,11 @@
       ],
       "sku": "ESS-12KW-60KWH",
       "features_all": [
-        "12KW/60KWh Commercial",
-        "Modular Design",
-        "Parallel Scalable",
-        "3-Phase 400V",
-        "BMS+EMS Integrated"
+        "12KW/60KWh Stackable System",
+        "15000W PV Input 450VDC",
+        "200A Charge/Discharge",
+        "Feed-in to Grid Support",
+        "WiFi + Generator Ready"
       ],
       "en_description": "The ESS-12KW-60KWH from RisunicPower delivers high-performance power solutions with standout features: 12KW/60KWh Commercial, Modular Design, Parallel Scalable. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "ESS_12KW+60KWH是RisunicPower推出的高性能电源解决方案，具备12KW/60KWh Commercial、Modular Design、Parallel Scalable等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -2149,64 +2429,164 @@
         {
           "l": "Model",
           "v": "ESS 12KW+64KWH",
-          "o": 0
+          "o": 1
         },
         {
           "l": "Type",
-          "v": "工商业储能系统 (C&I ESS)",
-          "o": 1
+          "v": "Rack-Mounted Off-Grid All-in-One ESS",
+          "o": 2
         },
         {
           "l": "Rated Inverter Power",
           "v": "12kW",
-          "o": 2
-        },
-        {
-          "l": "Battery Capacity",
-          "v": "64KWh",
           "o": 3
         },
         {
-          "l": "额定电池电压",
-          "v": "高压 (HV)",
+          "l": "Battery Capacity",
+          "v": "64kWh",
           "o": 4
         },
         {
-          "l": "应用场景",
-          "v": "工商业储能/峰谷套利/备用电源",
+          "l": "Rated Battery Voltage",
+          "v": "51.2VDC",
           "o": 5
+        },
+        {
+          "l": "AC Input",
+          "v": "220-240V 50/60Hz",
+          "o": 6
+        },
+        {
+          "l": "AC Output",
+          "v": "Pure Sine Wave 220-240V (Dual Output)",
+          "o": 7
+        },
+        {
+          "l": "Max PV Input Power",
+          "v": "15000W (Dual MPPT)",
+          "o": 8
+        },
+        {
+          "l": "MPPT Voltage Range",
+          "v": "60-450VDC",
+          "o": 9
+        },
+        {
+          "l": "Max Charge Current",
+          "v": "200A / 200A",
+          "o": 10
+        },
+        {
+          "l": "Features",
+          "v": "Rack-Mounted, Feed-in to Grid, WiFi, Dual Output, Generator",
+          "o": 11
+        },
+        {
+          "l": "Inverter Dimensions (W×D×H)",
+          "v": "745×440×176 mm",
+          "o": 12
+        },
+        {
+          "l": "Battery Dimensions (W×D×H)",
+          "v": "745×440×240 mm",
+          "o": 13
+        },
+        {
+          "l": "Inverter Weight",
+          "v": "29 kg",
+          "o": 14
+        },
+        {
+          "l": "Battery Unit Weight",
+          "v": "119 kg/PC",
+          "o": 15
+        },
+        {
+          "l": "Application",
+          "v": "C&I ESS / Peak Shaving / Backup Power",
+          "o": 16
         }
       ],
       "zh_specs": [
         {
-          "l": "型号",
+          "l": "Model",
           "v": "ESS 12KW+64KWH",
-          "o": 0
-        },
-        {
-          "l": "类型",
-          "v": "工商业储能系统 (C&I ESS)",
           "o": 1
         },
         {
-          "l": "额定逆变功率",
-          "v": "12kW",
+          "l": "Type",
+          "v": "Rack-Mounted Off-Grid All-in-One ESS",
           "o": 2
         },
         {
-          "l": "电池容量",
-          "v": "64KWh",
+          "l": "Rated Inverter Power",
+          "v": "12kW",
           "o": 3
         },
         {
-          "l": "额定电池电压",
-          "v": "高压 (HV)",
+          "l": "Battery Capacity",
+          "v": "64kWh",
           "o": 4
         },
         {
-          "l": "应用场景",
-          "v": "工商业储能/峰谷套利/备用电源",
+          "l": "Rated Battery Voltage",
+          "v": "51.2VDC",
           "o": 5
+        },
+        {
+          "l": "AC Input",
+          "v": "220-240V 50/60Hz",
+          "o": 6
+        },
+        {
+          "l": "AC Output",
+          "v": "Pure Sine Wave 220-240V (Dual Output)",
+          "o": 7
+        },
+        {
+          "l": "Max PV Input Power",
+          "v": "15000W (Dual MPPT)",
+          "o": 8
+        },
+        {
+          "l": "MPPT Voltage Range",
+          "v": "60-450VDC",
+          "o": 9
+        },
+        {
+          "l": "Max Charge Current",
+          "v": "200A / 200A",
+          "o": 10
+        },
+        {
+          "l": "Features",
+          "v": "Rack-Mounted, Feed-in to Grid, WiFi, Dual Output, Generator",
+          "o": 11
+        },
+        {
+          "l": "Inverter Dimensions (W×D×H)",
+          "v": "745×440×176 mm",
+          "o": 12
+        },
+        {
+          "l": "Battery Dimensions (W×D×H)",
+          "v": "745×440×240 mm",
+          "o": 13
+        },
+        {
+          "l": "Inverter Weight",
+          "v": "29 kg",
+          "o": 14
+        },
+        {
+          "l": "Battery Unit Weight",
+          "v": "119 kg/PC",
+          "o": 15
+        },
+        {
+          "l": "Application",
+          "v": "C&I ESS / Peak Shaving / Backup Power",
+          "o": 16
         }
       ],
       "images": [
@@ -2219,11 +2599,11 @@
       ],
       "sku": "ESS-12KW-64KWH",
       "features_all": [
-        "12KW/64KWh Max Capacity",
-        "Stackable Battery Module",
-        "3-Phase 400VAC",
-        "Grid-Tie Ready",
-        "Full Remote Control"
+        "12KW/64KWh Rack-Mounted",
+        "15000W Dual MPPT PV Input",
+        "200A Charge/Discharge",
+        "Feed-in to Grid Support",
+        "WiFi + Generator Ready"
       ],
       "en_description": "The ESS-12KW-64KWH from RisunicPower delivers high-performance power solutions with standout features: 12KW/64KWh Max Capacity, Stackable Battery Module, 3-Phase 400VAC. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "ESS_12KW+64KWH是RisunicPower推出的高性能电源解决方案，具备12KW/64KWh Max Capacity、Stackable Battery Module、3-Phase 400VAC等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -4442,64 +4822,154 @@
         {
           "l": "Model",
           "v": "ESS HY 10KW+30KWH",
-          "o": 0
+          "o": 1
         },
         {
           "l": "Type",
-          "v": "高压混合储能 (HV Hybrid)",
-          "o": 1
+          "v": "Off-Grid All-in-One ESS (Split Phase)",
+          "o": 2
         },
         {
           "l": "Rated Inverter Power",
           "v": "10kW",
-          "o": 2
-        },
-        {
-          "l": "Battery Capacity",
-          "v": "30KWh",
           "o": 3
         },
         {
-          "l": "额定电池电压",
-          "v": "高压 (HV)",
+          "l": "Battery Capacity",
+          "v": "30kWh",
           "o": 4
         },
         {
-          "l": "应用场景",
-          "v": "户用/商用高压混合储能",
+          "l": "Rated Battery Voltage",
+          "v": "51.2VDC",
           "o": 5
+        },
+        {
+          "l": "AC Input",
+          "v": "120/240V Split Phase 50/60Hz",
+          "o": 6
+        },
+        {
+          "l": "AC Output",
+          "v": "Pure Sine Wave 120/240V Split Phase",
+          "o": 7
+        },
+        {
+          "l": "Max PV Input Power",
+          "v": "5KW+5KW (Dual MPPT, 22A+22A)",
+          "o": 8
+        },
+        {
+          "l": "MPPT Voltage Range",
+          "v": "90-485VDC / 500VDC Max",
+          "o": 9
+        },
+        {
+          "l": "Max Charge Current",
+          "v": "200A / 200A",
+          "o": 10
+        },
+        {
+          "l": "Peak Efficiency",
+          "v": "~95%",
+          "o": 11
+        },
+        {
+          "l": "Features",
+          "v": "Dual MPPT, Split Phase 120/240V, Generator Compatible",
+          "o": 12
+        },
+        {
+          "l": "Dimensions (W×D×H)",
+          "v": "695×298×1550 mm",
+          "o": 13
+        },
+        {
+          "l": "Net/Gross Weight",
+          "v": "255 / 283 kg",
+          "o": 14
+        },
+        {
+          "l": "Application",
+          "v": "Residential / Commercial Split Phase Off-Grid ESS",
+          "o": 15
         }
       ],
       "zh_specs": [
         {
-          "l": "型号",
+          "l": "Model",
           "v": "ESS HY 10KW+30KWH",
-          "o": 0
-        },
-        {
-          "l": "类型",
-          "v": "高压混合储能 (HV Hybrid)",
           "o": 1
         },
         {
-          "l": "额定逆变功率",
-          "v": "10kW",
+          "l": "Type",
+          "v": "Off-Grid All-in-One ESS (Split Phase)",
           "o": 2
         },
         {
-          "l": "电池容量",
-          "v": "30KWh",
+          "l": "Rated Inverter Power",
+          "v": "10kW",
           "o": 3
         },
         {
-          "l": "额定电池电压",
-          "v": "高压 (HV)",
+          "l": "Battery Capacity",
+          "v": "30kWh",
           "o": 4
         },
         {
-          "l": "应用场景",
-          "v": "户用/商用高压混合储能",
+          "l": "Rated Battery Voltage",
+          "v": "51.2VDC",
           "o": 5
+        },
+        {
+          "l": "AC Input",
+          "v": "120/240V Split Phase 50/60Hz",
+          "o": 6
+        },
+        {
+          "l": "AC Output",
+          "v": "Pure Sine Wave 120/240V Split Phase",
+          "o": 7
+        },
+        {
+          "l": "Max PV Input Power",
+          "v": "5KW+5KW (Dual MPPT, 22A+22A)",
+          "o": 8
+        },
+        {
+          "l": "MPPT Voltage Range",
+          "v": "90-485VDC / 500VDC Max",
+          "o": 9
+        },
+        {
+          "l": "Max Charge Current",
+          "v": "200A / 200A",
+          "o": 10
+        },
+        {
+          "l": "Peak Efficiency",
+          "v": "~95%",
+          "o": 11
+        },
+        {
+          "l": "Features",
+          "v": "Dual MPPT, Split Phase 120/240V, Generator Compatible",
+          "o": 12
+        },
+        {
+          "l": "Dimensions (W×D×H)",
+          "v": "695×298×1550 mm",
+          "o": 13
+        },
+        {
+          "l": "Net/Gross Weight",
+          "v": "255 / 283 kg",
+          "o": 14
+        },
+        {
+          "l": "Application",
+          "v": "Residential / Commercial Split Phase Off-Grid ESS",
+          "o": 15
         }
       ],
       "images": [
@@ -4512,11 +4982,11 @@
       ],
       "sku": "ESS-HY-10KW",
       "features_all": [
-        "10KW Hybrid Inverter",
-        "Dual MPPT 6500W",
-        "Max 500VDC PV Input",
-        "On/Off-Grid Hybrid",
-        "Touch Screen Display"
+        "10KW Split Phase Off-Grid",
+        "Dual MPPT 5KW+5KW PV",
+        "500VDC PV Input Max",
+        "120/240V Split Phase Output",
+        "~95% Peak Efficiency"
       ],
       "en_description": "The ESS-HY-10KW from RisunicPower delivers high-performance power solutions with standout features: 10KW Hybrid Inverter, Dual MPPT 6500W, Max 500VDC PV Input. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "ESS_HY_10KW+30KWH是RisunicPower推出的高性能电源解决方案，具备10KW Hybrid Inverter、Dual MPPT 6500W、Max 500VDC PV Input等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -4613,64 +5083,154 @@
         {
           "l": "Model",
           "v": "ESS HY 12KW+30KWH",
-          "o": 0
+          "o": 1
         },
         {
           "l": "Type",
-          "v": "高压混合储能 (HV Hybrid)",
-          "o": 1
+          "v": "Off-Grid All-in-One ESS (Split Phase)",
+          "o": 2
         },
         {
           "l": "Rated Inverter Power",
           "v": "12kW",
-          "o": 2
-        },
-        {
-          "l": "Battery Capacity",
-          "v": "30KWh",
           "o": 3
         },
         {
-          "l": "额定电池电压",
-          "v": "高压 (HV)",
+          "l": "Battery Capacity",
+          "v": "30kWh",
           "o": 4
         },
         {
-          "l": "应用场景",
-          "v": "户用/商用高压混合储能",
+          "l": "Rated Battery Voltage",
+          "v": "51.2VDC",
           "o": 5
+        },
+        {
+          "l": "AC Input",
+          "v": "120/240V Split Phase 50/60Hz",
+          "o": 6
+        },
+        {
+          "l": "AC Output",
+          "v": "Pure Sine Wave 120/240V Split Phase",
+          "o": 7
+        },
+        {
+          "l": "Max PV Input Power",
+          "v": "6KW+6KW (Dual MPPT, 22A+22A)",
+          "o": 8
+        },
+        {
+          "l": "MPPT Voltage Range",
+          "v": "90-485VDC / 500VDC Max",
+          "o": 9
+        },
+        {
+          "l": "Max Charge Current",
+          "v": "200A / 200A",
+          "o": 10
+        },
+        {
+          "l": "Peak Efficiency",
+          "v": "~95%",
+          "o": 11
+        },
+        {
+          "l": "Features",
+          "v": "Dual MPPT, Split Phase 120/240V, Generator Compatible",
+          "o": 12
+        },
+        {
+          "l": "Dimensions (W×D×H)",
+          "v": "695×298×1550 mm",
+          "o": 13
+        },
+        {
+          "l": "Net/Gross Weight",
+          "v": "255 / 283 kg",
+          "o": 14
+        },
+        {
+          "l": "Application",
+          "v": "Residential / Commercial Split Phase Off-Grid ESS",
+          "o": 15
         }
       ],
       "zh_specs": [
         {
-          "l": "型号",
+          "l": "Model",
           "v": "ESS HY 12KW+30KWH",
-          "o": 0
-        },
-        {
-          "l": "类型",
-          "v": "高压混合储能 (HV Hybrid)",
           "o": 1
         },
         {
-          "l": "额定逆变功率",
-          "v": "12kW",
+          "l": "Type",
+          "v": "Off-Grid All-in-One ESS (Split Phase)",
           "o": 2
         },
         {
-          "l": "电池容量",
-          "v": "30KWh",
+          "l": "Rated Inverter Power",
+          "v": "12kW",
           "o": 3
         },
         {
-          "l": "额定电池电压",
-          "v": "高压 (HV)",
+          "l": "Battery Capacity",
+          "v": "30kWh",
           "o": 4
         },
         {
-          "l": "应用场景",
-          "v": "户用/商用高压混合储能",
+          "l": "Rated Battery Voltage",
+          "v": "51.2VDC",
           "o": 5
+        },
+        {
+          "l": "AC Input",
+          "v": "120/240V Split Phase 50/60Hz",
+          "o": 6
+        },
+        {
+          "l": "AC Output",
+          "v": "Pure Sine Wave 120/240V Split Phase",
+          "o": 7
+        },
+        {
+          "l": "Max PV Input Power",
+          "v": "6KW+6KW (Dual MPPT, 22A+22A)",
+          "o": 8
+        },
+        {
+          "l": "MPPT Voltage Range",
+          "v": "90-485VDC / 500VDC Max",
+          "o": 9
+        },
+        {
+          "l": "Max Charge Current",
+          "v": "200A / 200A",
+          "o": 10
+        },
+        {
+          "l": "Peak Efficiency",
+          "v": "~95%",
+          "o": 11
+        },
+        {
+          "l": "Features",
+          "v": "Dual MPPT, Split Phase 120/240V, Generator Compatible",
+          "o": 12
+        },
+        {
+          "l": "Dimensions (W×D×H)",
+          "v": "695×298×1550 mm",
+          "o": 13
+        },
+        {
+          "l": "Net/Gross Weight",
+          "v": "255 / 283 kg",
+          "o": 14
+        },
+        {
+          "l": "Application",
+          "v": "Residential / Commercial Split Phase Off-Grid ESS",
+          "o": 15
         }
       ],
       "images": [
@@ -4683,11 +5243,11 @@
       ],
       "sku": "ESS-HY-12KW",
       "features_all": [
-        "12KW Hybrid Inverter",
-        "Dual MPPT 6500W",
-        "UPS <4ms Switching",
-        "Parallel 9 Units Max",
-        "Generator Start"
+        "12KW Split Phase Off-Grid",
+        "Dual MPPT 6KW+6KW PV",
+        "500VDC PV Input Max",
+        "120/240V Split Phase Output",
+        "~95% Peak Efficiency"
       ],
       "en_description": "The ESS-HY-12KW from RisunicPower delivers high-performance power solutions with standout features: 12KW Hybrid Inverter, Dual MPPT 6500W, UPS <4ms Switching. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "ESS_HY_12KW+30KWH是RisunicPower推出的高性能电源解决方案，具备12KW Hybrid Inverter、Dual MPPT 6500W、UPS <4ms Switching等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
