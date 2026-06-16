@@ -1,13 +1,15 @@
 const CACHE_NAME = 'risunic-v1'
-const OFFLINE_PAGE = '/en/offline'
 
-const PRECACHE_URLS = [
-  '/en/',
-  '/en/products',
-  '/en/contact',
-  '/en/about',
-  '/en/offline',
-]
+const LOCALES = ['en', 'zh', 'ja', 'es', 'de', 'fr', 'pt', 'ar', 'ru']
+
+const PRECACHE_URLS = LOCALES.flatMap(locale => [
+  `/${locale}/`,
+  `/${locale}/products`,
+  `/${locale}/contact`,
+  `/${locale}/blog`,
+  `/${locale}/case-studies`,
+  `/${locale}/offline`,
+])
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -35,7 +37,12 @@ self.addEventListener('fetch', (event) => {
           caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone))
         }
         return response
-      }).catch(() => caches.match(OFFLINE_PAGE))
+      }).catch(() => {
+        // Try to match offline page for the user's locale from the request path
+        const localeMatch = event.request.url.match(/\/(en|zh|ja|es|de|fr|pt|ar|ru)\//)
+        const locale = localeMatch ? localeMatch[1] : 'en'
+        return caches.match(`/${locale}/offline`)
+      })
     )
   )
 })

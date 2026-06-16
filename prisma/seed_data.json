@@ -21808,6 +21808,384 @@
           "createdAt": "2026-06-08T06:42:23.632Z"
         }
       ]
+    },
+    {
+      "slug": "r0327",
+      "cat": "poe-desktop",
+      "order": 13,
+      "sku": "R0327-5401750",
+      "en_name": "R0327 Industrial Fiber PoE 54V 1.75A 94.5W Desktop",
+      "zh_name": "R0327 工业光纤PoE电源 54V 1.75A 94.5W 桌面型",
+      "en_specs": [
+        {
+          "l": "型号 (Model)",
+          "v": "R0327-5401750",
+          "o": 0
+        },
+        {
+          "l": "产品类型",
+          "v": "PoE电源适配器",
+          "o": 1
+        },
+        {
+          "l": "描述 (Description)",
+          "v": "54V 1.75A 黑色桌面工业光纤PoE",
+          "o": 2
+        },
+        {
+          "l": "输出电压 (Output Voltage)",
+          "v": "54V±5% (51.3~56.7V)",
+          "o": 3
+        },
+        {
+          "l": "输出电流 (Output Current)",
+          "v": "1.75A",
+          "o": 4
+        },
+        {
+          "l": "额定功率 (Rated Power)",
+          "v": "94.5W",
+          "o": 5
+        },
+        {
+          "l": "输入电压范围 (Input Voltage)",
+          "v": "90~264Vac (额定100~240Vac)",
+          "o": 6
+        },
+        {
+          "l": "输入频率 (Input Frequency)",
+          "v": "47~63Hz",
+          "o": 7
+        },
+        {
+          "l": "输入电流 (Input Current)",
+          "v": "2.5A Max @100Vac",
+          "o": 8
+        },
+        {
+          "l": "效率 (Efficiency)",
+          "v": "≥80%",
+          "o": 9
+        },
+        {
+          "l": "纹波噪音 (Ripple & Noise)",
+          "v": "<540mVp-p",
+          "o": 10
+        },
+        {
+          "l": "线性调整率 (Line Regulation)",
+          "v": "≤3%",
+          "o": 11
+        },
+        {
+          "l": "负载调整率 (Load Regulation)",
+          "v": "≤5%",
+          "o": 12
+        },
+        {
+          "l": "保持时间 (Hold-up Time)",
+          "v": "≥10ms @230Vac",
+          "o": 13
+        },
+        {
+          "l": "空载功耗 (No-load Power)",
+          "v": "≤2.0W",
+          "o": 14
+        },
+        {
+          "l": "浪涌电流 (Inrush Current)",
+          "v": "<80A@115Vac / <120A@230Vac",
+          "o": 15
+        },
+        {
+          "l": "过流保护 (OCP)",
+          "v": "2.5~4A, 自恢复",
+          "o": 16
+        },
+        {
+          "l": "泄漏电流 (Leakage Current)",
+          "v": "≤3.5mA @264Vac",
+          "o": 17
+        },
+        {
+          "l": "绝缘耐压 (Hi-Pot)",
+          "v": "3000VAC / 10mA / 1min",
+          "o": 18
+        },
+        {
+          "l": "绝缘电阻 (Insulation)",
+          "v": ">10MΩ @500VDC",
+          "o": 19
+        },
+        {
+          "l": "工作温度 (Operating Temp)",
+          "v": "-40°C~55°C",
+          "o": 20
+        },
+        {
+          "l": "储藏温度 (Storage Temp)",
+          "v": "-40°C~85°C",
+          "o": 21
+        },
+        {
+          "l": "工作湿度 (Humidity)",
+          "v": "5~90% RH",
+          "o": 22
+        },
+        {
+          "l": "尺寸 (Dimensions)",
+          "v": "203×130×41mm",
+          "o": 23
+        },
+        {
+          "l": "重量 (Weight)",
+          "v": "870±20g",
+          "o": 24
+        },
+        {
+          "l": "外壳材质 (Enclosure)",
+          "v": "金属 (Metal)",
+          "o": 25
+        },
+        {
+          "l": "数据速率 (Data Rate)",
+          "v": "10/100/1000Mbps (千兆)",
+          "o": 26
+        },
+        {
+          "l": "SFP光纤端口",
+          "v": "1×SFP 光纤输入",
+          "o": 27
+        },
+        {
+          "l": "AC浪涌保护 (AC Surge)",
+          "v": "DM ±4KV / CM ±4KV",
+          "o": 28
+        },
+        {
+          "l": "PoE网口浪涌 (PoE Surge)",
+          "v": "CM 2KV / DM 1.5KV",
+          "o": 29
+        },
+        {
+          "l": "PoE供电方式",
+          "v": "3,4,5,6(+) / 1,2,7,8(-)",
+          "o": 30
+        },
+        {
+          "l": "MTBF",
+          "v": "≥100,000h @25°C",
+          "o": 31
+        }
+      ],
+      "zh_specs": [
+        {
+          "l": "型号 (Model)",
+          "v": "R0327-5401750",
+          "o": 0
+        },
+        {
+          "l": "产品类型",
+          "v": "PoE电源适配器",
+          "o": 1
+        },
+        {
+          "l": "描述 (Description)",
+          "v": "54V 1.75A 黑色桌面工业光纤PoE",
+          "o": 2
+        },
+        {
+          "l": "输出电压 (Output Voltage)",
+          "v": "54V±5% (51.3~56.7V)",
+          "o": 3
+        },
+        {
+          "l": "输出电流 (Output Current)",
+          "v": "1.75A",
+          "o": 4
+        },
+        {
+          "l": "额定功率 (Rated Power)",
+          "v": "94.5W",
+          "o": 5
+        },
+        {
+          "l": "输入电压范围 (Input Voltage)",
+          "v": "90~264Vac (额定100~240Vac)",
+          "o": 6
+        },
+        {
+          "l": "输入频率 (Input Frequency)",
+          "v": "47~63Hz",
+          "o": 7
+        },
+        {
+          "l": "输入电流 (Input Current)",
+          "v": "2.5A Max @100Vac",
+          "o": 8
+        },
+        {
+          "l": "效率 (Efficiency)",
+          "v": "≥80%",
+          "o": 9
+        },
+        {
+          "l": "纹波噪音 (Ripple & Noise)",
+          "v": "<540mVp-p",
+          "o": 10
+        },
+        {
+          "l": "线性调整率 (Line Regulation)",
+          "v": "≤3%",
+          "o": 11
+        },
+        {
+          "l": "负载调整率 (Load Regulation)",
+          "v": "≤5%",
+          "o": 12
+        },
+        {
+          "l": "保持时间 (Hold-up Time)",
+          "v": "≥10ms @230Vac",
+          "o": 13
+        },
+        {
+          "l": "空载功耗 (No-load Power)",
+          "v": "≤2.0W",
+          "o": 14
+        },
+        {
+          "l": "浪涌电流 (Inrush Current)",
+          "v": "<80A@115Vac / <120A@230Vac",
+          "o": 15
+        },
+        {
+          "l": "过流保护 (OCP)",
+          "v": "2.5~4A, 自恢复",
+          "o": 16
+        },
+        {
+          "l": "泄漏电流 (Leakage Current)",
+          "v": "≤3.5mA @264Vac",
+          "o": 17
+        },
+        {
+          "l": "绝缘耐压 (Hi-Pot)",
+          "v": "3000VAC / 10mA / 1min",
+          "o": 18
+        },
+        {
+          "l": "绝缘电阻 (Insulation)",
+          "v": ">10MΩ @500VDC",
+          "o": 19
+        },
+        {
+          "l": "工作温度 (Operating Temp)",
+          "v": "-40°C~55°C",
+          "o": 20
+        },
+        {
+          "l": "储藏温度 (Storage Temp)",
+          "v": "-40°C~85°C",
+          "o": 21
+        },
+        {
+          "l": "工作湿度 (Humidity)",
+          "v": "5~90% RH",
+          "o": 22
+        },
+        {
+          "l": "尺寸 (Dimensions)",
+          "v": "203×130×41mm",
+          "o": 23
+        },
+        {
+          "l": "重量 (Weight)",
+          "v": "870±20g",
+          "o": 24
+        },
+        {
+          "l": "外壳材质 (Enclosure)",
+          "v": "金属 (Metal)",
+          "o": 25
+        },
+        {
+          "l": "数据速率 (Data Rate)",
+          "v": "10/100/1000Mbps (千兆)",
+          "o": 26
+        },
+        {
+          "l": "SFP光纤端口",
+          "v": "1×SFP 光纤输入",
+          "o": 27
+        },
+        {
+          "l": "AC浪涌保护 (AC Surge)",
+          "v": "DM ±4KV / CM ±4KV",
+          "o": 28
+        },
+        {
+          "l": "PoE网口浪涌 (PoE Surge)",
+          "v": "CM 2KV / DM 1.5KV",
+          "o": 29
+        },
+        {
+          "l": "PoE供电方式",
+          "v": "4/5(+), 7/8(+) / 1/2(-), 3/6(-)",
+          "o": 30
+        },
+        {
+          "l": "MTBF",
+          "v": "≥100,000h @25°C",
+          "o": 31
+        }
+      ],
+      "images": [
+        {
+          "url": "/images/products/r0327/r0327_main.png",
+          "alt": "R0327 54V 1.75A Industrial Fiber PoE",
+          "sortOrder": 0,
+          "isPrimary": true
+        },
+        {
+          "url": "/images/products/r0327/r0327_detail_1.png",
+          "alt": "R0327 detail view 1",
+          "sortOrder": 1,
+          "isPrimary": false
+        },
+        {
+          "url": "/images/products/r0327/r0327_detail_2.png",
+          "alt": "R0327 detail view 2",
+          "sortOrder": 2,
+          "isPrimary": false
+        },
+        {
+          "url": "/images/products/r0327/r0327_detail_3.png",
+          "alt": "R0327 detail view 3",
+          "sortOrder": 3,
+          "isPrimary": false
+        },
+        {
+          "url": "/images/products/r0327/r0327_detail_4.png",
+          "alt": "R0327 detail view 4",
+          "sortOrder": 4,
+          "isPrimary": false
+        }
+      ],
+      "features_all": [
+        "54V 1.75A 94.5W Output",
+        "Gigabit Industrial Fiber PoE",
+        "SFP Fiber Uplink Port",
+        "-40°C~55°C Wide Temperature",
+        "Metal Enclosure, IP40",
+        "6KV Surge Protection",
+        "Full Protections (OCP/SCP/OVP/OTP)",
+        "Non-Standard PoE",
+        "CE/FCC/UL Certified"
+      ],
+      "en_description": "The R0327 Industrial Fiber PoE Power Supply delivers 54V/1.75A (94.5W) with Gigabit SFP fiber uplink in a rugged metal enclosure. Engineered for extreme environments with -40°C~55°C wide temperature range, 6KV surge protection, and full OCP/SCP/OVP/OTP protections. Ideal for industrial surveillance, outdoor networking, and fiber-to-PoE deployments. CE/FCC/UL certified with ≥100,000h MTBF.",
+      "zh_description": "R0327工业光纤PoE电源提供54V/1.75A (94.5W) 输出，配备千兆SFP光纤上行端口和坚固金属外壳。专为极端环境设计，支持-40°C~55°C宽温工作、6KV浪涌保护和全方位OCP/SCP/OVP/OTP保护。适用于工业监控、户外网络和光纤转PoE部署。CE/FCC/UL认证，MTBF≥100,000小时。",
+      "reviews": []
     }
   ],
   "blog_posts": [
