@@ -21,6 +21,8 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
   if (!p) notFound()
 
   const l = ['en', 'zh', 'ja'].includes(locale) ? locale : 'en'
+  const dateLoc: Record<string, string> = { zh: 'zh-CN', ja: 'ja-JP', es: 'es-ES', de: 'de-DE', fr: 'fr-FR', pt: 'pt-BR', ar: 'ar-SA', ru: 'ru-RU' }
+  const dl = dateLoc[l] || 'en-US'
 
   return (
     <main className="min-h-screen bg-white pt-28 pb-20">
@@ -31,7 +33,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
 
         <div className="flex items-center gap-3 text-[1.2rem] text-[#6b7a8f] mb-4">
           <Calendar size={14} />
-          <span>{new Date(p.publishDate).toLocaleDateString(l === 'zh' ? 'zh-CN' : l === 'ja' ? 'ja-JP' : 'en-US')}</span>
+          <span>{new Date(p.publishDate).toLocaleDateString(dl)}</span>
           <span className="rounded-full bg-[#F7D142]/10 px-3 py-1 text-[1.1rem] text-[#F7D142]">{p.category}</span>
         </div>
 

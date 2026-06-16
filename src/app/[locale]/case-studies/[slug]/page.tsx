@@ -21,6 +21,8 @@ export default async function CaseStudyDetailPage({ params }: { params: Promise<
   if (!c) notFound()
 
   const l = ['en', 'zh', 'ja'].includes(locale) ? locale : 'en'
+  const dateLoc: Record<string, string> = { zh: 'zh-CN', ja: 'ja-JP', es: 'es-ES', de: 'de-DE', fr: 'fr-FR', pt: 'pt-BR', ar: 'ar-SA', ru: 'ru-RU' }
+  const dl = dateLoc[l] || 'en-US'
 
   return (
     <main className="min-h-screen bg-white pt-28 pb-20">
@@ -36,7 +38,7 @@ export default async function CaseStudyDetailPage({ params }: { params: Promise<
           <span>{c.industry}</span>
           <span>·</span>
           <Calendar size={14} />
-          <span>{new Date(c.publishDate).toLocaleDateString(l === 'zh' ? 'zh-CN' : l === 'ja' ? 'ja-JP' : 'en-US')}</span>
+          <span>{new Date(c.publishDate).toLocaleDateString(dl)}</span>
         </div>
 
         <h1 className="text-[3.2rem] font-bold text-[#0f2a44] leading-tight mb-12">{c.title}</h1>

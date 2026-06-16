@@ -15,11 +15,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale, slug } = await params
   const product = await prisma.product.findUnique({
     where: { slug },
-    include: { translations: { where: { locale } }, category: { include: { translations: { where: { locale } } } } },
+    include: { translations: true, category: { include: { translations: true } } },
   })
   if (!product) return { title: 'RisunicPower' }
-  const pt = product.translations[0]
-  const catT = product.category.translations[0]
+  const pt = product.translations.find((t: { locale: string }) => t.locale === locale)
+    || product.translations.find((t: { locale: string }) => t.locale === 'en')
+    || product.translations[0]
+  const catT = product.category.translations.find((t: { locale: string }) => t.locale === locale)
+    || product.category.translations.find((t: { locale: string }) => t.locale === 'en')
+    || product.category.translations[0]
   const name = pt?.name || slug
   const catName = catT?.name || product.categorySlug
   return {
@@ -35,19 +39,30 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   const product = await prisma.product.findUnique({
     where: { slug },
     include: {
-      translations: { where: { locale } },
-      specs: { where: { locale }, orderBy: { sortOrder: 'asc' } },
+      translations: true,
+      specs: { orderBy: { sortOrder: 'asc' } },
       certifications: true,
       images: true,
       reviews: { orderBy: { createdAt: 'desc' } },
-      category: { include: { translations: { where: { locale } } } },
+      category: { include: { translations: true } },
     },
   })
 
   if (!product || !product.published) notFound()
 
-  const pt = product.translations[0]
-  const catT = product.category.translations[0]
+  // 优先取当前语言翻译，无则回退英文
+  const pt = product.translations.find(t => t.locale === locale)
+    || product.translations.find(t => t.locale === 'en')
+    || product.translations[0]
+  const catT = product.category.translations.find(t => t.locale === locale)
+    || product.category.translations.find(t => t.locale === 'en')
+    || product.category.translations[0]
+
+  // specs: 优先当前语言，回退英文
+  const localeSpecs = product.specs.filter(s => s.locale === locale)
+  const enSpecs = product.specs.filter(s => s.locale === 'en')
+  const displaySpecs = localeSpecs.length > 0 ? localeSpecs : enSpecs
+
   const primaryImage = product.images?.[0]
   const imageUrl = primaryImage?.url || '/images/products/' + slug + '.png'
   const features: string[] = pt?.features ? JSON.parse(pt.features) : []
@@ -55,9 +70,9 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   const relatedProducts = await prisma.product.findMany({
     where: { categorySlug: catSlug, slug: { not: slug }, published: true },
     include: {
-      translations: { where: { locale } },
+      translations: true,
       images: { take: 1 },
-      category: { include: { translations: { where: { locale } } } },
+      category: { include: { translations: true } },
     },
     take: 3,
     orderBy: { sortOrder: 'asc' },
@@ -155,13 +170,13 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           </div>
         </div>
 
-        {product.specs.length > 0 && (
+        {displaySpecs.length > 0 && (
           <section className="mb-20 max-w-3xl">
             <h2 className="text-[2.4rem] font-bold text-[#0f2a44] mb-6">{t('techSpecs')}</h2>
             <div className="bg-white rounded-2xl border border-[#e2e8ef] overflow-hidden">
               <table className="w-full text-left">
                 <tbody>
-                  {product.specs.map((spec, i) => (
+                  {displaySpecs.map((spec, i) => (
                     <tr key={spec.id} className={i % 2 === 0 ? 'bg-[#f7f8fa]' : 'bg-white'}>
                       <td className="px-6 py-4 text-[1.4rem] font-medium text-[#0f2a44] min-w-[120px] sm:w-[220px] border-b border-[#e2e8ef]">{spec.label}</td>
                       <td className="px-6 py-4 text-[1.4rem] text-[#1a2332] border-b border-[#e2e8ef]">{spec.value}</td>
@@ -178,8 +193,8 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             <h2 className="text-[2.4rem] font-bold text-[#0f2a44] mb-6">{t('related')}</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {relatedProducts.map(rp => {
-                const rt = rp.translations[0]
-                const rpCatT = rp.category.translations[0]
+                const rt = rp.translations.find(t => t.locale === locale) || rp.translations.find(t => t.locale === 'en') || rp.translations[0]
+                const rpCatT = rp.category.translations.find(t => t.locale === locale) || rp.category.translations.find(t => t.locale === 'en') || rp.category.translations[0]
                 const rpImg = rp.images?.[0]?.url
                 return (
                   <Link key={rp.slug} href={`/${locale}/products/${rp.categorySlug}/${rp.slug}`}

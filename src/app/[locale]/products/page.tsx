@@ -10,7 +10,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
   const categories = await prisma.productCategory.findMany({
     where: { published: true },
     include: {
-      translations: { where: { locale } },
+      translations: true,
       _count: { select: { products: { where: { published: true } } } },
       products: {
         where: { published: true },
@@ -35,7 +35,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((cat) => {
-            const ct = cat.translations[0]
+            const ct = cat.translations.find(t => t.locale === locale) || cat.translations.find(t => t.locale === 'en') || cat.translations[0]
             const imgUrl = cat.products[0]?.images[0]?.url || null
             return (
               <Link key={cat.slug} href={`/${locale}/products/${cat.slug}`}

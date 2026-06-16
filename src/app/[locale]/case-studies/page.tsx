@@ -5,19 +5,27 @@ import { Building2, ArrowRight } from 'lucide-react'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  const t = locale === 'zh' ? '成功案例 — RisunicPower' : 'Case Studies — RisunicPower'
-  return { title: t }
+  const titles: Record<string, string> = { zh: '成功案例 — RisunicPower', ja: '導入事例 — RisunicPower', es: 'Casos de Éxito — RisunicPower', de: 'Fallstudien — RisunicPower', fr: 'Études de Cas — RisunicPower', pt: 'Estudos de Caso — RisunicPower', ar: 'دراسات الحالة — RisunicPower', ru: 'Кейсы — RisunicPower' }
+  return { title: titles[locale] || 'Case Studies — RisunicPower' }
 }
 
 export default async function CaseStudiesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const l = ['en', 'zh', 'ja'].includes(locale) ? locale : 'en'
 
-  const cases = await prisma.caseStudy.findMany({
+  // 当前语言案例，无则回退英文
+  let cases = await prisma.caseStudy.findMany({
     where: { locale: l, published: true },
     orderBy: { publishDate: 'desc' },
     select: { slug: true, title: true, client: true, industry: true, result: true, publishDate: true },
   })
+  if (cases.length === 0 && l !== 'en') {
+    cases = await prisma.caseStudy.findMany({
+      where: { locale: 'en', published: true },
+      orderBy: { publishDate: 'desc' },
+      select: { slug: true, title: true, client: true, industry: true, result: true, publishDate: true },
+    })
+  }
 
   return (
     <main className="min-h-screen bg-white pt-28 pb-20">
@@ -42,7 +50,7 @@ export default async function CaseStudiesPage({ params }: { params: Promise<{ lo
                 </div>
                 <div className="flex-1 min-w-0">
                   <h2 className="text-[1.8rem] font-bold text-[#0f2a44] mb-1 group-hover:text-[#F7D142] transition-colors">{c.title}</h2>
-                  <p className="text-[1.3rem] text-[#6b7a8f]">{c.client} · {c.industry} · {new Date(c.publishDate).toLocaleDateString()}</p>
+                  <p className="text-[1.3rem] text-[#6b7a8f]">{c.client} · {c.industry} · {new Date(c.publishDate).toLocaleDateString('en-US')}</p>
                   <p className="mt-2 text-[1.3rem] leading-relaxed text-[#2c3e50] line-clamp-2">{c.result}</p>
                 </div>
                 <ArrowRight size={20} className="text-gray-300 group-hover:text-[#F7D142] transition-colors shrink-0" />

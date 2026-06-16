@@ -10,12 +10,23 @@ export default async function NewsSection({ locale }: Props) {
   const ft = await getTranslations({ locale, namespace: 'Home' })
 
   const l = ['en', 'zh', 'ja', 'es', 'de', 'fr', 'pt', 'ar', 'ru'].includes(locale) ? locale : 'en'
-  const posts = await prisma.blogPost.findMany({
+  let posts = await prisma.blogPost.findMany({
     where: { locale: l, published: true },
     orderBy: { publishDate: 'desc' },
     take: 4,
     select: { slug: true, title: true, category: true, publishDate: true },
   })
+  if (posts.length === 0 && l !== 'en') {
+    posts = await prisma.blogPost.findMany({
+      where: { locale: 'en', published: true },
+      orderBy: { publishDate: 'desc' },
+      take: 4,
+      select: { slug: true, title: true, category: true, publishDate: true },
+    })
+  }
+
+  const dateLoc: Record<string, string> = { zh: 'zh-CN', ja: 'ja-JP', es: 'es-ES', de: 'de-DE', fr: 'fr-FR', pt: 'pt-BR', ar: 'ar-SA', ru: 'ru-RU' }
+  const dl = dateLoc[l] || 'en-US'
 
   if (posts.length === 0) return null
 
@@ -33,7 +44,7 @@ export default async function NewsSection({ locale }: Props) {
             >
               <div className="flex items-center gap-2 text-[1.2rem] text-[#F7D142] mb-3">
                 <Calendar size={14} />
-                <span>{new Date(p.publishDate).toLocaleDateString(locale === 'zh' ? 'zh-CN' : locale === 'ja' ? 'ja-JP' : 'en-US')}</span>
+                <span>{new Date(p.publishDate).toLocaleDateString(dl)}</span>
               </div>
               <span className="inline-block rounded-full bg-[#F7D142]/10 px-3 py-1 text-[1.1rem] text-[#0E4071] mb-3">{p.category}</span>
               <h3 className="text-[1.5rem] font-bold text-[#0E4071] mb-3 group-hover:text-[#F7D142] transition-colors line-clamp-2">{p.title}</h3>

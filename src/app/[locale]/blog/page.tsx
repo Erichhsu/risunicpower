@@ -5,19 +5,29 @@ import { Calendar, ArrowRight } from 'lucide-react'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  const t = locale === 'zh' ? '博客 — RisunicPower' : locale === 'ja' ? 'ブログ — RisunicPower' : 'Blog — RisunicPower'
-  return { title: t, description: 'Power industry insights, technology comparisons, and product guides from RisunicPower.' }
+  const titles: Record<string, string> = { zh: '博客 — RisunicPower', ja: 'ブログ — RisunicPower', es: 'Blog — RisunicPower', de: 'Blog — RisunicPower', fr: 'Blog — RisunicPower', pt: 'Blog — RisunicPower', ar: 'المدونة — RisunicPower', ru: 'Блог — RisunicPower' }
+  return { title: titles[locale] || 'Blog — RisunicPower', description: 'Power industry insights, technology comparisons, and product guides from RisunicPower.' }
 }
 
 export default async function BlogListPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const l = ['en', 'zh', 'ja'].includes(locale) ? locale : 'en'
+  const dateLoc: Record<string, string> = { zh: 'zh-CN', ja: 'ja-JP', es: 'es-ES', de: 'de-DE', fr: 'fr-FR', pt: 'pt-BR', ar: 'ar-SA', ru: 'ru-RU' }
+  const dl = dateLoc[l] || 'en-US'
 
-  const posts = await prisma.blogPost.findMany({
+  // 当前语言博客，无则回退英文
+  let posts = await prisma.blogPost.findMany({
     where: { locale: l, published: true },
     orderBy: { publishDate: 'desc' },
     select: { slug: true, title: true, excerpt: true, category: true, publishDate: true, coverImage: true },
   })
+  if (posts.length === 0 && l !== 'en') {
+    posts = await prisma.blogPost.findMany({
+      where: { locale: 'en', published: true },
+      orderBy: { publishDate: 'desc' },
+      select: { slug: true, title: true, excerpt: true, category: true, publishDate: true, coverImage: true },
+    })
+  }
 
   return (
     <main className="min-h-screen bg-white pt-28 pb-20">
@@ -41,7 +51,7 @@ export default async function BlogListPage({ params }: { params: Promise<{ local
               >
                 <div className="flex items-center gap-2 text-[1.2rem] text-[#F7D142] mb-4">
                   <Calendar size={14} />
-                  <span>{new Date(p.publishDate).toLocaleDateString(l === 'zh' ? 'zh-CN' : 'en-US')}</span>
+                  <span>{new Date(p.publishDate).toLocaleDateString(dl)}</span>
                   <span className="rounded-full bg-[#F7D142]/10 px-2 py-0.5 text-[1.1rem]">{p.category}</span>
                 </div>
                 <h2 className="text-[2rem] font-bold text-[#0f2a44] mb-3 group-hover:text-[#F7D142] transition-colors">{p.title}</h2>

@@ -11,13 +11,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale, category: catSlug } = await params
   const cat = await prisma.productCategory.findUnique({
     where: { slug: catSlug },
-    include: { translations: { where: { locale } } },
+    include: { translations: true },
   })
-  const name = cat?.translations[0]?.name || catSlug
+  const ct = cat?.translations.find((t: { locale: string }) => t.locale === locale)
+    || cat?.translations.find((t: { locale: string }) => t.locale === 'en')
+    || cat?.translations[0]
+  const name = ct?.name || catSlug
   return {
     title: `${name} | RisunicPower`,
-    description: cat?.translations[0]?.subtitle
-      ? `${cat.translations[0].subtitle} — RisunicPower industrial power supply manufacturer.`
+    description: ct?.subtitle
+      ? `${ct.subtitle} — RisunicPower industrial power supply manufacturer.`
       : `${name} products from RisunicPower — POE, adapters, UPS, inverters, and more.`,
   }
 }
@@ -29,11 +32,11 @@ export default async function CategoryPage({ params }: { params: Promise<{ local
   const cat = await prisma.productCategory.findUnique({
     where: { slug: catSlug },
     include: {
-      translations: { where: { locale } },
+      translations: true,
       products: {
         where: { published: true },
         include: {
-          translations: { where: { locale } },
+          translations: true,
           certifications: true,
           images: { take: 1 },
         },
@@ -44,7 +47,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ local
 
   if (!cat || !cat.published) notFound()
 
-  const catT = cat.translations[0]
+  const catT = cat.translations.find(t => t.locale === locale) || cat.translations.find(t => t.locale === 'en') || cat.translations[0]
 
   return (
     <main className="pt-32 pb-20 min-h-screen">
@@ -64,7 +67,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ local
         ) : (
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
             {cat.products.map((prod) => {
-              const pt = prod.translations[0]
+              const pt = prod.translations.find(t => t.locale === locale) || prod.translations.find(t => t.locale === 'en') || prod.translations[0]
               const features: string[] = pt?.features ? JSON.parse(pt.features) : []
               const imgUrl = prod.images?.[0]?.url
               return (
