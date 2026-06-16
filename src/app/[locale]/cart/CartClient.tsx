@@ -85,7 +85,7 @@ export default function CartClient({ locale }: { locale: string }) {
                   <span className="text-[1.4rem] text-[#6b7a8f]">{t('subtotal')}</span>
                   <span className="text-[2.4rem] font-bold text-[#F7D142]">{formatPrice(totalPrice(), locale)}</span>
                 </div>
-                <div className="divider-washi my-2" />
+                <hr className="border-t border-[#E2E8EF] my-2" />
                 <p className="text-[1.2rem] text-[#6b7a8f]">{t('shippingCalc')}</p>
                 <Link href={`/${locale}/contact?type=wholesale`}
                   className="flex items-center justify-center gap-2 w-full py-4 rounded-full border-2 border-[#F7D142] text-[#F7D142] font-semibold text-[1.4rem] hover:bg-[#F7D142] hover:text-white transition-colors"

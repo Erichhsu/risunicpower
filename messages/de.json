@@ -1,15 +1,15 @@
 {
   "Home": {
     "hero": {
-      "tag": "Industrielle Stromversorgungslösungen",
+      "tag": "Industrielle Stromversorgungsl枚sungen",
       "title": "Ihre Innovation\nMit Strom Versorgen",
-      "subtitle": "Von POE-Netzteilen bis zu Solarwechselrichtern — über 12 Jahre F&E-Exzellenz für mehr als 600 Kunden in über 30 Ländern.",
+      "subtitle": "Von POE-Netzteilen bis zu Solarwechselrichtern 鈥?眉ber 12 Jahre F&E-Exzellenz f眉r mehr als 600 Kunden in 眉ber 30 L盲ndern.",
       "ctaPrimary": "Produkte Ansehen",
       "ctaSecondary": "Angebot Anfordern"
     },
     "productGrid": {
       "title": "Unsere Produkte",
-      "subtitle": "Von kompakten POE-Injektoren bis zu industriellen USV-Systemen — jedes Produkt ist auf Zuverlässigkeit und Leistung ausgelegt.",
+      "subtitle": "Von kompakten POE-Injektoren bis zu industriellen USV-Systemen 鈥?jedes Produkt ist auf Zuverl盲ssigkeit und Leistung ausgelegt.",
       "viewAll": "Alle Anzeigen",
       "items": "Artikel",
       "label": "Unsere Produkte"
@@ -20,7 +20,7 @@
     "viewAll": "Alle Anzeigen",
     "readMore": "Weiterlesen",
     "certTitle": "Globale Zertifizierungen",
-    "certDesc": "Unsere Produkte erfüllen internationale Sicherheits- und Qualitätsstandards"
+    "certDesc": "Unsere Produkte erf眉llen internationale Sicherheits- und Qualit盲tsstandards"
   },
   "Product": {
     "specs": "Spezifikationen",
@@ -40,22 +40,22 @@
     "keyFeatures": "Hauptfunktionen",
     "techSpecs": "Technische Daten",
     "noProducts": "Noch keine Produkte in dieser Kategorie.",
-    "backTo": "Zurück zu {name}",
+    "backTo": "Zur眉ck zu {name}",
     "requestQuote": "Angebot Anfordern",
     "more": "+{n} mehr",
     "sku": "SKU",
-    "moqOemOdm": "MOQ · OEM · ODM",
+    "moqOemOdm": "MOQ 路 OEM 路 ODM",
     "productsTitle": "Produktkategorien",
-    "productsDesc": "Entdecken Sie unser gesamtes Sortiment an Stromversorgungslösungen — von POE-Injektoren und Adaptern bis hin zu Solarwechselrichtern und tragbaren Kraftwerken.",
+    "productsDesc": "Entdecken Sie unser gesamtes Sortiment an Stromversorgungsl枚sungen 鈥?von POE-Injektoren und Adaptern bis hin zu Solarwechselrichtern und tragbaren Kraftwerken.",
     "allProducts": "Alle Produkte Anzeigen",
     "inquiryNow": "Jetzt Anfragen",
     "customerReviews": "Kundenbewertungen",
-    "backToProducts": "Zurück zu Produkten"
+    "backToProducts": "Zur眉ck zu Produkten"
   },
   "Cart": {
     "title": "Warenkorb",
     "empty": "Ihr Warenkorb ist leer",
-    "emptyDesc": "Durchsuchen Sie unsere Produkte und fügen Sie hinzu, was Ihnen gefällt",
+    "emptyDesc": "Durchsuchen Sie unsere Produkte und f眉gen Sie hinzu, was Ihnen gef盲llt",
     "browseProducts": "Produkte Durchsuchen",
     "total": "Gesamt",
     "subtotal": "Zwischensumme",
@@ -63,32 +63,32 @@
     "calculatedAtCheckout": "Wird beim Checkout berechnet",
     "checkout": "Zur Kasse",
     "proceedCheckout": "Weiter zur Kasse",
-    "wholesaleInquiry": "Großhandelsanfrage",
+    "wholesaleInquiry": "Gro脽handelsanfrage",
     "clearCart": "Warenkorb Leeren",
     "remove": "Entfernen",
-    "orderSummary": "Bestellübersicht",
+    "orderSummary": "Bestell眉bersicht",
     "items": "Artikel",
     "product": "Produkt",
     "quantity": "Menge",
     "continueShopping": "Weiter Einkaufen",
     "shippingCalc": "Versand & Steuern werden beim Checkout berechnet",
-    "wholesalePricing": "Großhandelspreise benötigt?",
+    "wholesalePricing": "Gro脽handelspreise ben枚tigt?",
     "totalItems": "Gesamt ({n} Artikel)"
   },
   "Checkout": {
     "title": "Zur Kasse",
-    "backToCart": "Zurück zum Warenkorb",
-    "orderSummary": "Bestellübersicht",
+    "backToCart": "Zur眉ck zum Warenkorb",
+    "orderSummary": "Bestell眉bersicht",
     "total": "Gesamt",
     "payWithStripe": "Mit Stripe Bezahlen",
     "processing": "Verarbeitung...",
-    "securePayment": "🔒 Gesichert durch Stripe · 140+ Währungen",
+    "securePayment": "馃敀 Gesichert durch Stripe 路 140+ W盲hrungen",
     "empty": "Ihr Warenkorb ist leer",
     "browse": "Weiter Einkaufen",
     "items": "Artikel",
     "nogkey": "Zahlung noch nicht konfiguriert",
     "cart": "Warenkorb",
-    "desc": "Überprüfen Sie Ihre Bestellung und fahren Sie mit der Zahlung fort",
+    "desc": "脺berpr眉fen Sie Ihre Bestellung und fahren Sie mit der Zahlung fort",
     "error": "Zahlungseinleitung fehlgeschlagen. Bitte versuchen Sie es erneut."
   },
   "Contact": {
@@ -107,17 +107,17 @@
       "sending": "Wird gesendet...",
       "formError": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
       "required": "Erforderlich",
-      "invalidEmail": "Ungültige E-Mail"
+      "invalidEmail": "Ung眉ltige E-Mail"
     },
     "sending": "Senden...",
     "formError": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
     "required": "Erforderlich",
-    "invalidEmail": "Ungültige E-Mail-Adresse"
+    "invalidEmail": "Ung眉ltige E-Mail-Adresse"
   },
   "Header": {
     "products": "Produkte",
-    "solutions": "Lösungen",
-    "about": "Über Uns",
+    "solutions": "L枚sungen",
+    "about": "脺ber Uns",
     "blog": "Blog",
     "contact": "Kontakt",
     "search": "Suchen",
@@ -128,7 +128,7 @@
     "company": "Unternehmen",
     "support": "Support",
     "legal": "Rechtliches",
-    "privacy": "Datenschutzerklärung",
+    "privacy": "Datenschutzerkl盲rung",
     "terms": "Nutzungsbedingungen",
     "rights": "Alle Rechte vorbehalten.",
     "newsletter": "Abonnieren Sie unseren Newsletter",
@@ -138,8 +138,8 @@
   },
   "NotFound": {
     "title": "Seite Nicht Gefunden",
-    "desc": "Die gesuchte Seite wurde möglicherweise verschoben oder existiert nicht mehr.",
-    "backHome": "Zurück zur Startseite"
+    "desc": "Die gesuchte Seite wurde m枚glicherweise verschoben oder existiert nicht mehr.",
+    "backHome": "Zur眉ck zur Startseite"
   },
   "Reviews": {
     "title": "Kundenbewertungen",
@@ -160,41 +160,47 @@
     "count": "{n} Bewertungen"
   },
   "Blog": {
-    "backToBlog": "Zurück zum Blog",
+    "backToBlog": "Zur眉ck zum Blog",
     "inquireProduct": "Verwandte Produkte Anfragen"
   },
   "CaseStudies": {
-    "backToCaseStudies": "Zurück zu Fallstudien",
+    "backToCaseStudies": "Zur眉ck zu Fallstudien",
     "challenge": "Herausforderung",
-    "solution": "Lösung",
+    "solution": "L枚sung",
     "results": "Ergebnisse",
-    "getSimilar": "Ähnliche Lösung Anfordern"
+    "getSimilar": "脛hnliche L枚sung Anfordern"
   },
   "Offline": {
     "title": "Offline",
-    "desc": "Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut",
-    "backHome": "Zurück zur Startseite"
+    "desc": "Bitte 眉berpr眉fen Sie Ihre Internetverbindung und versuchen Sie es erneut",
+    "backHome": "Zur眉ck zur Startseite"
   },
   "Cookies": {
     "title": "Cookie-Richtlinie",
     "desc": "Diese Seite befindet sich im Aufbau. Bitte schauen Sie bald wieder vorbei.",
-    "backHome": "Zurück zur Startseite"
+    "backHome": "Zur眉ck zur Startseite"
   },
   "Payment": {
     "title": "Zahlung Erfolgreich!",
-    "desc": "Vielen Dank für Ihre Bestellung. Sie erhalten in Kürze eine Bestätigungs-E-Mail.",
+    "desc": "Vielen Dank f眉r Ihre Bestellung. Sie erhalten in K眉rze eine Best盲tigungs-E-Mail.",
     "orderId": "Bestell-ID",
     "backToShop": "Weiter Einkaufen",
     "error": "Zahlung konnte nicht verifiziert werden. Bitte kontaktieren Sie den Support.",
-    "loading": "Zahlung wird überprüft...",
+    "loading": "Zahlung wird 眉berpr眉ft...",
     "contactSupport": "Support Kontaktieren"
   },
   "Stats": {
     "title": "Vertrauen in Zahlen",
-    "subtitle": "Über 12 Jahre Branchenführerschaft in über 30 Ländern",
+    "subtitle": "脺ber 12 Jahre Branchenf眉hrerschaft in 眉ber 30 L盲ndern",
     "skus": "Produkt-SKUs",
-    "countries": "Länder Betreut",
+    "countries": "L盲nder Betreut",
     "clients": "Globale Kunden",
     "years": "Jahre Exzellenz"
+  },
+  "Error": {
+    "title": "Etwas ist schief gelaufen",
+    "description": "Ein unerwarteter Fehler ist aufgetreten. Bitte versuche es erneut oder kontaktiere uns.",
+    "tryAgain": "Erneut versuchen",
+    "backHome": "Zurück zur Startseite"
   }
 }

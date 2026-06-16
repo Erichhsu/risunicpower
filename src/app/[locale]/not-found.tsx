@@ -22,7 +22,7 @@ export default async function NotFound({ params }: { params?: Promise<{ locale: 
         <p className="text-[1.6rem] text-[#6b7a8f] max-w-md mx-auto mb-10">
           {t('desc')}
         </p>
-        <div className="divider-washi" />
+        <hr className="border-t border-[#E2E8EF] my-6" />
         <Link href={`/${locale}`}
           className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#F7D142] text-white font-semibold text-[1.4rem] hover:bg-[#9a3a1e] transition-all shadow-lg shadow-[#F7D142]/20"
         >

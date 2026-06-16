@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { logger } from '@/lib/logger'
 
 type Msg = { role: 'user' | 'bot'; text: string }
 
@@ -58,14 +59,14 @@ export async function POST(req: NextRequest) {
 
     if (!res.ok) {
       const err = await res.text()
-      console.error('DeepSeek API error:', res.status, err)
+      logger.error('DeepSeek API error:', res.status, err)
       return NextResponse.json({ reply: unavailableReplies[l] })
     }
 
     const data = await res.json()
     return NextResponse.json({ reply: data.choices?.[0]?.message?.content || 'No response.' })
   } catch (err) {
-    console.error('AI chat error:', err)
+    logger.error('AI chat error:', err)
     return NextResponse.json({ reply: unavailableReplies[l] })
   }
 }

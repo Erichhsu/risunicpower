@@ -66,7 +66,7 @@ export default function SuccessClient({ locale }: { locale: string }) {
                 <span className="text-[1.4rem] font-mono font-bold text-[#0f2a44]">{orderId}</span>
               </div>
             )}
-            <div className="divider-washi" />
+            <hr className="border-t border-[#E2E8EF] my-6" />
             <Link href={`/${locale}/products`}
               className="inline-flex items-center gap-2 mt-8 px-8 py-4 rounded-full bg-[#F7D142] text-white font-semibold text-[1.4rem] hover:bg-[#9a3a1e] transition-all shadow-lg shadow-[#F7D142]/20"
             >

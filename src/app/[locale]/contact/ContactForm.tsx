@@ -132,7 +132,7 @@ export default function ContactForm({ locale }: { locale: string }) {
       <div className="max-w-[1000px] mx-auto px-[clamp(2rem,5vw,8rem)]">
         <div className="text-center mb-16">
           <h1 className="text-[clamp(2.8rem,4vw,4.8rem)] font-bold text-[#0f2a44] mb-4">{t('title')}</h1>
-          <div className="divider-washi" />
+          <hr className="border-t border-[#E2E8EF] my-6" />
           <p className="text-[1.6rem] text-[#6b7a8f] max-w-2xl mx-auto">{t('subtitle')}</p>
         </div>
 

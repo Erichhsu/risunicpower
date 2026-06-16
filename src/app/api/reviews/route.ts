@@ -1,5 +1,6 @@
 import { prisma } from '@/lib/db/prisma';
 import { NextRequest, NextResponse } from 'next/server';
+import { logger } from '@/lib/logger';
 
 function stripHtml(input: string): string {
   return input.replace(/<[^>]*>/g, '').trim();
@@ -42,7 +43,7 @@ export async function POST(request: NextRequest) {
       reviewId: review.id,
     }, { status: 201 });
   } catch (error) {
-    console.error('Reviews POST error:', error);
+    logger.error('Reviews POST error:', error);
     return NextResponse.json(
       { success: false, message: 'Failed to submit review. Please try again.' },
       { status: 500 }
@@ -72,7 +73,7 @@ export async function GET(request: NextRequest) {
     response.headers.set('Cache-Control', 'public, max-age=0, s-maxage=60, stale-while-revalidate=120');
     return response;
   } catch (error) {
-    console.error('Reviews GET error:', error);
+    logger.error('Reviews GET error:', error);
     return NextResponse.json({ reviews: [] }, {
       headers: { 'Cache-Control': 'no-cache' },
     });

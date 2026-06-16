@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/db/prisma'
 import { createTransport, esc } from '@/lib/email/transport'
-
+import { logger } from '@/lib/logger'
 
 
 function createInquiryEmail(d: {
@@ -59,13 +59,13 @@ export async function POST(req: NextRequest) {
           html: createInquiryEmail(body),
         })
       } catch (mailErr) {
-        console.warn('Mail send failed (SMTP may not be configured yet):', mailErr)
+        logger.warn('Mail send failed (SMTP may not be configured yet):', mailErr)
       }
     }
 
     return NextResponse.json({ success: true, id: inquiry.id })
   } catch (err) {
-    console.error('Inquiry error:', err)
+    logger.error('Inquiry error:', err)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }

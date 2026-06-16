@@ -2,51 +2,51 @@
   "Home": {
     "hero": {
       "tag": "Soluciones de Potencia Industrial",
-      "title": "Potenciando Su\nInnovación",
-      "subtitle": "Desde fuentes POE hasta inversores solares — más de 12 años de excelencia en I+D, atendiendo a más de 600 clientes en más de 30 países.",
+      "title": "Potenciando Su\nInnovaci贸n",
+      "subtitle": "Desde fuentes POE hasta inversores solares 鈥?m谩s de 12 a帽os de excelencia en I+D, atendiendo a m谩s de 600 clientes en m谩s de 30 pa铆ses.",
       "ctaPrimary": "Ver Productos",
-      "ctaSecondary": "Solicitar Cotización"
+      "ctaSecondary": "Solicitar Cotizaci贸n"
     },
     "productGrid": {
       "title": "Nuestros Productos",
-      "subtitle": "Desde inyectores POE compactos hasta sistemas UPS de grado industrial — cada producto está diseñado para fiabilidad y rendimiento.",
+      "subtitle": "Desde inyectores POE compactos hasta sistemas UPS de grado industrial 鈥?cada producto est谩 dise帽ado para fiabilidad y rendimiento.",
       "viewAll": "Ver Todo",
-      "items": "artículos",
+      "items": "art铆culos",
       "label": "Nuestros Productos"
     },
     "stats": {
-      "title": "Confianza en Números"
+      "title": "Confianza en N煤meros"
     },
     "viewAll": "Ver Todo",
-    "readMore": "Leer Más",
+    "readMore": "Leer M谩s",
     "certTitle": "Certificaciones Globales",
-    "certDesc": "Nuestros productos cumplen con los estándares internacionales de seguridad y calidad"
+    "certDesc": "Nuestros productos cumplen con los est谩ndares internacionales de seguridad y calidad"
   },
   "Product": {
     "specs": "Especificaciones",
-    "features": "Características",
+    "features": "Caracter铆sticas",
     "certifications": "Certificaciones",
     "related": "Productos Relacionados",
-    "getQuote": "Solicitar Cotización",
-    "downloadSpec": "Descargar Ficha Técnica",
-    "addToCart": "Añadir al Carrito",
+    "getQuote": "Solicitar Cotizaci贸n",
+    "downloadSpec": "Descargar Ficha T茅cnica",
+    "addToCart": "A帽adir al Carrito",
     "buyNow": "Comprar Ahora",
-    "moq": "Mín.",
+    "moq": "M铆n.",
     "price": "Precio",
     "inquiry": "Consulta",
     "breadcrumbProducts": "Productos",
     "viewProducts": "Ver Productos",
     "productCount": "{n} productos",
-    "keyFeatures": "Características Clave",
-    "techSpecs": "Especificaciones Técnicas",
-    "noProducts": "Aún no hay productos en esta categoría.",
+    "keyFeatures": "Caracter铆sticas Clave",
+    "techSpecs": "Especificaciones T茅cnicas",
+    "noProducts": "A煤n no hay productos en esta categor铆a.",
     "backTo": "Volver a {name}",
-    "requestQuote": "Solicitar Cotización",
-    "more": "+{n} más",
+    "requestQuote": "Solicitar Cotizaci贸n",
+    "more": "+{n} m谩s",
     "sku": "SKU",
-    "moqOemOdm": "MOQ · OEM · ODM",
-    "productsTitle": "Categorías de Productos",
-    "productsDesc": "Explore nuestra gama completa de soluciones de potencia — desde inyectores POE y adaptadores hasta inversores solares y centrales eléctricas portátiles.",
+    "moqOemOdm": "MOQ 路 OEM 路 ODM",
+    "productsTitle": "Categor铆as de Productos",
+    "productsDesc": "Explore nuestra gama completa de soluciones de potencia 鈥?desde inyectores POE y adaptadores hasta inversores solares y centrales el茅ctricas port谩tiles.",
     "allProducts": "Ver Todos los Productos",
     "inquiryNow": "Consultar Ahora",
     "customerReviews": "Opiniones de Clientes",
@@ -54,12 +54,12 @@
   },
   "Cart": {
     "title": "Carrito de Compras",
-    "empty": "Tu carrito está vacío",
-    "emptyDesc": "Explore nuestros productos y añada los que le gusten",
+    "empty": "Tu carrito est谩 vac铆o",
+    "emptyDesc": "Explore nuestros productos y a帽ada los que le gusten",
     "browseProducts": "Explorar Productos",
     "total": "Total",
     "subtotal": "Subtotal",
-    "shipping": "Envío",
+    "shipping": "Env铆o",
     "calculatedAtCheckout": "Calculado al finalizar",
     "checkout": "Finalizar Compra",
     "proceedCheckout": "Proceder al Pago",
@@ -67,13 +67,13 @@
     "clearCart": "Vaciar Carrito",
     "remove": "Eliminar",
     "orderSummary": "Resumen del Pedido",
-    "items": "artículos",
+    "items": "art铆culos",
     "product": "Producto",
     "quantity": "Cant.",
     "continueShopping": "Seguir Comprando",
-    "shippingCalc": "Envío e impuestos calculados en el pago",
-    "wholesalePricing": "¿Necesita precios al por mayor?",
-    "totalItems": "Total ({n} artículos)"
+    "shippingCalc": "Env铆o e impuestos calculados en el pago",
+    "wholesalePricing": "驴Necesita precios al por mayor?",
+    "totalItems": "Total ({n} art铆culos)"
   },
   "Checkout": {
     "title": "Finalizar Compra",
@@ -82,37 +82,37 @@
     "total": "Total",
     "payWithStripe": "Pagar con Stripe",
     "processing": "Procesando...",
-    "securePayment": "🔒 Asegurado por Stripe · 140+ monedas aceptadas",
-    "empty": "Tu carrito está vacío",
+    "securePayment": "馃敀 Asegurado por Stripe 路 140+ monedas aceptadas",
+    "empty": "Tu carrito est谩 vac铆o",
     "browse": "Continuar Comprando",
-    "items": "Artículos",
-    "nogkey": "Pago aún no configurado",
+    "items": "Art铆culos",
+    "nogkey": "Pago a煤n no configurado",
     "cart": "Carrito",
     "desc": "Revise su pedido y proceda al pago",
-    "error": "Error al iniciar el pago. Por favor, inténtelo de nuevo."
+    "error": "Error al iniciar el pago. Por favor, int茅ntelo de nuevo."
   },
   "Contact": {
-    "title": "Contáctenos",
-    "subtitle": "Solicite cotizaciones, consultas OEM/ODM o soporte técnico",
+    "title": "Cont谩ctenos",
+    "subtitle": "Solicite cotizaciones, consultas OEM/ODM o soporte t茅cnico",
     "form": {
       "company": "Empresa",
       "name": "Nombre",
-      "email": "Correo Electrónico",
-      "phone": "Teléfono",
-      "product": "Producto de Interés",
+      "email": "Correo Electr贸nico",
+      "phone": "Tel茅fono",
+      "product": "Producto de Inter茅s",
       "quantity": "Cantidad (MOQ: 100)",
       "message": "Mensaje",
       "submit": "Enviar Consulta",
-      "success": "¡Gracias! Le responderemos dentro de 24 horas.",
+      "success": "隆Gracias! Le responderemos dentro de 24 horas.",
       "sending": "Enviando...",
-      "formError": "Algo salió mal. Intente de nuevo.",
+      "formError": "Algo sali贸 mal. Intente de nuevo.",
       "required": "Requerido",
-      "invalidEmail": "Correo inválido"
+      "invalidEmail": "Correo inv谩lido"
     },
     "sending": "Enviando...",
-    "formError": "Algo salió mal. Por favor, inténtelo de nuevo.",
+    "formError": "Algo sali贸 mal. Por favor, int茅ntelo de nuevo.",
     "required": "Requerido",
-    "invalidEmail": "Correo electrónico no válido"
+    "invalidEmail": "Correo electr贸nico no v谩lido"
   },
   "Header": {
     "products": "Productos",
@@ -121,41 +121,41 @@
     "blog": "Blog",
     "contact": "Contacto",
     "search": "Buscar",
-    "caseStudies": "Casos de Éxito"
+    "caseStudies": "Casos de 脡xito"
   },
   "Footer": {
     "products": "Productos",
     "company": "Empresa",
     "support": "Soporte",
     "legal": "Legal",
-    "privacy": "Política de Privacidad",
-    "terms": "Términos de Servicio",
+    "privacy": "Pol铆tica de Privacidad",
+    "terms": "T茅rminos de Servicio",
     "rights": "Todos los derechos reservados.",
-    "newsletter": "Suscríbase a nuestro boletín",
+    "newsletter": "Suscr铆base a nuestro bolet铆n",
     "subscribe": "Suscribirse",
-    "brandDescription": "Fabricante de fuentes de alimentación industrial desde 2014. Certificado CE, FCC, UL.",
-    "connectWithUs": "Conéctese Con Nosotros"
+    "brandDescription": "Fabricante de fuentes de alimentaci贸n industrial desde 2014. Certificado CE, FCC, UL.",
+    "connectWithUs": "Con茅ctese Con Nosotros"
   },
   "NotFound": {
-    "title": "Página No Encontrada",
-    "desc": "La página que busca puede haber sido movida o ya no existe.",
+    "title": "P谩gina No Encontrada",
+    "desc": "La p谩gina que busca puede haber sido movida o ya no existe.",
     "backHome": "Volver al inicio"
   },
   "Reviews": {
     "title": "Opiniones de Clientes",
     "loading": "Cargando opiniones...",
-    "noReviews": "Aún no hay opiniones",
-    "beFirst": "¡Sea el primero en compartir su experiencia!",
-    "writeReview": "Escribir Opinión",
-    "rating": "Valoración",
-    "yourReview": "Su Opinión",
+    "noReviews": "A煤n no hay opiniones",
+    "beFirst": "隆Sea el primero en compartir su experiencia!",
+    "writeReview": "Escribir Opini贸n",
+    "rating": "Valoraci贸n",
+    "yourReview": "Su Opini贸n",
     "reviewPlaceholder": "Comparta su experiencia con este producto...",
     "company": "Empresa",
     "yourName": "Su Nombre",
-    "country": "País",
+    "country": "Pa铆s",
     "submit": "Enviar",
     "submitting": "Enviando...",
-    "success": "¡Gracias! Su opinión ha sido enviada.",
+    "success": "隆Gracias! Su opini贸n ha sido enviada.",
     "error": "Error al enviar. Intente de nuevo.",
     "count": "{n} opiniones"
   },
@@ -164,25 +164,25 @@
     "inquireProduct": "Consultar Productos Relacionados"
   },
   "CaseStudies": {
-    "backToCaseStudies": "Volver a Casos de Éxito",
-    "challenge": "Desafío",
-    "solution": "Solución",
+    "backToCaseStudies": "Volver a Casos de 脡xito",
+    "challenge": "Desaf铆o",
+    "solution": "Soluci贸n",
     "results": "Resultados",
-    "getSimilar": "Obtener una Solución Similar"
+    "getSimilar": "Obtener una Soluci贸n Similar"
   },
   "Offline": {
-    "title": "Sin Conexión",
-    "desc": "Por favor, verifique su conexión a internet e intente de nuevo",
+    "title": "Sin Conexi贸n",
+    "desc": "Por favor, verifique su conexi贸n a internet e intente de nuevo",
     "backHome": "Volver al Inicio"
   },
   "Cookies": {
-    "title": "Política de Cookies",
-    "desc": "Esta página está en construcción. Por favor, vuelva pronto.",
+    "title": "Pol铆tica de Cookies",
+    "desc": "Esta p谩gina est谩 en construcci贸n. Por favor, vuelva pronto.",
     "backHome": "Volver al Inicio"
   },
   "Payment": {
-    "title": "¡Pago Exitoso!",
-    "desc": "Gracias por su pedido. Recibirá un correo de confirmación en breve.",
+    "title": "隆Pago Exitoso!",
+    "desc": "Gracias por su pedido. Recibir谩 un correo de confirmaci贸n en breve.",
     "orderId": "ID del Pedido",
     "backToShop": "Continuar Comprando",
     "error": "No se pudo verificar el pago. Por favor, contacte con soporte.",
@@ -190,11 +190,17 @@
     "contactSupport": "Contactar Soporte"
   },
   "Stats": {
-    "title": "Confianza en Números",
-    "subtitle": "Más de 12 años de liderazgo industrial en más de 30 países",
+    "title": "Confianza en N煤meros",
+    "subtitle": "M谩s de 12 a帽os de liderazgo industrial en m谩s de 30 pa铆ses",
     "skus": "SKU de Productos",
-    "countries": "Países Atendidos",
+    "countries": "Pa铆ses Atendidos",
     "clients": "Clientes Globales",
-    "years": "Años de Excelencia"
+    "years": "A帽os de Excelencia"
+  },
+  "Error": {
+    "title": "Algo salió mal",
+    "description": "Ocurrió un error inesperado. Inténtalo de nuevo o contáctanos.",
+    "tryAgain": "Reintentar",
+    "backHome": "Volver al inicio"
   }
 }

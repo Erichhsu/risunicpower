@@ -3,13 +3,13 @@
     "hero": {
       "tag": "Industrial Power Solutions",
       "title": "Powering Your \nInnovation",
-      "subtitle": "From POE supplies to solar inverters — 12+ years of R&D excellence serving\n600+ clients across 30+ countries.",
+      "subtitle": "From POE supplies to solar inverters 鈥?12+ years of R&D excellence serving\n600+ clients across 30+ countries.",
       "ctaPrimary": "View Products",
       "ctaSecondary": "Get a Quote"
     },
     "productGrid": {
       "title": "Our Products",
-      "subtitle": "From compact POE injectors to industrial-grade UPS systems — every product is engineered for reliability and performance.",
+      "subtitle": "From compact POE injectors to industrial-grade UPS systems 鈥?every product is engineered for reliability and performance.",
       "viewAll": "View All",
       "items": "items",
       "label": "Our Products"
@@ -44,9 +44,9 @@
     "requestQuote": "Request Quote",
     "more": "+{n} more",
     "sku": "SKU",
-    "moqOemOdm": "MOQ · OEM · ODM",
+    "moqOemOdm": "MOQ 路 OEM 路 ODM",
     "productsTitle": "Product Categories",
-    "productsDesc": "Explore our full range of power solutions — from POE injectors and adapters to solar inverters and portable power stations.",
+    "productsDesc": "Explore our full range of power solutions 鈥?from POE injectors and adapters to solar inverters and portable power stations.",
     "allProducts": "View All Products",
     "inquiryNow": "Inquire Now",
     "customerReviews": "Customer Reviews",
@@ -82,7 +82,7 @@
     "total": "Total",
     "payWithStripe": "Pay with Stripe",
     "processing": "Processing...",
-    "securePayment": "🔒 Secured by Stripe · 140+ currencies supported",
+    "securePayment": "馃敀 Secured by Stripe 路 140+ currencies supported",
     "empty": "Your cart is empty",
     "browse": "Continue Shopping",
     "items": "Items",
@@ -196,5 +196,11 @@
     "countries": "Countries Served",
     "clients": "Global Clients",
     "years": "Years of Excellence"
+  },
+  "Error": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. Please try again or contact us.",
+    "tryAgain": "Try Again",
+    "backHome": "Back to Home"
   }
 }

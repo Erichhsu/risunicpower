@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/db/prisma'
+import { logger } from '@/lib/logger'
 
 export async function GET(req: NextRequest) {
   const q = req.nextUrl.searchParams.get('q')?.trim()
@@ -54,7 +55,7 @@ export async function GET(req: NextRequest) {
 
     return NextResponse.json({ results: final })
   } catch (err) {
-    console.error('Search error:', err)
+    logger.error('Search error:', err)
     return NextResponse.json({ results: [] })
   }
 }

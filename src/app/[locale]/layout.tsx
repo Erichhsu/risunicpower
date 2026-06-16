@@ -24,7 +24,11 @@ export const metadata: Metadata = {
   twitter: { card: 'summary_large_image', title: 'RisunicPower', description: 'Industrial power supply manufacturer since 2014.' },
   alternates: {
     canonical: 'https://risunicpower.com',
-    languages: { en: 'https://risunicpower.com/en', zh: 'https://risunicpower.com/zh', ja: 'https://risunicpower.com/ja' },
+    languages: {
+      en: 'https://risunicpower.com/en', zh: 'https://risunicpower.com/zh', ja: 'https://risunicpower.com/ja',
+      es: 'https://risunicpower.com/es', de: 'https://risunicpower.com/de', fr: 'https://risunicpower.com/fr',
+      pt: 'https://risunicpower.com/pt', ar: 'https://risunicpower.com/ar', ru: 'https://risunicpower.com/ru',
+    },
   },
   icons: { icon: '/favicon.ico', apple: '/apple-icon.png' },
 }

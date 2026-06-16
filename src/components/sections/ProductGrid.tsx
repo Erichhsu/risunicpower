@@ -36,7 +36,7 @@ export default function ProductGrid({ categories }: { categories: CategoryData[]
           {categories.map((cat, i) => (
             <div key={cat.slug}>
               <Link href={`/${locale}/products/${cat.slug}`}
-                className="hex-card block bg-white rounded-2xl border border-[#e2e8ef] hover:border-[#F7D142]/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
+                className="block bg-white rounded-2xl border border-[#e2e8ef] hover:border-[#F7D142]/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
               >
                 {/* Product image — 80% of card width */}
                 <div className="w-[80%] mx-auto mt-8 aspect-[4/3] bg-gradient-to-br from-[#f7f8fa] to-[#e2e8ef] rounded-xl flex items-center justify-center overflow-hidden">

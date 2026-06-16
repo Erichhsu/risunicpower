@@ -94,7 +94,7 @@ export default function CheckoutClient({ locale }: { locale: string }) {
                 <span className="text-[#6b7a8f]">{tChk('items')} ({totalItems()})</span>
                 <span className="font-medium">{formatPrice(totalPrice())}</span>
               </div>
-              <div className="divider-washi my-2" />
+              <hr className="border-t border-[#E2E8EF] my-2" />
               <div className="flex justify-between items-baseline">
                 <span className="text-[1.4rem] text-[#6b7a8f]">{tChk('total')}</span>
                 <span className="text-[2.4rem] font-bold text-[#F7D142]">{formatPrice(totalPrice())}</span>

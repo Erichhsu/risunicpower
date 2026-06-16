@@ -28,7 +28,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
         <h1 className="text-[clamp(2.8rem,4vw,4.8rem)] font-bold text-[#0f2a44] mb-4 tracking-[-0.02em]">
           {t('productsTitle')}
         </h1>
-        <div className="divider-washi" />
+        <hr className="border-t border-[#E2E8EF] my-6" />
         <p className="text-[1.6rem] text-[#6b7a8f] max-w-2xl mb-16">
           {t('productsDesc')}
         </p>
@@ -39,7 +39,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
             const imgUrl = cat.products[0]?.images[0]?.url || null
             return (
               <Link key={cat.slug} href={`/${locale}/products/${cat.slug}`}
-                className="hex-card block bg-white rounded-2xl border border-[#e2e8ef] hover:border-[#F7D142]/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
+                className="block bg-white rounded-2xl border border-[#e2e8ef] hover:border-[#F7D142]/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
               >
                 <div className="w-[80%] mx-auto mt-8 aspect-[4/3] bg-gradient-to-br from-[#f7f8fa] to-[#e2e8ef] rounded-xl flex items-center justify-center overflow-hidden">
                   {imgUrl ? (
