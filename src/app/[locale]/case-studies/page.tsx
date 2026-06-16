@@ -9,11 +9,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return { title: titles[locale] || 'Case Studies — RisunicPower' }
 }
 
+// 案例页 9语言字典
+const CS_TITLE: Record<string, string> = { en: 'Case Studies', zh: '成功案例', ja: '導入事例', es: 'Casos de Éxito', de: 'Fallstudien', fr: 'Études de Cas', pt: 'Estudos de Caso', ar: 'دراسات الحالة', ru: 'Кейсы' }
+const CS_DESC: Record<string, string> = { en: 'See how our products help clients solve real-world challenges.', zh: '了解我们的产品如何帮助全球客户解决实际挑战', ja: '当社の製品が世界中のお客様の課題をどのように解決しているかをご覧ください', es: 'Vea cómo nuestros productos ayudan a los clientes a resolver desafíos reales.', de: 'Sehen Sie, wie unsere Produkte Kunden bei der Lösung realer Herausforderungen helfen.', fr: 'Découvrez comment nos produits aident nos clients à résoudre des défis concrets.', pt: 'Veja como nossos produtos ajudam clientes a resolver desafios reais.', ar: 'تعرف على كيفية مساعدة منتجاتنا للعملاء في حل التحديات الواقعية.', ru: 'Узнайте, как наши продукты помогают клиентам решать реальные задачи.' }
+const CS_EMPTY: Record<string, string> = { en: 'No case studies yet.', zh: '暂无成功案例', ja: '導入事例はまだありません', es: 'Aún no hay casos de éxito.', de: 'Noch keine Fallstudien.', fr: 'Pas encore d\'études de cas.', pt: 'Nenhum estudo de caso ainda.', ar: 'لا توجد دراسات حالة بعد.', ru: 'Кейсов пока нет.' }
+
 export default async function CaseStudiesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const l = ['en', 'zh', 'ja'].includes(locale) ? locale : 'en'
 
-  // 当前语言案例，无则回退英文
   let cases = await prisma.caseStudy.findMany({
     where: { locale: l, published: true },
     orderBy: { publishDate: 'desc' },
@@ -31,14 +35,14 @@ export default async function CaseStudiesPage({ params }: { params: Promise<{ lo
     <main className="min-h-screen bg-white pt-28 pb-20">
       <div className="mx-auto max-w-[1100px] px-6">
         <h1 className="text-[3.6rem] font-bold text-[#0f2a44] mb-4">
-          {l === 'zh' ? '成功案例' : l === 'ja' ? '導入事例' : 'Case Studies'}
+          {CS_TITLE[l] || 'Case Studies'}
         </h1>
         <p className="text-[1.4rem] text-[#6b7a8f] mb-12">
-          {l === 'zh' ? '了解我们的产品如何帮助全球客户解决实际挑战' : 'See how our products help clients solve real-world challenges.'}
+          {CS_DESC[l] || CS_DESC.en}
         </p>
 
         {cases.length === 0 ? (
-          <div className="py-20 text-center text-[1.4rem] text-gray-400">No case studies yet.</div>
+          <div className="py-20 text-center text-[1.4rem] text-gray-400">{CS_EMPTY[l] || CS_EMPTY.en}</div>
         ) : (
           <div className="space-y-6">
             {cases.map(c => (

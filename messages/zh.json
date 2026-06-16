@@ -106,9 +106,9 @@
       "success": "感谢您的询价！我们将在24小时内回复。"
     },
     "sending": "发送中...",
-    "formError": "出错了，请重试。",
+    "formError": "出了点问题，请重试。",
     "required": "必填",
-    "invalidEmail": "邮箱格式不正确"
+    "invalidEmail": "邮箱地址无效"
   },
   "Header": {
     "products": "产品",

@@ -100,10 +100,14 @@
       "email": "Email",
       "phone": "Phone",
       "product": "Product of Interest",
-      "quantity": "Quantity (MOQ: 100)",
+      "quantity": "Select quantity",
       "message": "Message",
       "submit": "Submit Inquiry",
-      "success": "Thank you! We will respond within 24 hours."
+      "success": "Thank you! We will respond within 24 hours.",
+      "sending": "Sending...",
+      "formError": "Something went wrong. Please try again.",
+      "required": "Required",
+      "invalidEmail": "Invalid email address"
     },
     "sending": "Sending...",
     "formError": "Something went wrong. Please try again.",

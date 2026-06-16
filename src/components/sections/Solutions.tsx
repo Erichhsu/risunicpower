@@ -13,6 +13,12 @@ const solutions = [
 ]
 
 const tData: Record<string, { title: string; desc: string; cta: string }> = {
+  es: { title: 'Soluciones Industriales', desc: 'Soluciones de alimentación personalizadas para 6 industrias clave', cta: 'Más Información' },
+  de: { title: 'Branchenlösungen', desc: 'Maßgeschneiderte Stromversorgungslösungen für 6 Schlüsselbranchen', cta: 'Mehr Erfahren' },
+  fr: { title: 'Solutions Industrielles', desc: 'Solutions d\'alimentation sur mesure pour 6 secteurs clés', cta: 'En Savoir Plus' },
+  pt: { title: 'Soluções Industriais', desc: 'Soluções de energia sob medida para 6 setores-chave', cta: 'Saiba Mais' },
+  ar: { title: 'الحلول الصناعية', desc: 'حلول طاقة مخصصة لـ 6 صناعات رئيسية', cta: 'اعرف المزيد' },
+  ru: { title: 'Отраслевые Решения', desc: 'Индивидуальные решения электропитания для 6 ключевых отраслей', cta: 'Узнать Больше' },
   zh: { title: '行业解决方案', desc: '为六大行业提供定制电源方案', cta: '了解更多' },
   ja: { title: '業界ソリューション', desc: '6つの業界にカスタム電源ソリューションを提供', cta: '詳細を見る' },
   en: { title: 'Industry Solutions', desc: 'Tailored power solutions across 6 key industries', cta: 'Learn More' },

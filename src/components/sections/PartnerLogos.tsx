@@ -22,21 +22,15 @@ const partners = [
 ]
 
 const tData: Record<string, { title: string; subtitle: string; footer: string }> = {
-  zh: {
-    title: '合作伙伴',
-    subtitle: '全球知名企业信赖之选',
-    footer: '与更多世界500强及行业领军企业建立长期合作关系',
-  },
-  ja: {
-    title: 'パートナー',
-    subtitle: '世界中のトップ企業から信頼されています',
-    footer: 'さらなるグローバルリーダーとのパートナーシップを築いています',
-  },
-  en: {
-    title: 'Trusted Partners',
-    subtitle: 'Trusted by leading enterprises worldwide',
-    footer: 'Building long-term partnerships with Fortune 500 & industry leaders',
-  },
+  zh: { title: '合作伙伴', subtitle: '全球知名企业信赖之选', footer: '与更多世界500强及行业领军企业建立长期合作关系' },
+  ja: { title: 'パートナー', subtitle: '世界中のトップ企業から信頼されています', footer: 'さらなるグローバルリーダーとのパートナーシップを築いています' },
+  es: { title: 'Socios de Confianza', subtitle: 'Con la confianza de empresas líderes en todo el mundo', footer: 'Construyendo alianzas a largo plazo con Fortune 500 y líderes de la industria' },
+  de: { title: 'Vertrauenswürdige Partner', subtitle: 'Vertrauen führender Unternehmen weltweit', footer: 'Aufbau langfristiger Partnerschaften mit Fortune 500 und Branchenführern' },
+  fr: { title: 'Partenaires de Confiance', subtitle: 'La confiance des grandes entreprises mondiales', footer: 'Établir des partenariats à long terme avec le Fortune 500 et les leaders de l\'industrie' },
+  pt: { title: 'Parceiros de Confiança', subtitle: 'Confiável para empresas líderes em todo o mundo', footer: 'Construindo parcerias de longo prazo com Fortune 500 e líderes do setor' },
+  ar: { title: 'شركاء موثوقون', subtitle: 'موثوق به من قبل الشركات الرائدة عالميًا', footer: 'بناء شراكات طويلة الأجل مع فورتشن 500 وقادة الصناعة' },
+  ru: { title: 'Надёжные Партнёры', subtitle: 'Доверие ведущих предприятий по всему миру', footer: 'Построение долгосрочных партнёрств с Fortune 500 и лидерами отрасли' },
+  en: { title: 'Trusted Partners', subtitle: 'Trusted by leading enterprises worldwide', footer: 'Building long-term partnerships with Fortune 500 & industry leaders' },
 }
 
 interface Props { locale?: string }

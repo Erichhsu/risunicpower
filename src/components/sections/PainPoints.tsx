@@ -11,6 +11,12 @@ const items = [
 const tData: Record<string, { title: string; sub: string }> = {
   zh: { title: '你的挑战，我们的方案', sub: 'Pain Points' },
   ja: { title: 'あなたの課題、私たちの解決策', sub: 'Pain Points' },
+  es: { title: 'Tus Desafíos, Nuestras Soluciones', sub: 'Pain Points' },
+  de: { title: 'Ihre Herausforderungen, Unsere Lösungen', sub: 'Pain Points' },
+  fr: { title: 'Vos Défis, Nos Solutions', sub: 'Pain Points' },
+  pt: { title: 'Seus Desafios, Nossas Soluções', sub: 'Pain Points' },
+  ar: { title: 'تحدياتكم، حلولنا', sub: 'Pain Points' },
+  ru: { title: 'Ваши Задачи, Наши Решения', sub: 'Pain Points' },
   en: { title: 'Your Challenges, Our Solutions', sub: 'Pain Points' },
 }
 

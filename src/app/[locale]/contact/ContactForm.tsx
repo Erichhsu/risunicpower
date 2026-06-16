@@ -39,9 +39,33 @@ const sidebarInfo: Record<string, { company: string; rdLabel: string; rdAddr: st
     whyItems: ['\u2713 12\u5E74\u4EE5\u4E0A\u306E\u96FB\u6E90\u958B\u767A\u7D4C\u9A13', '\u2713 \u4E16\u754C600\u793E\u4EE5\u4E0A\u306E\u304A\u5BA2\u69D8', '\u2713 CE\u3001FCC\u3001UL\u3001RoHS\u8A8D\u8A3C', '\u2713 OEM/ODM\u6B53\u8FCE', '\u2713 \u30B0\u30ED\u30FC\u30D0\u30EB\u914D\u9001\u5BFE\u5FDC'],
   },
 }
-const si = (locale: string) => {
-  const l = ['en', 'zh', 'ja'].includes(locale) ? locale : 'en'
-  return sidebarInfo[l] || sidebarInfo.en
+const si = (locale: string) => sidebarInfo[locale] || sidebarInfo.en
+
+const siWhyItems: Record<string, string[]> = {
+  es: ['\u2713 Más de 12 años de I+D en fuentes de alimentación', '\u2713 Más de 600 clientes satisfechos en todo el mundo', '\u2713 Certificado CE, FCC, UL, RoHS', '\u2713 OEM/ODM bienvenido', '\u2713 Envío global disponible'],
+  de: ['\u2713 Über 12 Jahre F&E in der Stromversorgung', '\u2713 Über 600 zufriedene Kunden weltweit', '\u2713 CE, FCC, UL, RoHS zertifiziert', '\u2713 OEM/ODM willkommen', '\u2713 Weltweiter Versand verfügbar'],
+  fr: ['\u2713 Plus de 12 ans de R&D en alimentation électrique', '\u2713 Plus de 600 clients satisfaits dans le monde', '\u2713 Certifié CE, FCC, UL, RoHS', '\u2713 OEM/ODM bienvenu', '\u2713 Expédition internationale disponible'],
+  pt: ['\u2713 Mais de 12 anos de P&D em fontes de alimentação', '\u2713 Mais de 600 clientes satisfeitos no mundo', '\u2713 Certificado CE, FCC, UL, RoHS', '\u2713 OEM/ODM bem-vindo', '\u2713 Envio global disponível'],
+  ar: ['\u2713 أكثر من 12 عامًا من البحث والتطوير في إمدادات الطاقة', '\u2713 أكثر من 600 عميل راضٍ حول العالم', '\u2713 معتمد CE وFCC وUL وRoHS', '\u2713 نرحب بـ OEM/ODM', '\u2713 الشحن العالمي متاح'],
+  ru: ['\u2713 Более 12 лет НИОКР в области источников питания', '\u2713 Более 600 довольных клиентов по всему миру', '\u2713 Сертифицировано CE, FCC, UL, RoHS', '\u2713 Приветствуется OEM/ODM', '\u2713 Доступна международная доставка'],
+}
+
+const siTagline: Record<string, string> = {
+  es: 'OEM/ODM · Envío Global · Certificado',
+  de: 'OEM/ODM · Weltweiter Versand · Zertifiziert',
+  fr: 'OEM/ODM · Expédition Internationale · Certifié',
+  pt: 'OEM/ODM · Envio Global · Certificado',
+  ar: 'OEM/ODM · شحن عالمي · معتمد',
+  ru: 'OEM/ODM · Международная доставка · Сертифицировано',
+}
+
+const siWhyTitle: Record<string, string> = {
+  es: '\uD83D\uDCA1 ¿Por Qué Trabajar Con Nosotros?',
+  de: '\uD83D\uDCA1 Warum Mit Uns Arbeiten?',
+  fr: '\uD83D\uDCA1 Pourquoi Travailler Avec Nous ?',
+  pt: '\uD83D\uDCA1 Por Que Trabalhar Conosco?',
+  ar: '\uD83D\uDCA1 لماذا العمل معنا؟',
+  ru: '\uD83D\uDCA1 Почему Стоит Работать С Нами?',
 }
 
 const phonePattern = /^[\d\s\-+()]{6,20}$/
@@ -114,7 +138,7 @@ export default function ContactForm({ locale }: { locale: string }) {
           >
             <div className="grid sm:grid-cols-2 gap-6">
               <Field icon={<Building size={16} />} label={t('form.company')} error={errors.company?.message}>
-                <input {...register('company')} className="input-field" placeholder="Shenzhen Risunic Technology Co., Ltd." />
+                <input {...register('company')} className="input-field" placeholder={t('form.company')} />
               </Field>
               <Field icon={<User size={16} />} label={t('form.name')} error={errors.name?.message}>
                 <input {...register('name')} className="input-field" placeholder={t('form.name')} />
@@ -122,7 +146,7 @@ export default function ContactForm({ locale }: { locale: string }) {
             </div>
             <div className="grid sm:grid-cols-2 gap-6">
               <Field icon={<Mail size={16} />} label={t('form.email')} error={errors.email?.message}>
-                <input {...register('email')} type="email" className="input-field" placeholder="email@company.com" />
+                <input {...register('email')} type="email" className="input-field" placeholder={t('form.email')} />
               </Field>
               <Field icon={<Phone size={16} />} label={t('form.phone')} error={errors.phone?.message}>
                 <input {...register('phone')} className="input-field" placeholder="+86 755 8888 8888" />
@@ -130,11 +154,11 @@ export default function ContactForm({ locale }: { locale: string }) {
             </div>
             <div className="grid sm:grid-cols-2 gap-6">
               <Field icon={<Package size={16} />} label={t('form.product')}>
-                <input {...register('productName')} className="input-field" placeholder="e.g., POE-60W" />
+                <input {...register('productName')} className="input-field" placeholder={t('form.product')} />
               </Field>
               <Field icon={<Hash size={16} />} label={t('form.quantity')}>
                 <select {...register('quantity')} className="input-field">
-                  <option value="">Select quantity</option>
+                  <option value="">{t('form.quantity')}</option>
                   <option value="1-10">1-10 pcs</option>
                   <option value="10-100">10-100 pcs</option>
                   <option value="100-1000">100-1,000 pcs</option>
@@ -144,7 +168,7 @@ export default function ContactForm({ locale }: { locale: string }) {
               </Field>
             </div>
             <Field icon={<MessageSquare size={16} />} label={t('form.message')} error={errors.message?.message}>
-              <textarea {...register('message')} rows={5} className="input-field resize-y" placeholder="Tell us about your requirements..." />
+              <textarea {...register('message')} rows={5} className="input-field resize-y" placeholder={t('form.message')} />
             </Field>
 
             {status === 'error' && (
@@ -185,16 +209,16 @@ export default function ContactForm({ locale }: { locale: string }) {
                   <p>{'\uD83D\uDCDE'} +86 755 2350 0205</p>
                 </div>
                 
-                <p className="text-[1.1rem] text-[#F7D142] pt-1">{si(locale).tagline}</p>
+                <p className="text-[1.1rem] text-[#F7D142] pt-1">{siTagline[locale] || si(locale).tagline}</p>
               </div>
               <div className="mt-5 pt-5 border-t border-white/10">
                 <SocialLinks />
               </div>
             </div>
             <div className="bg-[#f7f8fa] p-6 rounded-2xl space-y-3">
-              <h4 className="font-semibold text-[1.4rem] text-[#0f2a44]">{si(locale).whyTitle}</h4>
+              <h4 className="font-semibold text-[1.4rem] text-[#0f2a44]">{siWhyTitle[locale] || si(locale).whyTitle}</h4>
               <ul className="space-y-2 text-[1.3rem] text-[#6b7a8f]">
-                {si(locale).whyItems.map((item, i) => <li key={i}>{item}</li>)}
+                {(siWhyItems[locale] || si(locale).whyItems).map((item, i) => <li key={i}>{item}</li>)}
               </ul>
             </div>
           </div>

@@ -15,6 +15,12 @@ const labels: Record<string, { title: string; sub: string }> = {
   en: { title: 'What Our Clients Say', sub: 'Testimonials' },
   zh: { title: '客户对我们说', sub: 'Testimonials' },
   ja: { title: 'お客様の声', sub: 'Testimonials' },
+  es: { title: 'Lo Que Dicen Nuestros Clientes', sub: 'Testimonios' },
+  de: { title: 'Was Unsere Kunden Sagen', sub: 'Referenzen' },
+  fr: { title: 'Ce Que Disent Nos Clients', sub: 'Témoignages' },
+  pt: { title: 'O Que Nossos Clientes Dizem', sub: 'Depoimentos' },
+  ar: { title: 'ماذا يقول عملاؤنا', sub: 'شهادات' },
+  ru: { title: 'Что Говорят Наши Клиенты', sub: 'Отзывы' },
 }
 
 interface Props { locale?: string }

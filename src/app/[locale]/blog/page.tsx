@@ -9,6 +9,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return { title: titles[locale] || 'Blog — RisunicPower', description: 'Power industry insights, technology comparisons, and product guides from RisunicPower.' }
 }
 
+// 博客页 9语言字典
+const BLOG_TITLE: Record<string, string> = { en: 'Blog', zh: '博客', ja: 'ブログ', es: 'Blog', de: 'Blog', fr: 'Blog', pt: 'Blog', ar: 'المدونة', ru: 'Блог' }
+const BLOG_DESC: Record<string, string> = { en: 'Power industry insights, technology comparisons, and product guides.', zh: '电源行业洞察、技术对比与产品指南', ja: '電源業界の洞察、技術比較、製品ガイド', es: 'Información del sector energético, comparativas técnicas y guías de productos.', de: 'Einblicke in die Strombranche, Technologievergleiche und Produktleitfäden.', fr: 'Aperçus du secteur de l\'énergie, comparaisons technologiques et guides produits.', pt: 'Insights do setor de energia, comparações tecnológicas e guias de produtos.', ar: 'رؤى صناعة الطاقة، مقارنات تقنية وأدلة المنتجات.', ru: 'Аналитика энергетической отрасли, сравнения технологий и руководства по продуктам.' }
+const BLOG_EMPTY: Record<string, string> = { en: 'No blog posts yet.', zh: '暂无博客文章', ja: 'ブログ記事はまだありません', es: 'Aún no hay artículos.', de: 'Noch keine Blogbeiträge.', fr: 'Pas encore d\'articles.', pt: 'Nenhum artigo ainda.', ar: 'لا توجد مقالات بعد.', ru: 'Статей пока нет.' }
+const BLOG_READ_MORE: Record<string, string> = { en: 'Read More', zh: '阅读更多', ja: '続きを読む', es: 'Leer Más', de: 'Weiterlesen', fr: 'Lire Plus', pt: 'Ler Mais', ar: 'اقرأ المزيد', ru: 'Читать далее' }
+
 export default async function BlogListPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const l = ['en', 'zh', 'ja'].includes(locale) ? locale : 'en'
@@ -33,15 +39,15 @@ export default async function BlogListPage({ params }: { params: Promise<{ local
     <main className="min-h-screen bg-white pt-28 pb-20">
       <div className="mx-auto max-w-[1100px] px-6">
         <h1 className="text-[3.6rem] font-bold text-[#0f2a44] mb-4">
-          {l === 'zh' ? '博客' : l === 'ja' ? 'ブログ' : 'Blog'}
+          {BLOG_TITLE[l] || 'Blog'}
         </h1>
         <p className="text-[1.4rem] text-[#6b7a8f] mb-12">
-          {l === 'zh' ? '电源行业洞察、技术对比与产品指南' : l === 'ja' ? '電源業界の洞察、技術比較、製品ガイド' : 'Power industry insights, technology comparisons, and product guides.'}
+          {BLOG_DESC[l] || BLOG_DESC.en}
         </p>
 
         {posts.length === 0 ? (
           <div className="py-20 text-center text-[1.4rem] text-gray-400">
-            {l === 'zh' ? '暂无博客文章' : l === 'ja' ? 'ブログ記事はまだありません' : 'No blog posts yet.'}
+            {BLOG_EMPTY[l] || BLOG_EMPTY.en}
           </div>
         ) : (
           <div className="grid md:grid-cols-2 gap-8">
@@ -57,7 +63,7 @@ export default async function BlogListPage({ params }: { params: Promise<{ local
                 <h2 className="text-[2rem] font-bold text-[#0f2a44] mb-3 group-hover:text-[#F7D142] transition-colors">{p.title}</h2>
                 <p className="text-[1.3rem] leading-relaxed text-[#6b7a8f] mb-4">{p.excerpt}</p>
                 <span className="inline-flex items-center gap-1 text-[1.3rem] font-semibold text-[#F7D142] group-hover:gap-2 transition-all">
-                  {l === 'zh' ? '阅读更多' : l === 'ja' ? '続きを読む' : 'Read More'} <ArrowRight size={14} />
+                  {BLOG_READ_MORE[l] || 'Read More'} <ArrowRight size={14} />
                 </span>
               </Link>
             ))}
