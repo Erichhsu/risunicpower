@@ -39,7 +39,12 @@ const sidebarInfo: Record<string, { company: string; rdLabel: string; rdAddr: st
     whyItems: ['\u2713 12\u5E74\u4EE5\u4E0A\u306E\u96FB\u6E90\u958B\u767A\u7D4C\u9A13', '\u2713 \u4E16\u754C600\u793E\u4EE5\u4E0A\u306E\u304A\u5BA2\u69D8', '\u2713 CE\u3001FCC\u3001UL\u3001RoHS\u8A8D\u8A3C', '\u2713 OEM/ODM\u6B53\u8FCE', '\u2713 \u30B0\u30ED\u30FC\u30D0\u30EB\u914D\u9001\u5BFE\u5FDC'],
   },
 }
-const si = (locale: string) => sidebarInfo[locale] || sidebarInfo.en
+const siLabels: Record<string, { rdLabel?: string; factoryLabel?: string; twLabel?: string }> = {es:{rdLabel:'Centro de I+D',factoryLabel:'Fábrica',twLabel:'Oficina de Taiwán'},de:{rdLabel:'F&E-Zentrum',factoryLabel:'Fabrik',twLabel:'Taiwan-Büro'},fr:{rdLabel:'Centre R&D',factoryLabel:'Usine',twLabel:'Bureau de Taïwan'},pt:{rdLabel:'Centro de P&D',factoryLabel:'Fábrica',twLabel:'Escritório de Taiwan'},ar:{rdLabel:'مركز البحث والتطوير',factoryLabel:'المصنع',twLabel:'مكتب تايوان'},ru:{rdLabel:'Центр НИОКР',factoryLabel:'Завод',twLabel:'Офис на Тайване'}}
+const si = (locale: string) => {
+  const base = sidebarInfo[locale] || sidebarInfo.en
+  const extra = siLabels[locale]
+  return extra ? { ...base, ...extra } : base
+}
 
 const siWhyItems: Record<string, string[]> = {
   es: ['\u2713 Más de 12 años de I+D en fuentes de alimentación', '\u2713 Más de 600 clientes satisfechos en todo el mundo', '\u2713 Certificado CE, FCC, UL, RoHS', '\u2713 OEM/ODM bienvenido', '\u2713 Envío global disponible'],

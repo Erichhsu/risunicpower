@@ -103,7 +103,11 @@
       "quantity": "数量（MOQ: 100）",
       "message": "留言",
       "submit": "提交询价",
-      "success": "感谢您的询价！我们将在24小时内回复。"
+      "success": "感谢您的询价！我们将在24小时内回复。",
+      "sending": "发送中...",
+      "formError": "出了点问题，请重试。",
+      "required": "必填",
+      "invalidEmail": "邮箱地址无效"
     },
     "sending": "发送中...",
     "formError": "出了点问题，请重试。",

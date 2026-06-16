@@ -103,7 +103,11 @@
       "quantity": "Cantidad (MOQ: 100)",
       "message": "Mensaje",
       "submit": "Enviar Consulta",
-      "success": "¡Gracias! Le responderemos dentro de 24 horas."
+      "success": "¡Gracias! Le responderemos dentro de 24 horas.",
+      "sending": "Enviando...",
+      "formError": "Algo salió mal. Intente de nuevo.",
+      "required": "Requerido",
+      "invalidEmail": "Correo inválido"
     },
     "sending": "Enviando...",
     "formError": "Algo salió mal. Por favor, inténtelo de nuevo.",
@@ -167,17 +171,17 @@
     "getSimilar": "Obtener una Solución Similar"
   },
   "Offline": {
-    "title": "You're Offline",
+    "title": "Sin Conexión",
     "desc": "Por favor, verifique su conexión a internet e intente de nuevo",
     "backHome": "Volver al Inicio"
   },
   "Cookies": {
-    "title": "Cookie Policy",
+    "title": "Política de Cookies",
     "desc": "Esta página está en construcción. Por favor, vuelva pronto.",
     "backHome": "Volver al Inicio"
   },
   "Payment": {
-    "title": "Payment Successful!",
+    "title": "¡Pago Exitoso!",
     "desc": "Gracias por su pedido. Recibirá un correo de confirmación en breve.",
     "orderId": "ID del Pedido",
     "backToShop": "Continuar Comprando",
