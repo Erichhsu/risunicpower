@@ -18,11 +18,60 @@ const translations = {
     privacy: '隐私政策',
     title: 'Cookie偏好设置',
   },
+  ja: {
+    message: '当サイトでは、サイトの機能に必要なCookieと、利便性向上のための分析Cookieを使用しています。',
+    accept: 'すべて許可',
+    decline: '拒否',
+    privacy: 'プライバシーポリシー',
+    title: 'Cookie設定',
+  },
+  es: {
+    message: 'Utilizamos cookies esenciales para garantizar la funcionalidad del sitio y cookies analíticas para mejorar su experiencia.',
+    accept: 'Aceptar Todo',
+    decline: 'Rechazar',
+    privacy: 'Política de Privacidad',
+    title: 'Preferencias de Cookies',
+  },
+  de: {
+    message: 'Wir verwenden notwendige Cookies für die Funktionalität der Website und Analyse-Cookies zur Verbesserung Ihrer Erfahrung.',
+    accept: 'Alle Akzeptieren',
+    decline: 'Ablehnen',
+    privacy: 'Datenschutzerklärung',
+    title: 'Cookie-Einstellungen',
+  },
+  fr: {
+    message: 'Nous utilisons des cookies essentiels pour assurer le fonctionnement du site et des cookies analytiques pour améliorer votre expérience.',
+    accept: 'Tout Accepter',
+    decline: 'Refuser',
+    privacy: 'Politique de Confidentialité',
+    title: 'Préférences des Cookies',
+  },
+  pt: {
+    message: 'Utilizamos cookies essenciais para garantir a funcionalidade do site e cookies analíticos para melhorar sua experiência.',
+    accept: 'Aceitar Tudo',
+    decline: 'Recusar',
+    privacy: 'Política de Privacidade',
+    title: 'Preferências de Cookies',
+  },
+  ar: {
+    message: 'نستخدم ملفات تعريف الارتباط الأساسية لضمان وظائف الموقع وملفات تعريف الارتباط التحليلية لتحسين تجربتك.',
+    accept: 'قبول الكل',
+    decline: 'رفض',
+    privacy: 'سياسة الخصوصية',
+    title: 'تفضيلات ملفات تعريف الارتباط',
+  },
+  ru: {
+    message: 'Мы используем необходимые файлы cookie для обеспечения работы сайта и аналитические файлы cookie для улучшения вашего опыта.',
+    accept: 'Принять Все',
+    decline: 'Отклонить',
+    privacy: 'Политика Конфиденциальности',
+    title: 'Настройки Cookie',
+  },
 }
 
 export default function CookieConsent({ locale = 'en' }: { locale?: string }) {
   const [visible, setVisible] = useState(false)
-  const t = locale === 'zh' ? translations.zh : translations.en
+  const t = translations[locale as keyof typeof translations] || translations.en
 
   useEffect(() => {
     const consent = localStorage.getItem('cookie-consent')

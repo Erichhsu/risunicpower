@@ -11,42 +11,48 @@ export async function GET(req: NextRequest) {
     const products = await prisma.product.findMany({
       where: {
         published: true,
-        translations: {
-          some: {
-            locale,
-            name: { contains: q },
-          },
-        },
+        OR: [
+          { translations: { some: { locale, name: { contains: q } } } },
+          ...(locale !== 'en' ? [{ translations: { some: { locale: 'en', name: { contains: q } } } }] : []),
+        ],
       },
       select: {
         slug: true,
         categorySlug: true,
-        translations: { where: { locale }, select: { name: true } },
+        translations: { select: { locale: true, name: true } },
       },
       take: 10,
     })
 
+    // 去重
+    const seen = new Set<string>()
+    const unique = products.filter(p => { const k = p.slug; if (seen.has(k)) return false; seen.add(k); return true }).slice(0, 10)
+
+    // 取翻译：优先当前语言，回退英文
+    const results = unique.map(p => {
+      const t = p.translations.find(t => t.locale === locale) || p.translations.find(t => t.locale === 'en') || p.translations[0]
+      return {
+        slug: p.slug,
+        categorySlug: p.categorySlug,
+        name: t?.name || p.slug,
+      }
+    })
+
     // Get category names
-    const catSlugs = [...new Set(products.map(p => p.categorySlug))]
+    const catSlugs = [...new Set(results.map(p => p.categorySlug))]
     const categories = await prisma.productCategory.findMany({
       where: { slug: { in: catSlugs } },
-      select: {
-        slug: true,
-        translations: { where: { locale }, select: { name: true } },
-      },
+      select: { slug: true, translations: { select: { locale: true, name: true } } },
     })
-    const catMap = Object.fromEntries(
-      categories.map(c => [c.slug, c.translations[0]?.name || c.slug])
-    )
+    const catMap: Record<string, string> = {}
+    for (const c of categories) {
+      const ct = c.translations.find(t => t.locale === locale) || c.translations.find(t => t.locale === 'en') || c.translations[0]
+      catMap[c.slug] = ct?.name || c.slug
+    }
 
-    const results = products.map(p => ({
-      slug: p.slug,
-      categorySlug: p.categorySlug,
-      name: p.translations[0]?.name || p.slug,
-      categoryName: catMap[p.categorySlug] || p.categorySlug,
-    }))
+    const final = results.map(p => ({ ...p, categoryName: catMap[p.categorySlug] || p.categorySlug }))
 
-    return NextResponse.json({ results })
+    return NextResponse.json({ results: final })
   } catch (err) {
     console.error('Search error:', err)
     return NextResponse.json({ results: [] })

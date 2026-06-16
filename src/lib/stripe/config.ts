@@ -33,6 +33,7 @@ const stripeLocaleMap: Record<string, Stripe.Checkout.SessionCreateParams.Locale
   es: 'es' as Stripe.Checkout.SessionCreateParams.Locale,
   de: 'de' as Stripe.Checkout.SessionCreateParams.Locale,
   fr: 'fr' as Stripe.Checkout.SessionCreateParams.Locale,
+  pt: 'pt-BR' as Stripe.Checkout.SessionCreateParams.Locale,
 }
 
 export function mapStripeLocale(locale: string): Stripe.Checkout.SessionCreateParams.Locale {
