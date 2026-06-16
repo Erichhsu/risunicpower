@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ArrowLeft, Check, Star } from 'lucide-react'
 import AddToCartButton from '@/components/cart/AddToCartButton'
+import ProductGallery from '@/components/product/ProductGallery'
 import StarRating from '@/components/ui/StarRating'
 import CurrencyConverter from '@/components/ui/CurrencyConverter'
 import ProductReviews from '@/components/reviews/ProductReviews'
@@ -63,7 +64,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   const enSpecs = product.specs.filter(s => s.locale === 'en')
   const displaySpecs = localeSpecs.length > 0 ? localeSpecs : enSpecs
 
-  const primaryImage = product.images?.[0]
+  const primaryImage = product.images.find(im => im.isPrimary) || product.images[0]
   const imageUrl = primaryImage?.url || '/images/products/' + slug + '.png'
   const features: string[] = pt?.features ? JSON.parse(pt.features) : []
 
@@ -90,13 +91,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
         </nav>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
-          <div className="aspect-square bg-gradient-to-br from-[#f7f8fa] to-[#e2e8ef] rounded-2xl flex items-center justify-center border border-[#e2e8ef] overflow-hidden">
-            {primaryImage ? (
-              <img src={imageUrl} alt={pt?.name || slug} className="w-full h-full object-contain p-8" />
-            ) : (
-              <span className="text-[8rem] opacity-20">&#x1F4F7;</span>
-            )}
-          </div>
+          <ProductGallery images={product.images} name={pt?.name || slug} />
 
           <div>
             <div className="flex items-center gap-3 mb-4">
