@@ -11811,11 +11811,11 @@
       ],
       "sku": "R0046",
       "features_all": [
-        "12V 7.2Ah SLA Battery",
-        "Standard Sealed Lead Acid",
-        "UPS/CCTV Backup",
-        "Maintenance Free",
-        "High Reliability"
+        "80W PoE Power Supply",
+        "56V DC Output",
+        "IEEE 802.3bt Ready",
+        "3-Pin Integrated Design",
+        "Universal AC Input 90~264V"
       ],
       "en_description": "The R0046 from RisunicPower delivers high-performance power solutions with standout features: 12V 7.2Ah SLA Battery, Standard Sealed Lead Acid, UPS/CCTV Backup. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0046是RisunicPower推出的高性能电源解决方案，具备12V 7.2Ah SLA Battery、Standard Sealed Lead Acid、UPS/CCTV Backup等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -12234,11 +12234,11 @@
       ],
       "sku": "R0240",
       "features_all": [
-        "12V 9Ah SLA Battery",
-        "Sealed Lead Acid",
-        "Alarm System Backup",
-        "Emergency Lighting",
-        "Long Service Life"
+        "15.36W PoE Power Adapter",
+        "48V DC Output",
+        "Gigabit Ethernet Compatible",
+        "Compact Wall Plug Design",
+        "EU Plug, Non-Standard 2.5G"
       ],
       "en_description": "The R0240 from RisunicPower delivers high-performance power solutions with standout features: 12V 9Ah SLA Battery, Sealed Lead Acid, Alarm System Backup. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0240是RisunicPower推出的高性能电源解决方案，具备12V 9Ah SLA Battery、Sealed Lead Acid、Alarm System Backup等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -12487,11 +12487,11 @@
       ],
       "sku": "R0255",
       "features_all": [
-        "12V 12Ah SLA Battery",
-        "High Capacity SLA",
-        "Security System",
-        "Gate Opener Backup",
-        "For Toys/Instruments"
+        "Industrial PoE Extender",
+        "RJ45 Dual Port",
+        "Outdoor Rated IP65",
+        "-20°C to +50°C Operating",
+        "48~57V DC Input"
       ],
       "en_description": "The R0255 from RisunicPower delivers high-performance power solutions with standout features: 12V 12Ah SLA Battery, High Capacity SLA, Security System. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0255是RisunicPower推出的高性能电源解决方案，具备12V 12Ah SLA Battery、High Capacity SLA、Security System等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -12740,11 +12740,11 @@
       ],
       "sku": "R0260",
       "features_all": [
-        "12V 18Ah SLA Battery",
-        "Deep Cycle",
-        "UPS/Solar Backup",
-        "Electric Scooter",
-        "Maintenance Free"
+        "24-Channel PoE Surge Protector",
+        "100W Max Output Power",
+        "Industrial Outdoor Rated",
+        "RJ45 x24 Ports",
+        "-40°C to +80°C Extreme Temp"
       ],
       "en_description": "The R0260 from RisunicPower delivers high-performance power solutions with standout features: 12V 18Ah SLA Battery, Deep Cycle, UPS/Solar Backup. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0260是RisunicPower推出的高性能电源解决方案，具备12V 18Ah SLA Battery、Deep Cycle、UPS/Solar Backup等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -14184,11 +14184,11 @@
       ],
       "sku": "RP023",
       "features_all": [
-        "23W PoE++ Injector",
-        "802.3bt Ready",
-        "High Power Output",
+        "12W PoE Injector",
+        "IEEE 802.3af Compliant",
         "Metal Enclosure",
-        "Wide Temp Range"
+        "Plug and Play",
+        "Wide Temperature Range"
       ],
       "en_description": "The RP023 from RisunicPower delivers high-performance power solutions with standout features: 23W PoE++ Injector, 802.3bt Ready, High Power Output. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "RP023是RisunicPower推出的高性能电源解决方案，具备23W PoE++ Injector、802.3bt Ready、High Power Output等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -14910,8 +14910,8 @@
       ],
       "sku": "RP025-RP015",
       "features_all": [
-        "15W PoE Adapter",
-        "802.3af Compliant",
+        "30W PoE Adapter",
+        "IEEE 802.3at Compliant",
         "Compact and Reliable",
         "Universal AC Input",
         "Worldwide Certifications"
@@ -15269,11 +15269,11 @@
       ],
       "sku": "RP026-RP029-RP030W01",
       "features_all": [
-        "30W PoE+ Adapter",
-        "802.3at Standard",
+        "60W PoE+ Switch",
+        "IEEE 802.3at Standard",
         "High Efficiency >85%",
-        "Compact Design",
-        "CE/FCC/UL"
+        "Compact Desktop Design",
+        "CE/FCC/UL Certified"
       ],
       "en_description": "The RP026-RP029-RP030W01 from RisunicPower delivers high-performance power solutions with standout features: 30W PoE+ Adapter, 802.3at Standard, High Efficiency >85%. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "RP026 RP029 RP030W01是RisunicPower推出的高性能电源解决方案，具备30W PoE+ Adapter、802.3at Standard、High Efficiency >85%等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -15632,11 +15632,11 @@
       ],
       "sku": "RP028",
       "features_all": [
-        "28W PoE Injector",
-        "802.3at Compliant",
+        "12W PoE Injector",
+        "IEEE 802.3af Compliant",
         "Wide Input Range",
-        "Slim Wall Plug",
-        "Industrial Use"
+        "Compact Desktop Design",
+        "Industrial Grade"
       ],
       "en_description": "The RP028 from RisunicPower delivers high-performance power solutions with standout features: 28W PoE Injector, 802.3at Compliant, Wide Input Range. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "RP028是RisunicPower推出的高性能电源解决方案，具备28W PoE Injector、802.3at Compliant、Wide Input Range等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
