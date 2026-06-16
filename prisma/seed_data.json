@@ -3061,244 +3061,154 @@
         {
           "l": "Model",
           "v": "ESS 3.6KW+8KWH",
-          "o": 0
-        },
-        {
-          "l": "Type",
-          "v": "All-in-One Inverter & Battery",
           "o": 1
         },
         {
-          "l": "交流输入",
-          "v": "208/220/230/240VAC L+N+PE",
+          "l": "Type",
+          "v": "Off-Grid All-in-One ESS (Wall-Mount)",
           "o": 2
         },
         {
-          "l": "交流输入电压范围",
-          "v": "90~280V (普通) / 170~280V (UPS)",
+          "l": "Rated Inverter Power",
+          "v": "3.6kW",
           "o": 3
         },
         {
-          "l": "交流输出额定功率",
-          "v": "3.6kW",
+          "l": "Battery Capacity",
+          "v": "8kWh",
           "o": 4
         },
         {
-          "l": "交流输出电压",
-          "v": "208/220/230/240VAC",
+          "l": "Rated Battery Voltage",
+          "v": "25.6VDC",
           "o": 5
         },
         {
-          "l": "交流输出切换时间",
-          "v": "10ms",
+          "l": "AC Input",
+          "v": "208-240V 50/60Hz",
           "o": 6
         },
         {
-          "l": "交流输出波形",
-          "v": "纯正弦波",
+          "l": "AC Output",
+          "v": "Pure Sine Wave 208-240V",
           "o": 7
         },
         {
-          "l": "输出最大效率(电池模式)",
-          "v": "92.7% @24VDC",
+          "l": "Max PV Input Power",
+          "v": "5000W",
           "o": 8
         },
         {
-          "l": "光伏输入功率",
-          "v": "5000W / 18A",
+          "l": "MPPT Voltage Range",
+          "v": "40-450VDC",
           "o": 9
         },
         {
-          "l": "光伏MPPT范围",
-          "v": "40~450VDC",
+          "l": "Max Charge/Discharge Current",
+          "v": "100A / 150A",
           "o": 10
         },
         {
-          "l": "最大光伏开路电压",
-          "v": "500V",
+          "l": "Battery Compatibility",
+          "v": "Lead-Acid / Lithium Compatible",
           "o": 11
         },
         {
-          "l": "光伏充电电流",
-          "v": "100A",
+          "l": "Key Features",
+          "v": "MPPT Solar Charge, Battery Type Selectable",
           "o": 12
         },
         {
-          "l": "市电充电电流",
-          "v": "100A",
+          "l": "Dimensions (W×D×H)",
+          "v": "440×246×760 mm",
           "o": 13
         },
         {
-          "l": "Battery Type",
-          "v": "LiFePO4 磷酸铁锂",
+          "l": "Net/Gross Weight",
+          "v": "73 / 86 kg",
           "o": 14
         },
         {
-          "l": "额定电池电压",
-          "v": "25.6VDC",
+          "l": "Application",
+          "v": "Residential Off-Grid Wall-Mount ESS",
           "o": 15
-        },
-        {
-          "l": "Rated Energy",
-          "v": "8KWh (0.2C)",
-          "o": 16
-        },
-        {
-          "l": "Usable Energy (90% DOD)",
-          "v": "7.2KWh",
-          "o": 17
-        },
-        {
-          "l": "最大充电/放电电流",
-          "v": "100A / 150A",
-          "o": 18
-        },
-        {
-          "l": "显示",
-          "v": "LCD",
-          "o": 19
-        },
-        {
-          "l": "Communication",
-          "v": "USB / WiFi",
-          "o": 20
-        },
-        {
-          "l": "Protection Rating",
-          "v": "IP20",
-          "o": 21
-        },
-        {
-          "l": "Operating Temperature",
-          "v": "-10~50C",
-          "o": 22
-        },
-        {
-          "l": "最大工作海拔",
-          "v": "4000m",
-          "o": 23
         }
       ],
       "zh_specs": [
         {
-          "l": "型号",
+          "l": "Model",
           "v": "ESS 3.6KW+8KWH",
-          "o": 0
-        },
-        {
-          "l": "类型",
-          "v": "All-in-One Inverter & Battery",
           "o": 1
         },
         {
-          "l": "交流输入",
-          "v": "208/220/230/240VAC L+N+PE",
+          "l": "Type",
+          "v": "Off-Grid All-in-One ESS (Wall-Mount)",
           "o": 2
         },
         {
-          "l": "交流输入电压范围",
-          "v": "90~280V (普通) / 170~280V (UPS)",
+          "l": "Rated Inverter Power",
+          "v": "3.6kW",
           "o": 3
         },
         {
-          "l": "交流输出额定功率",
-          "v": "3.6kW",
+          "l": "Battery Capacity",
+          "v": "8kWh",
           "o": 4
         },
         {
-          "l": "交流输出电压",
-          "v": "208/220/230/240VAC",
+          "l": "Rated Battery Voltage",
+          "v": "25.6VDC",
           "o": 5
         },
         {
-          "l": "交流输出切换时间",
-          "v": "10ms",
+          "l": "AC Input",
+          "v": "208-240V 50/60Hz",
           "o": 6
         },
         {
-          "l": "交流输出波形",
-          "v": "纯正弦波",
+          "l": "AC Output",
+          "v": "Pure Sine Wave 208-240V",
           "o": 7
         },
         {
-          "l": "输出最大效率(电池模式)",
-          "v": "92.7% @24VDC",
+          "l": "Max PV Input Power",
+          "v": "5000W",
           "o": 8
         },
         {
-          "l": "光伏输入功率",
-          "v": "5000W / 18A",
+          "l": "MPPT Voltage Range",
+          "v": "40-450VDC",
           "o": 9
         },
         {
-          "l": "光伏MPPT范围",
-          "v": "40~450VDC",
+          "l": "Max Charge/Discharge Current",
+          "v": "100A / 150A",
           "o": 10
         },
         {
-          "l": "最大光伏开路电压",
-          "v": "500V",
+          "l": "Battery Compatibility",
+          "v": "Lead-Acid / Lithium Compatible",
           "o": 11
         },
         {
-          "l": "光伏充电电流",
-          "v": "100A",
+          "l": "Key Features",
+          "v": "MPPT Solar Charge, Battery Type Selectable",
           "o": 12
         },
         {
-          "l": "市电充电电流",
-          "v": "100A",
+          "l": "Dimensions (W×D×H)",
+          "v": "440×246×760 mm",
           "o": 13
         },
         {
-          "l": "电池类型",
-          "v": "LiFePO4 磷酸铁锂",
+          "l": "Net/Gross Weight",
+          "v": "73 / 86 kg",
           "o": 14
         },
         {
-          "l": "额定电池电压",
-          "v": "25.6VDC",
+          "l": "Application",
+          "v": "Residential Off-Grid Wall-Mount ESS",
           "o": 15
-        },
-        {
-          "l": "额定能量",
-          "v": "8KWh (0.2C)",
-          "o": 16
-        },
-        {
-          "l": "可用能量(90%DOD)",
-          "v": "7.2KWh",
-          "o": 17
-        },
-        {
-          "l": "最大充电/放电电流",
-          "v": "100A / 150A",
-          "o": 18
-        },
-        {
-          "l": "显示",
-          "v": "LCD",
-          "o": 19
-        },
-        {
-          "l": "通讯",
-          "v": "USB / WiFi",
-          "o": 20
-        },
-        {
-          "l": "防护等级",
-          "v": "IP20",
-          "o": 21
-        },
-        {
-          "l": "工作温度",
-          "v": "-10~50C",
-          "o": 22
-        },
-        {
-          "l": "最大工作海拔",
-          "v": "4000m",
-          "o": 23
         }
       ],
       "images": [
@@ -3311,11 +3221,11 @@
       ],
       "sku": "ESS-3-6KW-8KWH",
       "features_all": [
-        "3.6KW/8KWh Storage",
-        "Wall Mount LFP Battery",
-        "Grid-Tie + Off-Grid",
-        "Parallel 2 Units Max",
-        "Touch LCD Display"
+        "3.6KW/8KWh Off-Grid System",
+        "5000W PV MPPT 40-450V",
+        "25.6V Lead-Acid/Lithium Battery",
+        "100A Charge / 150A Discharge",
+        "Slim Wall-Mount Design"
       ],
       "en_description": "The ESS-3-6KW-8KWH from RisunicPower delivers high-performance power solutions with standout features: 3.6KW/8KWh Storage, Wall Mount LFP Battery, Grid-Tie + Off-Grid. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "ESS_3.6KW+8KWH是RisunicPower推出的高性能电源解决方案，具备3.6KW/8KWh Storage、Wall Mount LFP Battery、Grid-Tie + Off-Grid等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
