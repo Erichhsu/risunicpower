@@ -1255,10 +1255,10 @@
       "sku": "ESS-W-1000W",
       "features_all": [
         "1000W Pure Sine Wave",
-        "LiFePO4 Battery",
+        "LiFePO4 2000Wh Battery",
         "MPPT Solar Charge",
         "UPS <20ms Switch",
-        "Portable Design"
+        "Slim Wall-Mount Design"
       ],
       "en_description": "The ESS-W-1000W from RisunicPower delivers high-performance power solutions with standout features: 1000W Pure Sine Wave, LiFePO4 Battery, MPPT Solar Charge. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "ESS-W_1000W+2009WH是RisunicPower推出的高性能电源解决方案，具备1000W Pure Sine Wave、LiFePO4 Battery、MPPT Solar Charge等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -2581,8 +2581,8 @@
       "sku": "ESS-3-6KW-5KWH",
       "features_all": [
         "3.6KW/5KWh Wall-Mount",
-        "Low Voltage 48V System",
-        "EPS Backup <20ms",
+        "Low Voltage 25.6V System",
+        "EPS Backup <10ms",
         "Smart BMS Protection",
         "Slim Wall Mount"
       ],
@@ -3573,10 +3573,10 @@
       ],
       "sku": "ESS-500W",
       "features_all": [
-        "500W 540Wh Capacity",
-        "Pure Sine Wave Output",
-        "LiFePO4 Battery",
-        "MPPT Solar 120W",
+        "500W Pure Sine Wave",
+        "1000Wh LiFePO4 Battery",
+        "400W AC+Solar Charging",
+        "MPPT Solar 300W Max",
         "UPS Backup Function"
       ],
       "en_description": "The ESS-500W from RisunicPower delivers high-performance power solutions with standout features: 500W 540Wh Capacity, Pure Sine Wave Output, LiFePO4 Battery. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
@@ -4342,8 +4342,8 @@
       "sku": "ESS-HX-6KW",
       "features_all": [
         "6KW Hybrid Inverter",
-        "High PV 6500W Input",
-        "UPS <4ms Switch",
+        "High PV 9000W Input",
+        "UPS <20ms Switch",
         "Parallel Support",
         "WiFi/GPRS Optional"
       ],
@@ -13073,7 +13073,7 @@
         "IEEE 802.3af Compliant",
         "Gigabit Data Rate",
         "Compact Wall Mount",
-        "Wide Input 90~264VAC"
+        "Wide Input 100~240VAC"
       ],
       "en_description": "The RP015W01 from RisunicPower delivers high-performance power solutions with standout features: 15W Single Port PoE, IEEE 802.3af Compliant, Gigabit Data Rate. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "RP015W01是RisunicPower推出的高性能电源解决方案，具备15W Single Port PoE、IEEE 802.3af Compliant、Gigabit Data Rate等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -14542,7 +14542,7 @@
       "sku": "RP024",
       "features_all": [
         "24W PoE+ Injector",
-        "IEEE 802.3at",
+        "Non-Standard PoE 48V",
         "Gigabit Ethernet",
         "Plug-and-Play",
         "Universal Input"
@@ -15996,8 +15996,8 @@
       "sku": "RP030W02",
       "features_all": [
         "30W PoE++ Injector",
-        "802.3bt Ready",
-        "High Speed Gigabit",
+        "802.3af/at Compliant",
+        "2.5G High Speed",
         "Plug and Play Design",
         "Surge Protection"
       ],
