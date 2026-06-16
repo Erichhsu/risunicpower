@@ -20596,11 +20596,11 @@
       ],
       "sku": "BDH-318",
       "features_all": [
-        "48V Battery Charger",
-        "3 Stage Smart Charge",
-        "LED Status Indicator",
-        "Overcharge Protection",
-        "Compact Aluminum Case"
+        "30~50A MPPT Charge Controller",
+        "Max 180V PV Input",
+        "Up to 99.9% Efficiency",
+        "Lead-Acid/Gel/LiFePO4/NMC",
+        "DC Load Output 20A"
       ],
       "en_description": "The BDH-318 MPPT Solar Charge Controller from RisunicPower delivers high-performance power solutions with standout features: 48V Battery Charger, 3 Stage Smart Charge, LED Status Indicator. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "BDH-318 慧民款 MPPT太阳能充电控制器 30A~50A IP21是RisunicPower推出的高性能电源解决方案，具备48V Battery Charger、3 Stage Smart Charge、LED Status Indicator等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -20917,11 +20917,11 @@
       ],
       "sku": "BCC-318A",
       "features_all": [
-        "48V 5A Lead Acid Charger",
-        "Automatic CC/CV",
-        "Protection Built-in",
-        "LED Display",
-        "Aluminum Housing"
+        "60~120A MPPT Charge Controller",
+        "Max 480V PV Input",
+        "Up to 99.9% Efficiency",
+        "Lead-Acid & LiFePO4 Compatible",
+        "RS485 Modbus Communication"
       ],
       "en_description": "The BCC-318A MPPT Solar Charge Controller from RisunicPower delivers high-performance power solutions with standout features: 48V 5A Lead Acid Charger, Automatic CC/CV, Protection Built-in. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "BCC-318A 超强款 MPPT太阳能充电控制器 60A~120A IP21是RisunicPower推出的高性能电源解决方案，具备48V 5A Lead Acid Charger、Automatic CC/CV、Protection Built-in等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -21248,11 +21248,11 @@
       ],
       "sku": "BDZ-318B",
       "features_all": [
-        "48V 5A LiFePO4 Charger",
-        "CC/CV Charging Profile",
-        "LED Status",
-        "Over-Voltage Cutoff",
-        "Lightweight Design"
+        "30~80A MPPT Charge Controller",
+        "Max 230V PV Input",
+        "Up to 99.9% Efficiency",
+        "Lead-Acid & LiFePO4 Compatible",
+        "Lithium Activation Support"
       ],
       "en_description": "The BDZ-318B MPPT Solar Charge Controller from RisunicPower delivers high-performance power solutions with standout features: 48V 5A LiFePO4 Charger, CC/CV Charging Profile, LED Status. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "BDZ-318B 增强款 MPPT太阳能充电控制器 30A~80A IP21是RisunicPower推出的高性能电源解决方案，具备48V 5A LiFePO4 Charger、CC/CV Charging Profile、LED Status等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
