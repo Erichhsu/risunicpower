@@ -64,22 +64,6 @@
       "sort_order": 9
     },
     {
-      "slug": "inverter-ip21",
-      "name_en": "Power Inverters IP21",
-      "name_zh": "逆变器 IP21",
-      "sub_en": "Indoor-rated inverter power supplies",
-      "sub_zh": "室内防护等级逆变电源",
-      "sort_order": 2
-    },
-    {
-      "slug": "inverter-ip65",
-      "name_en": "Power Inverters IP65",
-      "name_zh": "逆变器 IP65",
-      "sub_en": "Outdoor-rated inverter power supplies",
-      "sub_zh": "户外防护等级逆变电源",
-      "sort_order": 3
-    },
-    {
       "slug": "poe-wall-plug",
       "name_en": "Wall Plug PoE",
       "name_zh": "墙插PoE电源",
@@ -102,6 +86,22 @@
       "sub_en": "Rackmount industrial PoE solutions",
       "sub_zh": "机架式工业PoE解决方案",
       "sort_order": 12
+    },
+    {
+      "slug": "inverter",
+      "name_en": "Inverter",
+      "name_zh": "逆变器",
+      "sub_en": "Off-Grid & IP65 Inverters",
+      "sub_zh": "离网及IP65逆变器",
+      "sort_order": 3
+    },
+    {
+      "slug": "inverter-single-cell",
+      "name_en": "Inverter 3.4V 314Ah Single Cell 500W/1.2KW",
+      "name_zh": "逆变器 3.4V 314Ah 单电芯 500W/1.2KW",
+      "sub_en": "Single-Cell LiFePO4 Inverter",
+      "sub_zh": "单电芯磷酸铁锂逆变器",
+      "sort_order": 2
     }
   ],
   "products": [
@@ -6554,7 +6554,7 @@
     },
     {
       "slug": "r0285",
-      "cat": "inverter-ip21",
+      "cat": "inverter",
       "order": 2,
       "en_name": "R0285 Power Inverter 2.4KW IP21 24V",
       "zh_name": "R0285 逆变器 2.4KW IP21 24V",
@@ -7011,7 +7011,7 @@
     },
     {
       "slug": "r0286",
-      "cat": "inverter-ip21",
+      "cat": "inverter",
       "order": 3,
       "en_name": "R0286 Power Inverter 2.4KW IP21 48V",
       "zh_name": "R0286 逆变器 2.4KW IP21 48V",
@@ -7208,7 +7208,7 @@
     },
     {
       "slug": "r0287",
-      "cat": "inverter-ip21",
+      "cat": "inverter",
       "order": 4,
       "en_name": "R0287 Power Inverter 6.2KW IP21 48V",
       "zh_name": "R0287 逆变器 6.2KW IP21 48V",
@@ -7405,7 +7405,7 @@
     },
     {
       "slug": "r0319",
-      "cat": "inverter-ip21",
+      "cat": "inverter",
       "order": 5,
       "en_name": "R0319 Power Inverter IP21 25.6V",
       "zh_name": "R0319 逆变器 IP21 25.6V",
@@ -7940,7 +7940,7 @@
     },
     {
       "slug": "r0337",
-      "cat": "inverter-ip21",
+      "cat": "inverter-single-cell",
       "order": 6,
       "en_name": "R0337 Power Inverter 500W IP21 LIP 3.2V 314Ah",
       "zh_name": "R0337 电力逆变器 500W IP21 LIP 3.2V 314Ah",
@@ -8467,7 +8467,7 @@
     },
     {
       "slug": "r0355",
-      "cat": "inverter-ip65",
+      "cat": "inverter",
       "order": 7,
       "en_name": "R0355 Power Inverter 6.2KW IP65 48V",
       "zh_name": "R0355 逆变器 6.2KW IP65 48V",
@@ -8952,7 +8952,7 @@
     },
     {
       "slug": "r0403",
-      "cat": "inverter-ip65",
+      "cat": "inverter",
       "order": 8,
       "en_name": "R0403 Power Inverter 10KW IP65 48V",
       "zh_name": "R0403 逆变器 10KW IP65 48V",
@@ -9451,7 +9451,7 @@
     },
     {
       "slug": "r0404",
-      "cat": "inverter-ip21",
+      "cat": "inverter-single-cell",
       "order": 9,
       "en_name": "R0404 Power Inverter 1.2KW IP21 LIP 6.4V×2 314Ah",
       "zh_name": "R0404 电力逆变器 1.2KW IP21 LIP 6.4V×2 314Ah",
