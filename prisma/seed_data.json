@@ -5342,11 +5342,11 @@
       ],
       "sku": "R0256",
       "features_all": [
-        "48V 100Ah LiFePO4",
-        "Built-in Smart BMS",
-        "5000+ Cycle Life",
-        "Standard Rack Mount",
-        "RS485/CAN Communication"
+        "700W Bidirectional Inverter",
+        "12V DC Input",
+        "230V AC Pure Sine Wave",
+        "Offline UPS Design",
+        "Ultra-Low Quiescent ≤100μA"
       ],
       "en_description": "The R0256 from RisunicPower delivers high-performance power solutions with standout features: 48V 100Ah LiFePO4, Built-in Smart BMS, 5000+ Cycle Life. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0256是RisunicPower推出的高性能电源解决方案，具备48V 100Ah LiFePO4、Built-in Smart BMS、5000+ Cycle Life等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -5991,11 +5991,11 @@
       ],
       "sku": "R0263",
       "features_all": [
-        "48V 200Ah High Capacity",
-        "LiFePO4 Safe Chemistry",
-        "10.24KWh Energy",
-        "Rack Mount 3U Design",
-        "BMS with LCD Display"
+        "1400W Inverter",
+        "24V DC Input",
+        "230V AC Pure Sine Wave",
+        "Offline UPS Design",
+        "Ultra-Low Quiescent ≤100μA"
       ],
       "en_description": "The R0263 from RisunicPower delivers high-performance power solutions with standout features: 48V 200Ah High Capacity, LiFePO4 Safe Chemistry, 10.24KWh Energy. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0263是RisunicPower推出的高性能电源解决方案，具备48V 200Ah High Capacity、LiFePO4 Safe Chemistry、10.24KWh Energy等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -7377,11 +7377,11 @@
       ],
       "sku": "R0319",
       "features_all": [
-        "48V 50Ah LiFePO4",
-        "2.56KWh Compact",
-        "Rack Mount Design",
-        "Customizable Configuration",
-        "Reliable BMS"
+        "3000W Bidirectional Inverter",
+        "25.6V DC Input",
+        "230V AC Pure Sine Wave",
+        "IP21 Indoor Rated",
+        "Wide DC Input Range 20~28.8V"
       ],
       "en_description": "The R0319 from RisunicPower delivers high-performance power solutions with standout features: 48V 50Ah LiFePO4, 2.56KWh Compact, Rack Mount Design. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0319是RisunicPower推出的高性能电源解决方案，具备48V 50Ah LiFePO4、2.56KWh Compact、Rack Mount Design等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -7904,11 +7904,11 @@
       ],
       "sku": "R0337",
       "features_all": [
-        "12.8V 100Ah LiFePO4",
-        "Built-in BMS",
-        "2000+ Cycles",
-        "Versatile Applications",
-        "Low Self-Discharge"
+        "500W Single Cell Inverter",
+        "3.2V LiFePO4 Input",
+        "230V AC Output",
+        "IP21 Indoor Design",
+        "Voltage Protection Built-in"
       ],
       "en_description": "The R0337 from RisunicPower delivers high-performance power solutions with standout features: 12.8V 100Ah LiFePO4, Built-in BMS, 2000+ Cycles. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0337是RisunicPower推出的高性能电源解决方案，具备12.8V 100Ah LiFePO4、Built-in BMS、2000+ Cycles等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -8389,11 +8389,11 @@
       ],
       "sku": "R0355",
       "features_all": [
-        "12.8V 200Ah LiFePO4",
-        "Large Capacity",
-        "High Discharge Rate",
-        "BMS Protection",
-        "RV/Marine/Solar Use"
+        "6200W Off-Grid Inverter",
+        "48V DC Input",
+        "IP65 Outdoor Rated",
+        "Pure Sine Wave Output",
+        "AC Charger Built-in"
       ],
       "en_description": "The R0355 from RisunicPower delivers high-performance power solutions with standout features: 12.8V 200Ah LiFePO4, Large Capacity, High Discharge Rate. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0355是RisunicPower推出的高性能电源解决方案，具备12.8V 200Ah LiFePO4、Large Capacity、High Discharge Rate等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -8888,11 +8888,11 @@
       ],
       "sku": "R0403",
       "features_all": [
-        "25.6V 200Ah LiFePO4",
-        "5.12KWh Storage",
-        "Compact Wall Mount",
-        "Smart BMS",
-        "Solar ESS Use"
+        "10kW Off-Grid Inverter",
+        "48V DC Input",
+        "IP65 Outdoor Rated",
+        "Pure Sine Wave Output",
+        "Utility/Generator Auto Switch"
       ],
       "en_description": "The R0403 from RisunicPower delivers high-performance power solutions with standout features: 25.6V 200Ah LiFePO4, 5.12KWh Storage, Compact Wall Mount. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0403是RisunicPower推出的高性能电源解决方案，具备25.6V 200Ah LiFePO4、5.12KWh Storage、Compact Wall Mount等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -9371,11 +9371,11 @@
       ],
       "sku": "R0404",
       "features_all": [
-        "25.6V 100Ah LiFePO4",
-        "2.56KWh Lightweight",
-        "Wall/Bracket Mount",
-        "Long Cycle Life",
-        "Home Backup"
+        "1200W Dual Cell Inverter",
+        "6.4V 2×LiFePO4 Input",
+        "230V AC Output",
+        "IP21 Indoor Design",
+        "Max Efficiency ≥84%"
       ],
       "en_description": "The R0404 from RisunicPower delivers high-performance power solutions with standout features: 25.6V 100Ah LiFePO4, 2.56KWh Lightweight, Wall/Bracket Mount. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0404是RisunicPower推出的高性能电源解决方案，具备25.6V 100Ah LiFePO4、2.56KWh Lightweight、Wall/Bracket Mount等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -9918,11 +9918,11 @@
       ],
       "sku": "R0378",
       "features_all": [
-        "12.8V 50Ah LiFePO4",
-        "Compact Size",
-        "UPS Backup Compatible",
-        "Wide Temperature Range",
-        "Custom OEM Service"
+        "8KW Split Phase Inverter",
+        "51.2V Battery Compatible",
+        "120/240V AC Output",
+        "Pure Sine Wave",
+        "Lead-Acid & Li-ion Support"
       ],
       "en_description": "The R0378 from RisunicPower delivers high-performance power solutions with standout features: 12.8V 50Ah LiFePO4, Compact Size, UPS Backup Compatible. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0378是RisunicPower推出的高性能电源解决方案，具备12.8V 50Ah LiFePO4、Compact Size、UPS Backup Compatible等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -10507,11 +10507,11 @@
       ],
       "sku": "R0388",
       "features_all": [
-        "12.8V 300Ah Large Cap",
-        "3.84KWh Energy",
-        "BMS Protection",
-        "High Current Output",
-        "Off-Grid/EV Use"
+        "12KW Split Phase Inverter",
+        "51.2V Battery Compatible",
+        "120/240V AC Output",
+        "Pure Sine Wave",
+        "Lead-Acid & Li-ion Support"
       ],
       "en_description": "The R0388 from RisunicPower delivers high-performance power solutions with standout features: 12.8V 300Ah Large Cap, 3.84KWh Energy, BMS Protection. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0388是RisunicPower推出的高性能电源解决方案，具备12.8V 300Ah Large Cap、3.84KWh Energy、BMS Protection等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -10824,11 +10824,11 @@
       ],
       "sku": "R0410",
       "features_all": [
-        "12.8V 10Ah Slim",
-        "Ultra Compact",
-        "UPS/NVR Backup",
-        "Custom Connectors",
-        "CE/RoHS Certified"
+        "400~800W Microinverter",
+        "1-2 Panel Support",
+        "Grid-Tie EN50549-1",
+        "96.5% Peak Efficiency",
+        "Wireless Monitoring Ready"
       ],
       "en_description": "The R0410 from RisunicPower delivers high-performance power solutions with standout features: 12.8V 10Ah Slim, Ultra Compact, UPS/NVR Backup. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "R0410是RisunicPower推出的高性能电源解决方案，具备12.8V 10Ah Slim、Ultra Compact、UPS/NVR Backup等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
@@ -13434,10 +13434,10 @@
       ],
       "sku": "RP018",
       "features_all": [
-        "18W PoE+ Switch",
-        "802.3at Standard",
-        "Port-Level PSE Control",
-        "Slim Metal Housing",
+        "12W PoE Switch",
+        "24V DC Output",
+        "802.3af Compatible",
+        "Slim Wall Plug Design",
         "Plug and Play"
       ],
       "en_description": "The RP018 from RisunicPower delivers high-performance power solutions with standout features: 18W PoE+ Switch, 802.3at Standard, Port-Level PSE Control. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
@@ -13809,11 +13809,11 @@
       ],
       "sku": "RP020",
       "features_all": [
-        "20W Single Port PoE",
-        "802.3af/at Compatible",
-        "Compact Design",
-        "Industrial Grade",
-        "Surge Protection"
+        "12W Single Port PoE",
+        "24V DC Output",
+        "802.3af Compatible",
+        "Compact Wall Plug Design",
+        "Gigabit Ethernet Supported"
       ],
       "en_description": "The RP020 from RisunicPower delivers high-performance power solutions with standout features: 20W Single Port PoE, 802.3af/at Compatible, Compact Design. Designed for reliability and efficiency in demanding environments, backed by CE/RoHS certifications and global OEM/ODM support.",
       "zh_description": "RP020是RisunicPower推出的高性能电源解决方案，具备20W Single Port PoE、802.3af/at Compatible、Compact Design等突出特点。专为严苛环境设计，可靠性高，效率出众，支持CE/RoHS认证及全球OEM/ODM服务。",
