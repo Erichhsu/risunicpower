@@ -7942,8 +7942,8 @@
       "slug": "r0337",
       "cat": "inverter-ip21",
       "order": 6,
-      "en_name": "R0337 Power Inverter 500W IP21 LIP 3.2V",
-      "zh_name": "R0337 逆变器 500W IP21 LIP 3.2V",
+      "en_name": "R0337 Power Inverter 500W IP21 LIP 3.2V 314Ah",
+      "zh_name": "R0337 电力逆变器 500W IP21 LIP 3.2V 314Ah",
       "en_specs": [
         {
           "l": "Model",
@@ -9453,8 +9453,8 @@
       "slug": "r0404",
       "cat": "inverter-ip21",
       "order": 9,
-      "en_name": "R0404 Power Inverter 1200W IP21 LIP 6.4V×2",
-      "zh_name": "R0404 逆变器 1200W IP21 LIP 6.4V×2",
+      "en_name": "R0404 Power Inverter 1200W IP21 LIP 6.4V×2 314Ah",
+      "zh_name": "R0404 电力逆变器 1200W IP21 LIP 6.4V×2 314Ah",
       "en_specs": [
         {
           "l": "Model",
@@ -17006,8 +17006,8 @@
       "slug": "rps-300",
       "cat": "power-station",
       "order": 2,
-      "en_name": "RPS-300 Portable Power Station 300W",
-      "zh_name": "RPS-300 便携储能电源 300W",
+      "en_name": "RPS-300 Portable Power Station 300W 314Ah",
+      "zh_name": "RPS-300 便携储能电源 300W 314Ah",
       "en_specs": [
         {
           "l": "电池类型 (Battery Type)",
@@ -20820,8 +20820,8 @@
       "slug": "bdh-318",
       "cat": "solar-controller",
       "order": 0,
-      "en_name": "BDH-318 MPPT Solar Controller 30-50A",
-      "zh_name": "BDH-318 MPPT太阳能控制器 30-50A",
+      "en_name": "BDH-318 MPPT Solar Controller 30-50A 314Ah",
+      "zh_name": "BDH-318 MPPT太阳能控制器 30-50A 314Ah",
       "en_specs": [
         {
           "l": "Model",
@@ -21161,8 +21161,8 @@
       "slug": "bcc-318a",
       "cat": "solar-controller",
       "order": 1,
-      "en_name": "BCC-318A MPPT Solar Controller 60-120A",
-      "zh_name": "BCC-318A MPPT太阳能控制器 60-120A",
+      "en_name": "BCC-318A MPPT Solar Controller 60-120A 314Ah",
+      "zh_name": "BCC-318A MPPT太阳能控制器 60-120A 314Ah",
       "en_specs": [
         {
           "l": "Model",
@@ -21482,8 +21482,8 @@
       "slug": "bdz-318b",
       "cat": "solar-controller",
       "order": 2,
-      "en_name": "BDZ-318B MPPT Solar Controller 30-80A",
-      "zh_name": "BDZ-318B MPPT太阳能控制器 30-80A",
+      "en_name": "BDZ-318B MPPT Solar Controller 30-80A 314Ah",
+      "zh_name": "BDZ-318B MPPT太阳能控制器 30-80A 314Ah",
       "en_specs": [
         {
           "l": "Model",
