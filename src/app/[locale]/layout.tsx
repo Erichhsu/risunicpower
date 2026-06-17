@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: 'POE power supplies, adapters, UPS, inverters, portable power stations. 12+ years R&D, serving 600+ clients globally.',
     url: 'https://risunicpower.com', images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
-  twitter: { card: 'summary_large_image', title: 'RisunicPower', description: 'Industrial power supply manufacturer since 2014.' },
+  twitter: { card: 'summary_large_image', title: 'RisunicPower - Industrial Power Supply Manufacturer', description: 'POE power supplies, adapters, UPS, inverters, portable power stations. 12+ years R&D, serving 600+ clients globally.', images: [{ url: '/og-image.png', width: 1200, height: 630 }] },
   alternates: {
     canonical: 'https://risunicpower.com',
     languages: {

@@ -7,7 +7,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const today = new Date().toISOString().split('T')[0]
 
   // Static routes
-  const staticRoutes = ['', '/products', '/contact', '/about', '/blog', '/case-studies', '/privacy']
+  const staticRoutes = ['', '/products', '/contact', '/about', '/blog', '/case-studies', '/privacy', '/solutions']
+
+  // Category listing pages
+  const cats = await prisma.productCategory.findMany({ where: { slug: { not: '' } }, select: { slug: true } })
+  const catPages = locales.flatMap(locale =>
+    cats.map(c => ({
+      url: `${baseUrl}/${locale}/products/${c.slug}`,
+      lastModified: today,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    }))
+  )
   const staticPages = locales.flatMap(locale =>
     staticRoutes.map(route => ({
       url: `${baseUrl}/${locale}${route}`,
@@ -46,5 +57,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }))
 
-  return [...staticPages, ...productPages, ...blogPages, ...casePages]
+  return [...staticPages, ...catPages, ...productPages, ...blogPages, ...casePages]
 }
