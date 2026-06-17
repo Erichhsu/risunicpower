@@ -45,7 +45,7 @@
     "backTo": "返回 {name}",
     "requestQuote": "获取报价",
     "more": "还有 {n} 项",
-    "sku": "型号",
+    "sku": "SKU",
     "moqOemOdm": "起订量 · OEM · 定制",
     "productsTitle": "产品中心",
     "productsDesc": "浏览我们的全系列电源解决方案——从POE供电器、适配器到太阳能逆变器和便携储能电源。",
