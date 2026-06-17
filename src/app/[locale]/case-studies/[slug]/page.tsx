@@ -9,7 +9,8 @@ export const dynamic = 'force-dynamic'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params
-  const c = await prisma.caseStudy.findFirst({ where: { slug, locale }, select: { title: true } })
+  let c = await prisma.caseStudy.findFirst({ where: { slug, locale }, select: { title: true } })
+  if (!c && locale !== 'en') c = await prisma.caseStudy.findFirst({ where: { slug, locale: 'en' }, select: { title: true } })
   if (!c) return { title: 'RisunicPower' }
   return { title: c.title + ' — RisunicPower' }
 }
@@ -17,7 +18,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function CaseStudyDetailPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params
   const t = await getTranslations({ locale, namespace: 'CaseStudies' })
-  const c = await prisma.caseStudy.findFirst({ where: { slug, locale } })
+  let c = await prisma.caseStudy.findFirst({ where: { slug, locale } })
+  if (!c && locale !== 'en') c = await prisma.caseStudy.findFirst({ where: { slug, locale: 'en' } })
   if (!c) notFound()
 
   const dateLoc: Record<string, string> = { zh: 'zh-CN', ja: 'ja-JP', es: 'es-ES', de: 'de-DE', fr: 'fr-FR', pt: 'pt-BR', ar: 'ar-SA', ru: 'ru-RU' }

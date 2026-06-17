@@ -9,7 +9,8 @@ export const dynamic = 'force-dynamic'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params
-  const post = await prisma.blogPost.findFirst({ where: { slug, locale }, select: { title: true, excerpt: true } })
+  let post = await prisma.blogPost.findFirst({ where: { slug, locale }, select: { title: true, excerpt: true } })
+  if (!post && locale !== 'en') post = await prisma.blogPost.findFirst({ where: { slug, locale: 'en' }, select: { title: true, excerpt: true } })
   if (!post) return { title: 'RisunicPower' }
   return { title: post.title + ' — RisunicPower', description: post.excerpt || '' }
 }
@@ -17,7 +18,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function BlogDetailPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params
   const t = await getTranslations({ locale, namespace: 'Blog' })
-  const p = await prisma.blogPost.findFirst({ where: { slug, locale } })
+  let p = await prisma.blogPost.findFirst({ where: { slug, locale } })
+  if (!p && locale !== 'en') p = await prisma.blogPost.findFirst({ where: { slug, locale: 'en' } })
   if (!p) notFound()
 
   const dateLoc: Record<string, string> = { zh: 'zh-CN', ja: 'ja-JP', es: 'es-ES', de: 'de-DE', fr: 'fr-FR', pt: 'pt-BR', ar: 'ar-SA', ru: 'ru-RU' }
