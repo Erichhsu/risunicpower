@@ -58,8 +58,8 @@ export default function Hero() {
           <div className="flex flex-wrap gap-8 pt-8 border-t border-white/[0.08]">
             {[
               { icon: Shield, label: 'CE / FCC / UL / RoHS' },
-              { icon: Zap, label: '12+ Years R&D' },
-              { icon: Globe, label: '30+ Countries Served' },
+              { icon: Zap, label: t('hero.badgeRnd') },
+              { icon: Globe, label: t('hero.badgeGlobal') },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-3 text-white/35 text-[1.15rem] tracking-wide">
                 <item.icon size={18} className="text-[#F7D142]" />

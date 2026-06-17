@@ -85,6 +85,17 @@ body {
   padding: 2rem;
   transition: all 0.3s;
 }
+/* 和纸风格分隔线 */
+.divider-washi {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+  margin: 1.5rem 0;
+}
+
+/* 六边形卡片 */
+.hex-card {
+  position: relative;
+}
 .card-ts:hover {
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
   border-color: rgba(247, 209, 66, 0.3);

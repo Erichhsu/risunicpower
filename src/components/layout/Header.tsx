@@ -170,7 +170,7 @@ export default function Header() {
               </Link>
             ))}
             <div className="pt-3 border-t border-[#e2e8ef]">
-              <p className="text-[1.2rem] text-[#b0bccd] mb-2">Language</p>
+              <p className="text-[1.2rem] text-[#b0bccd] mb-2">{t('language')}</p>
               <div className="grid grid-cols-3 gap-2">
                 {locales.map(lang => (
                   <Link

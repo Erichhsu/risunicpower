@@ -1,13 +1,18 @@
 FROM node:20-alpine AS base
 
+# Alpine 3.21+ has OpenSSL 3.x; Prisma 5.x needs libssl
+# Install openssl for both builder and runner stages
+FROM base AS with-ssl
+RUN apk add --no-cache openssl
+
 # Install deps
-FROM base AS deps
+FROM with-ssl AS deps
 WORKDIR /app
 COPY package.json package-lock.json* ./
 RUN npm install
 
 # Build
-FROM base AS builder
+FROM with-ssl AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
@@ -15,7 +20,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 RUN npx prisma generate && npm run build
 
 # Production
-FROM base AS runner
+FROM with-ssl AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1

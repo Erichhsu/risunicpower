@@ -108,8 +108,8 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-16 pt-10 border-t border-white/20 text-[1.2rem] text-white/50">
-          <p>&copy; {new Date().getFullYear()} Shenzhen Risunic Technology Co., Ltd. All rights reserved.</p>
-          <p>POE Power Supply | Inverter | Micro Inverter | UPS | Portable Power Station | Energy Storage Manufacturer, China</p>
+          <p>&copy; {new Date().getFullYear()} Shenzhen Risunic Technology Co., Ltd. {t('rights')}</p>
+          <p>{t('tagline')}</p>
         </div>
       </div>
     </footer>

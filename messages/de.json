@@ -1,15 +1,15 @@
 {
   "Home": {
     "hero": {
-      "tag": "Industrielle Stromversorgungsl枚sungen",
+      "tag": "Industrielle Stromversorgungslösungen",
       "title": "Ihre Innovation\nMit Strom Versorgen",
-      "subtitle": "Von POE-Netzteilen bis zu Solarwechselrichtern 鈥?眉ber 12 Jahre F&E-Exzellenz f眉r mehr als 600 Kunden in 眉ber 30 L盲ndern.",
+      "subtitle": "Von POE-Netzteilen bis zu Solarwechselrichtern — über 12 Jahre F&E-Exzellenz für mehr als 600 Kunden in über 30 Ländern.",
       "ctaPrimary": "Produkte Ansehen",
       "ctaSecondary": "Angebot Anfordern"
     },
     "productGrid": {
       "title": "Unsere Produkte",
-      "subtitle": "Von kompakten POE-Injektoren bis zu industriellen USV-Systemen 鈥?jedes Produkt ist auf Zuverl盲ssigkeit und Leistung ausgelegt.",
+      "subtitle": "Von kompakten POE-Injektoren bis zu industriellen USV-Systemen — jedes Produkt ist auf Zuverlässigkeit und Leistung ausgelegt.",
       "viewAll": "Alle Anzeigen",
       "items": "Artikel",
       "label": "Unsere Produkte"
@@ -20,7 +20,9 @@
     "viewAll": "Alle Anzeigen",
     "readMore": "Weiterlesen",
     "certTitle": "Globale Zertifizierungen",
-    "certDesc": "Unsere Produkte erf眉llen internationale Sicherheits- und Qualit盲tsstandards"
+    "certDesc": "Unsere Produkte erfüllen internationale Sicherheits- und Qualitätsstandards",
+    "badgeRnd": "12+ Jahre F&E",
+    "badgeGlobal": "30+ Länder beliefert"
   },
   "Product": {
     "specs": "Spezifikationen",
@@ -31,7 +33,7 @@
     "downloadSpec": "Datenblatt Herunterladen",
     "addToCart": "In den Warenkorb",
     "buyNow": "Jetzt Kaufen",
-    "moq": "MOQ",
+    "moq": "Mindestbestellmenge",
     "price": "Preis",
     "inquiry": "Anfrage",
     "breadcrumbProducts": "Produkte",
@@ -40,22 +42,22 @@
     "keyFeatures": "Hauptfunktionen",
     "techSpecs": "Technische Daten",
     "noProducts": "Noch keine Produkte in dieser Kategorie.",
-    "backTo": "Zur眉ck zu {name}",
+    "backTo": "Zurück zu {name}",
     "requestQuote": "Angebot Anfordern",
     "more": "+{n} mehr",
-    "sku": "SKU",
-    "moqOemOdm": "MOQ 路 OEM 路 ODM",
+    "sku": "Art.-Nr.",
+    "moqOemOdm": "Mindestbestellmenge · OEM · ODM",
     "productsTitle": "Produktkategorien",
-    "productsDesc": "Entdecken Sie unser gesamtes Sortiment an Stromversorgungsl枚sungen 鈥?von POE-Injektoren und Adaptern bis hin zu Solarwechselrichtern und tragbaren Kraftwerken.",
+    "productsDesc": "Entdecken Sie unser gesamtes Sortiment an Stromversorgungslösungen — von POE-Injektoren und Adaptern bis hin zu Solarwechselrichtern und tragbaren Kraftwerken.",
     "allProducts": "Alle Produkte Anzeigen",
     "inquiryNow": "Jetzt Anfragen",
     "customerReviews": "Kundenbewertungen",
-    "backToProducts": "Zur眉ck zu Produkten"
+    "backToProducts": "Zurück zu Produkten"
   },
   "Cart": {
     "title": "Warenkorb",
     "empty": "Ihr Warenkorb ist leer",
-    "emptyDesc": "Durchsuchen Sie unsere Produkte und f眉gen Sie hinzu, was Ihnen gef盲llt",
+    "emptyDesc": "Durchsuchen Sie unsere Produkte und fügen Sie hinzu, was Ihnen gefällt",
     "browseProducts": "Produkte Durchsuchen",
     "total": "Gesamt",
     "subtotal": "Zwischensumme",
@@ -63,32 +65,32 @@
     "calculatedAtCheckout": "Wird beim Checkout berechnet",
     "checkout": "Zur Kasse",
     "proceedCheckout": "Weiter zur Kasse",
-    "wholesaleInquiry": "Gro脽handelsanfrage",
+    "wholesaleInquiry": "Großhandelsanfrage",
     "clearCart": "Warenkorb Leeren",
     "remove": "Entfernen",
-    "orderSummary": "Bestell眉bersicht",
+    "orderSummary": "Bestellübersicht",
     "items": "Artikel",
     "product": "Produkt",
     "quantity": "Menge",
     "continueShopping": "Weiter Einkaufen",
     "shippingCalc": "Versand & Steuern werden beim Checkout berechnet",
-    "wholesalePricing": "Gro脽handelspreise ben枚tigt?",
+    "wholesalePricing": "Großhandelspreise benötigt?",
     "totalItems": "Gesamt ({n} Artikel)"
   },
   "Checkout": {
     "title": "Zur Kasse",
-    "backToCart": "Zur眉ck zum Warenkorb",
-    "orderSummary": "Bestell眉bersicht",
+    "backToCart": "Zurück zum Warenkorb",
+    "orderSummary": "Bestellübersicht",
     "total": "Gesamt",
     "payWithStripe": "Mit Stripe Bezahlen",
     "processing": "Verarbeitung...",
-    "securePayment": "馃敀 Gesichert durch Stripe 路 140+ W盲hrungen",
+    "securePayment": "🔒 Gesichert durch Stripe · 140+ Währungen",
     "empty": "Ihr Warenkorb ist leer",
     "browse": "Weiter Einkaufen",
     "items": "Artikel",
     "nogkey": "Zahlung noch nicht konfiguriert",
     "cart": "Warenkorb",
-    "desc": "脺berpr眉fen Sie Ihre Bestellung und fahren Sie mit der Zahlung fort",
+    "desc": "Überprüfen Sie Ihre Bestellung und fahren Sie mit der Zahlung fort",
     "error": "Zahlungseinleitung fehlgeschlagen. Bitte versuchen Sie es erneut."
   },
   "Contact": {
@@ -107,39 +109,41 @@
       "sending": "Wird gesendet...",
       "formError": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
       "required": "Erforderlich",
-      "invalidEmail": "Ung眉ltige E-Mail"
+      "invalidEmail": "Ungültige E-Mail-Adresse"
     },
     "sending": "Senden...",
     "formError": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
     "required": "Erforderlich",
-    "invalidEmail": "Ung眉ltige E-Mail-Adresse"
+    "invalidEmail": "Ungültige E-Mail-Adresse"
   },
   "Header": {
     "products": "Produkte",
-    "solutions": "L枚sungen",
-    "about": "脺ber Uns",
+    "solutions": "Lösungen",
+    "about": "Über Uns",
     "blog": "Blog",
     "contact": "Kontakt",
     "search": "Suchen",
-    "caseStudies": "Fallstudien"
+    "caseStudies": "Fallstudien",
+    "language": "Sprache"
   },
   "Footer": {
     "products": "Produkte",
     "company": "Unternehmen",
     "support": "Support",
     "legal": "Rechtliches",
-    "privacy": "Datenschutzerkl盲rung",
+    "privacy": "Datenschutzerklärung",
     "terms": "Nutzungsbedingungen",
     "rights": "Alle Rechte vorbehalten.",
     "newsletter": "Abonnieren Sie unseren Newsletter",
     "subscribe": "Abonnieren",
     "brandDescription": "Hersteller von industriellen Stromversorgungen seit 2014. CE, FCC, UL zertifiziert.",
-    "connectWithUs": "Verbinden Sie Sich Mit Uns"
+    "connectWithUs": "Verbinden Sie Sich Mit Uns",
+    "tagline": "POE-Netzteil | Wechselrichter | Mikro-Wechselrichter | USV | Tragbares Kraftwerk | Energiespeicher-Hersteller, China"
   },
   "NotFound": {
     "title": "Seite Nicht Gefunden",
-    "desc": "Die gesuchte Seite wurde m枚glicherweise verschoben oder existiert nicht mehr.",
-    "backHome": "Zur眉ck zur Startseite"
+    "desc": "Die gesuchte Seite wurde möglicherweise verschoben oder existiert nicht mehr.",
+    "backHome": "Zurück zur Startseite"
   },
   "Reviews": {
     "title": "Kundenbewertungen",
@@ -160,46 +164,46 @@
     "count": "{n} Bewertungen"
   },
   "Blog": {
-    "backToBlog": "Zur眉ck zum Blog",
+    "backToBlog": "Zurück zum Blog",
     "inquireProduct": "Verwandte Produkte Anfragen"
   },
   "CaseStudies": {
-    "backToCaseStudies": "Zur眉ck zu Fallstudien",
+    "backToCaseStudies": "Zurück zu Fallstudien",
     "challenge": "Herausforderung",
-    "solution": "L枚sung",
+    "solution": "Lösung",
     "results": "Ergebnisse",
-    "getSimilar": "脛hnliche L枚sung Anfordern"
+    "getSimilar": "Ähnliche Lösung Anfordern"
   },
   "Offline": {
-    "title": "Offline",
-    "desc": "Bitte 眉berpr眉fen Sie Ihre Internetverbindung und versuchen Sie es erneut",
-    "backHome": "Zur眉ck zur Startseite"
+    "title": "You're Offline",
+    "desc": "Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut",
+    "backHome": "Zurück zur Startseite"
   },
   "Cookies": {
-    "title": "Cookie-Richtlinie",
+    "title": "Cookie Policy",
     "desc": "Diese Seite befindet sich im Aufbau. Bitte schauen Sie bald wieder vorbei.",
-    "backHome": "Zur眉ck zur Startseite"
+    "backHome": "Zurück zur Startseite"
   },
   "Payment": {
-    "title": "Zahlung Erfolgreich!",
-    "desc": "Vielen Dank f眉r Ihre Bestellung. Sie erhalten in K眉rze eine Best盲tigungs-E-Mail.",
+    "title": "Payment Successful!",
+    "desc": "Vielen Dank für Ihre Bestellung. Sie erhalten in Kürze eine Bestätigungs-E-Mail.",
     "orderId": "Bestell-ID",
     "backToShop": "Weiter Einkaufen",
     "error": "Zahlung konnte nicht verifiziert werden. Bitte kontaktieren Sie den Support.",
-    "loading": "Zahlung wird 眉berpr眉ft...",
+    "loading": "Zahlung wird überprüft...",
     "contactSupport": "Support Kontaktieren"
   },
   "Stats": {
     "title": "Vertrauen in Zahlen",
-    "subtitle": "脺ber 12 Jahre Branchenf眉hrerschaft in 眉ber 30 L盲ndern",
+    "subtitle": "Über 12 Jahre Branchenführerschaft in über 30 Ländern",
     "skus": "Produkt-SKUs",
-    "countries": "L盲nder Betreut",
+    "countries": "Länder Betreut",
     "clients": "Globale Kunden",
     "years": "Jahre Exzellenz"
   },
   "Error": {
     "title": "Etwas ist schief gelaufen",
-    "description": "Ein unerwarteter Fehler ist aufgetreten. Bitte versuche es erneut oder kontaktiere uns.",
+    "description": "Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns.",
     "tryAgain": "Erneut versuchen",
     "backHome": "Zurück zur Startseite"
   }

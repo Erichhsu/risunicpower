@@ -11,12 +11,12 @@ const localeLabels: Record<string, Record<string, string>> = {
   zh: { title: '购物车', empty: '购物车是空的', browse: '浏览产品', total: '合计', checkout: '去结算', inquiry: '批量询价', clear: '清空购物车', remove: '删除' },
   ja: { title: 'カート', empty: 'カートは空です', browse: '製品を見る', total: '合計', checkout: 'レジに進む', inquiry: '卸売り問い合わせ', clear: 'カートを空にする', remove: '削除' },
 
-  ar: { title: 'الدفع', empty: 'سلة التسوق فارغة', browse: 'متابعة التسوق', total: 'الإجمالي', checkout: 'متابعة إلى الدفع', inquiry: 'هل تحتاج إلى أسعار الجملة؟', clear: 'تفريغ السلة', remove: 'إزالة' },
-  de: { title: 'Kasse', empty: 'Ihr Warenkorb ist leer', browse: 'Weiter einkaufen', total: 'Gesamtsumme', checkout: 'Zur Kasse gehen', inquiry: 'Benötigen Sie Großhandelspreise?', clear: 'Warenkorb leeren', remove: 'Entfernen' },
-  es: { title: 'Finalizar compra', empty: 'Su carrito está vacío', browse: 'Seguir comprando', total: 'Total', checkout: 'Ir a pagar', inquiry: '¿Necesita precios por mayor?', clear: 'Vaciar carrito', remove: 'Eliminar' },
-  fr: { title: 'Commande', empty: 'Votre panier est vide', browse: 'Continuer mes achats', total: 'Total', checkout: 'Passer la commande', inquiry: 'Vous souhaitez un tarif de gros ?', clear: 'Vider le panier', remove: 'Supprimer' },
-  pt: { title: 'Finalizar Compra', empty: 'Seu carrinho está vazio', browse: 'Continuar Comprando', total: 'Total', checkout: 'Prosseguir para Checkout', inquiry: 'Precisa de preços para atacado?', clear: 'Limpar Carrinho', remove: 'Remover' },
-  ru: { title: 'Оформление заказа', empty: 'Ваша корзина пуста', browse: 'Продолжить покупки', total: 'Итого', checkout: 'Оформить заказ', inquiry: 'Нужны оптовые цены?', clear: 'Очистить корзину', remove: 'Удалить' },
+  ar: { title: 'سلة التسوق', empty: 'سلة التسوق فارغة', browse: 'تصفح المنتجات', total: 'المجموع', checkout: 'إتمام الشراء', inquiry: 'استفسار بالجملة', clear: 'إفراغ السلة', remove: 'إزالة' },
+  de: { title: 'Warenkorb', empty: 'Ihr Warenkorb ist leer', browse: 'Produkte durchsuchen', total: 'Gesamt', checkout: 'Zur Kasse', inquiry: 'Großhandelsanfrage', clear: 'Warenkorb leeren', remove: 'Entfernen' },
+  es: { title: 'Carrito', empty: 'Tu carrito está vacío', browse: 'Ver productos', total: 'Total', checkout: 'Pagar', inquiry: 'Consulta al por mayor', clear: 'Vaciar carrito', remove: 'Eliminar' },
+  fr: { title: 'Panier', empty: 'Votre panier est vide', browse: 'Voir les produits', total: 'Total', checkout: 'Commander', inquiry: 'Demande de gros', clear: 'Vider le panier', remove: 'Supprimer' },
+  pt: { title: 'Carrinho', empty: 'Seu carrinho está vazio', browse: 'Ver Produtos', total: 'Total', checkout: 'Finalizar', inquiry: 'Consulta de atacado', clear: 'Esvaziar carrinho', remove: 'Remover' },
+  ru: { title: 'Корзина', empty: 'Ваша корзина пуста', browse: 'Смотреть товары', total: 'Итого', checkout: 'Оформить', inquiry: 'Оптовый запрос', clear: 'Очистить корзину', remove: 'Удалить' },
 }
 function lbl(locale: string, key: string): string {
   return (localeLabels[locale] || localeLabels.en)[key] || key

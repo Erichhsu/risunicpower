@@ -3,13 +3,13 @@
     "hero": {
       "tag": "Industrial Power Solutions",
       "title": "Powering Your \nInnovation",
-      "subtitle": "From POE supplies to solar inverters 鈥?12+ years of R&D excellence serving\n600+ clients across 30+ countries.",
+      "subtitle": "From POE supplies to solar inverters — 12+ years of R&D excellence serving\n600+ clients across 30+ countries.",
       "ctaPrimary": "View Products",
       "ctaSecondary": "Get a Quote"
     },
     "productGrid": {
       "title": "Our Products",
-      "subtitle": "From compact POE injectors to industrial-grade UPS systems 鈥?every product is engineered for reliability and performance.",
+      "subtitle": "From compact POE injectors to industrial-grade UPS systems — every product is engineered for reliability and performance.",
       "viewAll": "View All",
       "items": "items",
       "label": "Our Products"
@@ -20,7 +20,9 @@
     "viewAll": "View All",
     "readMore": "Read More",
     "certTitle": "Global Certifications",
-    "certDesc": "Our products meet international safety and quality standards"
+    "certDesc": "Our products meet international safety and quality standards",
+    "badgeRnd": "12+ Years R&D",
+    "badgeGlobal": "30+ Countries Served"
   },
   "Product": {
     "specs": "Specifications",
@@ -44,9 +46,9 @@
     "requestQuote": "Request Quote",
     "more": "+{n} more",
     "sku": "SKU",
-    "moqOemOdm": "MOQ 路 OEM 路 ODM",
+    "moqOemOdm": "MOQ · OEM · ODM",
     "productsTitle": "Product Categories",
-    "productsDesc": "Explore our full range of power solutions 鈥?from POE injectors and adapters to solar inverters and portable power stations.",
+    "productsDesc": "Explore our full range of power solutions — from POE injectors and adapters to solar inverters and portable power stations.",
     "allProducts": "View All Products",
     "inquiryNow": "Inquire Now",
     "customerReviews": "Customer Reviews",
@@ -82,7 +84,7 @@
     "total": "Total",
     "payWithStripe": "Pay with Stripe",
     "processing": "Processing...",
-    "securePayment": "馃敀 Secured by Stripe 路 140+ currencies supported",
+    "securePayment": "🔒 Secured by Stripe · 140+ currencies supported",
     "empty": "Your cart is empty",
     "browse": "Continue Shopping",
     "items": "Items",
@@ -121,7 +123,8 @@
     "blog": "Blog",
     "contact": "Contact",
     "search": "Search",
-    "caseStudies": "Case Studies"
+    "caseStudies": "Case Studies",
+    "language": "Language"
   },
   "Footer": {
     "products": "Products",
@@ -134,7 +137,8 @@
     "newsletter": "Subscribe to our newsletter",
     "subscribe": "Subscribe",
     "brandDescription": "Industrial power supply manufacturer since 2014. CE, FCC, UL certified.",
-    "connectWithUs": "Connect With Us"
+    "connectWithUs": "Connect With Us",
+    "tagline": "POE Power Supply | Inverter | Micro Inverter | UPS | Portable Power Station | Energy Storage Manufacturer, China"
   },
   "NotFound": {
     "title": "Page Not Found",

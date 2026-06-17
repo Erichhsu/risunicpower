@@ -5,7 +5,13 @@ import * as path from 'path'
 const prisma = new PrismaClient()
 
 interface CatDef {
-  slug: string; name_en: string; name_zh: string; sub_en: string; sub_zh: string; sort_order?: number
+  slug: string; name_en: string; name_zh: string
+  name_ja?: string; name_ar?: string; name_de?: string; name_es?: string
+  name_fr?: string; name_pt?: string; name_ru?: string
+  sub_en: string; sub_zh: string
+  sub_ja?: string; sub_ar?: string; sub_de?: string; sub_es?: string
+  sub_fr?: string; sub_pt?: string; sub_ru?: string
+  sort_order?: number
 }
 interface SpecDef { l: string; v: string; o: number }
 interface ImgDef { url: string; alt: string; sortOrder: number; isPrimary: boolean }
@@ -15,12 +21,21 @@ interface RevDef {
 }
 
 interface ProdDef {
-  slug: string; cat: string; order: number; en_name: string; zh_name: string
+  slug: string; cat: string; order: number
+  en_name: string; zh_name: string
+  ja_name?: string; ar_name?: string; de_name?: string
+  es_name?: string; fr_name?: string; pt_name?: string; ru_name?: string
   sku?: string
   features_all?: string[]
-  en_description?: string
-  zh_description?: string
+  zh_features?: string[]
+  ja_features?: string[]; ar_features?: string[]; de_features?: string[]
+  es_features?: string[]; fr_features?: string[]; pt_features?: string[]; ru_features?: string[]
+  en_description?: string; zh_description?: string
+  ja_description?: string; ar_description?: string; de_description?: string
+  es_description?: string; fr_description?: string; pt_description?: string; ru_description?: string
   en_specs: SpecDef[]; zh_specs: SpecDef[]
+  ja_specs?: SpecDef[]; ar_specs?: SpecDef[]; de_specs?: SpecDef[]
+  es_specs?: SpecDef[]; fr_specs?: SpecDef[]; pt_specs?: SpecDef[]; ru_specs?: SpecDef[]
   images: ImgDef[]
   reviews?: RevDef[]
 }
@@ -103,11 +118,24 @@ async function main() {
       update: { sortOrder: cat.sort_order ?? 0, icon: '', published: true },
       create: { slug: cat.slug, sortOrder: cat.sort_order ?? 0, icon: '', published: true },
     })
-    for (const [locale, name, subtitle] of [['en', cat.name_en, cat.sub_en], ['zh', cat.name_zh, cat.sub_zh]] as const) {
+    const catLocaleData: [string, string | undefined, string | undefined][] = [
+      ['en', cat.name_en, cat.sub_en],
+      ['zh', cat.name_zh, cat.sub_zh],
+      ['ja', cat.name_ja, cat.sub_ja],
+      ['ar', cat.name_ar, cat.sub_ar],
+      ['de', cat.name_de, cat.sub_de],
+      ['es', cat.name_es, cat.sub_es],
+      ['fr', cat.name_fr, cat.sub_fr],
+      ['pt', cat.name_pt, cat.sub_pt],
+      ['ru', cat.name_ru, cat.sub_ru],
+    ]
+    for (const [locale, name, subtitle] of catLocaleData) {
+      const locName = name || cat.name_en
+      const locSub = subtitle || cat.sub_en
       await prisma.productCategoryTranslation.upsert({
         where: { slug_locale: { slug: cat.slug, locale } },
-        update: { name, subtitle },
-        create: { slug: cat.slug, locale, name, subtitle },
+        update: { name: locName, subtitle: locSub },
+        create: { slug: cat.slug, locale, name: locName, subtitle: locSub },
       })
     }
   }
@@ -122,20 +150,35 @@ async function main() {
       create: { slug: p.slug, categorySlug: p.cat, sortOrder: p.order, published: true, featured: false, priceCents: 0, sku: p.sku || undefined },
     })
 
-    for (const [locale, name, desc] of [['en', p.en_name, p.en_description], ['zh', p.zh_name, p.zh_description]] as const) {
+    const localeData: [string, string | undefined, string | undefined, string[] | undefined, SpecDef[] | undefined][] = [
+      ['en', p.en_name, p.en_description, p.features_all, p.en_specs],
+      ['zh', p.zh_name, p.zh_description, p.zh_features || p.features_all, p.zh_specs],
+      ['ja', p.ja_name, p.ja_description, p.ja_features, p.ja_specs],
+      ['ar', p.ar_name, p.ar_description, p.ar_features, p.ar_specs],
+      ['de', p.de_name, p.de_description, p.de_features, p.de_specs],
+      ['es', p.es_name, p.es_description, p.es_features, p.es_specs],
+      ['fr', p.fr_name, p.fr_description, p.fr_features, p.fr_specs],
+      ['pt', p.pt_name, p.pt_description, p.pt_features, p.pt_specs],
+      ['ru', p.ru_name, p.ru_description, p.ru_features, p.ru_specs],
+    ]
+
+    for (const [locale, name, desc, features, specs] of localeData) {
+      if (!name && !specs) continue
+      const locFeatJson = features ? JSON.stringify(features) : featJson
+      const locName = name || p.en_name
+      const locDesc = desc || p.en_description || (locName + ' - RisunicPower')
       await prisma.productTranslation.upsert({
         where: { productId_locale: { productId: product.id, locale } },
-        update: { name, subtitle: '', description: desc || (name + ' - RisunicPower'), features: featJson },
-        create: { productId: product.id, locale, name, subtitle: '', description: desc || (name + ' - RisunicPower'), features: featJson },
+        update: { name: locName, subtitle: '', description: locDesc, features: locFeatJson },
+        create: { productId: product.id, locale, name: locName, subtitle: '', description: locDesc, features: locFeatJson },
       })
-    }
-
-    for (const [locale, specs] of [['en', p.en_specs], ['zh', p.zh_specs]] as const) {
-      await prisma.productSpec.deleteMany({ where: { productId: product.id, locale } })
-      for (const spec of specs) {
-        await prisma.productSpec.create({
-          data: { productId: product.id, locale, label: spec.l, value: spec.v, sortOrder: spec.o },
-        })
+      if (specs && specs.length > 0) {
+        await prisma.productSpec.deleteMany({ where: { productId: product.id, locale } })
+        for (const spec of specs) {
+          await prisma.productSpec.create({
+            data: { productId: product.id, locale, label: spec.l, value: spec.v, sortOrder: spec.o },
+          })
+        }
       }
     }
 
