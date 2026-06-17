@@ -5,7 +5,9 @@
       "title": "为创新 \n注入能量",
       "subtitle": "从POE电源到光伏逆变器 — 12年以上研发经验，服务全球600+客户，产品远销50余国。",
       "ctaPrimary": "查看产品",
-      "ctaSecondary": "获取报价"
+      "ctaSecondary": "获取报价",
+      "badgeRnd": "12年+ 研发经验",
+      "badgeGlobal": "服务全球30+国家"
     },
     "productGrid": {
       "title": "产品中心",
@@ -20,9 +22,7 @@
     "viewAll": "查看全部",
     "readMore": "了解更多",
     "certTitle": "全球认证",
-    "certDesc": "我们的产品符合国际安全和质量标准",
-    "badgeRnd": "12年+ 研发经验",
-    "badgeGlobal": "服务全球30+国家"
+    "certDesc": "我们的产品符合国际安全和质量标准"
   },
   "Product": {
     "specs": "规格参数",

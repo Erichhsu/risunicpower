@@ -5,7 +5,9 @@
       "title": "Alimenter Votre\nInnovation",
       "subtitle": "Des alimentations POE aux onduleurs solaires — plus de 12 ans d'excellence R&D au service de plus de 600 clients dans plus de 30 pays.",
       "ctaPrimary": "Voir les Produits",
-      "ctaSecondary": "Demander un Devis"
+      "ctaSecondary": "Demander un Devis",
+      "badgeRnd": "12+ Ans de R&D",
+      "badgeGlobal": "30+ Pays Desservis"
     },
     "productGrid": {
       "title": "Nos Produits",
@@ -20,9 +22,7 @@
     "viewAll": "Voir Tout",
     "readMore": "Lire Plus",
     "certTitle": "Certifications Mondiales",
-    "certDesc": "Nos produits respectent les normes internationales de sécurité et de qualité",
-    "badgeRnd": "12+ Ans de R&D",
-    "badgeGlobal": "30+ Pays Desservis"
+    "certDesc": "Nos produits respectent les normes internationales de sécurité et de qualité"
   },
   "Product": {
     "specs": "Spécifications",

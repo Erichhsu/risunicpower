@@ -5,7 +5,9 @@
       "title": "Powering Your \nInnovation",
       "subtitle": "From POE supplies to solar inverters — 12+ years of R&D excellence serving\n600+ clients across 30+ countries.",
       "ctaPrimary": "View Products",
-      "ctaSecondary": "Get a Quote"
+      "ctaSecondary": "Get a Quote",
+      "badgeRnd": "12+ Years R&D",
+      "badgeGlobal": "30+ Countries Served"
     },
     "productGrid": {
       "title": "Our Products",
@@ -20,9 +22,7 @@
     "viewAll": "View All",
     "readMore": "Read More",
     "certTitle": "Global Certifications",
-    "certDesc": "Our products meet international safety and quality standards",
-    "badgeRnd": "12+ Years R&D",
-    "badgeGlobal": "30+ Countries Served"
+    "certDesc": "Our products meet international safety and quality standards"
   },
   "Product": {
     "specs": "Specifications",

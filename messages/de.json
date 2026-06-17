@@ -5,7 +5,9 @@
       "title": "Ihre Innovation\nMit Strom Versorgen",
       "subtitle": "Von POE-Netzteilen bis zu Solarwechselrichtern — über 12 Jahre F&E-Exzellenz für mehr als 600 Kunden in über 30 Ländern.",
       "ctaPrimary": "Produkte Ansehen",
-      "ctaSecondary": "Angebot Anfordern"
+      "ctaSecondary": "Angebot Anfordern",
+      "badgeRnd": "12+ Jahre F&E",
+      "badgeGlobal": "30+ Länder beliefert"
     },
     "productGrid": {
       "title": "Unsere Produkte",
@@ -20,9 +22,7 @@
     "viewAll": "Alle Anzeigen",
     "readMore": "Weiterlesen",
     "certTitle": "Globale Zertifizierungen",
-    "certDesc": "Unsere Produkte erfüllen internationale Sicherheits- und Qualitätsstandards",
-    "badgeRnd": "12+ Jahre F&E",
-    "badgeGlobal": "30+ Länder beliefert"
+    "certDesc": "Unsere Produkte erfüllen internationale Sicherheits- und Qualitätsstandards"
   },
   "Product": {
     "specs": "Spezifikationen",

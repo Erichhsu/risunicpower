@@ -5,7 +5,9 @@
       "title": "Potencializando Sua\nInovação",
       "subtitle": "De fontes POE a inversores solares — mais de 12 anos de excelência em P&D atendendo mais de 600 clientes em mais de 30 países.",
       "ctaPrimary": "Ver Produtos",
-      "ctaSecondary": "Solicitar Cotação"
+      "ctaSecondary": "Solicitar Cotação",
+      "badgeRnd": "12+ Anos de P&D",
+      "badgeGlobal": "30+ Países Atendidos"
     },
     "productGrid": {
       "title": "Nossos Produtos",
@@ -20,9 +22,7 @@
     "viewAll": "Ver Tudo",
     "readMore": "Ler Mais",
     "certTitle": "Certificações Globais",
-    "certDesc": "Nossos produtos atendem aos padrões internacionais de segurança e qualidade",
-    "badgeRnd": "12+ Anos de P&D",
-    "badgeGlobal": "30+ Países Atendidos"
+    "certDesc": "Nossos produtos atendem aos padrões internacionais de segurança e qualidade"
   },
   "Product": {
     "specs": "Especificações",

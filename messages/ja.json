@@ -5,7 +5,9 @@
       "title": "革新に \nエネルギーを",
       "subtitle": "POE電源から太陽光インバーターまで — 12年以上の研究開発実績、600社以上のお客様、50カ国以上に輸出。",
       "ctaPrimary": "製品を見る",
-      "ctaSecondary": "見積もりを依頼"
+      "ctaSecondary": "見積もりを依頼",
+      "badgeRnd": "12年以上の研究開発",
+      "badgeGlobal": "30カ国以上にサービス提供"
     },
     "productGrid": {
       "title": "製品一覧",
@@ -20,9 +22,7 @@
     "viewAll": "すべて表示",
     "readMore": "続きを読む",
     "certTitle": "グローバル認証",
-    "certDesc": "当社製品は国際的な安全・品質基準を満たしています",
-    "badgeRnd": "12年以上の研究開発",
-    "badgeGlobal": "30カ国以上にサービス提供"
+    "certDesc": "当社製品は国際的な安全・品質基準を満たしています"
   },
   "Product": {
     "specs": "仕様",
