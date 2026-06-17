@@ -17,17 +17,16 @@ const BLOG_READ_MORE: Record<string, string> = { en: 'Read More', zh: '阅读更
 
 export default async function BlogListPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
-  const l = ['en', 'zh', 'ja'].includes(locale) ? locale : 'en'
   const dateLoc: Record<string, string> = { zh: 'zh-CN', ja: 'ja-JP', es: 'es-ES', de: 'de-DE', fr: 'fr-FR', pt: 'pt-BR', ar: 'ar-SA', ru: 'ru-RU' }
-  const dl = dateLoc[l] || 'en-US'
+  const dl = dateLoc[locale] || 'en-US'
 
   // 当前语言博客，无则回退英文
   let posts = await prisma.blogPost.findMany({
-    where: { locale: l, published: true },
+    where: { locale, published: true },
     orderBy: { publishDate: 'desc' },
     select: { slug: true, title: true, excerpt: true, category: true, publishDate: true, coverImage: true },
   })
-  if (posts.length === 0 && l !== 'en') {
+  if (posts.length === 0 && locale !== 'en') {
     posts = await prisma.blogPost.findMany({
       where: { locale: 'en', published: true },
       orderBy: { publishDate: 'desc' },
@@ -39,20 +38,20 @@ export default async function BlogListPage({ params }: { params: Promise<{ local
     <main className="min-h-screen bg-white pt-28 pb-20">
       <div className="mx-auto max-w-[1100px] px-6">
         <h1 className="text-[3.6rem] font-bold text-[#0f2a44] mb-4">
-          {BLOG_TITLE[l] || 'Blog'}
+          {BLOG_TITLE[locale] || BLOG_TITLE.en}
         </h1>
         <p className="text-[1.4rem] text-[#6b7a8f] mb-12">
-          {BLOG_DESC[l] || BLOG_DESC.en}
+          {BLOG_DESC[locale] || BLOG_DESC.en}
         </p>
 
         {posts.length === 0 ? (
           <div className="py-20 text-center text-[1.4rem] text-gray-400">
-            {BLOG_EMPTY[l] || BLOG_EMPTY.en}
+            {BLOG_EMPTY[locale] || BLOG_EMPTY.en}
           </div>
         ) : (
           <div className="grid md:grid-cols-2 gap-8">
             {posts.map(p => (
-              <Link key={p.slug} href={`/${l}/blog/${p.slug}`}
+              <Link key={p.slug} href={`/${locale}/blog/${p.slug}`}
                 className="group rounded-2xl border border-gray-200 p-8 hover:border-[#F7D142]/30 hover:shadow-lg transition-all"
               >
                 <div className="flex items-center gap-2 text-[1.2rem] text-[#F7D142] mb-4">
@@ -63,7 +62,7 @@ export default async function BlogListPage({ params }: { params: Promise<{ local
                 <h2 className="text-[2rem] font-bold text-[#0f2a44] mb-3 group-hover:text-[#F7D142] transition-colors">{p.title}</h2>
                 <p className="text-[1.3rem] leading-relaxed text-[#6b7a8f] mb-4">{p.excerpt}</p>
                 <span className="inline-flex items-center gap-1 text-[1.3rem] font-semibold text-[#F7D142] group-hover:gap-2 transition-all">
-                  {BLOG_READ_MORE[l] || 'Read More'} <ArrowRight size={14} />
+                  {BLOG_READ_MORE[locale] || 'Read More'} <ArrowRight size={14} />
                 </span>
               </Link>
             ))}

@@ -16,14 +16,13 @@ const CS_EMPTY: Record<string, string> = { en: 'No case studies yet.', zh: 'æš‚æ
 
 export default async function CaseStudiesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
-  const l = ['en', 'zh', 'ja'].includes(locale) ? locale : 'en'
 
   let cases = await prisma.caseStudy.findMany({
-    where: { locale: l, published: true },
+    where: { locale, published: true },
     orderBy: { publishDate: 'desc' },
     select: { slug: true, title: true, client: true, industry: true, result: true, publishDate: true },
   })
-  if (cases.length === 0 && l !== 'en') {
+  if (cases.length === 0 && locale !== 'en') {
     cases = await prisma.caseStudy.findMany({
       where: { locale: 'en', published: true },
       orderBy: { publishDate: 'desc' },
@@ -35,18 +34,18 @@ export default async function CaseStudiesPage({ params }: { params: Promise<{ lo
     <main className="min-h-screen bg-white pt-28 pb-20">
       <div className="mx-auto max-w-[1100px] px-6">
         <h1 className="text-[3.6rem] font-bold text-[#0f2a44] mb-4">
-          {CS_TITLE[l] || 'Case Studies'}
+          {CS_TITLE[locale] || CS_TITLE.en}
         </h1>
         <p className="text-[1.4rem] text-[#6b7a8f] mb-12">
-          {CS_DESC[l] || CS_DESC.en}
+          {CS_DESC[locale] || CS_DESC.en}
         </p>
 
         {cases.length === 0 ? (
-          <div className="py-20 text-center text-[1.4rem] text-gray-400">{CS_EMPTY[l] || CS_EMPTY.en}</div>
+          <div className="py-20 text-center text-[1.4rem] text-gray-400">{CS_EMPTY[locale] || CS_EMPTY.en}</div>
         ) : (
           <div className="space-y-6">
             {cases.map(c => (
-              <Link key={c.slug} href={`/${l}/case-studies/${c.slug}`}
+              <Link key={c.slug} href={`/${locale}/case-studies/${c.slug}`}
                 className="group flex flex-col md:flex-row md:items-center gap-6 rounded-2xl border border-gray-200 p-8 hover:border-[#F7D142]/30 hover:shadow-lg transition-all"
               >
                 <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#F7D142]/10">

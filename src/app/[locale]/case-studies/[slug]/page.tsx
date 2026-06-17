@@ -20,14 +20,13 @@ export default async function CaseStudyDetailPage({ params }: { params: Promise<
   const c = await prisma.caseStudy.findFirst({ where: { slug, locale } })
   if (!c) notFound()
 
-  const l = ['en', 'zh', 'ja'].includes(locale) ? locale : 'en'
   const dateLoc: Record<string, string> = { zh: 'zh-CN', ja: 'ja-JP', es: 'es-ES', de: 'de-DE', fr: 'fr-FR', pt: 'pt-BR', ar: 'ar-SA', ru: 'ru-RU' }
-  const dl = dateLoc[l] || 'en-US'
+  const dl = dateLoc[locale] || 'en-US'
 
   return (
     <main className="min-h-screen bg-white pt-28 pb-20">
       <div className="mx-auto max-w-[800px] px-6">
-        <Link href={`/${l}/case-studies`} className="inline-flex items-center gap-1 text-[1.3rem] text-[#F7D142] hover:underline mb-8">
+        <Link href={`/${locale}/case-studies`} className="inline-flex items-center gap-1 text-[1.3rem] text-[#F7D142] hover:underline mb-8">
           <ArrowLeft size={16} /> {t('backToCaseStudies')}
         </Link>
 
@@ -67,7 +66,7 @@ export default async function CaseStudyDetailPage({ params }: { params: Promise<
         </div>
 
         <div className="mt-12 border-t border-gray-200 pt-8">
-          <Link href={`/${l}/contact?subject=${encodeURIComponent(c.title)}`}
+          <Link href={`/${locale}/contact?subject=${encodeURIComponent(c.title)}`}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0f2a44] text-white text-[1.3rem] font-semibold hover:bg-[#1e4a7a] transition-colors"
           >
             {t('getSimilar')}
