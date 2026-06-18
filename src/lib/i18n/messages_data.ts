@@ -1040,14 +1040,14 @@ export const allMessages: Record<string, Record<string, unknown>> = {
     "invalidEmail": "Ung眉ltige E-Mail-Adresse",
     "addresses": {
       "title": "RisunicPower",
-      "rdCenter": "F&E-Zentrum",
-      "rdAddress": "12F, Gebäude A, Shenghui Hongxing Chuangzhi Plaza, Tongren Road, Tianliao Community, Yutang Street, Guangming District, Shenzhen, China",
-      "factory": "Fabrik",
-      "factoryAddress": "No. 1 Hongchuan Road, Huicheng District, Huizhou City, Provinz Guangdong, China",
-      "taiwan": "Büro Taiwan",
-      "taiwanAddress": "2F, No. 5, Lane 345, Yangguang Street, Neihu District, Taipei City, Taiwan",
+      "rdCenter": "📍 F&E-Zentrum",
+      "rdAddress": "Gebäude A, 12. Etage, Shenghui Hongxing Chuangzhi Plaza, Tongren-Straße, Tianliao, Yutang, Bezirk Guangming, Shenzhen, China",
+      "factory": "🏭 Fabrik",
+      "factoryAddress": "Hongchuan-Straße 1, Bezirk Huicheng, Stadt Huizhou, Provinz Guangdong, China",
+      "taiwan": "🇨🇳 Taiwan-Büro",
+      "taiwanAddress": "2. Etage, Nr. 5, Gasse 345, Yangguang-Straße, Bezirk Neihu, Taipeh, Taiwan",
       "email": "info@risunicpower.com",
-      "tel": "Tel: +86 755 2350 0205"
+      "tel": "Tel.: +86 755 2350 0205"
     },
     "whyWorkWithUs": {
       "title": "Warum mit uns arbeiten?",
@@ -1103,7 +1103,7 @@ export const allMessages: Record<string, Record<string, unknown>> = {
     "contact": "Kontakt",
     "blog": "Blog",
     "about": "Über uns",
-    "address": "Guangming District, Shenzhen, Guangdong, China"
+    "address": "Bezirk Guangming, Shenzhen, Guangdong, China"
   },
   "NotFound": {
     "title": "Seite nicht gefunden",
@@ -1349,14 +1349,14 @@ export const allMessages: Record<string, Record<string, unknown>> = {
     "invalidEmail": "Adresse e-mail invalide",
     "addresses": {
       "title": "RisunicPower",
-      "rdCenter": "Centre R&D",
-      "rdAddress": "12F, Bâtiment A, Shenghui Hongxing Chuangzhi Plaza, Tongren Road, Tianliao Community, Yutang Street, Guangming District, Shenzhen, Chine",
-      "factory": "Usine",
-      "factoryAddress": "No. 1 Hongchuan Road, District Huicheng, Huizhou, Province du Guangdong, Chine",
-      "taiwan": "Bureau de Taïwan",
-      "taiwanAddress": "2F, No. 5, Allée 345, Rue Yangguang, District Neihu, Taipei, Taïwan",
+      "rdCenter": "📍 Centre de R.&D.",
+      "rdAddress": "Bâtiment A, 12ᵉ étage, Shenghui Hongxing Chuangzhi Plaza, Rue Tongren, Communauté Tianliao, Rue Yutang, District Guangming, Shenzhen, Chine",
+      "factory": "🏭 Usine",
+      "factoryAddress": "1 Rue Hongchuan, District Huicheng, Huizhou, Province du Guangdong, Chine",
+      "taiwan": "🇨🇳 Bureau de Taïwan",
+      "taiwanAddress": "2ᵉ étage, 5 Allée 345, Rue Yangguang, District Neihu, Taipei, Taïwan",
       "email": "info@risunicpower.com",
-      "tel": "Tél: +86 755 2350 0205"
+      "tel": "Tél. : +86 755 2350 0205"
     },
     "whyWorkWithUs": {
       "title": "Pourquoi Travailler Avec Nous?",
@@ -1412,7 +1412,7 @@ export const allMessages: Record<string, Record<string, unknown>> = {
     "contact": "Contact",
     "blog": "Blog",
     "about": "À propos",
-    "address": "Guangming District, Shenzhen, Guangdong, Chine"
+    "address": "District de Guangming, Shenzhen, Guangdong, Chine"
   },
   "NotFound": {
     "title": "Page non trouv茅e",
@@ -1657,14 +1657,14 @@ export const allMessages: Record<string, Record<string, unknown>> = {
     "invalidEmail": "Direcci贸n de correo electr贸nico no v谩lida",
     "addresses": {
       "title": "RisunicPower",
-      "rdCenter": "Centro de I+D",
-      "rdAddress": "12F, Edificio A, Shenghui Hongxing Chuangzhi Plaza, Tongren Road, Comunidad Tianliao, Calle Yutang, Distrito Guangming, Shenzhen, China",
-      "factory": "Fábrica",
-      "factoryAddress": "No. 1 Hongchuan Road, Distrito Huicheng, Ciudad Huizhou, Provincia Guangdong, China",
-      "taiwan": "Oficina de Taiwán",
-      "taiwanAddress": "2F, No. 5, Callejón 345, Calle Yangguang, Distrito Neihu, Ciudad Taipei, Taiwán",
+      "rdCenter": "📍 Centro de I+D",
+      "rdAddress": "Edificio A, Piso 12, Shenghui Hongxing Chuangzhi Plaza, Calle Tongren, Comunidad Tianliao, Calle Yutang, Distrito Guangming, Shenzhen, China",
+      "factory": "🏭 Fábrica",
+      "factoryAddress": "Calle Hongchuan 1, Distrito Huicheng, Huizhou, Provincia de Guangdong, China",
+      "taiwan": "🇨🇳 Oficina de Taiwán",
+      "taiwanAddress": "Piso 2, Callejón 345 No. 5, Calle Yangguang, Distrito Neihu, Taipéi, Taiwán",
       "email": "info@risunicpower.com",
-      "tel": "Tel: +86 755 2350 0205"
+      "tel": "Tel.: +86 755 2350 0205"
     },
     "whyWorkWithUs": {
       "title": "¿Por Qué Trabajar Con Nosotros?",
@@ -1965,14 +1965,14 @@ export const allMessages: Record<string, Record<string, unknown>> = {
     "invalidEmail": "Endere莽o de e-mail inv谩lido",
     "addresses": {
       "title": "RisunicPower",
-      "rdCenter": "Centro de P&D",
-      "rdAddress": "12F, Edifício A, Shenghui Hongxing Chuangzhi Plaza, Tongren Road, Tianliao Community, Yutang Street, Guangming District, Shenzhen, China",
-      "factory": "Fábrica",
-      "factoryAddress": "No. 1 Hongchuan Road, Distrito Huicheng, Huizhou, Província de Guangdong, China",
-      "taiwan": "Escritório de Taiwan",
-      "taiwanAddress": "2F, No. 5, Viela 345, Rua Yangguang, Distrito Neihu, Cidade de Taipei, Taiwan",
+      "rdCenter": "📍 Centro de P&D",
+      "rdAddress": "Edifício A, 12º Andar, Shenghui Hongxing Chuangzhi Plaza, Estrada Tongren, Comunidade Tianliao, Rua Yutang, Distrito Guangming, Shenzhen, China",
+      "factory": "🏭 Fábrica",
+      "factoryAddress": "Estrada Hongchuan 1, Distrito Huicheng, Cidade Huizhou, Província Guangdong, China",
+      "taiwan": "🇨🇳 Escritório de Taiwan",
+      "taiwanAddress": "2º Andar, Viela 345 No. 5, Rua Yangguang, Distrito Neihu, Cidade Taipei, Taiwan",
       "email": "info@risunicpower.com",
-      "tel": "Tel: +86 755 2350 0205"
+      "tel": "Tel.: +86 755 2350 0205"
     },
     "whyWorkWithUs": {
       "title": "Por Que Trabalhar Conosco?",
@@ -2274,14 +2274,14 @@ export const allMessages: Record<string, Record<string, unknown>> = {
     "invalidEmail": "袧械泻芯褉褉械泻褌薪褘泄 邪写褉械褋 褝谢械泻褌褉芯薪薪芯泄 锌芯褔褌褘",
     "addresses": {
       "title": "RisunicPower",
-      "rdCenter": "Центр НИОКР",
-      "rdAddress": "12F, Здание A, Shenghui Hongxing Chuangzhi Plaza, Tongren Road, Tianliao Community, Yutang Street, Guangming District, Шэньчжэнь, Китай",
-      "factory": "Завод",
-      "factoryAddress": "No. 1 Hongchuan Road, Район Huicheng, Город Хуэйчжоу, Провинция Гуандун, Китай",
-      "taiwan": "Офис в Тайване",
-      "taiwanAddress": "2F, No. 5, Переулок 345, Улица Yangguang, Район Neihu, Город Тайбэй, Тайвань",
+      "rdCenter": "📍 Центр исследований и разработок",
+      "rdAddress": "Здание А, 12-й этаж, Shenghui Hongxing Chuangzhi Plaza, улица Тунжэнь, район Тяньляо, улица Юйтан, район Гуанмин, Шэньчжэнь, Китай",
+      "factory": "🏭 Завод",
+      "factoryAddress": "Улица Хунчуань 1, район Хуэйчэн, город Хуэйчжоу, провинция Гуандун, Китай",
+      "taiwan": "🇨🇳 Офис Тайваня",
+      "taiwanAddress": "2-й этаж, переулок 345, дом 5, улица Янгуан, район Нэйху, город Тайбэй, Тайвань",
       "email": "info@risunicpower.com",
-      "tel": "Тел: +86 755 2350 0205"
+      "tel": "Тел.: +86 755 2350 0205"
     },
     "whyWorkWithUs": {
       "title": "Почему Стоит Работать с Нами?",
@@ -2585,14 +2585,14 @@ export const allMessages: Record<string, Record<string, unknown>> = {
     "invalidEmail": "毓賳賵丕賳 亘乇賷丿 廿賱賰鬲乇賵賳賷 睾賷乇 氐丕賱丨",
     "addresses": {
       "title": "RisunicPower",
-      "rdCenter": "مركز البحث والتطوير",
-      "rdAddress": "الطابق 12، مبنى A، Shenghui Hongxing Chuangzhi Plaza، طريق Tongren، مجتمع Tianliao، شارع Yutang، منطقة Guangming، شنتشن، الصين",
-      "factory": "المصنع",
-      "factoryAddress": "رقم 1 طريق Hongchuan، منطقة Huicheng، مدينة هويتشو، مقاطعة قوانغدونغ، الصين",
-      "taiwan": "مكتب تايوان",
-      "taiwanAddress": "الطابق 2، رقم 5، زقاق 345، شارع Yangguang، منطقة Neihu، مدينة تايبيه، تايوان",
+      "rdCenter": "📍 مركز البحث والتطوير",
+      "rdAddress": "الطابق 12، المبنى A، ساحة شنغهوي هونغشينغ تشوانغتشي، طريق تونغرن، مجتمع تيانلياو، شارع يوتانغ، منطقة غوانغمينغ، شنتشن، الصين",
+      "factory": "🏭 المصنع",
+      "factoryAddress": "رقم 1، طريق هونغتشوان، منطقة هويتشنغ، مدينة هويتشو، مقاطعة قوانغدونغ، الصين",
+      "taiwan": "🇨🇳 مكتب تايوان",
+      "taiwanAddress": "الطابق 2، رقم 5، زقاق 345، شارع يانغوانغ، حي نيهو، مدينة تايبيه، تايوان",
       "email": "info@risunicpower.com",
-      "tel": "هاتف: 0205 2350 755 86+"
+      "tel": "هاتف: +86 755 2350 0205"
     },
     "whyWorkWithUs": {
       "title": "لماذا العمل معنا؟",
@@ -2648,7 +2648,7 @@ export const allMessages: Record<string, Record<string, unknown>> = {
     "contact": "اتصل",
     "blog": "مدونة",
     "about": "عنا",
-    "address": "منطقة Guangming، شنتشن، قوانغدونغ، الصين"
+    "address": "منطقة غوانغمينغ، شنتشن، قوانغدونغ، الصين"
   },
   "NotFound": {
     "title": "丕賱氐賮丨丞 睾賷乇 賲賵噩賵丿丞",
