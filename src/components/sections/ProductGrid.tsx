@@ -34,9 +34,9 @@ export default function ProductGrid({ categories }: { categories: CategoryData[]
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((cat, i) => (
-            <div key={cat.slug}>
+            <div key={cat.slug} className="flex">
               <Link href={`/${locale}/products/${cat.slug}`}
-                className="block bg-white rounded-2xl border border-[#e2e8ef] hover:border-[#F7D142]/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
+                className="flex flex-col bg-white rounded-2xl border border-[#e2e8ef] hover:border-[#F7D142]/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden w-full"
               >
                 {/* Product image — 80% of card width */}
                 <div className="w-[80%] mx-auto mt-8 aspect-[4/3] bg-gradient-to-br from-[#f7f8fa] to-[#e2e8ef] rounded-xl flex items-center justify-center overflow-hidden">
@@ -46,15 +46,15 @@ export default function ProductGrid({ categories }: { categories: CategoryData[]
                     <img src="/images/category-icon.png" alt="" className="w-14 h-14 object-contain opacity-30" />
                   )}
                 </div>
-                {/* Card text */}
-                <div className="p-6 pt-5">
-                  <h3 className="font-brand text-[2rem] font-bold text-[#0f2a44] mb-1.5 group-hover:text-[#F7D142] transition-colors">
+                {/* Card text — flex-grow for equal heights */}
+                <div className="p-6 pt-5 flex flex-col flex-1">
+                  <h3 className="font-brand text-[2rem] font-bold text-[#0f2a44] mb-1.5 group-hover:text-[#F7D142] transition-colors line-clamp-2 min-h-[5rem]">
                     {cat.name}
                   </h3>
                   {cat.subtitle && (
-                    <p className="text-[1.3rem] text-[#6b7a8f] mb-4 tracking-wide uppercase">{cat.subtitle}</p>
+                    <p className="text-[1.3rem] text-[#6b7a8f] mb-4 tracking-wide uppercase line-clamp-1">{cat.subtitle}</p>
                   )}
-                  <p className="text-[1.2rem] text-[#6b7a8f] mb-6">{cat.count} {t('productGrid.items')}</p>
+                  <p className="text-[1.2rem] text-[#6b7a8f] mb-6 mt-auto">{cat.count} {t('productGrid.items')}</p>
                   <span className="inline-flex items-center gap-1.5 text-[1.3rem] font-medium text-[#F7D142] group-hover:gap-3 transition-all">
                     {t('productGrid.viewAll')} <ArrowRight size={14} />
                   </span>
