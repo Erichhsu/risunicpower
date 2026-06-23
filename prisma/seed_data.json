@@ -1854,7 +1854,7 @@
         },
         {
           "l": "Battery Type",
-          "v": "锂电池 (Li-ion)",
+          "v": "(Li-ion)",
           "o": 12
         },
         {
@@ -2736,7 +2736,7 @@
         },
         {
           "l": "Battery Type",
-          "v": "锂电池 (Li-ion)",
+          "v": "(Li-ion)",
           "o": 12
         },
         {
@@ -3573,7 +3573,7 @@
         },
         {
           "l": "Output VoltageWaveform",
-          "v": "纯正弦波",
+          "v": "Pure Sine Wave",
           "o": 3
         },
         {
@@ -3603,7 +3603,7 @@
         },
         {
           "l": "Battery Type",
-          "v": "LiFePO4 磷酸铁锂",
+          "v": "LiFePO4",
           "o": 9
         },
         {
@@ -3628,12 +3628,12 @@
         },
         {
           "l": "Cycle Life",
-          "v": "8000次",
+          "v": "8000",
           "o": 14
         },
         {
           "l": "Dimensions LxWxH",
-          "v": "360x90x500mm (壁挂薄款)",
+          "v": "360x90x500mm",
           "o": 15
         },
         {
@@ -4533,7 +4533,7 @@
         },
         {
           "l": "Output VoltageWaveform",
-          "v": "纯正弦波",
+          "v": "Pure Sine Wave",
           "o": 3
         },
         {
@@ -4573,7 +4573,7 @@
         },
         {
           "l": "Battery Type",
-          "v": "LiFePO4 磷酸铁锂",
+          "v": "LiFePO4",
           "o": 11
         },
         {
@@ -4603,7 +4603,7 @@
         },
         {
           "l": "Cycle Life",
-          "v": "8000次",
+          "v": "8000",
           "o": 17
         },
         {
@@ -9063,7 +9063,7 @@
         },
         {
           "l": "ACInput Voltage Range",
-          "v": "90~280V (普通) / 170~280V (UPS)",
+          "v": "90~280V  / 170~280V (UPS)",
           "o": 3
         },
         {
@@ -9083,7 +9083,7 @@
         },
         {
           "l": "ACOutput Waveform",
-          "v": "纯正弦波",
+          "v": "Pure Sine Wave",
           "o": 7
         },
         {
@@ -9118,7 +9118,7 @@
         },
         {
           "l": "Battery Type",
-          "v": "LiFePO4 磷酸铁锂",
+          "v": "LiFePO4",
           "o": 14
         },
         {
@@ -9168,7 +9168,7 @@
         },
         {
           "l": "Product Dimensions LxWxH",
-          "v": "约400x300x600mm",
+          "v": "400x300x600mm",
           "o": 24
         }
       ],
@@ -11253,7 +11253,7 @@
         },
         {
           "l": "Output VoltageWaveform",
-          "v": "纯正弦波",
+          "v": "Pure Sine Wave",
           "o": 3
         },
         {
@@ -11303,7 +11303,7 @@
         },
         {
           "l": "Battery Type",
-          "v": "LiFePO4 磷酸铁锂",
+          "v": "LiFePO4",
           "o": 13
         },
         {
@@ -11333,7 +11333,7 @@
         },
         {
           "l": "Cycle Life",
-          "v": "8000次",
+          "v": "8000",
           "o": 19
         },
         {
@@ -12438,7 +12438,7 @@
         },
         {
           "l": "Output VoltageWaveform",
-          "v": "纯正弦波",
+          "v": "Pure Sine Wave",
           "o": 3
         },
         {
@@ -12478,7 +12478,7 @@
         },
         {
           "l": "Battery Type",
-          "v": "LiFePO4 磷酸铁锂",
+          "v": "LiFePO4",
           "o": 11
         },
         {
@@ -12508,7 +12508,7 @@
         },
         {
           "l": "Cycle Life",
-          "v": "8000次",
+          "v": "8000",
           "o": 17
         },
         {
@@ -13533,7 +13533,7 @@
         },
         {
           "l": "ACInput Voltage Range",
-          "v": "90~280V (普通) / 170~280V (UPS)",
+          "v": "90~280V  / 170~280V (UPS)",
           "o": 3
         },
         {
@@ -13553,7 +13553,7 @@
         },
         {
           "l": "ACOutput Waveform",
-          "v": "纯正弦波",
+          "v": "Pure Sine Wave",
           "o": 7
         },
         {
@@ -13588,7 +13588,7 @@
         },
         {
           "l": "Battery Type",
-          "v": "LiFePO4 磷酸铁锂",
+          "v": "LiFePO4",
           "o": 14
         },
         {
@@ -14929,7 +14929,7 @@
         },
         {
           "l": "Adjustable Power Factor",
-          "v": "0.8超前~0.8滞后",
+          "v": "0.8~0.8",
           "o": 8
         },
         {
@@ -14964,7 +14964,7 @@
         },
         {
           "l": "Battery Type",
-          "v": "LiFePO4 磷酸铁锂",
+          "v": "LiFePO4",
           "o": 15
         },
         {
@@ -14999,7 +14999,7 @@
         },
         {
           "l": "Protection Rating",
-          "v": "IP65 (户外安装)",
+          "v": "IP65",
           "o": 22
         },
         {
@@ -18094,12 +18094,12 @@
         },
         {
           "l": "Description",
-          "v": "双向逆变器 700W",
+          "v": "700W",
           "o": 2
         },
         {
           "l": "Type",
-          "v": "后备式UPS / 离线式UPS",
+          "v": "UPS / UPS",
           "o": 3
         },
         {
@@ -18114,7 +18114,7 @@
         },
         {
           "l": "DC Input-QuiescentCurrent",
-          "v": "≤100uA（关机）",
+          "v": "≤100uA",
           "o": 6
         },
         {
@@ -18134,7 +18134,7 @@
         },
         {
           "l": "AC Output-WaveformDistortion",
-          "v": "≤3% (额定) / ≤7% (低压)",
+          "v": "≤3%  / ≤7%",
           "o": 10
         },
         {
@@ -18149,12 +18149,12 @@
         },
         {
           "l": "AC Output - Capacitive & Inductive Load",
-          "v": "600VA（同时带100W阻性）",
+          "v": "600VA100W",
           "o": 13
         },
         {
           "l": "AC Output Waveform",
-          "v": "纯正弦波 (标准正弦波)",
+          "v": "Pure Sine Wave",
           "o": 14
         },
         {
@@ -18204,7 +18204,7 @@
         },
         {
           "l": "DC Output(Charging)-Trickle",
-          "v": "≤3A（<10V）",
+          "v": "≤3A<10V",
           "o": 24
         },
         {
@@ -18254,12 +18254,12 @@
         },
         {
           "l": "AC Output-Short Circuit Protection",
-          "v": "有（需手动复归）",
+          "v": "Yes (Manual Reset Required)",
           "o": 34
         },
         {
           "l": "AC Output-Over Temperature Protection",
-          "v": "95±5℃（恢复60℃）",
+          "v": "95±5℃60℃",
           "o": 35
         },
         {
@@ -18299,17 +18299,17 @@
         },
         {
           "l": "UPSMode",
-          "v": "支持，旁路优先，切换时间<20ms",
+          "v": "<20ms",
           "o": 43
         },
         {
           "l": "Communication",
-          "v": "TTL通讯（可选）",
+          "v": "TTL",
           "o": 44
         },
         {
           "l": "Cooling Method",
-          "v": "风扇强制制冷",
+          "v": "Forced Air Cooling",
           "o": 45
         },
         {
@@ -18324,17 +18324,17 @@
         },
         {
           "l": "Operating Humidity",
-          "v": "10%~90%（无凝露）",
+          "v": "10%~90%",
           "o": 48
         },
         {
           "l": "AltitudeAltitude",
-          "v": ">3000m降额",
+          "v": ">3000m",
           "o": 49
         },
         {
           "l": "MTBFTime",
-          "v": "≥30000小时",
+          "v": "≥30000",
           "o": 50
         },
         {
@@ -18344,7 +18344,7 @@
         },
         {
           "l": "Acoustic Noise",
-          "v": "≤55dB（使用70mm风扇）",
+          "v": "≤55dB70mm",
           "o": 52
         }
       ],
@@ -20692,12 +20692,12 @@
         },
         {
           "l": "Description",
-          "v": "逆变器 1.4KW",
+          "v": "1.4KW",
           "o": 2
         },
         {
           "l": "Type",
-          "v": "后备式UPS / 离线式UPS",
+          "v": "UPS / UPS",
           "o": 3
         },
         {
@@ -20712,7 +20712,7 @@
         },
         {
           "l": "DC Input-QuiescentCurrent",
-          "v": "≤100uA（关机）",
+          "v": "≤100uA",
           "o": 6
         },
         {
@@ -20732,7 +20732,7 @@
         },
         {
           "l": "AC Output-WaveformDistortion",
-          "v": "≤3% (额定) / ≤7% (低压)",
+          "v": "≤3%  / ≤7%",
           "o": 10
         },
         {
@@ -20747,12 +20747,12 @@
         },
         {
           "l": "AC Output - Capacitive & Inductive Load",
-          "v": "1400VA（同时带100W阻性）",
+          "v": "1400VA100W",
           "o": 13
         },
         {
           "l": "AC Output Waveform",
-          "v": "纯正弦波 (标准正弦波)",
+          "v": "Pure Sine Wave",
           "o": 14
         },
         {
@@ -20802,7 +20802,7 @@
         },
         {
           "l": "DC Output(Charging)-Trickle",
-          "v": "3±0.5A（<21V）",
+          "v": "3±0.5A<21V",
           "o": 24
         },
         {
@@ -20852,12 +20852,12 @@
         },
         {
           "l": "AC Output-Short Circuit Protection",
-          "v": "有（需手动复归）",
+          "v": "Yes (Manual Reset Required)",
           "o": 34
         },
         {
           "l": "AC Output-Over Temperature Protection",
-          "v": "95±5℃（恢复60℃）",
+          "v": "95±5℃60℃",
           "o": 35
         },
         {
@@ -20897,17 +20897,17 @@
         },
         {
           "l": "UPSMode",
-          "v": "支持，旁路优先，切换时间<20ms",
+          "v": "<20ms",
           "o": 43
         },
         {
           "l": "Communication",
-          "v": "TTL/RS485（可选）",
+          "v": "TTL/RS485",
           "o": 44
         },
         {
           "l": "Cooling Method",
-          "v": "风扇强制制冷",
+          "v": "Forced Air Cooling",
           "o": 45
         },
         {
@@ -20922,22 +20922,22 @@
         },
         {
           "l": "Operating Humidity",
-          "v": "10%~90%（无凝露）",
+          "v": "10%~90%",
           "o": 48
         },
         {
           "l": "AltitudeAltitude",
-          "v": ">3000m降额",
+          "v": ">3000m",
           "o": 49
         },
         {
           "l": "MTBFTime",
-          "v": "≥30000小时",
+          "v": "≥30000",
           "o": 50
         },
         {
           "l": "Acoustic Noise",
-          "v": "≤55dB（使用70mm风扇）",
+          "v": "≤55dB70mm",
           "o": 51
         }
       ],
@@ -23240,7 +23240,7 @@
         },
         {
           "l": "Description",
-          "v": "24V 2.4KW 双向逆变器 / 60~100V 1.4KW MPPT",
+          "v": "24V 2.4KW / 60~100V 1.4KW MPPT",
           "o": 1
         },
         {
@@ -23260,7 +23260,7 @@
         },
         {
           "l": "AC Mode-Output Waveform",
-          "v": "纯正弦波",
+          "v": "Pure Sine Wave",
           "o": 5
         },
         {
@@ -23280,7 +23280,7 @@
         },
         {
           "l": "AC Mode-Transfer Time(UPS)",
-          "v": "10ms (典型)",
+          "v": "10ms",
           "o": 9
         },
         {
@@ -23365,17 +23365,17 @@
         },
         {
           "l": "InverterMode-Recommended Battery",
-          "v": "铅酸密封/GEL/AGM/LFP",
+          "v": "GEL/AGM/LFP",
           "o": 26
         },
         {
           "l": "Communication",
-          "v": "干接点(选) / RS485 / SNMP(选) / MODBUS(选)",
+          "v": "RS485 / SNMP / MODBUS",
           "o": 27
         },
         {
           "l": "Monitoring",
-          "v": "PC软件(选) / 远程监控(选)",
+          "v": "PC",
           "o": 28
         },
         {
@@ -24971,7 +24971,7 @@
         },
         {
           "l": "Description",
-          "v": "逆变器/充电器 (Inverter/Charger)",
+          "v": "(Inverter/Charger)",
           "o": 1
         },
         {
@@ -24991,7 +24991,7 @@
         },
         {
           "l": "Output Waveform",
-          "v": "纯正弦波",
+          "v": "Pure Sine Wave",
           "o": 5
         },
         {
@@ -25532,7 +25532,7 @@
         },
         {
           "l": "Description",
-          "v": "逆变器/充电器 (Inverter/Charger)",
+          "v": "(Inverter/Charger)",
           "o": 1
         },
         {
@@ -25552,7 +25552,7 @@
         },
         {
           "l": "Output Waveform",
-          "v": "纯正弦波",
+          "v": "Pure Sine Wave",
           "o": 5
         },
         {
@@ -26093,7 +26093,7 @@
         },
         {
           "l": "Description",
-          "v": "3KW 双向逆变器",
+          "v": "3KW",
           "o": 1
         },
         {
@@ -26138,7 +26138,7 @@
         },
         {
           "l": "AC Output-WaveformDistortion",
-          "v": "≤3% (额定) / ≤7% (低压)",
+          "v": "≤3%  / ≤7%",
           "o": 10
         },
         {
@@ -26148,7 +26148,7 @@
         },
         {
           "l": "AC Output Waveform",
-          "v": "标准正弦波",
+          "v": "Standard Sine Wave",
           "o": 12
         },
         {
@@ -26223,12 +26223,12 @@
         },
         {
           "l": "AC Output Protection - Short Circuit",
-          "v": "有 (需手动复归)",
+          "v": "Yes (Manual Reset Required)",
           "o": 27
         },
         {
           "l": "AC Output Protection - Over Temperature",
-          "v": "有 (需手动复归)",
+          "v": "Yes (Manual Reset Required)",
           "o": 28
         },
         {
@@ -26263,17 +26263,17 @@
         },
         {
           "l": "Altitude",
-          "v": ">3000m降额",
+          "v": ">3000m",
           "o": 35
         },
         {
           "l": "Cooling Method",
-          "v": "风扇强制制冷",
+          "v": "Forced Air Cooling",
           "o": 36
         },
         {
           "l": "MTBF",
-          "v": "≥30000小时",
+          "v": "≥30000",
           "o": 37
         },
         {
@@ -26283,7 +26283,7 @@
         },
         {
           "l": "Conformal CoatingRequirement",
-          "v": "线路板双面三防处理",
+          "v": "Double-sided Conformal Coating",
           "o": 39
         }
       ],
@@ -28112,12 +28112,12 @@
         },
         {
           "l": "Description",
-          "v": "3.2V 500W 双向逆变器 (LiFePO4单电芯方案)",
+          "v": "3.2V 500W (LiFePO4)",
           "o": 1
         },
         {
           "l": "DC Input-Rated Voltage",
-          "v": "3.2Vdc (LIP单电芯)",
+          "v": "3.2Vdc (LIP)",
           "o": 2
         },
         {
@@ -28167,17 +28167,17 @@
         },
         {
           "l": "AC Output Waveform",
-          "v": "标准正弦波",
+          "v": "Standard Sine Wave",
           "o": 12
         },
         {
           "l": "AC Output-Overload Protection",
-          "v": "恒功率输出；<170Vac延时20s关",
+          "v": "<170Vac20s",
           "o": 13
         },
         {
           "l": "AC Output-Short Circuit Protection",
-          "v": "有",
+          "v": "Yes",
           "o": 14
         },
         {
@@ -28237,7 +28237,7 @@
         },
         {
           "l": "PV Charger - Reverse Polarity",
-          "v": "有",
+          "v": "Yes",
           "o": 26
         },
         {
@@ -28267,7 +28267,7 @@
         },
         {
           "l": "Cooling Method",
-          "v": "风扇强制制冷",
+          "v": "Forced Air Cooling",
           "o": 32
         },
         {
@@ -29948,7 +29948,7 @@
         },
         {
           "l": "Description",
-          "v": "离网逆变器/充电器 (Off-Grid Inverter/Charger)",
+          "v": "(Off-Grid Inverter/Charger)",
           "o": 1
         },
         {
@@ -29958,7 +29958,7 @@
         },
         {
           "l": "LineMode-InputWaveform",
-          "v": "正弦波 (市电/发电机)",
+          "v": "(/)",
           "o": 3
         },
         {
@@ -29978,7 +29978,7 @@
         },
         {
           "l": "LineMode-Rated Frequency",
-          "v": "50Hz (自动检测)",
+          "v": "50Hz",
           "o": 7
         },
         {
@@ -29988,7 +29988,7 @@
         },
         {
           "l": "LineMode-Transfer Time",
-          "v": "10ms (典型)",
+          "v": "10ms",
           "o": 9
         },
         {
@@ -29998,7 +29998,7 @@
         },
         {
           "l": "InverterMode-Output Waveform",
-          "v": "纯正弦波",
+          "v": "Pure Sine Wave",
           "o": 11
         },
         {
@@ -30018,7 +30018,7 @@
         },
         {
           "l": "InverterMode-SurgeCapability",
-          "v": "1.5倍额定功率 15s",
+          "v": "1.5 15s",
           "o": 15
         },
         {
@@ -31742,7 +31742,7 @@
         },
         {
           "l": "Description",
-          "v": "离网逆变器/充电器 (Off-Grid Inverter/Charger)",
+          "v": "(Off-Grid Inverter/Charger)",
           "o": 1
         },
         {
@@ -31752,7 +31752,7 @@
         },
         {
           "l": "LineMode-InputWaveform",
-          "v": "正弦波 (市电/发电机)",
+          "v": "(/)",
           "o": 3
         },
         {
@@ -31772,7 +31772,7 @@
         },
         {
           "l": "LineMode-Rated Frequency",
-          "v": "50Hz (自动检测)",
+          "v": "50Hz",
           "o": 7
         },
         {
@@ -31782,7 +31782,7 @@
         },
         {
           "l": "LineMode-Transfer Time",
-          "v": "20ms (典型)",
+          "v": "20ms",
           "o": 9
         },
         {
@@ -31792,7 +31792,7 @@
         },
         {
           "l": "InverterMode-Output Waveform",
-          "v": "纯正弦波",
+          "v": "Pure Sine Wave",
           "o": 11
         },
         {
@@ -31812,7 +31812,7 @@
         },
         {
           "l": "InverterMode-SurgeCapability",
-          "v": "1.5倍额定功率 15s",
+          "v": "1.5 15s",
           "o": 15
         },
         {
@@ -31887,7 +31887,7 @@
         },
         {
           "l": "PV Input-MaxInput Current",
-          "v": "27A×2 (双MPPT?)",
+          "v": "27A×2 (MPPT?)",
           "o": 30
         },
         {
@@ -33620,12 +33620,12 @@
         },
         {
           "l": "Description",
-          "v": "6.4V 1.2KW 双向逆变器 (双LiFePO4电芯串联)",
+          "v": "6.4V 1.2KW (LiFePO4)",
           "o": 1
         },
         {
           "l": "DC Input-Rated Voltage",
-          "v": "6.4Vdc (2×LIP电芯串联)",
+          "v": "6.4Vdc (2×LIP)",
           "o": 2
         },
         {
@@ -33675,17 +33675,17 @@
         },
         {
           "l": "AC Output Waveform",
-          "v": "标准正弦波",
+          "v": "Standard Sine Wave",
           "o": 12
         },
         {
           "l": "AC Output - Over Power Protection",
-          "v": "恒功率；<170Vac延时30s关；<160Vac立即关机",
+          "v": "<170Vac30s<160Vac",
           "o": 13
         },
         {
           "l": "AC Output-Short Circuit Protection",
-          "v": "有",
+          "v": "Yes",
           "o": 14
         },
         {
@@ -33725,7 +33725,7 @@
         },
         {
           "l": "AC Charging-Bypass Output",
-          "v": "90~280Vac (与输入一致)",
+          "v": "90~280Vac",
           "o": 22
         },
         {
@@ -33745,12 +33745,12 @@
         },
         {
           "l": "PV Charger - Reverse Polarity",
-          "v": "有",
+          "v": "Yes",
           "o": 26
         },
         {
           "l": "PV Charger - PV+AC Simultaneous",
-          "v": "550W (PV优先, AC补足)",
+          "v": "550W (PV, AC)",
           "o": 27
         },
         {
@@ -33780,7 +33780,7 @@
         },
         {
           "l": "Cooling Method",
-          "v": "风扇强制制冷",
+          "v": "Forced Air Cooling",
           "o": 33
         },
         {
@@ -35447,7 +35447,7 @@
         },
         {
           "l": "Description",
-          "v": "裂相逆变器 8KW (Split Phase Inverter)",
+          "v": "8KW (Split Phase Inverter)",
           "o": 1
         },
         {
@@ -35457,12 +35457,12 @@
         },
         {
           "l": "Battery VoltageRange",
-          "v": "40~58.4Vdc (LCD可设)",
+          "v": "40~58.4Vdc (LCD)",
           "o": 3
         },
         {
           "l": "Battery Type",
-          "v": "铅酸/锂电池",
+          "v": "Lead-acid / Lithium",
           "o": 4
         },
         {
@@ -35487,17 +35487,17 @@
         },
         {
           "l": "AC Mode-Transfer Time(Bypass→Inverter)",
-          "v": "10ms (典型)",
+          "v": "10ms",
           "o": 9
         },
         {
           "l": "AC Mode-Bypass Overload Current",
-          "v": "2极, 50A/50A (L1/L2)",
+          "v": "2, 50A/50A (L1/L2)",
           "o": 10
         },
         {
           "l": "InverterMode-Output Waveform",
-          "v": "纯正弦波",
+          "v": "Pure Sine Wave",
           "o": 11
         },
         {
@@ -35547,7 +35547,7 @@
         },
         {
           "l": "InverterMode-Overload Protection",
-          "v": "102%~110%关5min / 110%~125%关10s / >125%关5s",
+          "v": "102%~110%5min / 110%~125%10s / >125%5s",
           "o": 21
         },
         {
@@ -35557,12 +35557,12 @@
         },
         {
           "l": "InverterMode-Short Circuit Protection",
-          "v": "有",
+          "v": "Yes",
           "o": 23
         },
         {
           "l": "InverterMode-Eco Mode",
-          "v": "负载≤50W进入节能模式",
+          "v": "≤50W",
           "o": 24
         },
         {
@@ -35577,7 +35577,7 @@
         },
         {
           "l": "AC Charging-Short Circuit Protection",
-          "v": "断路器+保险丝",
+          "v": "+",
           "o": 27
         },
         {
@@ -35642,17 +35642,17 @@
         },
         {
           "l": "Cooling Method",
-          "v": "强制风冷（变速风扇）",
+          "v": "Forced Air Cooling (Variable Speed Fan)",
           "o": 40
         },
         {
           "l": "Communication Interface",
-          "v": "USB / RS485 / CAN / (WiFi/GPRS) / 干接点控制",
+          "v": "USB / RS485 / CAN / (WiFi/GPRS)",
           "o": 41
         },
         {
           "l": "Parallel Units",
-          "v": "1~6台",
+          "v": "1~6",
           "o": 42
         }
       ],
@@ -37583,7 +37583,7 @@
         },
         {
           "l": "Description",
-          "v": "裂相逆变器 12KW (Split Phase Inverter)",
+          "v": "12KW (Split Phase Inverter)",
           "o": 1
         },
         {
@@ -37593,12 +37593,12 @@
         },
         {
           "l": "Battery VoltageRange",
-          "v": "40~58.4Vdc (LCD可设)",
+          "v": "40~58.4Vdc (LCD)",
           "o": 3
         },
         {
           "l": "Battery Type",
-          "v": "铅酸/锂电池",
+          "v": "Lead-acid / Lithium",
           "o": 4
         },
         {
@@ -37623,17 +37623,17 @@
         },
         {
           "l": "AC Mode-Transfer Time(Bypass→Inverter)",
-          "v": "10ms (典型)",
+          "v": "10ms",
           "o": 9
         },
         {
           "l": "AC Mode-Bypass Overload Current",
-          "v": "2极, 63A/63A (L1/L2)",
+          "v": "2, 63A/63A (L1/L2)",
           "o": 10
         },
         {
           "l": "InverterMode-Output Waveform",
-          "v": "纯正弦波",
+          "v": "Pure Sine Wave",
           "o": 11
         },
         {
@@ -37683,7 +37683,7 @@
         },
         {
           "l": "InverterMode-Overload Protection",
-          "v": "102%~110%关5min / 110%~125%关10s / >125%关5s",
+          "v": "102%~110%5min / 110%~125%10s / >125%5s",
           "o": 21
         },
         {
@@ -37693,17 +37693,17 @@
         },
         {
           "l": "InverterMode-Short Circuit Protection",
-          "v": "有",
+          "v": "Yes",
           "o": 23
         },
         {
           "l": "InverterMode-BypassCircuit Breaker Rating",
-          "v": "2极, 63A/63A (L1/L2)",
+          "v": "2, 63A/63A (L1/L2)",
           "o": 24
         },
         {
           "l": "InverterMode-Eco Mode",
-          "v": "负载≤50W进入节能模式",
+          "v": "≤50W",
           "o": 25
         },
         {
@@ -37723,12 +37723,12 @@
         },
         {
           "l": "AC Charging-Short Circuit Protection",
-          "v": "断路器+保险丝",
+          "v": "+",
           "o": 29
         },
         {
           "l": "AC Charging-Circuit Breaker Rating",
-          "v": "2极, 63A/63A (L1/L2)",
+          "v": "2, 63A/63A (L1/L2)",
           "o": 30
         },
         {
@@ -37793,17 +37793,17 @@
         },
         {
           "l": "Cooling Method",
-          "v": "强制风冷（变速风扇）",
+          "v": "Forced Air Cooling (Variable Speed Fan)",
           "o": 43
         },
         {
           "l": "Communication Interface",
-          "v": "USB / RS485 / CAN / (WiFi/GPRS) / 干接点控制",
+          "v": "USB / RS485 / CAN / (WiFi/GPRS)",
           "o": 44
         },
         {
           "l": "Parallel Units",
-          "v": "1~6台",
+          "v": "1~6",
           "o": 45
         }
       ],
@@ -39866,7 +39866,7 @@
         },
         {
           "l": "Product Series",
-          "v": "微型逆变器 (Microinverter)",
+          "v": "(Microinverter)",
           "o": 1
         },
         {
@@ -39876,7 +39876,7 @@
         },
         {
           "l": "Input Channels",
-          "v": "1~2路 (单/双组件)",
+          "v": "1~2 (/)",
           "o": 3
         },
         {
@@ -39931,7 +39931,7 @@
         },
         {
           "l": "Cooling Method",
-          "v": "自然冷却 (无风扇)",
+          "v": "Natural Cooling (Fanless)",
           "o": 14
         },
         {
@@ -39941,7 +39941,7 @@
         },
         {
           "l": "NetworkMethod",
-          "v": "无线配网",
+          "v": "Wireless Network",
           "o": 16
         },
         {
@@ -40967,7 +40967,7 @@
         },
         {
           "l": "Product Series",
-          "v": "微型逆变器 (Microinverter)",
+          "v": "(Microinverter)",
           "o": 1
         },
         {
@@ -40977,7 +40977,7 @@
         },
         {
           "l": "Input Channels",
-          "v": "2路 (双组件)",
+          "v": "2",
           "o": 3
         },
         {
@@ -41002,7 +41002,7 @@
         },
         {
           "l": "AC Output-Grid-tieStandard",
-          "v": "VDE-AR-N 4105:2018 (德国)",
+          "v": "VDE-AR-N 4105:2018",
           "o": 8
         },
         {
@@ -41027,7 +41027,7 @@
         },
         {
           "l": "Cooling Method",
-          "v": "自然冷却 (无风扇)",
+          "v": "Natural Cooling (Fanless)",
           "o": 13
         },
         {
@@ -41037,7 +41037,7 @@
         },
         {
           "l": "NetworkMethod",
-          "v": "无线配网",
+          "v": "Wireless Network",
           "o": 15
         },
         {
@@ -42023,7 +42023,7 @@
         },
         {
           "l": "Product Series",
-          "v": "微型逆变器 (Microinverter)",
+          "v": "(Microinverter)",
           "o": 1
         },
         {
@@ -42033,7 +42033,7 @@
         },
         {
           "l": "Input Channels",
-          "v": "4路 (四组件)",
+          "v": "4",
           "o": 3
         },
         {
@@ -42088,7 +42088,7 @@
         },
         {
           "l": "Cooling Method",
-          "v": "自然冷却 (无风扇)",
+          "v": "Natural Cooling (Fanless)",
           "o": 14
         },
         {
@@ -42098,7 +42098,7 @@
         },
         {
           "l": "NetworkMethod",
-          "v": "无线配网",
+          "v": "Wireless Network",
           "o": 16
         },
         {
@@ -43124,17 +43124,17 @@
         },
         {
           "l": "Product Type",
-          "v": "PoE电源适配器",
+          "v": "PoE",
           "o": 1
         },
         {
           "l": "Client",
-          "v": "锐捷",
+          "v": "Ruijie",
           "o": 2
         },
         {
           "l": "Description",
-          "v": "56V 1.5A 黑色3PIN 一体式",
+          "v": "56V 1.5A 3PIN",
           "o": 3
         },
         {
@@ -43154,7 +43154,7 @@
         },
         {
           "l": "Input Voltage Range (Input Voltage)",
-          "v": "90~264Vac (额定100~240Vac)",
+          "v": "90~264Vac (100~240Vac)",
           "o": 7
         },
         {
@@ -43169,7 +43169,7 @@
         },
         {
           "l": "Efficiency (Efficiency)",
-          "v": "≥88.00% (VI级)",
+          "v": "≥88.00% (VI)",
           "o": 10
         },
         {
@@ -43214,22 +43214,22 @@
         },
         {
           "l": "Connector",
-          "v": "DC 5.5×2.5×9.5mm 直插",
+          "v": "DC 5.5×2.5×9.5mm",
           "o": 19
         },
         {
           "l": "PoE Standard",
-          "v": "非标PoE",
+          "v": "PoE",
           "o": 20
         },
         {
           "l": "PlugType",
-          "v": "3PIN 一体式",
+          "v": "3PIN",
           "o": 21
         },
         {
           "l": "Color",
-          "v": "黑色",
+          "v": "Black",
           "o": 22
         },
         {
@@ -44411,17 +44411,17 @@
         },
         {
           "l": "Product Type",
-          "v": "PoE电源适配器",
+          "v": "PoE",
           "o": 1
         },
         {
           "l": "Client",
-          "v": "盟创",
+          "v": "Mengchuang",
           "o": 2
         },
         {
           "l": "Description",
-          "v": "48V 0.32A 黑色欧规 非标2.5G",
+          "v": "48V 0.32A 2.5G",
           "o": 3
         },
         {
@@ -44441,7 +44441,7 @@
         },
         {
           "l": "Input Voltage Range (Input Voltage)",
-          "v": "90~264Vac (额定100~240Vac)",
+          "v": "90~264Vac (100~240Vac)",
           "o": 7
         },
         {
@@ -44456,7 +44456,7 @@
         },
         {
           "l": "Efficiency (Efficiency)",
-          "v": "≥84.25% (VI级)",
+          "v": "≥84.25% (VI)",
           "o": 10
         },
         {
@@ -44506,7 +44506,7 @@
         },
         {
           "l": "PoE Standard",
-          "v": "非标PoE",
+          "v": "PoE",
           "o": 20
         },
         {
@@ -44516,12 +44516,12 @@
         },
         {
           "l": "PlugType",
-          "v": "欧规(欧洲插头)",
+          "v": "EU Plug",
           "o": 22
         },
         {
           "l": "Color",
-          "v": "黑色",
+          "v": "Black",
           "o": 23
         },
         {
@@ -45863,22 +45863,22 @@
         },
         {
           "l": "Product Type",
-          "v": "PoE延伸器 (工业级室外)",
+          "v": "PoE",
           "o": 1
         },
         {
           "l": "Client",
-          "v": "自研",
+          "v": "Self-developed",
           "o": 2
         },
         {
           "l": "Description",
-          "v": "工业级室外PoE延伸器",
+          "v": "PoE",
           "o": 3
         },
         {
           "l": "Rated Power (Rated Power)",
-          "v": "32.4W (最大输出功率)",
+          "v": "32.4W",
           "o": 4
         },
         {
@@ -45893,7 +45893,7 @@
         },
         {
           "l": "Over Current Protection (OCP)",
-          "v": "有",
+          "v": "Yes",
           "o": 7
         },
         {
@@ -45918,7 +45918,7 @@
         },
         {
           "l": "PlugType",
-          "v": "RJ45 (防水)",
+          "v": "RJ45",
           "o": 12
         }
       ],
@@ -46655,7 +46655,7 @@
         },
         {
           "l": "Product Type",
-          "v": "PoE防雷器 (24路)",
+          "v": "PoE (24)",
           "o": 1
         },
         {
@@ -46665,12 +46665,12 @@
         },
         {
           "l": "Description",
-          "v": "工业级室外PoE防雷器 24路",
+          "v": "PoE 24",
           "o": 3
         },
         {
           "l": "Rated Power (Rated Power)",
-          "v": "100W (最大输出功率)",
+          "v": "100W",
           "o": 4
         },
         {
@@ -46685,7 +46685,7 @@
         },
         {
           "l": "Over Current Protection (OCP)",
-          "v": "有",
+          "v": "Yes",
           "o": 7
         },
         {
@@ -46710,7 +46710,7 @@
         },
         {
           "l": "PlugType",
-          "v": "RJ45 x24 (防水)",
+          "v": "RJ45 x24",
           "o": 12
         }
       ],
@@ -47447,17 +47447,17 @@
         },
         {
           "l": "Product Type",
-          "v": "PoE电源适配器",
+          "v": "PoE",
           "o": 1
         },
         {
           "l": "Client",
-          "v": "讯舟 (Edimax)",
+          "v": "(Edimax)",
           "o": 2
         },
         {
           "l": "Description",
-          "v": "48V 0.32A 黑色桌面梅花尾美规 正标1G",
+          "v": "48V 0.32A 1G",
           "o": 3
         },
         {
@@ -47487,7 +47487,7 @@
         },
         {
           "l": "Efficiency (Efficiency)",
-          "v": "VI级",
+          "v": "VI",
           "o": 9
         },
         {
@@ -47502,7 +47502,7 @@
         },
         {
           "l": "Over Current Protection (OCP)",
-          "v": "有",
+          "v": "Yes",
           "o": 12
         },
         {
@@ -47522,7 +47522,7 @@
         },
         {
           "l": "PoE Standard",
-          "v": "IEEE 802.3af (正标1G)",
+          "v": "IEEE 802.3af (1G)",
           "o": 16
         },
         {
@@ -47532,12 +47532,12 @@
         },
         {
           "l": "PlugType",
-          "v": "美规(美式插头) / IEC C5梅花尾",
+          "v": "IEC C5",
           "o": 18
         },
         {
           "l": "Color",
-          "v": "黑色",
+          "v": "Black",
           "o": 19
         }
       ],
@@ -48560,17 +48560,17 @@
         },
         {
           "l": "Product Type",
-          "v": "PoE电源适配器",
+          "v": "PoE",
           "o": 1
         },
         {
           "l": "Client",
-          "v": "拓达",
+          "v": "Tuoda",
           "o": 2
         },
         {
           "l": "Description",
-          "v": "24V 0.5A 中规2PIN 白色",
+          "v": "24V 0.5A 2PIN",
           "o": 3
         },
         {
@@ -48590,7 +48590,7 @@
         },
         {
           "l": "Input Voltage Range (Input Voltage)",
-          "v": "90~264Vac (额定100~240Vac)",
+          "v": "90~264Vac (100~240Vac)",
           "o": 7
         },
         {
@@ -48605,7 +48605,7 @@
         },
         {
           "l": "Efficiency (Efficiency)",
-          "v": "≥77.76% (V级)",
+          "v": "≥77.76% (V)",
           "o": 10
         },
         {
@@ -48630,7 +48630,7 @@
         },
         {
           "l": "Over Current Protection (OCP)",
-          "v": "有",
+          "v": "Yes",
           "o": 15
         },
         {
@@ -48655,17 +48655,17 @@
         },
         {
           "l": "PoE Standard",
-          "v": "非标PoE",
+          "v": "PoE",
           "o": 20
         },
         {
           "l": "PlugType",
-          "v": "中规2PIN(中国插头)",
+          "v": "2PIN",
           "o": 21
         },
         {
           "l": "Color",
-          "v": "白色",
+          "v": "White",
           "o": 22
         }
       ],
@@ -49814,17 +49814,17 @@
         },
         {
           "l": "Product Type",
-          "v": "PoE电源适配器",
+          "v": "PoE",
           "o": 1
         },
         {
           "l": "Client",
-          "v": "耀晋",
+          "v": "Yaojin",
           "o": 2
         },
         {
           "l": "Description",
-          "v": "24V 0.5A 黑色欧规 千兆",
+          "v": "24V 0.5A",
           "o": 3
         },
         {
@@ -49844,7 +49844,7 @@
         },
         {
           "l": "Input Voltage Range (Input Voltage)",
-          "v": "90~264Vac (额定100~240Vac)",
+          "v": "90~264Vac (100~240Vac)",
           "o": 7
         },
         {
@@ -49859,7 +49859,7 @@
         },
         {
           "l": "Efficiency (Efficiency)",
-          "v": "≥82.96% (VI级)",
+          "v": "≥82.96% (VI)",
           "o": 10
         },
         {
@@ -49884,7 +49884,7 @@
         },
         {
           "l": "Over Current Protection (OCP)",
-          "v": "有",
+          "v": "Yes",
           "o": 15
         },
         {
@@ -49909,22 +49909,22 @@
         },
         {
           "l": "PoE Standard",
-          "v": "非标PoE",
+          "v": "PoE",
           "o": 20
         },
         {
           "l": "Data Transfer Rate",
-          "v": "1G (千兆)",
+          "v": "1G",
           "o": 21
         },
         {
           "l": "PlugType",
-          "v": "欧规(欧洲插头)",
+          "v": "EU Plug",
           "o": 22
         },
         {
           "l": "Color",
-          "v": "黑色",
+          "v": "Black",
           "o": 23
         }
       ],
@@ -51113,17 +51113,17 @@
         },
         {
           "l": "Product Type",
-          "v": "PoE电源适配器",
+          "v": "PoE",
           "o": 1
         },
         {
           "l": "Client",
-          "v": "佰才邦",
+          "v": "Baicells",
           "o": 2
         },
         {
           "l": "Description",
-          "v": "24V 0.5A 12W 千兆 黑色桌面梅花尾",
+          "v": "24V 0.5A 12W",
           "o": 3
         },
         {
@@ -51143,7 +51143,7 @@
         },
         {
           "l": "Input Voltage Range (Input Voltage)",
-          "v": "90~264Vac (额定100~240Vac)",
+          "v": "90~264Vac (100~240Vac)",
           "o": 7
         },
         {
@@ -51158,7 +51158,7 @@
         },
         {
           "l": "Efficiency (Efficiency)",
-          "v": "≥82.96% (VI级)",
+          "v": "≥82.96% (VI)",
           "o": 10
         },
         {
@@ -51208,22 +51208,22 @@
         },
         {
           "l": "PoE Standard",
-          "v": "非标PoE",
+          "v": "PoE",
           "o": 20
         },
         {
           "l": "Data Transfer Rate",
-          "v": "1G (千兆)",
+          "v": "1G",
           "o": 21
         },
         {
           "l": "PlugType",
-          "v": "IEC C5梅花尾(桌面式)",
+          "v": "IEC C5",
           "o": 22
         },
         {
           "l": "Color",
-          "v": "黑色",
+          "v": "Black",
           "o": 23
         }
       ],
@@ -52412,17 +52412,17 @@
         },
         {
           "l": "Product Type",
-          "v": "PoE电源适配器",
+          "v": "PoE",
           "o": 1
         },
         {
           "l": "Client",
-          "v": "讯舟 (Edimax)",
+          "v": "(Edimax)",
           "o": 2
         },
         {
           "l": "Description",
-          "v": "48V 0.5A 梅花尾黑色 千兆",
+          "v": "48V 0.5A",
           "o": 3
         },
         {
@@ -52442,7 +52442,7 @@
         },
         {
           "l": "Input Voltage Range (Input Voltage)",
-          "v": "90~264Vac (额定100~240Vac)",
+          "v": "90~264Vac (100~240Vac)",
           "o": 7
         },
         {
@@ -52457,7 +52457,7 @@
         },
         {
           "l": "Efficiency (Efficiency)",
-          "v": "≥86.2% (VI级)",
+          "v": "≥86.2% (VI)",
           "o": 10
         },
         {
@@ -52482,7 +52482,7 @@
         },
         {
           "l": "Over Current Protection (OCP)",
-          "v": "有",
+          "v": "Yes",
           "o": 15
         },
         {
@@ -52507,22 +52507,22 @@
         },
         {
           "l": "PoE Standard",
-          "v": "非标PoE",
+          "v": "PoE",
           "o": 20
         },
         {
           "l": "Data Transfer Rate",
-          "v": "1G (千兆)",
+          "v": "1G",
           "o": 21
         },
         {
           "l": "PlugType",
-          "v": "IEC C5梅花尾(桌面式)",
+          "v": "IEC C5",
           "o": 22
         },
         {
           "l": "Color",
-          "v": "黑色",
+          "v": "Black",
           "o": 23
         }
       ],
@@ -53693,17 +53693,17 @@
         },
         {
           "l": "Product Type",
-          "v": "PoE电源适配器",
+          "v": "PoE",
           "o": 1
         },
         {
           "l": "Client",
-          "v": "华硕 (ASUS)",
+          "v": "(ASUS)",
           "o": 2
         },
         {
           "l": "Description",
-          "v": "48V 0.625A 2.5G 黑色桌面梅花尾",
+          "v": "48V 0.625A 2.5G",
           "o": 3
         },
         {
@@ -53723,7 +53723,7 @@
         },
         {
           "l": "Input Voltage Range (Input Voltage)",
-          "v": "90~264Vac (额定100~240Vac)",
+          "v": "90~264Vac (100~240Vac)",
           "o": 7
         },
         {
@@ -53738,7 +53738,7 @@
         },
         {
           "l": "Efficiency (Efficiency)",
-          "v": "≥86.95% (VI级)",
+          "v": "≥86.95% (VI)",
           "o": 10
         },
         {
@@ -53763,7 +53763,7 @@
         },
         {
           "l": "Over Current Protection (OCP)",
-          "v": "有",
+          "v": "Yes",
           "o": 15
         },
         {
@@ -53788,7 +53788,7 @@
         },
         {
           "l": "PoE Standard",
-          "v": "非标PoE",
+          "v": "PoE",
           "o": 20
         },
         {
@@ -53798,12 +53798,12 @@
         },
         {
           "l": "PlugType",
-          "v": "IEC C5梅花尾(桌面式)",
+          "v": "IEC C5",
           "o": 22
         },
         {
           "l": "Color",
-          "v": "黑色",
+          "v": "Black",
           "o": 23
         }
       ],
@@ -54986,12 +54986,12 @@
         },
         {
           "l": "Product Type",
-          "v": "PoE电源适配器",
+          "v": "PoE",
           "o": 1
         },
         {
           "l": "Description",
-          "v": "48V 1.25A 桌面黑色梅花尾 千兆",
+          "v": "48V 1.25A",
           "o": 2
         },
         {
@@ -55011,7 +55011,7 @@
         },
         {
           "l": "Input Voltage Range (Input Voltage)",
-          "v": "90~264Vac (额定100~240Vac)",
+          "v": "90~264Vac (100~240Vac)",
           "o": 6
         },
         {
@@ -55026,7 +55026,7 @@
         },
         {
           "l": "Efficiency (Efficiency)",
-          "v": "≥87.0% (V级)",
+          "v": "≥87.0% (V)",
           "o": 9
         },
         {
@@ -55051,7 +55051,7 @@
         },
         {
           "l": "Over Current Protection (OCP)",
-          "v": "有",
+          "v": "Yes",
           "o": 14
         },
         {
@@ -55076,22 +55076,22 @@
         },
         {
           "l": "PoE Standard",
-          "v": "非标PoE",
+          "v": "PoE",
           "o": 19
         },
         {
           "l": "Data Transfer Rate",
-          "v": "1G (千兆)",
+          "v": "1G",
           "o": 20
         },
         {
           "l": "PlugType",
-          "v": "IEC C5梅花尾(桌面式)",
+          "v": "IEC C5",
           "o": 21
         },
         {
           "l": "Color",
-          "v": "黑色",
+          "v": "Black",
           "o": 22
         }
       ],
@@ -56234,17 +56234,17 @@
         },
         {
           "l": "Product Type",
-          "v": "PoE电源适配器",
+          "v": "PoE",
           "o": 1
         },
         {
           "l": "Client",
-          "v": "瑞联",
+          "v": "Ruilian",
           "o": 2
         },
         {
           "l": "Description",
-          "v": "24V 0.5A 黑色桌面8字尾 百兆",
+          "v": "24V 0.5A 8",
           "o": 3
         },
         {
@@ -56264,7 +56264,7 @@
         },
         {
           "l": "Input Voltage Range (Input Voltage)",
-          "v": "90~264Vac (额定100~240Vac)",
+          "v": "90~264Vac (100~240Vac)",
           "o": 7
         },
         {
@@ -56279,7 +56279,7 @@
         },
         {
           "l": "Efficiency (Efficiency)",
-          "v": "≥82.96% (VI级)",
+          "v": "≥82.96% (VI)",
           "o": 10
         },
         {
@@ -56304,7 +56304,7 @@
         },
         {
           "l": "Over Current Protection (OCP)",
-          "v": "有",
+          "v": "Yes",
           "o": 15
         },
         {
@@ -56329,22 +56329,22 @@
         },
         {
           "l": "PoE Standard",
-          "v": "非标PoE",
+          "v": "PoE",
           "o": 20
         },
         {
           "l": "Data Transfer Rate",
-          "v": "100M (百兆)",
+          "v": "100M",
           "o": 21
         },
         {
           "l": "PlugType",
-          "v": "IEC C7(8字尾/桌面式)",
+          "v": "IEC C7(8/)",
           "o": 22
         },
         {
           "l": "Color",
-          "v": "黑色",
+          "v": "Black",
           "o": 23
         }
       ],
@@ -57521,17 +57521,17 @@
         },
         {
           "l": "Product Type",
-          "v": "PoE电源适配器",
+          "v": "PoE",
           "o": 1
         },
         {
           "l": "Client",
-          "v": "台湾客户",
+          "v": "Taiwan Client",
           "o": 2
         },
         {
           "l": "Description",
-          "v": "53V 0.56A 正标2.5G 黑色桌面梅花尾",
+          "v": "53V 0.56A 2.5G",
           "o": 3
         },
         {
@@ -57551,7 +57551,7 @@
         },
         {
           "l": "Input Voltage Range (Input Voltage)",
-          "v": "90~264Vac (额定100~240Vac)",
+          "v": "90~264Vac (100~240Vac)",
           "o": 7
         },
         {
@@ -57616,7 +57616,7 @@
         },
         {
           "l": "PoE Standard",
-          "v": "IEEE 802.3af/at (正标2.5G)",
+          "v": "IEEE 802.3af/at (2.5G)",
           "o": 20
         },
         {
@@ -57626,12 +57626,12 @@
         },
         {
           "l": "PlugType",
-          "v": "IEC C5梅花尾(桌面式)",
+          "v": "IEC C5",
           "o": 22
         },
         {
           "l": "Color",
-          "v": "黑色",
+          "v": "Black",
           "o": 23
         }
       ],
@@ -58803,7 +58803,7 @@
       "en_specs": [
         {
           "l": "Battery Type (Battery Type)",
-          "v": "磷酸铁锂 (LiFePO4)",
+          "v": "(LiFePO4)",
           "o": 0
         },
         {
@@ -58813,7 +58813,7 @@
         },
         {
           "l": "AC Input (AC Input)",
-          "v": "额定600W (220~240V/10A)",
+          "v": "600W (220~240V/10A)",
           "o": 2
         },
         {
@@ -58823,7 +58823,7 @@
         },
         {
           "l": "ACOutput Power",
-          "v": "1.2KW Max (纯正弦波)",
+          "v": "1.2KW Max",
           "o": 4
         },
         {
@@ -58848,17 +58848,17 @@
         },
         {
           "l": "Car ChargerOutput (Car Output)",
-          "v": "车充×2: 12V/10A 120W",
+          "v": "×2: 12V/10A 120W",
           "o": 9
         },
         {
           "l": "DC Input",
-          "v": "32~28V/1A（据产品图）",
+          "v": "32~28V/1A",
           "o": 10
         },
         {
           "l": "Weight (Weight)",
-          "v": "约11.2kg",
+          "v": "11.2kg",
           "o": 11
         },
         {
@@ -59595,7 +59595,7 @@
       "en_specs": [
         {
           "l": "Battery Type (Battery Type)",
-          "v": "磷酸铁锂 (LiFePO4)",
+          "v": "(LiFePO4)",
           "o": 0
         },
         {
@@ -59610,7 +59610,7 @@
         },
         {
           "l": "ACOutput Power",
-          "v": "150W Max (纯正弦波)",
+          "v": "150W Max",
           "o": 3
         },
         {
@@ -59620,12 +59620,12 @@
         },
         {
           "l": "PDFast ChargeOutput",
-          "v": "PD 60W Max（据产品图）",
+          "v": "PD 60W Max",
           "o": 5
         },
         {
           "l": "Car ChargerOutput (Car Output)",
-          "v": "12V/5A (60W) 输入/输出共用口",
+          "v": "12V/5A (60W)",
           "o": 6
         }
       ],
@@ -60117,7 +60117,7 @@
       "en_specs": [
         {
           "l": "Battery Type (Battery Type)",
-          "v": "磷酸铁锂 (LiFePO4)",
+          "v": "(LiFePO4)",
           "o": 0
         },
         {
@@ -60127,27 +60127,27 @@
         },
         {
           "l": "Battery Voltage",
-          "v": "3.2V (磷酸铁锂电芯)",
+          "v": "3.2V",
           "o": 2
         },
         {
           "l": "AC Input (AC Input)",
-          "v": "额定300W",
+          "v": "300W",
           "o": 3
         },
         {
           "l": "Utility PowerChargingTime",
-          "v": "约2小时",
+          "v": "2",
           "o": 4
         },
         {
           "l": "100WSolar PanelCharging",
-          "v": "约4.6小时",
+          "v": "4.6",
           "o": 5
         },
         {
           "l": "40WSolar PanelCharging",
-          "v": "约9.5小时",
+          "v": "9.5",
           "o": 6
         },
         {
@@ -60157,7 +60157,7 @@
         },
         {
           "l": "ACOutput Power",
-          "v": "300W Max (纯正弦波)",
+          "v": "300W Max",
           "o": 8
         },
         {
@@ -60177,7 +60177,7 @@
         },
         {
           "l": "Weight (Weight)",
-          "v": "约2.7kg",
+          "v": "2.7kg",
           "o": 12
         },
         {
@@ -60942,27 +60942,27 @@
       "en_specs": [
         {
           "l": "Battery Type (Battery Type)",
-          "v": "磷酸铁锂 (LiFePO4)",
+          "v": "(LiFePO4)",
           "o": 0
         },
         {
           "l": "AC Input (AC Input)",
-          "v": "额定300W",
+          "v": "300W",
           "o": 1
         },
         {
           "l": "Utility PowerChargingTime",
-          "v": "约8.5小时",
+          "v": "8.5",
           "o": 2
         },
         {
           "l": "100WSolar PanelCharging",
-          "v": "约6小时",
+          "v": "6",
           "o": 3
         },
         {
           "l": "40WSolar PanelCharging",
-          "v": "约4.5小时",
+          "v": "4.5",
           "o": 4
         },
         {
@@ -60972,7 +60972,7 @@
         },
         {
           "l": "ACOutput Power",
-          "v": "600W Max (纯正弦波)",
+          "v": "600W Max",
           "o": 6
         },
         {
@@ -60997,7 +60997,7 @@
         },
         {
           "l": "Car ChargerOutput (Car Output)",
-          "v": "12V/5A 输入口",
+          "v": "12V/5A",
           "o": 11
         },
         {
@@ -61007,7 +61007,7 @@
         },
         {
           "l": "Weight (Weight)",
-          "v": "约5.8kg",
+          "v": "5.8kg",
           "o": 13
         },
         {
@@ -61869,12 +61869,12 @@
         },
         {
           "l": "TransferTime (Line→Bat)",
-          "v": "0ms (在线式)",
+          "v": "0ms",
           "o": 9
         },
         {
           "l": "TransferTime (Line→BPS)",
-          "v": "典型<6ms, 最差<10ms",
+          "v": "<6ms, <10ms",
           "o": 10
         },
         {
@@ -61889,7 +61889,7 @@
         },
         {
           "l": "InputTopology (Input Topology)",
-          "v": "单相输入 (L,N+PE)",
+          "v": "(L,N+PE)",
           "o": 13
         },
         {
@@ -61914,7 +61914,7 @@
         },
         {
           "l": "Input PowerFactor",
-          "v": "≥0.99 @100%负载",
+          "v": "≥0.99 @100%",
           "o": 18
         },
         {
@@ -61929,12 +61929,12 @@
         },
         {
           "l": "Battery Capacity",
-          "v": "7AH (标准) / 9AH (可选)",
+          "v": "7AH  / 9AH",
           "o": 21
         },
         {
           "l": "BackupTime (Backup Time)",
-          "v": "4分钟 (满载, PF 0.7)",
+          "v": "4 (, PF 0.7)",
           "o": 22
         },
         {
@@ -61949,27 +61949,27 @@
         },
         {
           "l": "BypassOutput Voltage Range",
-          "v": "184~264V (默认) / 110~300V (最大)",
+          "v": "184~264V  / 110~300V",
           "o": 25
         },
         {
           "l": "BypassOutput FrequencyRange",
-          "v": "±10% (默认) / 46~54Hz或56~64Hz (最大)",
+          "v": "±10%  / 46~54Hz56~64Hz",
           "o": 26
         },
         {
           "l": "Inverter Overload Capability",
-          "v": "105%~150%: 70s~25s线性 → 转旁路; >200%: 200ms → 转旁路",
+          "v": "105%~150%: 70s~25s → ; >200%: 200ms →",
           "o": 27
         },
         {
           "l": "Display",
-          "v": "LED (标配) / 段式LCD (选配)",
+          "v": "LED  / LCD",
           "o": 28
         },
         {
           "l": "CommunicationInterface (Communication)",
-          "v": "RS232 (DB-9/Q协议/2400BPS) · USB2.0 HID (选配) · 智能插槽SNMP/RS485/AS400 (选配)",
+          "v": "RS232 (DB-9/Q/2400BPS) · USB2.0 HID  · SNMP/RS485/AS400",
           "o": 29
         },
         {
@@ -62004,7 +62004,7 @@
         },
         {
           "l": "Cooling Method (Cooling)",
-          "v": "强制风冷 (Force Air Cooling)",
+          "v": "(Force Air Cooling)",
           "o": 36
         },
         {
@@ -62014,17 +62014,17 @@
         },
         {
           "l": "StorageTemperature (Storage Temp)",
-          "v": "-15°C~60°C (UPS) / 0~35°C (电池)",
+          "v": "-15°C~60°C (UPS) / 0~35°C",
           "o": 38
         },
         {
           "l": "Operating Humidity (Humidity)",
-          "v": "0~98% (无冷凝)",
+          "v": "0~98%",
           "o": 39
         },
         {
           "l": "Altitude (Altitude)",
-          "v": "<2000m (额定功率), >2000m每100m降额2%",
+          "v": "<2000m , >2000m100m2%",
           "o": 40
         },
         {
@@ -63978,12 +63978,12 @@
         },
         {
           "l": "TransferTime (Line→Bat)",
-          "v": "0ms (在线式)",
+          "v": "0ms",
           "o": 9
         },
         {
           "l": "TransferTime (Line→BPS)",
-          "v": "典型<6ms, 最差<10ms",
+          "v": "<6ms, <10ms",
           "o": 10
         },
         {
@@ -63998,7 +63998,7 @@
         },
         {
           "l": "InputTopology (Input Topology)",
-          "v": "单相输入 (L,N+PE)",
+          "v": "(L,N+PE)",
           "o": 13
         },
         {
@@ -64023,7 +64023,7 @@
         },
         {
           "l": "Input PowerFactor",
-          "v": "≥0.99 @100%负载",
+          "v": "≥0.99 @100%",
           "o": 18
         },
         {
@@ -64038,12 +64038,12 @@
         },
         {
           "l": "Battery Capacity",
-          "v": "7AH (标准) / 9AH (可选)",
+          "v": "7AH  / 9AH",
           "o": 21
         },
         {
           "l": "BackupTime (Backup Time)",
-          "v": "4分钟 (满载, PF 0.7)",
+          "v": "4 (, PF 0.7)",
           "o": 22
         },
         {
@@ -64058,27 +64058,27 @@
         },
         {
           "l": "BypassOutput Voltage Range",
-          "v": "184~264V (默认) / 110~300V (最大)",
+          "v": "184~264V  / 110~300V",
           "o": 25
         },
         {
           "l": "BypassOutput FrequencyRange",
-          "v": "±10% (默认) / 46~54Hz或56~64Hz (最大)",
+          "v": "±10%  / 46~54Hz56~64Hz",
           "o": 26
         },
         {
           "l": "Inverter Overload Capability",
-          "v": "105%~150%: 70s~25s线性 → 转旁路; >200%: 200ms → 转旁路",
+          "v": "105%~150%: 70s~25s → ; >200%: 200ms →",
           "o": 27
         },
         {
           "l": "Display",
-          "v": "LED (标配) / 段式LCD (选配)",
+          "v": "LED  / LCD",
           "o": 28
         },
         {
           "l": "CommunicationInterface (Communication)",
-          "v": "RS232 (DB-9/Q协议/2400BPS) · USB2.0 HID (选配) · 智能插槽SNMP/RS485/AS400 (选配)",
+          "v": "RS232 (DB-9/Q/2400BPS) · USB2.0 HID  · SNMP/RS485/AS400",
           "o": 29
         },
         {
@@ -64113,7 +64113,7 @@
         },
         {
           "l": "Cooling Method (Cooling)",
-          "v": "强制风冷 (Force Air Cooling)",
+          "v": "(Force Air Cooling)",
           "o": 36
         },
         {
@@ -64123,17 +64123,17 @@
         },
         {
           "l": "StorageTemperature (Storage Temp)",
-          "v": "-15°C~60°C (UPS) / 0~35°C (电池)",
+          "v": "-15°C~60°C (UPS) / 0~35°C",
           "o": 38
         },
         {
           "l": "Operating Humidity (Humidity)",
-          "v": "0~98% (无冷凝)",
+          "v": "0~98%",
           "o": 39
         },
         {
           "l": "Altitude (Altitude)",
-          "v": "<2000m (额定功率), >2000m每100m降额2%",
+          "v": "<2000m , >2000m100m2%",
           "o": 40
         },
         {
@@ -66087,12 +66087,12 @@
         },
         {
           "l": "TransferTime (Line→Bat)",
-          "v": "0ms (在线式)",
+          "v": "0ms",
           "o": 9
         },
         {
           "l": "TransferTime (Line→BPS)",
-          "v": "典型<6ms, 最差<10ms",
+          "v": "<6ms, <10ms",
           "o": 10
         },
         {
@@ -66107,7 +66107,7 @@
         },
         {
           "l": "InputTopology (Input Topology)",
-          "v": "单相输入 (L,N+PE)",
+          "v": "(L,N+PE)",
           "o": 13
         },
         {
@@ -66132,7 +66132,7 @@
         },
         {
           "l": "Input PowerFactor",
-          "v": "≥0.99 @100%负载",
+          "v": "≥0.99 @100%",
           "o": 18
         },
         {
@@ -66142,42 +66142,42 @@
         },
         {
           "l": "Battery Configuration",
-          "v": "2×12V (24V) - 1K机型",
+          "v": "2×12V (24V) - 1K",
           "o": 20
         },
         {
           "l": "Battery Capacity",
-          "v": "7AH (标准) / 9AH (可选)",
+          "v": "7AH  / 9AH",
           "o": 21
         },
         {
           "l": "BackupTime (Backup Time)",
-          "v": "5分钟 (满载, PF 0.7)",
+          "v": "5 (, PF 0.7)",
           "o": 22
         },
         {
           "l": "BypassOutput Voltage Range",
-          "v": "184~264V (默认) / 110~300V (最大)",
+          "v": "184~264V  / 110~300V",
           "o": 23
         },
         {
           "l": "BypassOutput FrequencyRange",
-          "v": "±10% (默认) / 46~54Hz或56~64Hz (最大)",
+          "v": "±10%  / 46~54Hz56~64Hz",
           "o": 24
         },
         {
           "l": "Inverter Overload Capability",
-          "v": "105%~150%: 70s~25s线性 → 转旁路; >200%: 200ms → 转旁路",
+          "v": "105%~150%: 70s~25s → ; >200%: 200ms →",
           "o": 25
         },
         {
           "l": "Display",
-          "v": "LED (标配) / 段式LCD (选配)",
+          "v": "LED  / LCD",
           "o": 26
         },
         {
           "l": "CommunicationInterface (Communication)",
-          "v": "RS232 (DB-9/Q协议/2400BPS) · USB2.0 HID (选配) · 智能插槽SNMP/RS485/AS400 (选配)",
+          "v": "RS232 (DB-9/Q/2400BPS) · USB2.0 HID  · SNMP/RS485/AS400",
           "o": 27
         },
         {
@@ -66212,7 +66212,7 @@
         },
         {
           "l": "Cooling Method (Cooling)",
-          "v": "强制风冷 (Force Air Cooling)",
+          "v": "(Force Air Cooling)",
           "o": 34
         },
         {
@@ -66222,17 +66222,17 @@
         },
         {
           "l": "StorageTemperature (Storage Temp)",
-          "v": "-15°C~60°C (UPS) / 0~35°C (电池)",
+          "v": "-15°C~60°C (UPS) / 0~35°C",
           "o": 36
         },
         {
           "l": "Operating Humidity (Humidity)",
-          "v": "0~98% (无冷凝)",
+          "v": "0~98%",
           "o": 37
         },
         {
           "l": "Altitude (Altitude)",
-          "v": "<2000m (额定功率), >2000m每100m降额2%",
+          "v": "<2000m , >2000m100m2%",
           "o": 38
         },
         {
@@ -68106,12 +68106,12 @@
         },
         {
           "l": "TransferTime (Line→Bat)",
-          "v": "0ms (在线式)",
+          "v": "0ms",
           "o": 9
         },
         {
           "l": "TransferTime (Line→BPS)",
-          "v": "典型<6ms, 最差<10ms",
+          "v": "<6ms, <10ms",
           "o": 10
         },
         {
@@ -68126,7 +68126,7 @@
         },
         {
           "l": "InputTopology (Input Topology)",
-          "v": "单相输入 (L,N+PE)",
+          "v": "(L,N+PE)",
           "o": 13
         },
         {
@@ -68151,7 +68151,7 @@
         },
         {
           "l": "Input PowerFactor",
-          "v": "≥0.99 @100%负载",
+          "v": "≥0.99 @100%",
           "o": 18
         },
         {
@@ -68161,42 +68161,42 @@
         },
         {
           "l": "Battery Configuration",
-          "v": "2×12V (24V) - 1K机型",
+          "v": "2×12V (24V) - 1K",
           "o": 20
         },
         {
           "l": "Battery Capacity",
-          "v": "7AH (标准) / 9AH (可选)",
+          "v": "7AH  / 9AH",
           "o": 21
         },
         {
           "l": "BackupTime (Backup Time)",
-          "v": "5分钟 (满载, PF 0.7)",
+          "v": "5 (, PF 0.7)",
           "o": 22
         },
         {
           "l": "BypassOutput Voltage Range",
-          "v": "184~264V (默认) / 110~300V (最大)",
+          "v": "184~264V  / 110~300V",
           "o": 23
         },
         {
           "l": "BypassOutput FrequencyRange",
-          "v": "±10% (默认) / 46~54Hz或56~64Hz (最大)",
+          "v": "±10%  / 46~54Hz56~64Hz",
           "o": 24
         },
         {
           "l": "Inverter Overload Capability",
-          "v": "105%~150%: 70s~25s线性 → 转旁路; >200%: 200ms → 转旁路",
+          "v": "105%~150%: 70s~25s → ; >200%: 200ms →",
           "o": 25
         },
         {
           "l": "Display",
-          "v": "LED (标配) / 段式LCD (选配)",
+          "v": "LED  / LCD",
           "o": 26
         },
         {
           "l": "CommunicationInterface (Communication)",
-          "v": "RS232 (DB-9/Q协议/2400BPS) · USB2.0 HID (选配) · 智能插槽SNMP/RS485/AS400 (选配)",
+          "v": "RS232 (DB-9/Q/2400BPS) · USB2.0 HID  · SNMP/RS485/AS400",
           "o": 27
         },
         {
@@ -68231,7 +68231,7 @@
         },
         {
           "l": "Cooling Method (Cooling)",
-          "v": "强制风冷 (Force Air Cooling)",
+          "v": "(Force Air Cooling)",
           "o": 34
         },
         {
@@ -68241,17 +68241,17 @@
         },
         {
           "l": "StorageTemperature (Storage Temp)",
-          "v": "-15°C~60°C (UPS) / 0~35°C (电池)",
+          "v": "-15°C~60°C (UPS) / 0~35°C",
           "o": 36
         },
         {
           "l": "Operating Humidity (Humidity)",
-          "v": "0~98% (无冷凝)",
+          "v": "0~98%",
           "o": 37
         },
         {
           "l": "Altitude (Altitude)",
-          "v": "<2000m (额定功率), >2000m每100m降额2%",
+          "v": "<2000m , >2000m100m2%",
           "o": 38
         },
         {
@@ -70125,12 +70125,12 @@
         },
         {
           "l": "TransferTime (Line→Bat)",
-          "v": "0ms (在线式)",
+          "v": "0ms",
           "o": 9
         },
         {
           "l": "TransferTime (Line→BPS)",
-          "v": "典型<6ms, 最差<10ms",
+          "v": "<6ms, <10ms",
           "o": 10
         },
         {
@@ -70145,7 +70145,7 @@
         },
         {
           "l": "InputTopology (Input Topology)",
-          "v": "单相输入 (L,N+PE)",
+          "v": "(L,N+PE)",
           "o": 13
         },
         {
@@ -70170,7 +70170,7 @@
         },
         {
           "l": "Input PowerFactor",
-          "v": "≥0.99 @100%负载",
+          "v": "≥0.99 @100%",
           "o": 18
         },
         {
@@ -70180,17 +70180,17 @@
         },
         {
           "l": "Battery Configuration",
-          "v": "8×12V (96V) - 3KS长延时机型",
+          "v": "8×12V (96V) - 3KS",
           "o": 20
         },
         {
           "l": "Battery Capacity",
-          "v": "7AH (标准) / 9AH (可选)",
+          "v": "7AH  / 9AH",
           "o": 21
         },
         {
           "l": "BackupTime (Backup Time)",
-          "v": "5分钟 (满载, PF 0.7)",
+          "v": "5 (, PF 0.7)",
           "o": 22
         },
         {
@@ -70205,27 +70205,27 @@
         },
         {
           "l": "BypassOutput Voltage Range",
-          "v": "184~264V (默认) / 110~300V (最大)",
+          "v": "184~264V  / 110~300V",
           "o": 25
         },
         {
           "l": "BypassOutput FrequencyRange",
-          "v": "±10% (默认) / 46~54Hz或56~64Hz (最大)",
+          "v": "±10%  / 46~54Hz56~64Hz",
           "o": 26
         },
         {
           "l": "Inverter Overload Capability",
-          "v": "105%~150%: 70s~25s线性 → 转旁路; >200%: 200ms → 转旁路",
+          "v": "105%~150%: 70s~25s → ; >200%: 200ms →",
           "o": 27
         },
         {
           "l": "Display",
-          "v": "LED (标配) / 段式LCD (选配)",
+          "v": "LED  / LCD",
           "o": 28
         },
         {
           "l": "CommunicationInterface (Communication)",
-          "v": "RS232 (DB-9/Q协议/2400BPS) · USB2.0 HID (选配) · 智能插槽SNMP/RS485/AS400 (选配)",
+          "v": "RS232 (DB-9/Q/2400BPS) · USB2.0 HID  · SNMP/RS485/AS400",
           "o": 29
         },
         {
@@ -70260,7 +70260,7 @@
         },
         {
           "l": "Cooling Method (Cooling)",
-          "v": "强制风冷 (Force Air Cooling)",
+          "v": "(Force Air Cooling)",
           "o": 36
         },
         {
@@ -70270,17 +70270,17 @@
         },
         {
           "l": "StorageTemperature (Storage Temp)",
-          "v": "-15°C~60°C (UPS) / 0~35°C (电池)",
+          "v": "-15°C~60°C (UPS) / 0~35°C",
           "o": 38
         },
         {
           "l": "Operating Humidity (Humidity)",
-          "v": "0~98% (无冷凝)",
+          "v": "0~98%",
           "o": 39
         },
         {
           "l": "Altitude (Altitude)",
-          "v": "<2000m (额定功率), >2000m每100m降额2%",
+          "v": "<2000m , >2000m100m2%",
           "o": 40
         },
         {
@@ -72234,12 +72234,12 @@
         },
         {
           "l": "TransferTime (Line→Bat)",
-          "v": "0ms (在线式)",
+          "v": "0ms",
           "o": 9
         },
         {
           "l": "TransferTime (Line→BPS)",
-          "v": "典型<6ms, 最差<10ms",
+          "v": "<6ms, <10ms",
           "o": 10
         },
         {
@@ -72254,7 +72254,7 @@
         },
         {
           "l": "InputTopology (Input Topology)",
-          "v": "单相输入 (L,N+PE)",
+          "v": "(L,N+PE)",
           "o": 13
         },
         {
@@ -72279,7 +72279,7 @@
         },
         {
           "l": "Input PowerFactor",
-          "v": "≥0.99 @100%负载",
+          "v": "≥0.99 @100%",
           "o": 18
         },
         {
@@ -72289,17 +72289,17 @@
         },
         {
           "l": "Battery Configuration",
-          "v": "8×12V (96V) - 3KS长延时机型",
+          "v": "8×12V (96V) - 3KS",
           "o": 20
         },
         {
           "l": "Battery Capacity",
-          "v": "7AH (标准) / 9AH (可选)",
+          "v": "7AH  / 9AH",
           "o": 21
         },
         {
           "l": "BackupTime (Backup Time)",
-          "v": "5分钟 (满载, PF 0.7)",
+          "v": "5 (, PF 0.7)",
           "o": 22
         },
         {
@@ -72314,27 +72314,27 @@
         },
         {
           "l": "BypassOutput Voltage Range",
-          "v": "184~264V (默认) / 110~300V (最大)",
+          "v": "184~264V  / 110~300V",
           "o": 25
         },
         {
           "l": "BypassOutput FrequencyRange",
-          "v": "±10% (默认) / 46~54Hz或56~64Hz (最大)",
+          "v": "±10%  / 46~54Hz56~64Hz",
           "o": 26
         },
         {
           "l": "Inverter Overload Capability",
-          "v": "105%~150%: 70s~25s线性 → 转旁路; >200%: 200ms → 转旁路",
+          "v": "105%~150%: 70s~25s → ; >200%: 200ms →",
           "o": 27
         },
         {
           "l": "Display",
-          "v": "LED (标配) / 段式LCD (选配)",
+          "v": "LED  / LCD",
           "o": 28
         },
         {
           "l": "CommunicationInterface (Communication)",
-          "v": "RS232 (DB-9/Q协议/2400BPS) · USB2.0 HID (选配) · 智能插槽SNMP/RS485/AS400 (选配)",
+          "v": "RS232 (DB-9/Q/2400BPS) · USB2.0 HID  · SNMP/RS485/AS400",
           "o": 29
         },
         {
@@ -72369,7 +72369,7 @@
         },
         {
           "l": "Cooling Method (Cooling)",
-          "v": "强制风冷 (Force Air Cooling)",
+          "v": "(Force Air Cooling)",
           "o": 36
         },
         {
@@ -72379,17 +72379,17 @@
         },
         {
           "l": "StorageTemperature (Storage Temp)",
-          "v": "-15°C~60°C (UPS) / 0~35°C (电池)",
+          "v": "-15°C~60°C (UPS) / 0~35°C",
           "o": 38
         },
         {
           "l": "Operating Humidity (Humidity)",
-          "v": "0~98% (无冷凝)",
+          "v": "0~98%",
           "o": 39
         },
         {
           "l": "Altitude (Altitude)",
-          "v": "<2000m (额定功率), >2000m每100m降额2%",
+          "v": "<2000m , >2000m100m2%",
           "o": 40
         },
         {
@@ -74303,12 +74303,12 @@
         },
         {
           "l": "Product Type",
-          "v": "MPPT太阳能充电控制器",
+          "v": "MPPT",
           "o": 1
         },
         {
           "l": "Series",
-          "v": "慧民款",
+          "v": "Huimin Series",
           "o": 2
         },
         {
@@ -74318,32 +74318,32 @@
         },
         {
           "l": "Battery Types",
-          "v": "铅酸 · 胶体 · LiFePO4(3.2V) · 三元铂(3.7V) · 自定义",
+          "v": "· · LiFePO4(3.2V) · (3.7V) ·",
           "o": 4
         },
         {
           "l": "Lead-Acid Voltage",
-          "v": "12V ~ 48V自动识别 / 可调12V~96V",
+          "v": "12V ~ 48V / 12V~96V",
           "o": 5
         },
         {
           "l": "LeadBattery Voltage",
-          "v": "48V~240V（手动调整）",
+          "v": "48V~240V",
           "o": 6
         },
         {
           "l": "LiFePO4 Cells",
-          "v": "2S ~ 20S 可调",
+          "v": "2S ~ 20S",
           "o": 7
         },
         {
           "l": "NMC Cells",
-          "v": "2S ~ 20S 可调",
+          "v": "2S ~ 20S",
           "o": 8
         },
         {
           "l": "Charging Mode",
-          "v": "MPPT最大功率跟踪 → 快充 → 浮充",
+          "v": "MPPT → →",
           "o": 9
         },
         {
@@ -74353,37 +74353,37 @@
         },
         {
           "l": "PV Start Charging",
-          "v": "光伏输入电压 > 电池电压 + 2V",
+          "v": "> + 2V",
           "o": 11
         },
         {
           "l": "Conversion Efficiency",
-          "v": "高达99.9%",
+          "v": "99.9%",
           "o": 12
         },
         {
           "l": "DC Load Output",
-          "v": "持续输出20A",
+          "v": "20A",
           "o": 13
         },
         {
           "l": "Temperature Compensation",
-          "v": "电池外接温度传感器",
+          "v": "External Battery Temp Sensor",
           "o": 14
         },
         {
           "l": "Communication Interface",
-          "v": "6针RS485 / Modbus协议",
+          "v": "6RS485 / Modbus",
           "o": 15
         },
         {
           "l": "Display",
-          "v": "触摸按键 + LCD显示（中英文）",
+          "v": "+ LCD",
           "o": 16
         },
         {
           "l": "Protection",
-          "v": "过充/过放/过载/短路保护",
+          "v": "/",
           "o": 17
         },
         {
@@ -75533,42 +75533,42 @@
         },
         {
           "l": "Product Type",
-          "v": "MPPT太阳能充电控制器",
+          "v": "MPPT",
           "o": 1
         },
         {
           "l": "Series",
-          "v": "超强款",
+          "v": "Super Strong Series",
           "o": 2
         },
         {
           "l": "Rated Charge Current",
-          "v": "60A ~ 120A（BCC-1: 60~100A / BCC-2: 100~120A）",
+          "v": "60A ~ 120ABCC-1: 60~100A / BCC-2: 100~120A",
           "o": 3
         },
         {
           "l": "Battery Types",
-          "v": "铅酸 · 胶体 · LiFePO4(3.2V) · 三元铂(3.7V) · 自定义",
+          "v": "· · LiFePO4(3.2V) · (3.7V) ·",
           "o": 4
         },
         {
           "l": "Lead-Acid Voltage",
-          "v": "12V~48V（手动调整）",
+          "v": "12V~48V",
           "o": 5
         },
         {
           "l": "LiFePO4 Cells",
-          "v": "14S ~ 90S 可调",
+          "v": "14S ~ 90S",
           "o": 6
         },
         {
           "l": "NMC Cells",
-          "v": "14S ~ 80S 可调",
+          "v": "14S ~ 80S",
           "o": 7
         },
         {
           "l": "Lithium Activation",
-          "v": "有（电压范围35V~350V）",
+          "v": "35V~350V",
           "o": 8
         },
         {
@@ -75578,27 +75578,27 @@
         },
         {
           "l": "Conversion Efficiency",
-          "v": "高达99.9%",
+          "v": "99.9%",
           "o": 10
         },
         {
           "l": "DC Load Output",
-          "v": "持续输出50A",
+          "v": "50A",
           "o": 11
         },
         {
           "l": "Communication Interface",
-          "v": "6针RS485 / Modbus协议",
+          "v": "6RS485 / Modbus",
           "o": 12
         },
         {
           "l": "Display",
-          "v": "触摸按键 + LCD显示",
+          "v": "+ LCD",
           "o": 13
         },
         {
           "l": "Protection",
-          "v": "过充/过放/过载/短路保护",
+          "v": "/",
           "o": 14
         },
         {
@@ -76673,47 +76673,47 @@
         },
         {
           "l": "Product Type",
-          "v": "MPPT太阳能充电控制器",
+          "v": "MPPT",
           "o": 1
         },
         {
           "l": "Series",
-          "v": "增强款",
+          "v": "Enhanced Series",
           "o": 2
         },
         {
           "l": "Rated Charge Current",
-          "v": "30A ~ 80A（BDZ-1: 30~60A / BDZ-2: 60~80A）",
+          "v": "30A ~ 80ABDZ-1: 30~60A / BDZ-2: 60~80A",
           "o": 3
         },
         {
           "l": "Battery Types",
-          "v": "铅酸 · 胶体 · LiFePO4(3.2V) · 三元铂(3.7V) · 自定义",
+          "v": "· · LiFePO4(3.2V) · (3.7V) ·",
           "o": 4
         },
         {
           "l": "Lead-Acid Voltage",
-          "v": "12V~96V（手动调整）",
+          "v": "12V~96V",
           "o": 5
         },
         {
           "l": "Lithium Battery Voltage",
-          "v": "48V~240V（手动调整）",
+          "v": "48V~240V",
           "o": 6
         },
         {
           "l": "LiFePO4 Cells",
-          "v": "2S ~ 45S 可调",
+          "v": "2S ~ 45S",
           "o": 7
         },
         {
           "l": "NMC Cells",
-          "v": "2S ~ 45S 可调",
+          "v": "2S ~ 45S",
           "o": 8
         },
         {
           "l": "Lithium Activation",
-          "v": "有（电压范围8V~170V）",
+          "v": "8V~170V",
           "o": 9
         },
         {
@@ -76723,27 +76723,27 @@
         },
         {
           "l": "Conversion Efficiency",
-          "v": "高达99.9%",
+          "v": "99.9%",
           "o": 11
         },
         {
           "l": "DC Load Output",
-          "v": "持续输出20A",
+          "v": "20A",
           "o": 12
         },
         {
           "l": "Communication Interface",
-          "v": "6针RS485 / Modbus协议",
+          "v": "6RS485 / Modbus",
           "o": 13
         },
         {
           "l": "Display",
-          "v": "触摸按键 + LCD显示",
+          "v": "+ LCD",
           "o": 14
         },
         {
           "l": "Protection",
-          "v": "过充/过放/过载/短路保护",
+          "v": "/",
           "o": 15
         },
         {
@@ -77859,12 +77859,12 @@
         },
         {
           "l": "Product Type",
-          "v": "PoE电源适配器",
+          "v": "PoE",
           "o": 1
         },
         {
           "l": "Description",
-          "v": "54V 1.75A 黑色桌面工业光纤PoE",
+          "v": "54V 1.75A PoE",
           "o": 2
         },
         {
@@ -77884,7 +77884,7 @@
         },
         {
           "l": "Input Voltage Range (Input Voltage)",
-          "v": "90~264Vac (额定100~240Vac)",
+          "v": "90~264Vac (100~240Vac)",
           "o": 6
         },
         {
@@ -77934,7 +77934,7 @@
         },
         {
           "l": "Over Current Protection (OCP)",
-          "v": "2.5~4A, 自恢复",
+          "v": "2.5~4A",
           "o": 16
         },
         {
@@ -77979,17 +77979,17 @@
         },
         {
           "l": "Enclosure Material",
-          "v": "金属 (Metal)",
+          "v": "(Metal)",
           "o": 25
         },
         {
           "l": "Data Rate",
-          "v": "10/100/1000Mbps (千兆)",
+          "v": "10/100/1000Mbps",
           "o": 26
         },
         {
           "l": "SFP Fiber Port",
-          "v": "1×SFP 光纤输入",
+          "v": "1×SFP",
           "o": 27
         },
         {
