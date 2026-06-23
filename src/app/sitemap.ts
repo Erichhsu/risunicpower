@@ -9,8 +9,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Static routes
   const staticRoutes = ['', '/products', '/contact', '/about', '/blog', '/case-studies', '/privacy', '/solutions']
 
-  // Category listing pages
-  const cats = await prisma.productCategory.findMany({ where: { slug: { not: '' } }, select: { slug: true } })
+  // Category listing pages (with DB error tolerance)
+  let cats: { slug: string }[] = []
+  try { cats = await prisma.productCategory.findMany({ where: { slug: { not: '' } }, select: { slug: true } }) } catch (_) {}
   const catPages = locales.flatMap(locale =>
     cats.map(c => ({
       url: `${baseUrl}/${locale}/products/${c.slug}`,
@@ -28,8 +29,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }))
   )
 
-  // Product detail pages
-  const products = await prisma.product.findMany({ where: { published: true }, select: { slug: true, categorySlug: true } })
+  // Product detail pages (with DB error tolerance)
+  let products: { slug: string; categorySlug: string }[] = []
+  try { products = await prisma.product.findMany({ where: { published: true }, select: { slug: true, categorySlug: true } }) } catch (_) {}
   const productPages = locales.flatMap(locale =>
     products.map(p => ({
       url: `${baseUrl}/${locale}/products/${p.categorySlug}/${p.slug}`,
@@ -39,8 +41,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }))
   )
 
-  // Blog posts
-  const posts = await prisma.blogPost.findMany({ where: { published: true }, select: { slug: true, locale: true, updatedAt: true } })
+  // Blog posts (with DB error tolerance)
+  let posts: { slug: string; locale: string; updatedAt: Date }[] = []
+  try { posts = await prisma.blogPost.findMany({ where: { published: true }, select: { slug: true, locale: true, updatedAt: true } }) } catch (_) {}
   const blogPages = posts.map(p => ({
     url: `${baseUrl}/${p.locale}/blog/${p.slug}`,
     lastModified: p.updatedAt.toISOString().split('T')[0],
@@ -48,8 +51,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }))
 
-  // Case studies
-  const cases = await prisma.caseStudy.findMany({ where: { published: true }, select: { slug: true, locale: true, updatedAt: true } })
+  // Case studies (with DB error tolerance)
+  let cases: { slug: string; locale: string; updatedAt: Date }[] = []
+  try { cases = await prisma.caseStudy.findMany({ where: { published: true }, select: { slug: true, locale: true, updatedAt: true } }) } catch (_) {}
   const casePages = cases.map(c => ({
     url: `${baseUrl}/${c.locale}/case-studies/${c.slug}`,
     lastModified: c.updatedAt.toISOString().split('T')[0],
