@@ -86,7 +86,7 @@ function getRateLimit(pathname: string): { max: number; windowMs: number } {
   if (pathname.startsWith('/api/')) {
     return { max: 20, windowMs: 60_000 }
   }
-  return { max: 120, windowMs: 30_000 }
+  return { max: 200, windowMs: 30_000 }
 }
 
 export default function proxy(req: NextRequest) {
