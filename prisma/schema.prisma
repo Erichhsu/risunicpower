@@ -153,6 +153,26 @@ model Order {
   @@index([status])
 }
 
+// ─── Visitor Registration ───
+
+model VisitorRegistration {
+  id          String   @id @default(cuid())
+  refId       String   @unique
+  hostName    String
+  hostTitle   String?
+  visitorName String
+  company     String
+  visitorTitle String?
+  contact     String
+  purpose     String
+  visitDate   String?
+  notes       String?
+  createdAt   DateTime @default(now())
+
+  @@index([createdAt])
+  @@index([refId])
+}
+
 // ─── Content Models ───
 
 model BlogPost {
