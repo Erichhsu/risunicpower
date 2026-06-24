@@ -1,7 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server'
+import nodemailer from 'nodemailer'
 import { prisma } from '@/lib/db/prisma'
-import { createTransport, esc } from '@/lib/email/transport'
+import { esc } from '@/lib/email/transport'
 import { logger } from '@/lib/logger'
+
+function createVisitTransport() {
+  // Use visit-specific SMTP if configured, otherwise fall back to default
+  const host = process.env.VISIT_SMTP_HOST || process.env.SMTP_HOST
+  const user = process.env.VISIT_SMTP_USER || process.env.SMTP_USER
+  if (!host || !user) return null
+  return nodemailer.createTransport({
+    host,
+    port: Number(process.env.VISIT_SMTP_PORT || process.env.SMTP_PORT || '465'),
+    secure: true,
+    auth: { user, pass: process.env.VISIT_SMTP_PASS || process.env.SMTP_PASS || '' },
+  })
+}
 
 function generateRefId(): string {
   const now = new Date()
@@ -104,32 +118,31 @@ export async function POST(req: NextRequest) {
     })
 
     // Send email notification (non-blocking, don't fail on email errors)
-    if (process.env.SMTP_HOST && process.env.SMTP_USER) {
+    const visitTransport = createVisitTransport()
+    if (visitTransport) {
       try {
-        const t = createTransport()
-        if (t) {
-          const notifyEmail = process.env.VISIT_NOTIFY_EMAIL || 'hr-sz@risunic.com'
-          await t.sendMail({
-            from: process.env.SMTP_USER,
-            to: notifyEmail,
-            subject: `[访客登记] ${company} - ${visitorName} 来访`,
-            html: createVisitEmail({
-              refId,
-              hostName,
-              hostTitle,
-              visitorName,
-              company,
-              visitorTitle,
-              contact,
-              purpose,
-              visitDate,
-              notes,
-            }),
-          })
-          logger.info(`Visit notification email sent to ${notifyEmail}`)
-        }
+        const notifyEmail = process.env.VISIT_NOTIFY_EMAIL || 'hr-sz@risunic.com'
+        const fromAddr = process.env.VISIT_SMTP_USER || process.env.SMTP_USER || ''
+        await visitTransport.sendMail({
+          from: fromAddr,
+          to: notifyEmail,
+          subject: `[访客登记] ${company} - ${visitorName} 来访`,
+          html: createVisitEmail({
+            refId,
+            hostName,
+            hostTitle,
+            visitorName,
+            company,
+            visitorTitle,
+            contact,
+            purpose,
+            visitDate,
+            notes,
+          }),
+        })
+        logger.info(`Visit notification email sent to ${notifyEmail}`)
       } catch (mailErr) {
-        logger.warn('Visit notification email failed (will retry or SMTP not configured):', mailErr)
+        logger.warn('Visit notification email failed:', mailErr)
       }
     }
 
