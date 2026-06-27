@@ -135,5 +135,5 @@ export default function proxy(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!_next/static|_next/image|images|fonts|icons|manifest|sw|robots).*)'],
+  matcher: ['/((?!_next/static|_next/image|images|fonts|icons|manifest|sw|robots|brochure).*)'],
 }
