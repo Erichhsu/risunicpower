@@ -17,6 +17,7 @@ const navItems = [
   { key: 'blog', href: '/blog' },
   { key: 'about', href: '/about' },
   { key: 'contact', href: '/contact' },
+  { key: 'brochure', href: '/brochure/', external: true },
 ]
 
 export default function Header() {
@@ -78,19 +79,34 @@ export default function Header() {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">
-            {navItems.map(item => (
-              <Link
-                key={item.key}
-                href={`/${locale}${item.href}`}
-                className={`relative text-[1.3rem] font-medium tracking-wide transition-colors duration-300 group ${
-                  solid ? 'text-[#0E4071]' : 'text-white/80'
-                }`}
-              >
-                <span className="relative">
-                  {t(item.key)}
-                  <span className="absolute -bottom-1 left-0 h-[2px] w-0 rounded-full bg-[#F7D142] transition-all duration-300 ease-out group-hover:w-full" />
-                </span>
-              </Link>
+            {navItems.map(item =>
+              item.external ? (
+                <a
+                  key={item.key}
+                  href={item.href}
+                  className={`relative text-[1.3rem] font-medium tracking-wide transition-colors duration-300 group ${
+                    solid ? 'text-[#0E4071]' : 'text-white/80'
+                  }`}
+                >
+                  <span className="relative">
+                    {t(item.key)}
+                    <span className="absolute -bottom-1 left-0 h-[2px] w-0 rounded-full bg-[#F7D142] transition-all duration-300 ease-out group-hover:w-full" />
+                  </span>
+                </a>
+              ) : (
+                <Link
+                  key={item.key}
+                  href={`/${locale}${item.href}`}
+                  className={`relative text-[1.3rem] font-medium tracking-wide transition-colors duration-300 group ${
+                    solid ? 'text-[#0E4071]' : 'text-white/80'
+                  }`}
+                >
+                  <span className="relative">
+                    {t(item.key)}
+                    <span className="absolute -bottom-1 left-0 h-[2px] w-0 rounded-full bg-[#F7D142] transition-all duration-300 ease-out group-hover:w-full" />
+                  </span>
+                </Link>
+              )
             ))}
           </nav>
 
@@ -159,16 +175,27 @@ export default function Header() {
         {/* Mobile Nav */}
         {menuOpen && (
           <div className="lg:hidden bg-white border-t border-[#e2e8ef] py-4 px-4 space-y-3">
-            {navItems.map(item => (
-              <Link
-                key={item.key}
-                href={`/${locale}${item.href}`}
-                className="block text-[1.5rem] text-[#0E4071] font-medium py-2"
-                onClick={() => setMenuOpen(false)}
-              >
-                {t(item.key)}
-              </Link>
-            ))}
+            {navItems.map(item =>
+              item.external ? (
+                <a
+                  key={item.key}
+                  href={item.href}
+                  className="block text-[1.5rem] text-[#0E4071] font-medium py-2"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {t(item.key)}
+                </a>
+              ) : (
+                <Link
+                  key={item.key}
+                  href={`/${locale}${item.href}`}
+                  className="block text-[1.5rem] text-[#0E4071] font-medium py-2"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {t(item.key)}
+                </Link>
+              )
+            )}
             <div className="pt-3 border-t border-[#e2e8ef]">
               <p className="text-[1.2rem] text-[#b0bccd] mb-2">{t('language')}</p>
               <div className="grid grid-cols-3 gap-2">

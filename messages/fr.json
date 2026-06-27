@@ -1,210 +1,211 @@
-{
-  "Home": {
-    "hero": {
-      "tag": "Solutions d'Alimentation Industrielles",
-      "title": "Alimenter Votre\nInnovation",
-      "subtitle": "Des alimentations POE aux onduleurs solaires — plus de 12 ans d'excellence R&D au service de plus de 600 clients dans plus de 30 pays.",
-      "ctaPrimary": "Voir les Produits",
-      "ctaSecondary": "Demander un Devis",
-      "badgeRnd": "12+ Ans de R&D",
-      "badgeGlobal": "30+ Pays Desservis"
-    },
-    "productGrid": {
-      "title": "Nos Produits",
-      "subtitle": "Des injecteurs POE compacts aux systèmes UPS industriels — chaque produit est conçu pour la fiabilité et la performance.",
-      "viewAll": "Voir Tout",
-      "items": "articles",
-      "label": "Nos Produits"
-    },
-    "stats": {
-      "title": "La Confiance en Chiffres"
-    },
-    "viewAll": "Voir Tout",
-    "readMore": "Lire Plus",
-    "certTitle": "Certifications Mondiales",
-    "certDesc": "Nos produits respectent les normes internationales de sécurité et de qualité"
-  },
-  "Product": {
-    "specs": "Spécifications",
-    "features": "Fonctionnalités",
-    "certifications": "Certifications",
-    "related": "Produits Connexes",
-    "getQuote": "Demander un Devis",
-    "downloadSpec": "Télécharger la Fiche Technique",
-    "addToCart": "Ajouter au Panier",
-    "buyNow": "Acheter Maintenant",
-    "moq": "Qté Min.",
-    "price": "Prix",
-    "inquiry": "Demande",
-    "breadcrumbProducts": "Produits",
-    "viewProducts": "Voir les Produits",
-    "productCount": "{n} produits",
-    "keyFeatures": "Fonctionnalités Clés",
-    "techSpecs": "Spécifications Techniques",
-    "noProducts": "Aucun produit dans cette catégorie pour le moment.",
-    "backTo": "Retour à {name}",
-    "requestQuote": "Demander un Devis",
-    "more": "+{n} de plus",
-    "sku": "SKU",
-    "moqOemOdm": "Commande minimum · OEM · ODM",
-    "productsTitle": "Catégories de Produits",
-    "productsDesc": "Découvrez notre gamme complète de solutions d'alimentation — des injecteurs POE et adaptateurs aux onduleurs solaires et centrales électriques portables.",
-    "allProducts": "Voir Tous les Produits",
-    "inquiryNow": "Demander Maintenant",
-    "customerReviews": "Avis Clients",
-    "backToProducts": "Retour aux Produits"
-  },
-  "Cart": {
-    "title": "Panier",
-    "empty": "Votre panier est vide",
-    "emptyDesc": "Parcourez nos produits et ajoutez ce qui vous plaît",
-    "browseProducts": "Parcourir les Produits",
-    "total": "Total",
-    "subtotal": "Sous-total",
-    "shipping": "Livraison",
-    "calculatedAtCheckout": "Calculé à la commande",
-    "checkout": "Commander",
-    "proceedCheckout": "Passer à la Caisse",
-    "wholesaleInquiry": "Demande de Gros",
-    "clearCart": "Vider le Panier",
-    "remove": "Supprimer",
-    "orderSummary": "Résumé de la Commande",
-    "items": "articles",
-    "product": "Produit",
-    "quantity": "Qté",
-    "continueShopping": "Continuer les Achats",
-    "shippingCalc": "Livraison et taxes calculées à la caisse",
-    "wholesalePricing": "Besoin de prix de gros ?",
-    "totalItems": "Total ({n} articles)"
-  },
-  "Checkout": {
-    "title": "Commander",
-    "backToCart": "Retour au Panier",
-    "orderSummary": "Résumé de la Commande",
-    "total": "Total",
-    "payWithStripe": "Payer avec Stripe",
-    "processing": "Traitement...",
-    "securePayment": "🔒 Sécurisé par Stripe · 140+ devises",
-    "empty": "Votre panier est vide",
-    "browse": "Continuer les Achats",
-    "items": "Articles",
-    "nogkey": "Paiement pas encore configuré",
-    "cart": "Panier",
-    "desc": "Vérifiez votre commande et procédez au paiement",
-    "error": "Échec de l'initiation du paiement. Veuillez réessayer."
-  },
-  "Contact": {
-    "title": "Contactez-Nous",
-    "subtitle": "Demandez des devis, des demandes OEM/ODM ou un support technique",
-    "form": {
-      "company": "Entreprise",
-      "name": "Nom",
-      "email": "E-mail",
-      "phone": "Téléphone",
-      "product": "Produit d'Intérêt",
-      "quantity": "Quantité (MOQ: 100)",
-      "message": "Message",
-      "submit": "Envoyer la Demande",
-      "success": "Merci ! Nous vous répondrons dans les 24 heures.",
-      "sending": "Envoi...",
-      "formError": "Quelque chose s'est mal passé. Veuillez réessayer.",
-      "required": "Requis",
-      "invalidEmail": "Adresse e-mail non valide"
-    },
-    "sending": "Envoi...",
-    "formError": "Quelque chose s'est mal passé. Veuillez réessayer.",
-    "required": "Requis",
-    "invalidEmail": "Adresse e-mail non valide"
-  },
-  "Header": {
-    "products": "Produits",
-    "solutions": "Solutions",
-    "about": "À Propos",
-    "blog": "Blog",
-    "contact": "Contact",
-    "search": "Rechercher",
-    "caseStudies": "Études de Cas",
-    "language": "Langue"
-  },
-  "Footer": {
-    "products": "Produits",
-    "company": "Entreprise",
-    "support": "Support",
-    "legal": "Mentions Légales",
-    "privacy": "Politique de Confidentialité",
-    "terms": "Conditions d'Utilisation",
-    "rights": "Tous droits réservés.",
-    "newsletter": "Abonnez-vous à notre newsletter",
-    "subscribe": "S'abonner",
-    "brandDescription": "Fabricant d'alimentations industrielles depuis 2014. Certifié CE, FCC, UL.",
-    "connectWithUs": "Connectez-Vous Avec Nous",
-    "tagline": "Alimentation POE | Onduleur | Micro-onduleur | UPS | Centrale Électrique Portable | Fabricant de Stockage d'Énergie, Chine"
-  },
-  "NotFound": {
-    "title": "Page Introuvable",
-    "desc": "La page que vous recherchez a peut-être été déplacée ou n'existe plus.",
-    "backHome": "Retour à l'accueil"
-  },
-  "Reviews": {
-    "title": "Avis Clients",
-    "loading": "Chargement des avis...",
-    "noReviews": "Aucun avis pour le moment",
-    "beFirst": "Soyez le premier à partager votre expérience !",
-    "writeReview": "Écrire un Avis",
-    "rating": "Note",
-    "yourReview": "Votre Avis",
-    "reviewPlaceholder": "Partagez votre expérience avec ce produit...",
-    "company": "Entreprise",
-    "yourName": "Votre Nom",
-    "country": "Pays",
-    "submit": "Envoyer",
-    "submitting": "Envoi en cours...",
-    "success": "Merci ! Votre avis a été soumis.",
-    "error": "Échec de l'envoi. Veuillez réessayer.",
-    "count": "{n} avis"
-  },
-  "Blog": {
-    "backToBlog": "Retour au Blog",
-    "inquireProduct": "Demander des Produits Connexes"
-  },
-  "CaseStudies": {
-    "backToCaseStudies": "Retour aux Études de Cas",
-    "challenge": "Défi",
-    "solution": "Solution",
-    "results": "Résultats",
-    "getSimilar": "Obtenir une Solution Similaire"
-  },
-  "Offline": {
-    "title": "You're Offline",
-    "desc": "Veuillez vérifier votre connexion internet et réessayer",
-    "backHome": "Retour à l'Accueil"
-  },
-  "Cookies": {
-    "title": "Cookie Policy",
-    "desc": "Cette page est en construction. Veuillez revenir bientôt.",
-    "backHome": "Retour à l'Accueil"
-  },
-  "Payment": {
-    "title": "Payment Successful!",
-    "desc": "Merci pour votre commande. Vous recevrez un e-mail de confirmation sous peu.",
-    "orderId": "ID de Commande",
-    "backToShop": "Continuer les Achats",
-    "error": "Impossible de vérifier le paiement. Veuillez contacter le support.",
-    "loading": "Vérification du paiement...",
-    "contactSupport": "Contacter le Support"
-  },
-  "Stats": {
-    "title": "La Confiance en Chiffres",
-    "subtitle": "Plus de 12 ans de leadership industriel dans plus de 30 pays",
-    "skus": "SKU Produits",
-    "countries": "Pays Desservis",
-    "clients": "Clients Mondiaux",
-    "years": "Années d'Excellence"
-  },
-  "Error": {
-    "title": "Une erreur est survenue",
-    "description": "Une erreur inattendue est survenue. Veuillez réessayer ou nous contacter.",
-    "tryAgain": "Réessayer",
-    "backHome": "Retour à l'accueil"
-  }
+﻿{
+    "Home":  {
+                 "hero":  {
+                              "tag":  "Solutions d\u0027Alimentation Industrielles",
+                              "title":  "Alimenter Votre\nInnovation",
+                              "subtitle":  "Des alimentations POE aux onduleurs solaires — plus de 12 ans d\u0027excellence R\u0026D au service de plus de 600 clients dans plus de 30 pays.",
+                              "ctaPrimary":  "Voir les Produits",
+                              "ctaSecondary":  "Demander un Devis",
+                              "badgeRnd":  "12+ Ans de R\u0026D",
+                              "badgeGlobal":  "30+ Pays Desservis"
+                          },
+                 "productGrid":  {
+                                     "title":  "Nos Produits",
+                                     "subtitle":  "Des injecteurs POE compacts aux systèmes UPS industriels — chaque produit est conçu pour la fiabilité et la performance.",
+                                     "viewAll":  "Voir Tout",
+                                     "items":  "articles",
+                                     "label":  "Nos Produits"
+                                 },
+                 "stats":  {
+                               "title":  "La Confiance en Chiffres"
+                           },
+                 "viewAll":  "Voir Tout",
+                 "readMore":  "Lire Plus",
+                 "certTitle":  "Certifications Mondiales",
+                 "certDesc":  "Nos produits respectent les normes internationales de sécurité et de qualité"
+             },
+    "Product":  {
+                    "specs":  "Spécifications",
+                    "features":  "Fonctionnalités",
+                    "certifications":  "Certifications",
+                    "related":  "Produits Connexes",
+                    "getQuote":  "Demander un Devis",
+                    "downloadSpec":  "Télécharger la Fiche Technique",
+                    "addToCart":  "Ajouter au Panier",
+                    "buyNow":  "Acheter Maintenant",
+                    "moq":  "Qté Min.",
+                    "price":  "Prix",
+                    "inquiry":  "Demande",
+                    "breadcrumbProducts":  "Produits",
+                    "viewProducts":  "Voir les Produits",
+                    "productCount":  "{n} produits",
+                    "keyFeatures":  "Fonctionnalités Clés",
+                    "techSpecs":  "Spécifications Techniques",
+                    "noProducts":  "Aucun produit dans cette catégorie pour le moment.",
+                    "backTo":  "Retour à {name}",
+                    "requestQuote":  "Demander un Devis",
+                    "more":  "+{n} de plus",
+                    "sku":  "SKU",
+                    "moqOemOdm":  "Commande minimum · OEM · ODM",
+                    "productsTitle":  "Catégories de Produits",
+                    "productsDesc":  "Découvrez notre gamme complète de solutions d\u0027alimentation — des injecteurs POE et adaptateurs aux onduleurs solaires et centrales électriques portables.",
+                    "allProducts":  "Voir Tous les Produits",
+                    "inquiryNow":  "Demander Maintenant",
+                    "customerReviews":  "Avis Clients",
+                    "backToProducts":  "Retour aux Produits"
+                },
+    "Cart":  {
+                 "title":  "Panier",
+                 "empty":  "Votre panier est vide",
+                 "emptyDesc":  "Parcourez nos produits et ajoutez ce qui vous plaît",
+                 "browseProducts":  "Parcourir les Produits",
+                 "total":  "Total",
+                 "subtotal":  "Sous-total",
+                 "shipping":  "Livraison",
+                 "calculatedAtCheckout":  "Calculé à la commande",
+                 "checkout":  "Commander",
+                 "proceedCheckout":  "Passer à la Caisse",
+                 "wholesaleInquiry":  "Demande de Gros",
+                 "clearCart":  "Vider le Panier",
+                 "remove":  "Supprimer",
+                 "orderSummary":  "Résumé de la Commande",
+                 "items":  "articles",
+                 "product":  "Produit",
+                 "quantity":  "Qté",
+                 "continueShopping":  "Continuer les Achats",
+                 "shippingCalc":  "Livraison et taxes calculées à la caisse",
+                 "wholesalePricing":  "Besoin de prix de gros ?",
+                 "totalItems":  "Total ({n} articles)"
+             },
+    "Checkout":  {
+                     "title":  "Commander",
+                     "backToCart":  "Retour au Panier",
+                     "orderSummary":  "Résumé de la Commande",
+                     "total":  "Total",
+                     "payWithStripe":  "Payer avec Stripe",
+                     "processing":  "Traitement...",
+                     "securePayment":  "🔒 Sécurisé par Stripe · 140+ devises",
+                     "empty":  "Votre panier est vide",
+                     "browse":  "Continuer les Achats",
+                     "items":  "Articles",
+                     "nogkey":  "Paiement pas encore configuré",
+                     "cart":  "Panier",
+                     "desc":  "Vérifiez votre commande et procédez au paiement",
+                     "error":  "Échec de l\u0027initiation du paiement. Veuillez réessayer."
+                 },
+    "Contact":  {
+                    "title":  "Contactez-Nous",
+                    "subtitle":  "Demandez des devis, des demandes OEM/ODM ou un support technique",
+                    "form":  {
+                                 "company":  "Entreprise",
+                                 "name":  "Nom",
+                                 "email":  "E-mail",
+                                 "phone":  "Téléphone",
+                                 "product":  "Produit d\u0027Intérêt",
+                                 "quantity":  "Quantité (MOQ: 100)",
+                                 "message":  "Message",
+                                 "submit":  "Envoyer la Demande",
+                                 "success":  "Merci ! Nous vous répondrons dans les 24 heures.",
+                                 "sending":  "Envoi...",
+                                 "formError":  "Quelque chose s\u0027est mal passé. Veuillez réessayer.",
+                                 "required":  "Requis",
+                                 "invalidEmail":  "Adresse e-mail non valide"
+                             },
+                    "sending":  "Envoi...",
+                    "formError":  "Quelque chose s\u0027est mal passé. Veuillez réessayer.",
+                    "required":  "Requis",
+                    "invalidEmail":  "Adresse e-mail non valide"
+                },
+    "Header":  {
+                   "products":  "Produits",
+                   "solutions":  "Solutions",
+                   "about":  "À Propos",
+                   "blog":  "Blog",
+                   "contact":  "Contact",
+                   "search":  "Rechercher",
+                   "caseStudies":  "Études de Cas",
+                   "language":  "Langue",
+                   "brochure":  "Brochure"
+               },
+    "Footer":  {
+                   "products":  "Produits",
+                   "company":  "Entreprise",
+                   "support":  "Support",
+                   "legal":  "Mentions Légales",
+                   "privacy":  "Politique de Confidentialité",
+                   "terms":  "Conditions d\u0027Utilisation",
+                   "rights":  "Tous droits réservés.",
+                   "newsletter":  "Abonnez-vous à notre newsletter",
+                   "subscribe":  "S\u0027abonner",
+                   "brandDescription":  "Fabricant d\u0027alimentations industrielles depuis 2014. Certifié CE, FCC, UL.",
+                   "connectWithUs":  "Connectez-Vous Avec Nous",
+                   "tagline":  "Alimentation POE | Onduleur | Micro-onduleur | UPS | Centrale Électrique Portable | Fabricant de Stockage d\u0027Énergie, Chine"
+               },
+    "NotFound":  {
+                     "title":  "Page Introuvable",
+                     "desc":  "La page que vous recherchez a peut-être été déplacée ou n\u0027existe plus.",
+                     "backHome":  "Retour à l\u0027accueil"
+                 },
+    "Reviews":  {
+                    "title":  "Avis Clients",
+                    "loading":  "Chargement des avis...",
+                    "noReviews":  "Aucun avis pour le moment",
+                    "beFirst":  "Soyez le premier à partager votre expérience !",
+                    "writeReview":  "Écrire un Avis",
+                    "rating":  "Note",
+                    "yourReview":  "Votre Avis",
+                    "reviewPlaceholder":  "Partagez votre expérience avec ce produit...",
+                    "company":  "Entreprise",
+                    "yourName":  "Votre Nom",
+                    "country":  "Pays",
+                    "submit":  "Envoyer",
+                    "submitting":  "Envoi en cours...",
+                    "success":  "Merci ! Votre avis a été soumis.",
+                    "error":  "Échec de l\u0027envoi. Veuillez réessayer.",
+                    "count":  "{n} avis"
+                },
+    "Blog":  {
+                 "backToBlog":  "Retour au Blog",
+                 "inquireProduct":  "Demander des Produits Connexes"
+             },
+    "CaseStudies":  {
+                        "backToCaseStudies":  "Retour aux Études de Cas",
+                        "challenge":  "Défi",
+                        "solution":  "Solution",
+                        "results":  "Résultats",
+                        "getSimilar":  "Obtenir une Solution Similaire"
+                    },
+    "Offline":  {
+                    "title":  "You\u0027re Offline",
+                    "desc":  "Veuillez vérifier votre connexion internet et réessayer",
+                    "backHome":  "Retour à l\u0027Accueil"
+                },
+    "Cookies":  {
+                    "title":  "Cookie Policy",
+                    "desc":  "Cette page est en construction. Veuillez revenir bientôt.",
+                    "backHome":  "Retour à l\u0027Accueil"
+                },
+    "Payment":  {
+                    "title":  "Payment Successful!",
+                    "desc":  "Merci pour votre commande. Vous recevrez un e-mail de confirmation sous peu.",
+                    "orderId":  "ID de Commande",
+                    "backToShop":  "Continuer les Achats",
+                    "error":  "Impossible de vérifier le paiement. Veuillez contacter le support.",
+                    "loading":  "Vérification du paiement...",
+                    "contactSupport":  "Contacter le Support"
+                },
+    "Stats":  {
+                  "title":  "La Confiance en Chiffres",
+                  "subtitle":  "Plus de 12 ans de leadership industriel dans plus de 30 pays",
+                  "skus":  "SKU Produits",
+                  "countries":  "Pays Desservis",
+                  "clients":  "Clients Mondiaux",
+                  "years":  "Années d\u0027Excellence"
+              },
+    "Error":  {
+                  "title":  "Une erreur est survenue",
+                  "description":  "Une erreur inattendue est survenue. Veuillez réessayer ou nous contacter.",
+                  "tryAgain":  "Réessayer",
+                  "backHome":  "Retour à l\u0027accueil"
+              }
 }

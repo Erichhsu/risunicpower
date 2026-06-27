@@ -1,210 +1,211 @@
-{
-  "Home": {
-    "hero": {
-      "tag": "Industrial Power Solutions",
-      "title": "Powering Your \nInnovation",
-      "subtitle": "From POE supplies to solar inverters — 12+ years of R&D excellence serving\n600+ clients across 30+ countries.",
-      "ctaPrimary": "View Products",
-      "ctaSecondary": "Get a Quote",
-      "badgeRnd": "12+ Years R&D",
-      "badgeGlobal": "30+ Countries Served"
-    },
-    "productGrid": {
-      "title": "Our Products",
-      "subtitle": "From compact POE injectors to industrial-grade UPS systems — every product is engineered for reliability and performance.",
-      "viewAll": "View All",
-      "items": "items",
-      "label": "Our Products"
-    },
-    "stats": {
-      "title": "Trust in Numbers"
-    },
-    "viewAll": "View All",
-    "readMore": "Read More",
-    "certTitle": "Global Certifications",
-    "certDesc": "Our products meet international safety and quality standards"
-  },
-  "Product": {
-    "specs": "Specifications",
-    "features": "Features",
-    "certifications": "Certifications",
-    "related": "Related Products",
-    "getQuote": "Get a Quote",
-    "downloadSpec": "Download Datasheet",
-    "addToCart": "Add to Cart",
-    "buyNow": "Buy Now",
-    "moq": "MOQ",
-    "price": "Price",
-    "inquiry": "Inquiry",
-    "breadcrumbProducts": "Products",
-    "viewProducts": "View Products",
-    "productCount": "{n} products",
-    "keyFeatures": "Key Features",
-    "techSpecs": "Technical Specifications",
-    "noProducts": "No products in this category yet.",
-    "backTo": "Back to {name}",
-    "requestQuote": "Request Quote",
-    "more": "+{n} more",
-    "sku": "SKU",
-    "moqOemOdm": "MOQ · OEM · ODM",
-    "productsTitle": "Product Categories",
-    "productsDesc": "Explore our full range of power solutions — from POE injectors and adapters to solar inverters and portable power stations.",
-    "allProducts": "View All Products",
-    "inquiryNow": "Inquire Now",
-    "customerReviews": "Customer Reviews",
-    "backToProducts": "Back to Products"
-  },
-  "Cart": {
-    "title": "Shopping Cart",
-    "empty": "Your cart is empty",
-    "emptyDesc": "Browse our products and add items you like",
-    "browseProducts": "Browse Products",
-    "total": "Total",
-    "subtotal": "Subtotal",
-    "shipping": "Shipping",
-    "calculatedAtCheckout": "Calculated at checkout",
-    "checkout": "Checkout",
-    "proceedCheckout": "Proceed to Checkout",
-    "wholesaleInquiry": "Wholesale Inquiry",
-    "clearCart": "Clear Cart",
-    "remove": "Remove",
-    "orderSummary": "Order Summary",
-    "items": "items",
-    "product": "Product",
-    "quantity": "Qty",
-    "continueShopping": "Continue Shopping",
-    "shippingCalc": "Shipping & taxes calculated at checkout",
-    "wholesalePricing": "Need wholesale pricing?",
-    "totalItems": "Total ({n} items)"
-  },
-  "Checkout": {
-    "title": "Checkout",
-    "backToCart": "Back to Cart",
-    "orderSummary": "Order Summary",
-    "total": "Total",
-    "payWithStripe": "Pay with Stripe",
-    "processing": "Processing...",
-    "securePayment": "🔒 Secured by Stripe · 140+ currencies supported",
-    "empty": "Your cart is empty",
-    "browse": "Continue Shopping",
-    "items": "Items",
-    "nogkey": "Payment not configured yet",
-    "cart": "Cart",
-    "desc": "Review your order and proceed to payment",
-    "error": "Payment initiation failed. Please try again."
-  },
-  "Contact": {
-    "title": "Contact Us",
-    "subtitle": "Get in touch for quotes, OEM/ODM inquiries, or technical support",
-    "form": {
-      "company": "Company",
-      "name": "Name",
-      "email": "Email",
-      "phone": "Phone",
-      "product": "Product of Interest",
-      "quantity": "Select quantity",
-      "message": "Message",
-      "submit": "Submit Inquiry",
-      "success": "Thank you! We will respond within 24 hours.",
-      "sending": "Sending...",
-      "formError": "Something went wrong. Please try again.",
-      "required": "Required",
-      "invalidEmail": "Invalid email address"
-    },
-    "sending": "Sending...",
-    "formError": "Something went wrong. Please try again.",
-    "required": "Required",
-    "invalidEmail": "Invalid email address"
-  },
-  "Header": {
-    "products": "Products",
-    "solutions": "Solutions",
-    "about": "About",
-    "blog": "Blog",
-    "contact": "Contact",
-    "search": "Search",
-    "caseStudies": "Case Studies",
-    "language": "Language"
-  },
-  "Footer": {
-    "products": "Products",
-    "company": "Company",
-    "support": "Support",
-    "legal": "Legal",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "rights": "All rights reserved.",
-    "newsletter": "Subscribe to our newsletter",
-    "subscribe": "Subscribe",
-    "brandDescription": "Industrial power supply manufacturer since 2014. CE, FCC, UL certified.",
-    "connectWithUs": "Connect With Us",
-    "tagline": "POE Power Supply | Inverter | Micro Inverter | UPS | Portable Power Station | Energy Storage Manufacturer, China"
-  },
-  "NotFound": {
-    "title": "Page Not Found",
-    "desc": "The page you are looking for might have been moved or no longer exists.",
-    "backHome": "Back to Home"
-  },
-  "Reviews": {
-    "title": "Customer Reviews",
-    "loading": "Loading reviews...",
-    "noReviews": "No reviews yet.",
-    "beFirst": "Be the first to share your experience with this product!",
-    "writeReview": "Write a Review",
-    "rating": "Rating",
-    "yourReview": "Your Review",
-    "reviewPlaceholder": "Share your experience with this product...",
-    "company": "Company",
-    "yourName": "Your Name",
-    "country": "Country",
-    "submit": "Submit Review",
-    "submitting": "Submitting...",
-    "success": "Thank you! Your review has been submitted.",
-    "error": "Failed to submit review. Please try again.",
-    "count": "{n} reviews"
-  },
-  "Blog": {
-    "backToBlog": "Back to Blog",
-    "inquireProduct": "Inquire About Related Products"
-  },
-  "CaseStudies": {
-    "backToCaseStudies": "Back to Case Studies",
-    "challenge": "Challenge",
-    "solution": "Solution",
-    "results": "Results",
-    "getSimilar": "Get a Similar Solution"
-  },
-  "Offline": {
-    "title": "You're Offline",
-    "desc": "Please check your internet connection and try again",
-    "backHome": "Back to Home"
-  },
-  "Cookies": {
-    "title": "Cookie Policy",
-    "desc": "This page is under construction. Please check back soon.",
-    "backHome": "Back to Home"
-  },
-  "Payment": {
-    "title": "Payment Successful!",
-    "desc": "Thank you for your order. You will receive a confirmation email shortly.",
-    "orderId": "Order ID",
-    "backToShop": "Continue Shopping",
-    "error": "Unable to verify payment. Please contact support.",
-    "loading": "Verifying payment...",
-    "contactSupport": "Contact Support"
-  },
-  "Stats": {
-    "title": "Trust in Numbers",
-    "subtitle": "12+ years of industry leadership across 30+ countries",
-    "skus": "Product SKUs",
-    "countries": "Countries Served",
-    "clients": "Global Clients",
-    "years": "Years of Excellence"
-  },
-  "Error": {
-    "title": "Something went wrong",
-    "description": "An unexpected error occurred. Please try again or contact us.",
-    "tryAgain": "Try Again",
-    "backHome": "Back to Home"
-  }
+﻿{
+    "Home":  {
+                 "hero":  {
+                              "tag":  "Industrial Power Solutions",
+                              "title":  "Powering Your \nInnovation",
+                              "subtitle":  "From POE supplies to solar inverters — 12+ years of R\u0026D excellence serving\n600+ clients across 30+ countries.",
+                              "ctaPrimary":  "View Products",
+                              "ctaSecondary":  "Get a Quote",
+                              "badgeRnd":  "12+ Years R\u0026D",
+                              "badgeGlobal":  "30+ Countries Served"
+                          },
+                 "productGrid":  {
+                                     "title":  "Our Products",
+                                     "subtitle":  "From compact POE injectors to industrial-grade UPS systems — every product is engineered for reliability and performance.",
+                                     "viewAll":  "View All",
+                                     "items":  "items",
+                                     "label":  "Our Products"
+                                 },
+                 "stats":  {
+                               "title":  "Trust in Numbers"
+                           },
+                 "viewAll":  "View All",
+                 "readMore":  "Read More",
+                 "certTitle":  "Global Certifications",
+                 "certDesc":  "Our products meet international safety and quality standards"
+             },
+    "Product":  {
+                    "specs":  "Specifications",
+                    "features":  "Features",
+                    "certifications":  "Certifications",
+                    "related":  "Related Products",
+                    "getQuote":  "Get a Quote",
+                    "downloadSpec":  "Download Datasheet",
+                    "addToCart":  "Add to Cart",
+                    "buyNow":  "Buy Now",
+                    "moq":  "MOQ",
+                    "price":  "Price",
+                    "inquiry":  "Inquiry",
+                    "breadcrumbProducts":  "Products",
+                    "viewProducts":  "View Products",
+                    "productCount":  "{n} products",
+                    "keyFeatures":  "Key Features",
+                    "techSpecs":  "Technical Specifications",
+                    "noProducts":  "No products in this category yet.",
+                    "backTo":  "Back to {name}",
+                    "requestQuote":  "Request Quote",
+                    "more":  "+{n} more",
+                    "sku":  "SKU",
+                    "moqOemOdm":  "MOQ · OEM · ODM",
+                    "productsTitle":  "Product Categories",
+                    "productsDesc":  "Explore our full range of power solutions — from POE injectors and adapters to solar inverters and portable power stations.",
+                    "allProducts":  "View All Products",
+                    "inquiryNow":  "Inquire Now",
+                    "customerReviews":  "Customer Reviews",
+                    "backToProducts":  "Back to Products"
+                },
+    "Cart":  {
+                 "title":  "Shopping Cart",
+                 "empty":  "Your cart is empty",
+                 "emptyDesc":  "Browse our products and add items you like",
+                 "browseProducts":  "Browse Products",
+                 "total":  "Total",
+                 "subtotal":  "Subtotal",
+                 "shipping":  "Shipping",
+                 "calculatedAtCheckout":  "Calculated at checkout",
+                 "checkout":  "Checkout",
+                 "proceedCheckout":  "Proceed to Checkout",
+                 "wholesaleInquiry":  "Wholesale Inquiry",
+                 "clearCart":  "Clear Cart",
+                 "remove":  "Remove",
+                 "orderSummary":  "Order Summary",
+                 "items":  "items",
+                 "product":  "Product",
+                 "quantity":  "Qty",
+                 "continueShopping":  "Continue Shopping",
+                 "shippingCalc":  "Shipping \u0026 taxes calculated at checkout",
+                 "wholesalePricing":  "Need wholesale pricing?",
+                 "totalItems":  "Total ({n} items)"
+             },
+    "Checkout":  {
+                     "title":  "Checkout",
+                     "backToCart":  "Back to Cart",
+                     "orderSummary":  "Order Summary",
+                     "total":  "Total",
+                     "payWithStripe":  "Pay with Stripe",
+                     "processing":  "Processing...",
+                     "securePayment":  "🔒 Secured by Stripe · 140+ currencies supported",
+                     "empty":  "Your cart is empty",
+                     "browse":  "Continue Shopping",
+                     "items":  "Items",
+                     "nogkey":  "Payment not configured yet",
+                     "cart":  "Cart",
+                     "desc":  "Review your order and proceed to payment",
+                     "error":  "Payment initiation failed. Please try again."
+                 },
+    "Contact":  {
+                    "title":  "Contact Us",
+                    "subtitle":  "Get in touch for quotes, OEM/ODM inquiries, or technical support",
+                    "form":  {
+                                 "company":  "Company",
+                                 "name":  "Name",
+                                 "email":  "Email",
+                                 "phone":  "Phone",
+                                 "product":  "Product of Interest",
+                                 "quantity":  "Select quantity",
+                                 "message":  "Message",
+                                 "submit":  "Submit Inquiry",
+                                 "success":  "Thank you! We will respond within 24 hours.",
+                                 "sending":  "Sending...",
+                                 "formError":  "Something went wrong. Please try again.",
+                                 "required":  "Required",
+                                 "invalidEmail":  "Invalid email address"
+                             },
+                    "sending":  "Sending...",
+                    "formError":  "Something went wrong. Please try again.",
+                    "required":  "Required",
+                    "invalidEmail":  "Invalid email address"
+                },
+    "Header":  {
+                   "products":  "Products",
+                   "solutions":  "Solutions",
+                   "about":  "About",
+                   "blog":  "Blog",
+                   "contact":  "Contact",
+                   "search":  "Search",
+                   "caseStudies":  "Case Studies",
+                   "language":  "Language",
+                   "brochure":  "Brochure"
+               },
+    "Footer":  {
+                   "products":  "Products",
+                   "company":  "Company",
+                   "support":  "Support",
+                   "legal":  "Legal",
+                   "privacy":  "Privacy Policy",
+                   "terms":  "Terms of Service",
+                   "rights":  "All rights reserved.",
+                   "newsletter":  "Subscribe to our newsletter",
+                   "subscribe":  "Subscribe",
+                   "brandDescription":  "Industrial power supply manufacturer since 2014. CE, FCC, UL certified.",
+                   "connectWithUs":  "Connect With Us",
+                   "tagline":  "POE Power Supply | Inverter | Micro Inverter | UPS | Portable Power Station | Energy Storage Manufacturer, China"
+               },
+    "NotFound":  {
+                     "title":  "Page Not Found",
+                     "desc":  "The page you are looking for might have been moved or no longer exists.",
+                     "backHome":  "Back to Home"
+                 },
+    "Reviews":  {
+                    "title":  "Customer Reviews",
+                    "loading":  "Loading reviews...",
+                    "noReviews":  "No reviews yet.",
+                    "beFirst":  "Be the first to share your experience with this product!",
+                    "writeReview":  "Write a Review",
+                    "rating":  "Rating",
+                    "yourReview":  "Your Review",
+                    "reviewPlaceholder":  "Share your experience with this product...",
+                    "company":  "Company",
+                    "yourName":  "Your Name",
+                    "country":  "Country",
+                    "submit":  "Submit Review",
+                    "submitting":  "Submitting...",
+                    "success":  "Thank you! Your review has been submitted.",
+                    "error":  "Failed to submit review. Please try again.",
+                    "count":  "{n} reviews"
+                },
+    "Blog":  {
+                 "backToBlog":  "Back to Blog",
+                 "inquireProduct":  "Inquire About Related Products"
+             },
+    "CaseStudies":  {
+                        "backToCaseStudies":  "Back to Case Studies",
+                        "challenge":  "Challenge",
+                        "solution":  "Solution",
+                        "results":  "Results",
+                        "getSimilar":  "Get a Similar Solution"
+                    },
+    "Offline":  {
+                    "title":  "You\u0027re Offline",
+                    "desc":  "Please check your internet connection and try again",
+                    "backHome":  "Back to Home"
+                },
+    "Cookies":  {
+                    "title":  "Cookie Policy",
+                    "desc":  "This page is under construction. Please check back soon.",
+                    "backHome":  "Back to Home"
+                },
+    "Payment":  {
+                    "title":  "Payment Successful!",
+                    "desc":  "Thank you for your order. You will receive a confirmation email shortly.",
+                    "orderId":  "Order ID",
+                    "backToShop":  "Continue Shopping",
+                    "error":  "Unable to verify payment. Please contact support.",
+                    "loading":  "Verifying payment...",
+                    "contactSupport":  "Contact Support"
+                },
+    "Stats":  {
+                  "title":  "Trust in Numbers",
+                  "subtitle":  "12+ years of industry leadership across 30+ countries",
+                  "skus":  "Product SKUs",
+                  "countries":  "Countries Served",
+                  "clients":  "Global Clients",
+                  "years":  "Years of Excellence"
+              },
+    "Error":  {
+                  "title":  "Something went wrong",
+                  "description":  "An unexpected error occurred. Please try again or contact us.",
+                  "tryAgain":  "Try Again",
+                  "backHome":  "Back to Home"
+              }
 }
