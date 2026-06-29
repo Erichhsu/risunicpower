@@ -4,6 +4,7 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Calendar, ArrowLeft } from 'lucide-react'
+import { marked } from 'marked'
 
 export const dynamic = 'force-dynamic'
 
@@ -42,7 +43,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
 
         <div
           className="prose prose-lg max-w-none text-[1.4rem] leading-relaxed text-[#2c3e50]"
-          dangerouslySetInnerHTML={{ __html: p.content }}
+          dangerouslySetInnerHTML={{ __html: marked.parse(p.content) as string }}
         />
 
         <div className="mt-12 border-t border-gray-200 pt-8">

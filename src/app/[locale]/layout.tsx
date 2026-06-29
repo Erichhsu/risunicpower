@@ -15,13 +15,14 @@ import LocaleAttributes from '@/components/ui/LocaleAttributes'
 export const metadata: Metadata = {
   title: { default: 'RisunicPower - Industrial Power Supply Manufacturer', template: '%s — RisunicPower' },
   description: 'POE power supplies, adapters, UPS, inverters, portable power stations. 12+ years R&D, serving 600+ clients globally.',
+  metadataBase: new URL('https://risunicpower.com'),
   openGraph: {
     type: 'website', locale: 'en_US', siteName: 'RisunicPower',
     title: 'RisunicPower - Industrial Power Supply Manufacturer',
     description: 'POE power supplies, adapters, UPS, inverters, portable power stations. 12+ years R&D, serving 600+ clients globally.',
-    url: 'https://risunicpower.com', images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    url: 'https://risunicpower.com', images: [{ url: 'https://risunicpower.com/og-image.png', width: 1200, height: 630 }],
   },
-  twitter: { card: 'summary_large_image', title: 'RisunicPower - Industrial Power Supply Manufacturer', description: 'POE power supplies, adapters, UPS, inverters, portable power stations. 12+ years R&D, serving 600+ clients globally.', images: [{ url: '/og-image.png', width: 1200, height: 630 }] },
+  twitter: { card: 'summary_large_image', title: 'RisunicPower - Industrial Power Supply Manufacturer', description: 'POE power supplies, adapters, UPS, inverters, portable power stations. 12+ years R&D, serving 600+ clients globally.', images: [{ url: 'https://risunicpower.com/og-image.png', width: 1200, height: 630 }] },
   alternates: {
     canonical: 'https://risunicpower.com',
     languages: {

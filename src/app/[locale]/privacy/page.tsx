@@ -3,22 +3,40 @@ import privacyContent from '@/lib/legal/privacy'
 
 type Props = { params: Promise<{ locale: string }> }
 
+const metaTitle: Record<string, string> = {
+  en: 'Privacy Policy - RisunicPower', zh: '隐私政策 - RisunicPower', ja: 'プライバシーポリシー - RisunicPower',
+  es: 'Política de Privacidad - RisunicPower', de: 'Datenschutzerklärung - RisunicPower',
+  fr: 'Politique de Confidentialité - RisunicPower', pt: 'Política de Privacidade - RisunicPower',
+  ar: 'سياسة الخصوصية - RisunicPower', ru: 'Политика Конфиденциальности - RisunicPower',
+}
+const metaDesc: Record<string, string> = {
+  en: 'RisunicPower Privacy Policy. Learn how we collect, use, and protect your personal information.',
+  zh: 'RisunicPower隐私政策。了解我们如何收集、使用和保护您的个人信息。',
+  ja: 'RisunicPowerのプライバシーポリシー。お客様の個人情報の収集、利用、保護について説明します。',
+  es: 'Política de Privacidad de RisunicPower. Conozca cómo recopilamos, utilizamos y protegemos su información personal.',
+  de: 'Datenschutzerklärung von RisunicPower. Erfahren Sie, wie wir Ihre personenbezogenen Daten erfassen, nutzen und schützen.',
+  fr: 'Politique de Confidentialité de RisunicPower. Découvrez comment nous collectons, utilisons et protégeons vos informations personnelles.',
+  pt: 'Política de Privacidade da RisunicPower. Saiba como coletamos, usamos e protegemos suas informações pessoais.',
+  ar: 'سياسة خصوصية RisunicPower. تعرف على كيفية جمعنا واستخدامنا وحمايتنا لمعلوماتك الشخصية.',
+  ru: 'Политика конфиденциальности RisunicPower. Узнайте, как мы собираем, используем и защищаем вашу личную информацию.',
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
-  const isZh = locale === 'zh'
+  const l = supportedLocales.includes(locale) ? locale : 'en'
   return {
-    title: isZh ? '隐私政策 - RisunicPower' : 'Privacy Policy - RisunicPower',
-    description: isZh
-      ? 'RisunicPower隐私政策。了解我们如何收集、使用和保护您的个人信息。'
-      : 'RisunicPower Privacy Policy. Learn how we collect, use, and protect your personal information.',
+    title: metaTitle[l] || metaTitle.en,
+    description: metaDesc[l] || metaDesc.en,
     robots: 'noindex, follow',
   }
 }
 
+const supportedLocales = ['en', 'zh', 'ja', 'es', 'de', 'fr', 'pt', 'ar', 'ru']
+
 export default async function PrivacyPage({ params }: Props) {
   const { locale } = await params
-  const l = ['en', 'zh', 'ja'].includes(locale) ? locale : 'en'
-  const content = privacyContent[l === 'zh' ? 'zh' : 'en']
+  const l = supportedLocales.includes(locale) ? locale : 'en'
+  const content = privacyContent[l] || privacyContent.en
 
   return (
     <main className="pt-32 pb-20 min-h-screen bg-[#f7f8fa]">
