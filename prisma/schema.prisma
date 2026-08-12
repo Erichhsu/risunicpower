@@ -173,6 +173,47 @@ model VisitorRegistration {
   @@index([refId])
 }
 
+// ─── Badminton ───
+
+model BadmintonActivity {
+  id           String   @id @default(cuid())
+  activityDate String   @unique
+  venue        String   @default("公司羽毛球场")
+  totalSlots   Int      @default(14)
+  bookedSlots  Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  registrations BadmintonRegistration[]
+  checkins      BadmintonCheckin[]
+
+  @@index([activityDate])
+}
+
+model BadmintonRegistration {
+  id          String   @id @default(cuid())
+  activityId  String
+  memberName  String
+  regTime     DateTime @default(now())
+
+  activity BadmintonActivity @relation(fields: [activityId], references: [id], onDelete: Cascade)
+
+  @@unique([activityId, memberName])
+  @@index([activityId])
+}
+
+model BadmintonCheckin {
+  id          String   @id @default(cuid())
+  activityId  String
+  memberName  String
+  checkinTime DateTime @default(now())
+
+  activity BadmintonActivity @relation(fields: [activityId], references: [id], onDelete: Cascade)
+
+  @@unique([activityId, memberName])
+  @@index([activityId])
+}
+
 // ─── Content Models ───
 
 model BlogPost {
