@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>周三羽球</title>
+    <style>
+        :root {
+            --bg-deep: #050B18;
+            --bg-card: #0A1226;
+            --bg-input: #0F1A30;
+            --border: #1A2A45;
+            --border-focus: #00D4AA;
+            --accent: #00D4AA;
+            --accent-glow: rgba(0,212,170,0.25);
+            --accent-dim: rgba(0,212,170,0.08);
+            --text-primary: #E8ECF1;
+            --text-secondary: #8899B4;
+            --text-muted: #556580;
+            --text-placeholder: #3A4A65;
+            --danger: #FF5E5E;
+            --radius-sm: 6px;
+            --radius: 10px;
+            --radius-lg: 16px;
+            --transition: 0.25s cubic-bezier(0.4,0,0.2,1);
+            --font: -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: var(--font);
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex; flex-direction: column; align-items: center;
+            -webkit-tap-highlight-color: transparent;
+        }
+        body::before {
+            content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                radial-gradient(ellipse 80% 50% at 50% -10%, rgba(0,212,170,0.06) 0%, transparent 70%),
+                radial-gradient(ellipse 60% 40% at 20% 80%, rgba(0,150,255,0.04) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 30% at 80% 60%, rgba(120,0,255,0.03) 0%, transparent 70%);
+            pointer-events: none; z-index: 0;
+        }
+        .grid-bg {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; opacity: 0.03;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .container {
+            position: relative; z-index: 1;
+            width: 100%; max-width: 420px;
+            padding: 40px 24px 80px;
+            display: flex; flex-direction: column; align-items: center;
+        }
+        .logo { text-align: center; margin-bottom: 12px; animation: fadeInDown 0.6s ease; }
+        .logo span {
+            font-size: 22px; font-weight: 800; letter-spacing: 3px;
+            background: linear-gradient(135deg, #00D4AA, #00A8FF);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .brand-sub {
+            font-size: 12px; color: var(--text-muted);
+            letter-spacing: 3px; margin-bottom: 32px;
+            animation: fadeInDown 0.6s ease;
+        }
+        .mode-badge {
+            font-size: 13px; padding: 6px 20px; border-radius: 20px; margin-bottom: 20px;
+            text-align: center; font-weight: 600; letter-spacing: 1px;
+            animation: fadeInUp 0.5s ease;
+        }
+        .mode-register { background: var(--accent-dim); color: var(--accent); border: 1px solid rgba(0,212,170,0.2); }
+        .mode-checkin { background: rgba(0,168,255,0.08); color: #00A8FF; border: 1px solid rgba(0,168,255,0.2); }
+        .mode-closed { background: rgba(255,94,94,0.08); color: var(--danger); border: 1px solid rgba(255,94,94,0.2); }
+
+        .activity-card {
+            width: 100%;
+            background: linear-gradient(135deg, rgba(0,212,170,0.12), rgba(0,168,255,0.08));
+            border: 1px solid rgba(0,212,170,0.15);
+            border-radius: var(--radius-lg);
+            padding: 24px 22px 22px;
+            margin-bottom: 20px;
+            position: relative; overflow: hidden;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.02) inset;
+            animation: fadeInUp 0.6s ease;
+        }
+        .act-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: var(--accent-dim); color: var(--accent);
+            padding: 4px 16px; border-radius: 20px; font-size: 12px;
+            margin-bottom: 10px; letter-spacing: 1px;
+        }
+        .act-badge svg { color: var(--accent); }
+        .act-date { font-size: 24px; font-weight: 700; color: var(--text-primary); margin: 4px 0 2px; }
+        .act-venue { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+        .slots { font-size: 15px; color: var(--text-secondary); margin-bottom: 8px; }
+        .num { font-weight: 700; font-size: 20px; color: var(--accent); }
+        .num.full { color: var(--danger); }
+        .progress-bar {
+            height: 6px; background: rgba(255,255,255,0.08); border-radius: 10px; overflow: hidden; margin-bottom: 8px;
+        }
+        .progress-fill {
+            height: 100%; background: linear-gradient(90deg, var(--accent), #00A8FF);
+            border-radius: 10px; transition: width 0.5s ease; width: 0%;
+        }
+        .status-tip { font-size: 13px; color: var(--danger); font-weight: 500; margin-top: 4px; display: none; }
+
+        .action-area {
+            width: 100%;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 24px 22px 26px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.03) inset;
+            animation: fadeInUp 0.6s ease;
+        }
+        .input-group { margin-bottom: 16px; }
+        .input-label {
+            display: flex; align-items: center; gap: 6px;
+            font-size: 13px; font-weight: 600;
+            color: var(--text-secondary); margin-bottom: 6px; letter-spacing: 0.5px;
+        }
+        .input-label svg { color: var(--text-muted); }
+        .name-input {
+            width: 100%; height: 48px; border: 1px solid var(--border);
+            border-radius: var(--radius-sm); padding: 0 14px; font-size: 16px;
+            background: var(--bg-input); color: var(--text-primary);
+            outline: none; font-family: var(--font);
+            transition: border-color var(--transition);
+            caret-color: var(--accent);
+        }
+        .name-input:focus { border-color: var(--border-focus); box-shadow: 0 0 0 3px var(--accent-dim); }
+        .name-input::placeholder { color: var(--text-placeholder); }
+
+        .action-btn {
+            width: 100%; padding: 14px; border: none; border-radius: var(--radius);
+            font-size: 16px; font-weight: 700; cursor: pointer; letter-spacing: 2px;
+            transition: all var(--transition);
+            font-family: var(--font);
+            position: relative; overflow: hidden;
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+        }
+        .action-btn:active { transform: translateY(0); }
+        .action-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none !important; }
+
+        .btn-register {
+            background: linear-gradient(135deg, #00D4AA, #009E7D);
+            color: #050B18;
+            box-shadow: 0 4px 16px var(--accent-glow);
+        }
+        .btn-register:hover { transform: translateY(-1px); box-shadow: 0 6px 24px var(--accent-glow); }
+
+        .btn-checkin {
+            background: linear-gradient(135deg, #00A8FF, #007BFF);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(0,168,255,0.25);
+        }
+        .btn-checkin:hover { transform: translateY(-1px); box-shadow: 0 6px 24px rgba(0,168,255,0.35); }
+
+        .list-card {
+            width: 100%;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin-bottom: 16px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+            animation: fadeInUp 0.6s ease;
+        }
+        .list-header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 16px 22px 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            font-size: 16px; font-weight: 600; color: var(--text-primary);
+        }
+        .list-header > span { display: flex; align-items: center; gap: 6px; }
+        .list-header > span svg { color: var(--text-muted); }
+        .refresh-btn {
+            display: flex; align-items: center; gap: 4px;
+            color: var(--accent); font-weight: 400; font-size: 14px;
+            padding: 4px 14px; border-radius: 20px;
+            background: var(--accent-dim); cursor: pointer;
+            transition: background var(--transition);
+        }
+        .refresh-btn:active { background: rgba(0,212,170,0.15); }
+        .refresh-btn svg { color: var(--accent); }
+
+        .list-body { padding: 4px 0; max-height: 400px; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+        .list-item {
+            display: flex; align-items: center; padding: 12px 22px;
+            border-bottom: 1px solid rgba(255,255,255,0.03); font-size: 15px;
+        }
+        .list-item:last-child { border-bottom: none; }
+        .index { color: var(--text-muted); width: 36px; font-size: 14px; }
+        .name { flex: 1; font-weight: 500; color: var(--text-primary); }
+        .time { color: var(--text-muted); font-size: 13px; }
+        .empty-tip { text-align: center; color: var(--text-muted); padding: 50px 0; font-size: 15px; }
+
+        .pairs-card {
+            width: 100%;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin-bottom: 16px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+            animation: fadeInUp 0.6s ease;
+        }
+        .pairs-header {
+            display: flex; align-items: center; padding: 14px 22px;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            font-size: 16px; font-weight: 600; color: var(--text-primary); gap: 8px;
+        }
+        .pairs-header svg { color: var(--text-muted); }
+        .pairs-body { padding: 8px 0; }
+        .pair-item {
+            display: flex; align-items: center; padding: 10px 22px;
+            border-bottom: 1px solid rgba(255,255,255,0.03); font-size: 14px;
+        }
+        .pair-item:last-child { border-bottom: none; }
+        .pair-num {
+            background: var(--accent-dim); color: var(--accent);
+            font-weight: 700; font-size: 12px; padding: 3px 12px;
+            border-radius: 14px; margin-right: 14px; min-width: 48px; text-align: center;
+        }
+        .pair-names { font-weight: 500; color: var(--text-primary); }
+        .pair-names .vs { color: var(--accent); margin: 0 8px; font-weight: 600; }
+        .pair-names .solo { color: var(--danger); font-size: 12px; margin-left: 6px; }
+
+        .footer {
+            margin-top: 28px; text-align: center; font-size: 11px;
+            color: var(--text-muted); opacity: 0.7; line-height: 1.8;
+            display: flex; align-items: center; justify-content: center; gap: 4px;
+        }
+        .footer svg { color: var(--text-muted); }
+
+        .toast {
+            position: fixed; top: 20px; left: 50%;
+            transform: translateX(-50%) translateY(-80px);
+            background: rgba(0,0,0,0.85); color: #fff;
+            padding: 10px 24px; border-radius: 12px; font-size: 15px;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+            opacity: 0; pointer-events: none; z-index: 999;
+            max-width: 90%; text-align: center;
+        }
+        .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+        .toast.success { background: rgba(0,212,170,0.9); }
+        .toast.error { background: rgba(255,94,94,0.9); }
+
+        .loading-mask {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(5,11,24,0.7); display: flex;
+            justify-content: center; align-items: center; z-index: 1000;
+            backdrop-filter: blur(4px);
+        }
+        .loading-mask.hidden { display: none; }
+        .spinner {
+            width: 28px; height: 28px; border: 3px solid var(--border);
+            border-top-color: var(--accent); border-radius: 50%;
+            animation: spin 0.8s linear infinite; margin-right: 12px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .loading-content {
+            display: flex; align-items: center; background: var(--bg-card);
+            padding: 12px 24px; border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            color: var(--text-primary);
+        }
+
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+        @media (max-width: 440px) {
+            .container { padding: 32px 16px 56px; }
+            .activity-card, .action-area { padding: 20px 18px 22px; }
+            .act-date { font-size: 20px; }
+            .action-btn { font-size: 15px; padding: 12px; }
+        }
+    </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<div class="container">
+    <!-- Logo -->
+    <div class="logo">
+        <span>RISUNIC</span>
+    </div>
+    <div class="brand-sub">POWER · ENERGY · INNOVATION</div>
+
+    <!-- Mode badge -->
+    <div class="mode-badge" id="modeBadge">加载中...</div>
+
+    <!-- Activity card -->
+    <div class="activity-card">
+        <div class="act-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.66-10.47c-2.28-4.1-7.14-5.88-12.94-5.17"/><path d="M4.75 10.47c2.28-4.1 11.66-3.18 15.12 1.35"/></svg>
+            本周三活动
+        </div>
+        <div class="act-date" id="activityDate">加载中...</div>
+        <div class="act-venue" id="venue">皓天羽毛球馆（光明海纳店）</div>
+        <div class="slots">
+            <span>剩余名额：</span>
+            <span class="num" id="remainSlots">0 / 14</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+        </div>
+        <div class="status-tip" id="statusTip">名额已满</div>
+    </div>
+
+    <!-- Action area -->
+    <div class="action-area" id="actionArea">
+        <div class="input-group">
+            <label class="input-label" id="inputLabel">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                你的姓名
+            </label>
+            <input class="name-input" id="nameInput" placeholder="请输入中文姓名" maxlength="10" autocomplete="off" />
+        </div>
+        <button class="action-btn" id="actionBtn">加载中...</button>
+    </div>
+
+    <!-- Registration list -->
+    <div class="list-card" id="regCard">
+        <div class="list-header">
+            <span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                预报名（<span id="regCount">0</span>/14）
+            </span>
+            <span class="refresh-btn" id="refreshBtn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                刷新
+            </span>
+        </div>
+        <div class="list-body" id="regBody">
+            <div class="empty-tip">暂无预报名</div>
+        </div>
+    </div>
+
+    <!-- Pairs (only on Wednesday) -->
+    <div class="pairs-card" id="pairsCard" style="display:none;">
+        <div class="pairs-header">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <span>随机双打配对（<span id="pairsCount">0</span>组）</span>
+        </div>
+        <div class="pairs-body" id="pairsBody"></div>
+    </div>
+
+    <!-- Checkin list (only on Wednesday) -->
+    <div class="list-card" id="checkinCard" style="display:none;">
+        <div class="list-header">
+            <span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                已签到（<span id="chkCount">0</span>人）
+            </span>
+        </div>
+        <div class="list-body" id="chkBody">
+            <div class="empty-tip">暂无签到</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        周一/周二预报名 · 周三晚 20:00 现场打卡<br>
+        <span id="footerTime">系统时间：--:--</span>
+    </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<div class="loading-mask hidden" id="loadingMask">
+    <div class="loading-content"><div class="spinner"></div><span id="loadingText">加载中...</span></div>
+</div>
+
+<script>
+(function() {
+    'use strict';
+    var $ = function(id) { return document.getElementById(id); };
+    var activityId = null, totalSlots = 14, bookedSlots = 0;
+    var regList = [], chkList = [];
+    var toastTimer, refreshTimer, mode = 'register';
+
+    function getMode() {
+        var p = new URLSearchParams(window.location.search).get('mode');
+        if (p === 'checkin') return 'checkin';
+        if (p === 'closed') return 'closed';
+        if (p === 'register') return 'register';
+        var d = new Date().getDay();
+        if (d === 1 || d === 2) return 'register';
+        if (d === 3) return 'checkin';
+        return 'closed';
+    }
+
+    function showToast(msg, type) {
+        if (toastTimer) clearTimeout(toastTimer);
+        $('toast').textContent = msg;
+        $('toast').className = 'toast show' + (type ? ' ' + type : '');
+        toastTimer = setTimeout(function() { $('toast').className = 'toast'; }, 2500);
+    }
+    function showLoading(t) { $('loadingText').textContent = t || '加载中...'; $('loadingMask').classList.remove('hidden'); }
+    function hideLoading() { $('loadingMask').classList.add('hidden'); }
+
+    function formatDate(ds) {
+        var d = new Date(ds), w = ['周日','周一','周二','周三','周四','周五','周六'];
+        return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')+' ('+w[d.getDay()]+')';
+    }
+    function formatTime(ts) {
+        var d = new Date(ts);
+        return String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');
+    }
+    function updateTime() {
+        var n = new Date(), t = String(n.getHours()).padStart(2,'0')+':'+String(n.getMinutes()).padStart(2,'0');
+        $('footerTime').textContent = '系统时间：'+t;
+    }
+    function esc(s) { if (!s) return ''; return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+    function shuffle(arr) {
+        var a = arr.slice();
+        for (var i = a.length-1; i>0; i--) { var j = Math.floor(Math.random()*(i+1)), t=a[i]; a[i]=a[j]; a[j]=t; }
+        return a;
+    }
+    function generatePairs(names) {
+        if (names.length < 2) return [];
+        var s = shuffle(names), p = [];
+        for (var i=0; i<s.length; i+=2) {
+            if (i+1 < s.length) p.push([s[i], s[i+1]]);
+            else p[p.length-1].push(s[i]);
+        }
+        return p;
+    }
+
+    function renderRegList() {
+        $('regCount').textContent = regList.length;
+        if (regList.length === 0) { $('regBody').innerHTML = '<div class="empty-tip">暂无预报名</div>'; }
+        else {
+            var h = '';
+            regList.forEach(function(r,i) {
+                h += '<div class="list-item"><span class="index">'+(i+1)+'.</span><span class="name">'+esc(r.member_name)+'</span><span class="time">'+formatTime(r.reg_time)+'</span></div>';
+            });
+            $('regBody').innerHTML = h;
+        }
+    }
+
+    function renderChkList() {
+        $('chkCount').textContent = chkList.length;
+        if (chkList.length === 0) { $('chkBody').innerHTML = '<div class="empty-tip">暂无签到</div>'; }
+        else {
+            var h = '';
+            chkList.forEach(function(c,i) {
+                h += '<div class="list-item"><span class="index">'+(i+1)+'.</span><span class="name">'+esc(c.member_name)+'</span><span class="time">'+formatTime(c.checkin_time)+'</span></div>';
+            });
+            $('chkBody').innerHTML = h;
+        }
+    }
+
+    function renderPairs() {
+        var names = regList.map(function(r) { return r.member_name; });
+        var pairs = generatePairs(names);
+        if (pairs.length === 0) { $('pairsCard').style.display = 'none'; return; }
+        $('pairsCard').style.display = 'block';
+        $('pairsCount').textContent = pairs.length;
+        var h = '';
+        pairs.forEach(function(p,i) {
+            var nh = p.map(esc).join(' <span class="vs">VS</span> ');
+            if (p.length === 3) nh += '<span class="solo">（三人组）</span>';
+            h += '<div class="pair-item"><span class="pair-num">第'+(i+1)+'组</span><span class="pair-names">'+nh+'</span></div>';
+        });
+        $('pairsBody').innerHTML = h;
+    }
+
+    function updateUI() {
+        mode = getMode();
+        var badge = $('modeBadge'), btn = $('actionBtn'), tip = $('statusTip'), label = $('inputLabel');
+
+        if (mode === 'register') {
+            badge.textContent = '预报名阶段（周一~周二）';
+            badge.className = 'mode-badge mode-register';
+            label.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> 你的姓名';
+            btn.innerHTML = bookedSlots >= totalSlots
+                ? '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg> 名额已满'
+                : '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg> 立即报名';
+            btn.className = 'action-btn btn-register';
+            btn.disabled = bookedSlots >= totalSlots;
+            $('actionArea').style.display = 'block';
+            $('checkinCard').style.display = 'none';
+            tip.style.display = bookedSlots >= totalSlots ? 'block' : 'none';
+        } else if (mode === 'checkin') {
+            badge.textContent = '现场签到（周三 20:00-22:00）';
+            badge.className = 'mode-badge mode-checkin';
+            label.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> 你的姓名';
+            btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 签到打球';
+            btn.className = 'action-btn btn-checkin';
+            btn.disabled = false;
+            $('actionArea').style.display = 'block';
+            $('checkinCard').style.display = 'block';
+            tip.style.display = 'none';
+        } else {
+            badge.textContent = '本期活动已结束（周四~周日休息）';
+            badge.className = 'mode-badge mode-closed';
+            $('actionArea').style.display = 'none';
+            $('checkinCard').style.display = 'block';
+            tip.style.display = 'none';
+        }
+
+        renderRegList();
+        renderChkList();
+        renderPairs();
+    }
+
+    function updateCard(act) {
+        activityId = act.id;
+        totalSlots = act.totalSlots;
+        bookedSlots = act.bookedSlots;
+        var remain = totalSlots - bookedSlots;
+        $('activityDate').textContent = formatDate(act.activityDate);
+        $('venue').textContent = act.venue || '皓天羽毛球馆（光明海纳店）';
+        $('remainSlots').textContent = remain + ' / ' + totalSlots;
+        $('remainSlots').className = 'num' + (remain === 0 ? ' full' : '');
+        $('progressFill').style.width = (bookedSlots/totalSlots*100) + '%';
+        updateUI();
+    }
+
+    function loadAll() {
+        showLoading('加载中...');
+        fetch('/api/badminton')
+            .then(function(r) { return r.json(); })
+            .then(function(d) {
+                if (d.code === 0) updateCard(d.data);
+                return Promise.all([
+                    fetch('/api/badminton?action=registrations').then(function(r) { return r.json(); }),
+                    fetch('/api/badminton?action=checkins').then(function(r) { return r.json(); })
+                ]);
+            })
+            .then(function(results) {
+                hideLoading();
+                if (results[0].code === 0) regList = results[0].data;
+                if (results[1].code === 0) chkList = results[1].data;
+                updateUI();
+            })
+            .catch(function() { hideLoading(); showToast('网络异常', 'error'); });
+    }
+
+    function handleSubmit() {
+        var name = $('nameInput').value.trim();
+        if (!name) { showToast('请输入姓名','error'); return; }
+        if (!activityId) return;
+
+        var m = getMode();
+        var type = (m === 'register') ? 'register' : 'checkin';
+        var btn = $('actionBtn');
+        btn.disabled = true;
+        btn.innerHTML = '<div class="spinner" style="margin:0;width:20px;height:20px;border-width:2px;border-top-color:currentColor;"></div> 提交中...';
+
+        fetch('/api/badminton', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ member_name: name, activityId: activityId, type: type })
+        })
+            .then(function(r) { return r.json(); })
+            .then(function(d) {
+                btn.disabled = false;
+                if (d.code === 0) {
+                    showToast((type === 'register' ? '报名' : '签到') + '成功！', 'success');
+                    $('nameInput').value = '';
+                    loadAll();
+                } else {
+                    showToast(d.msg || '操作失败', 'error');
+                    updateUI();
+                }
+            })
+            .catch(function() { btn.disabled = false; updateUI(); showToast('网络异常', 'error'); });
+    }
+
+    function init() {
+        updateTime();
+        loadAll();
+        refreshTimer = setInterval(function() { if (activityId) loadAll(); updateTime(); }, 60000);
+        $('actionBtn').addEventListener('click', handleSubmit);
+        $('refreshBtn').addEventListener('click', loadAll);
+        $('nameInput').addEventListener('keydown', function(e) { if (e.key === 'Enter') handleSubmit(); });
+    }
+    window.addEventListener('beforeunload', function() { if (refreshTimer) clearInterval(refreshTimer); });
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+})();
+</script>
+</body>
+</html>
