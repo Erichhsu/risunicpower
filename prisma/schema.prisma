@@ -178,7 +178,7 @@ model VisitorRegistration {
 model BadmintonActivity {
   id           String   @id @default(cuid())
   activityDate String   @unique
-  venue        String   @default("公司羽毛球场")
+  venue        String   @default("皓天羽毛球馆（光明海纳店）")
   totalSlots   Int      @default(14)
   bookedSlots  Int      @default(0)
   createdAt    DateTime @default(now())
@@ -194,6 +194,7 @@ model BadmintonRegistration {
   id          String   @id @default(cuid())
   activityId  String
   memberName  String
+  department  String?
   regTime     DateTime @default(now())
 
   activity BadmintonActivity @relation(fields: [activityId], references: [id], onDelete: Cascade)
@@ -206,6 +207,7 @@ model BadmintonCheckin {
   id          String   @id @default(cuid())
   activityId  String
   memberName  String
+  department  String?
   checkinTime DateTime @default(now())
 
   activity BadmintonActivity @relation(fields: [activityId], references: [id], onDelete: Cascade)

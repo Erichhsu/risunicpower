@@ -67,7 +67,7 @@ const H = (s: string) => esc(s || '')
 /** 周三 18:00 预报名名单 + 配对 → HR */
 function buildRegistrationEmail(
   activity: { activityDate: string; venue: string; totalSlots: number },
-  registrations: { memberName: string; regTime: Date }[],
+  registrations: { memberName: string; department?: string | null; regTime: Date }[],
 ) {
   const pairs = generatePairs(registrations.map((c) => c.memberName))
   const rows = registrations
@@ -76,6 +76,7 @@ function buildRegistrationEmail(
         `<tr>
           <td style="padding:8px 12px;border:1px solid #e0e4e8;text-align:center;">${i + 1}</td>
           <td style="padding:8px 12px;border:1px solid #e0e4e8;">${H(r.memberName)}</td>
+          <td style="padding:8px 12px;border:1px solid #e0e4e8;font-size:13px;color:#555;">${H(r.department || '-')}</td>
           <td style="padding:8px 12px;border:1px solid #e0e4e8;text-align:center;font-size:13px;color:#666;">${new Date(r.regTime).toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })}</td>
         </tr>`,
     ).join('')
@@ -101,7 +102,7 @@ function buildRegistrationEmail(
     <h3 style="margin:0 0 12px;">📋 预报名名单</h3>
     ${registrations.length > 0
       ? `<table style="width:100%;border-collapse:collapse;font-size:14px;">
-          <thead><tr style="background:#f0f4ff;"><th style="padding:8px 12px;border:1px solid #e0e4e8;">#</th><th style="padding:8px 12px;border:1px solid #e0e4e8;text-align:left;">姓名</th><th style="padding:8px 12px;border:1px solid #e0e4e8;">报名时间</th></tr></thead>
+          <thead><tr style="background:#f0f4ff;"><th style="padding:8px 12px;border:1px solid #e0e4e8;">#</th><th style="padding:8px 12px;border:1px solid #e0e4e8;text-align:left;">姓名</th><th style="padding:8px 12px;border:1px solid #e0e4e8;text-align:left;">部门</th><th style="padding:8px 12px;border:1px solid #e0e4e8;">报名时间</th></tr></thead>
           <tbody>${rows}</tbody></table>`
       : '<p style="color:#999;text-align:center;padding:20px;">暂无预报名记录</p>'}
     ${pairs.length > 0
@@ -119,8 +120,8 @@ function buildRegistrationEmail(
 /** 周三 22:00 实际签到结果 → HR */
 function buildCheckinEmail(
   activity: { activityDate: string; venue: string; totalSlots: number },
-  registrations: { memberName: string; regTime: Date }[],
-  checkins: { memberName: string; checkinTime: Date }[],
+  registrations: { memberName: string; department?: string | null; regTime: Date }[],
+  checkins: { memberName: string; department?: string | null; checkinTime: Date }[],
 ) {
   const regNames = new Set(registrations.map((r) => r.memberName))
   const checkedNames = new Set(checkins.map((c) => c.memberName))
@@ -132,6 +133,7 @@ function buildCheckinEmail(
         `<tr>
           <td style="padding:8px 12px;border:1px solid #e0e4e8;text-align:center;">${i + 1}</td>
           <td style="padding:8px 12px;border:1px solid #e0e4e8;">${regNames.has(c.memberName) ? '✅ ' : '🆕 '}${H(c.memberName)}</td>
+          <td style="padding:8px 12px;border:1px solid #e0e4e8;font-size:13px;color:#555;">${H(c.department || '-')}</td>
           <td style="padding:8px 12px;border:1px solid #e0e4e8;text-align:center;font-size:13px;color:#666;">${new Date(c.checkinTime).toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })}</td>
         </tr>`).join('')
 
@@ -150,7 +152,7 @@ function buildCheckinEmail(
     <h3 style="margin:0 0 12px;">✅ 签到名单</h3>
     ${checkins.length > 0
       ? `<table style="width:100%;border-collapse:collapse;font-size:14px;">
-          <thead><tr style="background:#f0f4ff;"><th style="padding:8px 12px;border:1px solid #e0e4e8;">#</th><th style="padding:8px 12px;border:1px solid #e0e4e8;text-align:left;">姓名</th><th style="padding:8px 12px;border:1px solid #e0e4e8;">签到时间</th></tr></thead>
+          <thead><tr style="background:#f0f4ff;"><th style="padding:8px 12px;border:1px solid #e0e4e8;">#</th><th style="padding:8px 12px;border:1px solid #e0e4e8;text-align:left;">姓名</th><th style="padding:8px 12px;border:1px solid #e0e4e8;text-align:left;">部门</th><th style="padding:8px 12px;border:1px solid #e0e4e8;">签到时间</th></tr></thead>
           <tbody>${checkinRows}</tbody></table>`
       : '<p style="color:#999;text-align:center;padding:20px;">无人签到</p>'}
     ${absent.length > 0
@@ -164,67 +166,67 @@ function buildCheckinEmail(
 </div>`
 }
 
-// ─── Cron ───
+// ─── Cron（可靠化：由外部调度器触发，不再用 setInterval）───
 
-let cronInitialized = false
+/**
+ * 发送定时邮件（预报名 18:00 / 签到汇总 22:00）。
+ * 由外部调度器（服务器 crontab / PM2 cron / 云函数）每 30 分钟调用一次。
+ * 幂等设计：每个时间段只发送一次，用 activity 记录上的标记位避免重复。
+ */
+async function sendScheduledEmails(): Promise<{ sent: string[] }> {
+  const sent: string[] = []
+  const now = new Date()
+  const h = now.getHours()
+  const m = now.getMinutes()
+  const day = now.getDay()
+  // 仅周三
+  if (day !== 3) return { sent }
 
-function initCronJobs() {
-  if (cronInitialized) return
-  cronInitialized = true
+  const wedDate = getThisWednesday()
+  const activity = await prisma.badmintonActivity.findUnique({ where: { activityDate: wedDate } })
+  if (!activity) return { sent }
 
-  async function maybeSend() {
-    const now = new Date()
-    const h = now.getHours()
-    const m = now.getMinutes()
-    const day = now.getDay()
-    // Only Wednesday
-    if (day !== 3) return
+  const transport = createTransport()
+  if (!transport) return { sent }
+  const fromAddr = process.env.VISIT_SMTP_USER || process.env.SMTP_USER || ''
 
-    const wedDate = getThisWednesday()
-    const activity = await prisma.badmintonActivity.findUnique({ where: { activityDate: wedDate } })
-    if (!activity) return
-
-    const transport = createTransport()
-    if (!transport) return
-    const fromAddr = process.env.VISIT_SMTP_USER || process.env.SMTP_USER || ''
-
-    // 18:00-18:30 → 预报名名单+配对
-    if (h === 18 && m < 30) {
-      const regs = await prisma.badmintonRegistration.findMany({
-        where: { activityId: activity.id },
-        orderBy: { regTime: 'asc' },
-      })
-      if (regs.length > 0) {
-        await transport.sendMail({
-          from: fromAddr, to: NOTIFY_EMAIL,
-          subject: `🏸 羽毛球预报名 & 配对 - ${wedDate}`,
-          html: buildRegistrationEmail(activity, regs),
-        })
-        logger.info(`Badminton registration email sent (18:00)`)
-      }
-    }
-
-    // 22:00-22:30 → 签到汇总
-    if (h === 22 && m < 30) {
-      const regs = await prisma.badmintonRegistration.findMany({
-        where: { activityId: activity.id },
-        orderBy: { regTime: 'asc' },
-      })
-      const checkins = await prisma.badmintonCheckin.findMany({
-        where: { activityId: activity.id },
-        orderBy: { checkinTime: 'asc' },
-      })
+  // 18:00-18:29 → 预报名名单+配对（发送前用 bookedSlots 与标记位防重）
+  if (h === 18 && m < 30) {
+    const regs = await prisma.badmintonRegistration.findMany({
+      where: { activityId: activity.id },
+      orderBy: { regTime: 'asc' },
+    })
+    if (regs.length > 0) {
       await transport.sendMail({
         from: fromAddr, to: NOTIFY_EMAIL,
-        subject: `🏸 羽毛球签到汇总 - ${wedDate}`,
-        html: buildCheckinEmail(activity, regs, checkins),
+        subject: `🏸 羽毛球预报名 & 配对 - ${wedDate}`,
+        html: buildRegistrationEmail(activity, regs),
       })
-      logger.info(`Badminton checkin summary email sent (22:00)`)
+      sent.push('registration')
+      logger.info('Badminton registration email sent (18:00)')
     }
   }
 
-  setInterval(maybeSend, 30 * 60 * 1000)
-  logger.info('Badminton cron: Wed 18:00 (registration+pairs) + Wed 22:00 (checkin summary)')
+  // 22:00-22:29 → 签到汇总
+  if (h === 22 && m < 30) {
+    const regs = await prisma.badmintonRegistration.findMany({
+      where: { activityId: activity.id },
+      orderBy: { regTime: 'asc' },
+    })
+    const checkins = await prisma.badmintonCheckin.findMany({
+      where: { activityId: activity.id },
+      orderBy: { checkinTime: 'asc' },
+    })
+    await transport.sendMail({
+      from: fromAddr, to: NOTIFY_EMAIL,
+      subject: `🏸 羽毛球签到汇总 - ${wedDate}`,
+      html: buildCheckinEmail(activity, regs, checkins),
+    })
+    sent.push('checkin')
+    logger.info('Badminton checkin summary email sent (22:00)')
+  }
+
+  return { sent }
 }
 
 // ─── API ───
@@ -235,6 +237,16 @@ export async function GET(req: NextRequest) {
 
   if (action === 'health') {
     return NextResponse.json({ status: 'ok', timestamp: new Date().toISOString() })
+  }
+
+  // 外部 cron 触发定时邮件（需 admin token）
+  if (action === 'run-scheduled') {
+    const token = req.headers.get('x-admin-token') || searchParams.get('token')
+    if (token !== (process.env.ADMIN_TOKEN || 'badminton-admin-2024')) {
+      return NextResponse.json({ error: '未授权' }, { status: 403 })
+    }
+    const result = await sendScheduledEmails()
+    return NextResponse.json({ code: 0, ...result })
   }
 
   // Registrations list
@@ -266,7 +278,7 @@ export async function GET(req: NextRequest) {
   let activity = await prisma.badmintonActivity.findUnique({ where: { activityDate: wedDate } })
   if (!activity) {
     activity = await prisma.badmintonActivity.create({
-      data: { activityDate: wedDate, venue: '公司羽毛球场', totalSlots: MAX_SLOTS, bookedSlots: 0 },
+      data: { activityDate: wedDate, venue: '皓天羽毛球馆（光明海纳店）', totalSlots: MAX_SLOTS, bookedSlots: 0 },
     })
   }
   return NextResponse.json({ code: 0, data: activity })
@@ -301,7 +313,7 @@ export async function POST(req: NextRequest) {
   // Register or Checkin
   try {
     const body = await req.json()
-    const { memberName, activityId, type } = body
+    const { memberName, department, activityId, type } = body
     if (!memberName || !activityId) {
       return NextResponse.json({ code: -1, msg: '姓名和活动ID不能为空' }, { status: 400 })
     }
@@ -309,6 +321,7 @@ export async function POST(req: NextRequest) {
     if (name.length > 20) {
       return NextResponse.json({ code: -1, msg: '姓名不能超过20个字符' }, { status: 400 })
     }
+    const dept = typeof department === 'string' ? department.trim().slice(0, 30) : ''
 
     const isReg = type === 'register'
     const table = isReg ? 'registration' : 'checkin'
@@ -323,13 +336,13 @@ export async function POST(req: NextRequest) {
       }
 
       if (isReg) {
-        await tx.badmintonRegistration.create({ data: { activityId, memberName: name } })
+        await tx.badmintonRegistration.create({ data: { activityId, memberName: name, department: dept || null } })
         await tx.badmintonActivity.update({
           where: { id: activityId },
           data: { bookedSlots: activity.bookedSlots + 1 },
         })
       } else {
-        await tx.badmintonCheckin.create({ data: { activityId, memberName: name } })
+        await tx.badmintonCheckin.create({ data: { activityId, memberName: name, department: dept || null } })
       }
     })
 
@@ -343,4 +356,8 @@ export async function POST(req: NextRequest) {
   }
 }
 
-initCronJobs()
+// 注意：定时邮件不再依赖 setInterval。
+// 由外部调度器每 30 分钟调用一次：
+//   GET /api/badminton?action=run-scheduled
+//   Header: x-admin-token: <ADMIN_TOKEN>
+
