@@ -13,7 +13,7 @@ import SearchDialog from '@/components/ui/SearchDialog'
 import LocaleAttributes from '@/components/ui/LocaleAttributes'
 
 export const metadata: Metadata = {
-  title: { default: 'RisunicPower - Industrial Power Supply Manufacturer', template: '%s — RisunicPower' },
+  title: { default: 'RisunicPower - Industrial Power Supply Manufacturer', template: '%s' },
   description: 'POE power supplies, adapters, UPS, inverters, portable power stations. 12+ years R&D, serving 600+ clients globally.',
   metadataBase: new URL('https://risunicpower.com'),
   openGraph: {
