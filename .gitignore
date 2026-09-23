@@ -42,5 +42,12 @@ next-env.d.ts
 
 .env.production
 dev.db
+dev.db.bak*
+*.bak
+*.bak_*
+_old_brochure_backup*/
+ssl/
+scripts/_*.cjs
+scripts/_*.mjs
 *_query.js
 public/_debug_*
