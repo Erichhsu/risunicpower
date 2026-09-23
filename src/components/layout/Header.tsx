@@ -83,6 +83,8 @@ export default function Header() {
                 <a
                   key={item.key}
                   href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`relative text-[1.3rem] font-medium tracking-wide transition-colors duration-300 group ${
                     solid ? 'text-[#0E4071]' : 'text-white/80'
                   }`}
@@ -177,6 +179,8 @@ export default function Header() {
                 <a
                   key={item.key}
                   href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block text-[1.5rem] text-[#0E4071] font-medium py-2"
                   onClick={() => setMenuOpen(false)}
                 >
