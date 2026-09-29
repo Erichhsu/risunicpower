@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
-import { Mail } from 'lucide-react'
+import { Mail, MessageCircle } from 'lucide-react'
 import SocialLinks from '@/components/ui/SocialLinks'
 
 const productSlugs = ['poe', 'ups', 'inverter', 'split-phase-inverter', 'backup-power', 'power-station', 'all-in-one', 'micro-inverter', 'solar-controller']
@@ -65,6 +65,10 @@ export default function Footer() {
             <div className="flex items-center gap-2 text-[1.3rem] text-white/70 mt-4">
               <Mail size={14} />
               <a href="mailto:erich.hsu@risunicpower.com" className="hover:text-[#F7D142] transition-colors">erich.hsu@risunicpower.com</a>
+            </div>
+            <div className="flex items-center gap-2 text-[1.3rem] text-white/70 mt-2">
+              <MessageCircle size={14} />
+              <a href="https://wa.me/8613510768009" target="_blank" rel="noopener noreferrer" className="hover:text-[#F7D142] transition-colors">WhatsApp: +86 135 1076 8009</a>
             </div>
             <div className="mt-6">
               <h4 className="font-semibold text-[1.4rem] mb-3 uppercase tracking-wider">{t('connectWithUs')}</h4>

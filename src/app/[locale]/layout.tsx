@@ -52,8 +52,11 @@ export default async function LocaleLayout({
     url: 'https://risunicpower.com',
     logo: 'https://risunicpower.com/logo.png',
     description: 'Industrial power supply manufacturer since 2014. OEM/ODM, global shipping, CE FCC UL RoHS certified.',
-    contactPoint: { '@type': 'ContactPoint', telephone: '+86-755-23500205', contactType: 'sales', email: 'erich.hsu@risunicpower.com' },
-    sameAs: ['https://linkedin.com/company/risunicpower'],
+    contactPoint: [
+      { '@type': 'ContactPoint', telephone: '+86-755-23500205', contactType: 'sales', email: 'erich.hsu@risunicpower.com' },
+      { '@type': 'ContactPoint', telephone: '+8613510768009', contactType: 'customer service', availableLanguage: ['English', 'Chinese'] },
+    ],
+    sameAs: ['https://linkedin.com/company/risunicpower', 'https://wa.me/8613510768009'],
   }
 
   return (

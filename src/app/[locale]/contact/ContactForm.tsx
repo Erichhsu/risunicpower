@@ -118,6 +118,19 @@ const siTagline: Record<string, string> = {
   ru: 'OEM/ODM · Международная доставка · Сертифицировано',
 }
 
+const contactLabels: Record<string, { b2b: string; support: string; whatsapp: string }> = {
+  en: { b2b: 'B2B/C Director', support: 'Technical Support', whatsapp: 'WhatsApp' },
+  zh: { b2b: 'B2B/C 总监', support: '技术支持', whatsapp: 'WhatsApp' },
+  ja: { b2b: 'B2B/C ディレクター', support: '技術サポート', whatsapp: 'WhatsApp' },
+  es: { b2b: 'Director B2B/C', support: 'Soporte técnico', whatsapp: 'WhatsApp' },
+  de: { b2b: 'B2B/C Direktor', support: 'Technischer Support', whatsapp: 'WhatsApp' },
+  fr: { b2b: 'Directeur B2B/C', support: 'Support technique', whatsapp: 'WhatsApp' },
+  pt: { b2b: 'Diretor B2B/C', support: 'Suporte técnico', whatsapp: 'WhatsApp' },
+  ar: { b2b: 'مدير B2B/C', support: 'الدعم الفني', whatsapp: 'واتساب' },
+  ru: { b2b: 'Директор B2B/C', support: 'Техническая поддержка', whatsapp: 'WhatsApp' },
+}
+const siContact = (locale: string) => contactLabels[locale] || contactLabels.en
+
 const siWhyTitle: Record<string, string> = {
   es: '\uD83D\uDCA1 ¿Por Qué Trabajar Con Nosotros?',
   de: '\uD83D\uDCA1 Warum Mit Uns Arbeiten?',
@@ -264,8 +277,12 @@ export default function ContactForm({ locale }: { locale: string }) {
                 </div>
 
                 <div className="pt-2 space-y-1.5">
+                  <p className="text-[1.1rem] uppercase tracking-wider text-white/50 mb-1">{siContact(locale).b2b}</p>
                   <p><a href="mailto:erich.hsu@risunicpower.com" className="text-white hover:text-[#F7D142] transition-colors">{'\u2709'} erich.hsu@risunicpower.com</a></p>
-                  <p>{'\uD83D\uDCDE'} +86 755 2350 0205</p>
+                  <p className="text-[1.1rem] uppercase tracking-wider text-white/50 mb-1 mt-3">{siContact(locale).support}</p>
+                  <p><a href="mailto:bob@risunic.com" className="text-white hover:text-[#F7D142] transition-colors">{'\u2709'} bob@risunic.com</a></p>
+                  <p className="mt-3">{'\uD83D\uDCDE'} +86 755 2350 0205</p>
+                  <p>{siContact(locale).whatsapp}: +86 135 1076 8009</p>
                 </div>
                 
                 <p className="text-[1.1rem] text-[#F7D142] pt-1">{siTagline[locale] || si(locale).tagline}</p>
