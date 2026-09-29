@@ -34,6 +34,7 @@ export default function ProductGallery({ images, name }: { images: ProductImage[
           height={1000}
           sizes="(max-width: 768px) 100vw, 600px"
           priority
+          quality={85}
           className="w-full h-full object-contain p-8 transition-opacity duration-300"
         />
       </div>
@@ -56,6 +57,7 @@ export default function ProductGallery({ images, name }: { images: ProductImage[
                 alt={img.alt || `${name} ${idx + 1}`}
                 width={80}
                 height={80}
+                quality={85}
                 className="w-full h-full object-contain p-1.5"
               />
             </button>

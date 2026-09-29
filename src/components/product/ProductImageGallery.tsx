@@ -25,6 +25,7 @@ export default function ProductImageGallery({ images, name }: { images: GalleryI
           className="object-contain p-4 transition-all duration-300 hover:scale-110 cursor-crosshair"
           sizes="(max-width: 1024px) 100vw, 50vw"
           priority
+          quality={85}
         />
       </div>
       {/* Thumbnails */}
@@ -43,6 +44,7 @@ export default function ProductImageGallery({ images, name }: { images: GalleryI
                 alt={img.alt || `${name} ${idx + 1}`}
                 width={80}
                 height={80}
+                quality={85}
                 className="object-contain w-full h-full p-1"
               />
             </button>

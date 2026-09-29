@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   allowedDevOrigins: ['192.168.111.144', '172.19.224.1'],
   images: {
     formats: ['image/avif', 'image/webp'],
+    qualities: [85],
   },
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],

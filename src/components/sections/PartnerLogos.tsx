@@ -60,6 +60,7 @@ export default function PartnerLogos({ locale }: Props) {
                 width={p.width}
                 height={40}
                 sizes="(max-width: 768px) 33vw, 12vw"
+                quality={85}
                 className={`object-contain ${p.file === '山克.webp' ? 'w-[50%] h-[50%]' : 'w-[80%] h-[80%]'}`}
               />
             </div>

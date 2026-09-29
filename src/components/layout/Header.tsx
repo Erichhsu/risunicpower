@@ -70,6 +70,7 @@ export default function Header() {
               alt="RisunicPower"
               width={36}
               height={36}
+              quality={85}
               className="w-9 h-auto transition-transform duration-300 group-hover:scale-110"
             />
             <span className={`font-bold text-[1.8rem] tracking-tight transition-colors duration-300 ${solid ? 'text-[#0E4071] group-hover:text-[#F7D142]' : 'text-white group-hover:text-[#F7D142]'}`}>

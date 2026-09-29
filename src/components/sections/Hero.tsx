@@ -19,6 +19,7 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
+          quality={85}
           className="object-cover opacity-40"
           style={{ maskImage: 'linear-gradient(to right, black 30%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to right, black 30%, transparent 100%)' }}
         />
