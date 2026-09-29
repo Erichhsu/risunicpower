@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
   output: 'standalone',
   outputFileTracingIncludes: {
     // sharp 图片优化依赖（standalone 打包时强制包含原生二进制，否则 next/image 无法转 WebP）
-    '/*': ['./node_modules/sharp/**/*', './node_modules/@img/**/*'],
+    '/': ['./node_modules/sharp/**/*', './node_modules/@img/**/*'],
   },
   serverExternalPackages: ['nodemailer'],
 }
