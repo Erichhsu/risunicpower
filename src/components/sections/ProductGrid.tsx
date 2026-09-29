@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
 import { ArrowRight } from 'lucide-react'
+import Image from 'next/image'
 
 interface CategoryData {
   slug: string
@@ -41,7 +42,7 @@ export default function ProductGrid({ categories }: { categories: CategoryData[]
                 {/* Product image — 80% of card width */}
                 <div className="w-[80%] mx-auto mt-8 aspect-[4/3] bg-gradient-to-br from-[#f7f8fa] to-[#e2e8ef] rounded-xl flex items-center justify-center overflow-hidden">
                   {cat.image ? (
-                    <img src={cat.image} alt={cat.name} className="w-full h-full object-contain p-4" />
+                    <Image src={cat.image} alt={cat.name} width={640} height={480} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="w-full h-full object-contain p-4" loading={i < 3 ? 'eager' : 'lazy'} />
                   ) : (
                     <img src="/images/category-icon.png" alt="" className="w-14 h-14 object-contain opacity-30" />
                   )}

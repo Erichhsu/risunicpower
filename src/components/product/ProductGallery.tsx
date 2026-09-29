@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 
 interface ProductImage {
   id: number | string
@@ -26,9 +27,13 @@ export default function ProductGallery({ images, name }: { images: ProductImage[
     <div>
       {/* Main image */}
       <div className="aspect-square bg-gradient-to-br from-[#f7f8fa] to-[#e2e8ef] rounded-2xl flex items-center justify-center border border-[#e2e8ef] overflow-hidden mb-4">
-        <img
+        <Image
           src={active}
           alt={name}
+          width={1000}
+          height={1000}
+          sizes="(max-width: 768px) 100vw, 600px"
+          priority
           className="w-full h-full object-contain p-8 transition-opacity duration-300"
         />
       </div>
@@ -46,9 +51,11 @@ export default function ProductGallery({ images, name }: { images: ProductImage[
                   : 'border-[#e2e8ef] hover:border-[#F7D142]/50'
               }`}
             >
-              <img
+              <Image
                 src={img.url}
                 alt={img.alt || `${name} ${idx + 1}`}
+                width={80}
+                height={80}
                 className="w-full h-full object-contain p-1.5"
               />
             </button>

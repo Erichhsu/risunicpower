@@ -17,9 +17,10 @@ export default function Hero() {
           src="/images/820.jpg"
           alt=""
           fill
+          priority
+          sizes="100vw"
           className="object-cover opacity-40"
           style={{ maskImage: 'linear-gradient(to right, black 30%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to right, black 30%, transparent 100%)' }}
-          unoptimized
         />
       </div>
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-[#ECF1F7]" />

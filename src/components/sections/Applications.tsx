@@ -44,7 +44,7 @@ export default function Applications({ locale }: { locale?: string }) {
               <div key={app.key}
                 className="group relative aspect-[4/5] rounded-xl overflow-hidden bg-[#E5ECF4]"
               >
-                <Image src={app.img} alt={name} fill className="object-contain p-6 group-hover:scale-105 transition-transform duration-500" unoptimized />
+                <Image src={app.img} alt={name} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" className="object-contain p-6 group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                   <h3 className="text-[1.8rem] font-bold mb-2">{name}</h3>
