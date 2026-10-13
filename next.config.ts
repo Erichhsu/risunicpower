@@ -14,8 +14,9 @@ const nextConfig: NextConfig = {
   },
   output: 'standalone',
   outputFileTracingIncludes: {
-    // sharp 鍥剧墖浼樺寲渚濊禆锛坰tandalone 鎵撳寘鏃跺己鍒跺寘鍚師鐢熶簩杩涘埗锛屽惁鍒?next/image 鏃犳硶杞?WebP锛?
+    // sharp 图片优化依赖（standalone 打包时强制包含原生二进制，否则 next/image 无法转 WebP）
     '/': ['./node_modules/sharp/**/*', './node_modules/@img/**/*'],
+    // hls.js 客户端依赖（standalone 打包时强制包含，否则视频页无法播放）
     '/video': ['./node_modules/hls.js/**/*'],
   },
   serverExternalPackages: ['nodemailer'],
