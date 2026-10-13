@@ -16,6 +16,7 @@ const navItems = [
   { key: 'caseStudies', href: '/case-studies' },
   { key: 'blog', href: '/blog' },
   { key: 'about', href: '/about' },
+  { key: 'companyVideo', href: '/video' },
   { key: 'contact', href: '/contact' },
   { key: 'brochure', href: '/brochure/', external: true },
 ]
